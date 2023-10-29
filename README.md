@@ -39,4 +39,9 @@ Portfolio Website
 
 ```bash
 npx create-next-app@latest portfolio
+npm install -D prettier prettier-plugin-tailwindcss prettier-plugin-organize-imports
+npm install @ducanh2912/next-pwa
+npm install @formatjs/intl-localematcher negotiator server-only
+npm install -D @types/negotiator
+npm install @vercel/analytics
 ```

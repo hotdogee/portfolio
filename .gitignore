@@ -40,4 +40,12 @@ next-env.d.ts
 
 # draft
 draft/
+/tmp
 RESEARCH.md
+
+# vscode
+/.vscode
+
+# PWA
+/public/sw.js*
+/public/workbox-*.js*
