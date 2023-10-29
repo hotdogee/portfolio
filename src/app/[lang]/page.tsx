@@ -23,10 +23,7 @@ export default function Home({ params: { lang } }: { params: { lang: Locale } })
         className={`wide:grid-cols-[1fr_1fr] wide:grid-rows-[52px_fit-content(50vw)_minmax(48px,_1fr)_40px] grid h-screen grid-rows-[52px_1fr_48px_1fr_40px]`}
       >
         <header className="wide:col-span-2 mx-2 flex items-center justify-between">
-          <a
-            href="https://cubes.hanl.in/"
-            className="flex items-center justify-items-start"
-          >
+          <a href="https://hanl.in/" className="flex items-center justify-items-start">
             <Image
               src="/icons/android-chrome-512x512.png"
               alt="Logo"
@@ -63,7 +60,7 @@ export default function Home({ params: { lang } }: { params: { lang: Locale } })
           </Link>
           <div className="flex flex-row space-x-3">
             <div className="">
-              <a href="https://github.com/hotdogee/origami-moving-cubes-drawing-designer">
+              <a href="https://github.com/hotdogee/portfolio">
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
