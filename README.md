@@ -4,7 +4,7 @@ Portfolio Website
 
 # Tech Stack (tentative)
 
-- Framework: Next.js
+- Framework: Next.js 14.0.2
 - Database:
   - PlanetScale: Serverless MySQL
     - 5 GB storage included
