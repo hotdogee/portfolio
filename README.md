@@ -1,47 +1,47 @@
-# portfolio
+# Astro Starter Kit: Minimal
 
-Portfolio Website
-
-# Tech Stack (tentative)
-
-- Framework: Next.js 14.0.2
-- Database:
-  - PlanetScale: Serverless MySQL
-    - 5 GB storage included
-    - 1 billion row reads per month ($1 per additional billion)
-    - 1B row reads/ month
-    - 10 million row reads per month ($1.50 per additional million)
-    - 10M row writes/ month
-    - 1 production branch
-    - 1 development branch
-  - Upstash: Serverless Redis/Kafka
-    - Redis is an in-memory data structure store, used as a database, cache, and message broker.
-    - Free tier limits 10K commands per day and total 256Mb data size.
-    - Use case: Page View Counter
-  - MongoDB Atlas: Serverless MongoDB
-    - 512MB to 5GB of storage
-    - Shared RAM
-- Authentication: NextAuth
-- Deployment: Vercel
-  - Support for 35+ Frameworks
-  - Fast Globally (Edge Network)
-  - Automatic CI/CD (Git Integration)
-  - Functions (Serverless, Edge)
-  - Starter Database (KV, Postgres)
-  - Web Analytics
-- Styling: Tailwind CSS
-- Analytics: Vercel Analytics
-- Frontend Library: React
-
-# Implementation
-
-## Dependencies
-
-```bash
-npx create-next-app@latest portfolio
-npm install -D prettier prettier-plugin-tailwindcss prettier-plugin-organize-imports
-npm install @ducanh2912/next-pwa
-npm install @formatjs/intl-localematcher negotiator server-only
-npm install -D @types/negotiator
-npm install @vercel/analytics
+```sh
+npm create astro@latest -- --template minimal
 ```
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+
+## 🚀 Project Structure
+
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+/
+├── public/
+├── src/
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
+
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
