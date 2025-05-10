@@ -7,6 +7,8 @@ import mdx from '@astrojs/mdx';
 
 import partytown from '@astrojs/partytown';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://hanl.in',
@@ -24,7 +26,18 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [mdx(), partytown()],
+  integrations: [
+    mdx(),
+    partytown(),
+    sitemap({
+      i18n: {
+        defaultLocale: 'en',
+        locales: {
+          tw: 'zh-TW',
+        },
+      },
+    }),
+  ],
   markdown: {
     syntaxHighlight: 'shiki',
     shikiConfig: {
