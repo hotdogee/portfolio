@@ -9,6 +9,8 @@ import partytown from '@astrojs/partytown';
 
 import sitemap from '@astrojs/sitemap';
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://hanl.in',
@@ -26,18 +28,14 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
 
-  integrations: [
-    mdx(),
-    partytown(),
-    sitemap({
-      i18n: {
-        defaultLocale: 'en',
-        locales: {
-          tw: 'zh-TW',
-        },
+  integrations: [mdx(), partytown(), sitemap({
+    i18n: {
+      defaultLocale: 'en',
+      locales: {
+        tw: 'zh-TW',
       },
-    }),
-  ],
+    },
+  }), react()],
   markdown: {
     syntaxHighlight: 'shiki',
     shikiConfig: {
