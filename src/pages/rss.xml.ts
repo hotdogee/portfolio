@@ -1,12 +1,13 @@
+import type { APIRoute } from 'astro';
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 
-export async function GET(context) {
+export const GET: APIRoute = async ({ site }) => {
   const posts = await getCollection('blog');
   return rss({
     title: 'Han Lin',
     description: 'Random thoughts and ideas',
-    site: context.site,
+    site: site as URL,
     items: posts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.pubDate,
@@ -15,4 +16,4 @@ export async function GET(context) {
     })),
     customData: `<language>en-us</language>`,
   });
-}
+};
