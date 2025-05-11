@@ -1,8 +1,13 @@
 ---
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { defaultLocale } from '@/i18n'
+const { lang } = Astro.params
+const currentLocale = lang ?? defaultLocale
 ---
+
 <div class="nav-links">
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/blog">Blog</a>
-  <a href="/tags/">Tags</a>
+  <a href={getRelativeLocaleUrl(currentLocale, '/')}>Home</a>
+  <a href={getRelativeLocaleUrl(currentLocale, '/about')}>About</a>
+  <a href={getRelativeLocaleUrl(currentLocale, '/blog')}>Blog</a>
+  <a href={getRelativeLocaleUrl(currentLocale, '/tags/')}>Tags</a>
 </div>

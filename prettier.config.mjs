@@ -3,14 +3,14 @@
 const config = {
   semi: false,
   singleQuote: true,
-  printWidth: 90,
-  trailingComma: "es5",
+  printWidth: 100,
+  trailingComma: 'es5',
   organizeImportsSkipDestructiveCodeActions: true,
   plugins: [
-    "prettier-plugin-astro",
-    "prettier-plugin-organize-imports",
-    "prettier-plugin-tailwindcss", // MUST come last
+    'prettier-plugin-astro',
+    'prettier-plugin-organize-imports',
+    'prettier-plugin-tailwindcss', // MUST come last
   ],
-};
+}
 
-export default config;
+export default config

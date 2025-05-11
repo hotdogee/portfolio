@@ -5,24 +5,22 @@ import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'astro/config'
+import { defaultLocale, locales } from './src/i18n'
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://hanl.in',
-
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'tw'],
+    defaultLocale: defaultLocale,
+    locales: [...locales],
     routing: 'manual',
     fallback: {
-      tw: 'en',
+      tw: defaultLocale,
     },
   },
-
   vite: {
     plugins: [tailwindcss()],
   },
-
   integrations: [
     mdx(),
     partytown(),

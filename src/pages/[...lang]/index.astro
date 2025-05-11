@@ -1,0 +1,11 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+export { getLocalizedStaticPaths as getStaticPaths } from '@/i18n'
+const pageTitle = 'Home Page'
+const { lang } = Astro.params
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <h2>Han Lin's Portfolio</h2>
+  <h2>Language: {lang}</h2>
+</BaseLayout>
