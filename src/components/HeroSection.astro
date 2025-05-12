@@ -1,0 +1,134 @@
+---
+import { Button } from '@components/ui/button'
+import { defaultLocale } from '@i18n/utils'
+
+// Get current locale
+const { lang } = Astro.params
+const currentLocale = lang ?? defaultLocale
+
+// Define translations
+const translations = {
+  en: {
+    'home.hero.title':
+      'Engineering Novel Solutions at the Intersection of AI, Bioinformatics, and Sustainable Energy',
+    'home.hero.description':
+      'With a unique background spanning artificial intelligence, bioinformatics, and electrical engineering, I develop innovative technologies that bridge hardware and software to solve complex scientific and industrial challenges. My work ranges from designing high-efficiency geothermal systems to creating cutting-edge deep learning models for protein analysis, all driven by a commitment to advancing human knowledge through technological innovation.',
+    'button.contact': "Let's Innovate Together",
+    'button.download': 'Download CV',
+  },
+  tw: {
+    'home.hero.title': '跨界整合 AI、生物資訊與永續能源，擘劃創新解決方案',
+    'home.hero.description':
+      '憑藉在人工智慧、生物資訊學及電機工程領域的獨特多重背景，我致力於開發尖端技術，整合軟硬體以應對複雜的科學及工業挑戰。我的專案範疇廣泛，從設計高效率地熱發電系統，到建構用於蛋白質分析的頂尖深度學習模型，這一切的驅動力，皆源於我致力透過技術創新，拓展人類知識的疆界。',
+    'button.contact': '攜手創新',
+    'button.download': '下載簡歷',
+  },
+}
+
+// Translation helper
+const t = (key: string) => {
+  const locale = currentLocale as keyof typeof translations
+  return translations[locale]?.[key as keyof (typeof translations)[typeof locale]] || key
+}
+---
+
+<section class="py-12 md:py-24">
+  <div class="container px-4 md:px-6">
+    <div class="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+      <div class="flex flex-col justify-center space-y-4">
+        <div class="hero-content" data-astro-transition="fade">
+          <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
+            {t('home.hero.title')}
+          </h1>
+          <p class="text-muted-foreground mt-4 max-w-[700px] md:text-xl">
+            {t('home.hero.description')}
+          </p>
+          <div class="mt-6 flex flex-col gap-3 sm:flex-row">
+            <a
+              href={`/${lang}/contact`}
+              class="ring-offset-background focus-visible:ring-ring bg-primary text-primary-foreground hover:bg-primary/90 inline-flex h-11 items-center justify-center rounded-md px-8 py-6 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+            >
+              {t('button.contact')}
+            </a>
+            <a
+              href="/cv.pdf"
+              target="_blank"
+              class="ring-offset-background focus-visible:ring-ring border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-11 items-center justify-center rounded-md border px-8 py-6 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+            >
+              {t('button.download')}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="hero-image-container flex items-center justify-center"
+        data-astro-transition="scale"
+      >
+        <div
+          class="relative h-[300px] w-full overflow-hidden rounded-lg bg-gradient-to-br from-green-500/20 via-blue-500/20 to-amber-500/20 md:h-[400px] dark:from-green-500/10 dark:via-blue-500/10 dark:to-amber-500/10"
+        >
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center">
+              <div class="flex justify-center">
+                <div
+                  class="pulse-animation relative h-24 w-24 rounded-full bg-gradient-to-r from-green-500 to-blue-500"
+                >
+                </div>
+              </div>
+              <p class="text-muted-foreground mt-4 text-sm">
+                AI • Bioinformatics • Sustainable Energy
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+  }
+
+  .hero-image-container {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInScale 0.5s forwards 0.2s;
+  }
+
+  .pulse-animation {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInScale {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+    }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
+    }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+    }
+  }
+</style>
