@@ -1,5 +1,5 @@
-import { LOCALE_COOKIE, defaultLocale, locales } from '@/i18n'
 import { match } from '@formatjs/intl-localematcher'
+import { LOCALE_COOKIE, defaultLocale, locales } from '@i18n/utils'
 import { defineMiddleware } from 'astro:middleware'
 import Negotiator from 'negotiator'
 
@@ -78,9 +78,7 @@ export const ssrMiddleware = defineMiddleware(async (context, next) => {
   } else {
     // broken cookie, redirect to default locale
     console.log(`redirect 4 to /${defaultLocale}${url.pathname}`)
-    return redirect(
-      newUrl(`/${defaultLocale}${url.pathname === '/' ? '' : url.pathname}`)
-    )
+    return redirect(newUrl(`/${defaultLocale}${url.pathname === '/' ? '' : url.pathname}`))
   }
 })
 
