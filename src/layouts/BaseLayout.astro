@@ -3,11 +3,16 @@ import { ClientRouter } from 'astro:transitions'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import '../styles/global.css'
+import { useTranslations, type Language } from '@i18n/utils'
+
 export interface Props {
-  pageTitle: string
+  pageTitle?: string
+  description?: string
 }
+
 const { lang } = Astro.params
-const { pageTitle } = Astro.props
+const t = useTranslations(lang as Language)
+const { pageTitle = t('site.title'), description = t('site.description') } = Astro.props
 ---
 
 <html lang={lang || 'en'} transition:name="root" transition:animate="none">
@@ -18,17 +23,23 @@ const { pageTitle } = Astro.props
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Color+Emoji&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
     <ClientRouter />
   </head>
   <body>
-    <Header />
-    <main transition:animate="fade">
-      <h1>{pageTitle}</h1>
-      <slot />
+    <main class="flex min-h-screen flex-col">
+      <Header />
+      <div class="container mx-auto flex-grow px-4 py-8">
+        <slot />
+      </div>
       <Footer />
     </main>
-    <script>
-      import '../scripts/menu.js'
-    </script>
   </body>
 </html>
