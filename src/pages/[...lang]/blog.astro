@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
-export { getLocalizedStaticPaths as getStaticPaths } from '@/i18n'
+export { getLocalizedStaticPaths as getStaticPaths } from '@i18n/utils'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import BlogPost from '@components/BlogPost.astro'
 
@@ -10,14 +10,9 @@ const allPosts = await getCollection('blog')
 
 <BaseLayout pageTitle={pageTitle}>
   <p>
-    Welcome to Han Lin's blog! Here, we share our thoughts and experiences about various
-    topics.
+    Welcome to Han Lin's blog! Here, we share our thoughts and experiences about various topics.
   </p>
   <ul>
-    {
-      allPosts.map((post: any) => (
-        <BlogPost url={`/posts/${post.id}/`} title={post.data.title} />
-      ))
-    }
+    {allPosts.map((post: any) => <BlogPost url={`/posts/${post.id}/`} title={post.data.title} />)}
   </ul>
 </BaseLayout>

@@ -1,11 +1,13 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro'
-export { getLocalizedStaticPaths as getStaticPaths } from '@/i18n'
-const pageTitle = 'Home Page'
+import HeroSection from '@components/HeroSection.astro'
+import FeaturedProjects from '@components/FeaturedProjects.astro'
+export { getLocalizedStaticPaths as getStaticPaths } from '@i18n/utils'
+
 const { lang } = Astro.params
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <h2>Han Lin's Portfolio</h2>
-  <h2>Language: {lang}</h2>
+<BaseLayout>
+  <HeroSection />
+  <FeaturedProjects />
 </BaseLayout>

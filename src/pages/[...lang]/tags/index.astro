@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
-export { getLocalizedStaticPaths as getStaticPaths } from '@/i18n'
+export { getLocalizedStaticPaths as getStaticPaths } from '@i18n/utils'
 import BaseLayout from '@layouts/BaseLayout.astro'
 const allPosts = await getCollection('blog')
 const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
