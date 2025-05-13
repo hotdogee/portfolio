@@ -3,8 +3,8 @@ import { Link } from '@components/ui/link'
 import { Button } from '@/components/ui/button'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { Menu, X } from 'lucide-react'
-import ThemeIcon from './ThemeIcon.astro'
-import LocaleSelect from './LocaleSelect.astro'
+import ThemeToggle from './ThemeToggle.astro'
+import LanguageSwitcher from './LanguageSwitcher.astro'
 import { useTranslations, defaultLocale, type Language } from '@i18n/utils'
 const { lang } = Astro.params
 const currentLocale = lang ?? defaultLocale
@@ -46,10 +46,9 @@ const navLinks = [
         ))
       }
     </nav>
-
     <div class="flex items-center gap-2">
-      <LocaleSelect />
-      <ThemeIcon />
+      <LanguageSwitcher />
+      <ThemeToggle />
       <Link
         href={getRelativeLocaleUrl(currentLocale, '/contact')}
         className="hidden md:inline-flex"
