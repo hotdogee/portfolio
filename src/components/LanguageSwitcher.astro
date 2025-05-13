@@ -1,0 +1,170 @@
+---
+import { LOCALE_COOKIE, defaultLocale, locales } from '@i18n/utils'
+
+function getLocaleFromUrl(url: URL) {
+  const [, locale] = url.pathname.split('/')
+  if ((locales as readonly string[]).includes(locale)) return locale as (typeof locales)[number]
+  return defaultLocale
+}
+
+const locale = getLocaleFromUrl(Astro.url) as string
+---
+
+<div class="dropdown relative">
+  <button
+    id="language-toggle"
+    aria-label="Toggle language"
+    aria-haspopup="true"
+    class="hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring inline-flex h-10 w-10 items-center justify-center rounded-md border text-sm font-medium transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="h-[1.2rem] w-[1.2rem]"
+    >
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="2" y1="12" x2="22" y2="12"></line>
+      <path
+        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+      ></path>
+    </svg>
+    <span class="sr-only">Toggle language</span>
+  </button>
+  <div
+    id="dropdown-content"
+    class="dropdown-content bg-background/95 absolute right-0 mt-2 hidden w-36 rounded-md border p-1 shadow-lg backdrop-blur-sm"
+  >
+    <button
+      type="button"
+      data-lang="en"
+      class={`flex w-full items-center rounded-sm px-3 py-2 text-sm transition-colors ${locale === 'en' ? 'bg-accent text-accent-foreground' : 'hover:bg-accent/50'}`}
+    >
+      <span class="mr-2">🇺🇸</span> English
+    </button>
+    <button
+      type="button"
+      data-lang="tw"
+      class={`flex w-full items-center rounded-sm px-3 py-2 text-sm transition-colors ${locale === 'tw' ? 'bg-accent text-accent-foreground' : 'hover:bg-accent/50'}`}
+    >
+      <span class="mr-2">🇹🇼</span> 繁體中文
+    </button>
+  </div>
+</div>
+
+<script define:vars={{ locale, defaultLocale, LOCALE_COOKIE }}>
+  document.addEventListener('astro:page-load', () => {
+    // Toggle dropdown visibility
+    const toggleButton = document.getElementById('language-toggle')
+    const dropdownContent = document.getElementById('dropdown-content')
+
+    if (toggleButton && dropdownContent) {
+      // Function to open dropdown
+      const openDropdown = () => {
+        dropdownContent.classList.remove('hidden')
+        // Set focus to the first language button when dropdown opens
+        setTimeout(() => {
+          const firstButton = dropdownContent.querySelector('button')
+          if (firstButton) firstButton.focus()
+        }, 10)
+      }
+
+      // Function to close dropdown
+      const closeDropdown = () => {
+        dropdownContent.classList.add('hidden')
+        // Return focus to toggle button
+        toggleButton.focus()
+      }
+
+      // Toggle dropdown when clicking the button
+      toggleButton.addEventListener('click', (e) => {
+        e.stopPropagation()
+        if (dropdownContent.classList.contains('hidden')) {
+          openDropdown()
+        } else {
+          closeDropdown()
+        }
+      })
+
+      // Close dropdown when clicking elsewhere
+      document.addEventListener('click', () => {
+        if (!dropdownContent.classList.contains('hidden')) {
+          closeDropdown()
+        }
+      })
+
+      // Prevent dropdown from closing when clicking inside it
+      dropdownContent.addEventListener('click', (e) => {
+        e.stopPropagation()
+      })
+
+      // Close dropdown with Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !dropdownContent.classList.contains('hidden')) {
+          closeDropdown()
+        }
+      })
+
+      // Handle language selection
+      const languageButtons = document.querySelectorAll('[data-lang]')
+      languageButtons.forEach((button) => {
+        button.addEventListener('click', (e) => {
+          const selectedLocale = e.currentTarget.dataset.lang
+          if (selectedLocale === locale) {
+            // If current language is selected, just close the dropdown
+            closeDropdown()
+            return
+          }
+
+          const pathnameWithoutLocale = window.location.pathname.replace(`/${locale}`, '')
+          const pathnameWithNewLocale =
+            selectedLocale === defaultLocale
+              ? pathnameWithoutLocale || '/'
+              : `/${selectedLocale}${pathnameWithoutLocale === '/' ? '' : pathnameWithoutLocale}`
+
+          document.cookie = `${LOCALE_COOKIE}=${selectedLocale};path=/;max-age=31536000;samesite=strict;`
+          window.location.pathname = pathnameWithNewLocale
+        })
+      })
+    }
+  })
+</script>
+
+<style>
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    z-index: 50;
+    min-width: 160px;
+    transform-origin: top right;
+    opacity: 0;
+    transform: scale(0.95);
+    transition:
+      opacity 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .dropdown-content:not(.hidden) {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Font for emoji flags */
+  button[data-lang] {
+    font-family: 'Noto Color Emoji', sans-serif;
+    transition: background-color 0.2s ease;
+  }
+
+  button[data-lang]:hover {
+    background-color: var(--accent);
+  }
+</style>
