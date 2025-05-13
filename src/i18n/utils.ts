@@ -93,9 +93,17 @@ export const ui = {
 
 export type Language = 'en' | 'tw'
 
-export function useTranslations(lang: Language) {
+export const getCurrentLocale = (locale: string | undefined) => {
+  if (locale !== undefined && locales.includes(locale as any)) {
+    return locale as Language
+  }
+  return defaultLocale
+}
+
+export function useTranslations(locale: string | undefined) {
+  const language = getCurrentLocale(locale)
   return function t(key: keyof (typeof ui)[typeof defaultLocale]) {
-    return ui[lang][key] || ui[defaultLocale][key]
+    return ui[language][key] || ui[defaultLocale][key]
   }
 }
 

@@ -93,6 +93,10 @@ export const onRequest = defineMiddleware(async (context, next) => {
     // skip devtools
     return new Response(null, { status: 204 })
   }
+  if (url.pathname.startsWith('/favicon')) {
+    // skip host-meta
+    return next()
+  }
   // --- Priority 1: URL locale ---
   // Check if the URL path starts with a supported locale prefix.
   let locale = url.pathname.split('/')[1]
