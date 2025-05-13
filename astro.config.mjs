@@ -4,7 +4,7 @@ import partytown from '@astrojs/partytown'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwindcss from '@tailwindcss/vite'
-import { defineConfig } from 'astro/config'
+import { defineConfig, fontProviders } from 'astro/config'
 import { defaultLocale, locales } from './src/i18n/utils'
 
 // https://astro.build/config
@@ -23,6 +23,16 @@ export default defineConfig({
   },
   vite: {
     plugins: [tailwindcss()],
+  },
+  experimental: {
+    fonts: [
+      {
+        provider: fontProviders.google(),
+        name: 'Inter',
+        weights: ['100 900'],
+        cssVariable: '--font-inter',
+      },
+    ],
   },
   integrations: [
     mdx(),
