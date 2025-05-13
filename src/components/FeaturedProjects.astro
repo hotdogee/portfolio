@@ -8,51 +8,12 @@ import {
   CardHeader,
   CardTitle,
 } from '@components/ui/card'
-import { defaultLocale } from '@i18n/utils'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { ArrowRight, Dna, Cpu, CuboidIcon } from 'lucide-react'
-
-// Get current locale
+import { useTranslations, defaultLocale, type Language } from '@i18n/utils'
 const { lang } = Astro.params
 const currentLocale = lang ?? defaultLocale
-
-// Define translations
-const translations = {
-  en: {
-    'home.featured.title': 'Featured Projects',
-    'home.featured.annotate.title': 'ANNotate: Revolutionizing Protein Analysis',
-    'home.featured.annotate.description':
-      'ANNotate leverages deep learning to predict protein functions 100x faster than traditional methods, making complex proteomic analysis accessible to all researchers through an intuitive web interface. The system uses a hierarchical neural network architecture to identify patterns in protein sequences with unprecedented speed and accuracy.',
-    'home.featured.scada.title': 'SCADA/IoT: Transforming Geothermal Power',
-    'home.featured.scada.description':
-      "A modern, cost-effective monitoring system that helped increase power output from 70kW to 180kW in Taiwan's pioneering geothermal project. This system demonstrates how open-source technology can outperform expensive proprietary solutions while providing deeper insights for research and optimization.",
-    'home.featured.origami.title': 'Origami Moving Cubes: Where Art Meets Engineering',
-    'home.featured.origami.description':
-      'An interactive web application for designing mesmerizing optical illusions, featured by popular science communicator Steve Mould. This project showcases the beauty that emerges when creativity intersects with technical precision, making complex mathematical transformations accessible to everyone.',
-    'button.view': 'View Project',
-    'button.view.all': 'View All Projects',
-  },
-  tw: {
-    'home.featured.title': '精選專案',
-    'home.featured.annotate.title': 'ANNotate：革新蛋白質分析技術',
-    'home.featured.annotate.description':
-      'ANNotate 運用深度學習預測蛋白質功能，速度較傳統方法提升百倍，並透過易於操作的網頁介面，讓複雜的蛋白質體學分析對所有研究人員觸手可及。此系統採用階層式神經網路架構，能以前所未有的速度與精準度，辨識蛋白質序列中的特定模式。',
-    'home.featured.scada.title': 'SCADA/IoT：翻轉地熱發電效益',
-    'home.featured.scada.description':
-      '此套現代化且具成本效益的監控系統，成功助益台灣指標性的地熱專案，將發電功率自 70kW 大幅提升至 180kW。本系統充分證明，開源技術不僅能超越昂貴的專有解決方案，更能為學術研究及系統優化提供深刻洞見。',
-    'home.featured.origami.title': 'Origami Moving Cubes：當藝術巧遇工程',
-    'home.featured.origami.description':
-      '這是一款設計令人目眩神迷視覺幻象的互動式網頁應用程式，曾獲知名科普頻道主 Steve Mould 專題報導。此專案完美展現了創意與精湛技術交織而成的美感，使大眾皆能輕易領略複雜數學變換的奧妙。',
-    'button.view': '查看專案',
-    'button.view.all': '查看所有專案',
-  },
-}
-
-// Translation helper
-const t = (key: string) => {
-  const locale = currentLocale as keyof typeof translations
-  return translations[locale]?.[key as keyof (typeof translations)[typeof locale]] || key
-}
+const t = useTranslations(lang as Language)
 ---
 
 <section class="py-12 md:py-24">

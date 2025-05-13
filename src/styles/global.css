@@ -172,11 +172,19 @@
   --ring: oklch(0.527 0.137 150.1);
 }
 
+/* These are things you want to be easily overridden. */
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+/* The components layer is a good place to put custom styles for any third-party components you're using */
+@layer components {
+  [data-slot='card-title'] {
+    @apply text-2xl;
   }
 }

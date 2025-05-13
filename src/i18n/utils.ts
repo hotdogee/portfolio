@@ -40,6 +40,8 @@ export const ui = {
     // Buttons
     'button.download': 'Download CV',
     'button.contact': "Let's Innovate Together",
+    'button.view': 'View Project',
+    'button.view.all': 'View All Projects',
 
     // Footer
     'footer.description':
@@ -66,7 +68,7 @@ export const ui = {
     'home.hero.title': '跨界整合 AI、生物資訊與永續能源，擘劃創新解決方案',
     'home.hero.description':
       '憑藉在人工智慧、生物資訊學及電機工程領域的獨特多重背景，我致力於開發尖端技術，整合軟硬體以應對複雜的科學及工業挑戰。我的專案範疇廣泛，從設計高效率地熱發電系統，到建構用於蛋白質分析的頂尖深度學習模型，這一切的驅動力，皆源於我致力透過技術創新，拓展人類知識的疆界。',
-    'home.featured.title': '代表專案',
+    'home.featured.title': '精選專案',
     'home.featured.annotate.title': 'ANNotate：革新蛋白質分析技術',
     'home.featured.annotate.description':
       'ANNotate 運用深度學習預測蛋白質功能，速度較傳統方法提升百倍，並透過易於操作的網頁介面，讓複雜的蛋白質體學分析對所有研究人員觸手可及。此系統採用階層式神經網路架構，能以前所未有的速度與精準度，辨識蛋白質序列中的特定模式。',
@@ -80,6 +82,8 @@ export const ui = {
     // Buttons
     'button.download': '下載履歷',
     'button.contact': '攜手共創價值',
+    'button.view': '查看專案',
+    'button.view.all': '查看所有專案',
 
     // Footer
     'footer.description': '跨界整合 AI、生物資訊與永續能源，擘劃創新解決方案。',
