@@ -18,6 +18,9 @@ export default defineConfig({
       tw: defaultLocale,
     },
   },
+  prefetch: {
+    prefetchAll: false,
+  },
   vite: {
     plugins: [tailwindcss()],
   },

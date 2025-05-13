@@ -1,0 +1,35 @@
+@theme inline {
+  --color-primary-50: 'oklch(98.3% 0.015 171.1)';
+  --color-primary-100: 'oklch(96.4% 0.039 165.7)';
+  --color-primary-200: 'oklch(92.7% 0.073 162.9)';
+  --color-primary-300: 'oklch(87.5% 0.122 161.8)';
+  --color-primary-400: 'oklch(80.6% 0.156 160.4)';
+  --color-primary-500: 'oklch(69.6% 0.149 162.5)';
+  --color-primary-600: 'oklch(60.3% 0.126 163.7)';
+  --color-primary-700: 'oklch(51% 0.102 164.7)';
+  --color-primary-800: 'oklch(43.7% 0.084 165.1)';
+  --color-primary-900: 'oklch(38.4% 0.07 166.6)';
+  --color-primary-950: 'oklch(26.4% 0.046 169.1)';
+  --color-secondary-50: 'oklch(97% 0.014 254.6)';
+  --color-secondary-100: 'oklch(93.2% 0.032 255.6)';
+  --color-secondary-200: 'oklch(88.2% 0.057 254.1)';
+  --color-secondary-300: 'oklch(80.9% 0.096 251.8)';
+  --color-secondary-400: 'oklch(71.4% 0.143 254.6)';
+  --color-secondary-500: 'oklch(62.3% 0.188 259.8)';
+  --color-secondary-600: 'oklch(54.7% 0.125 254.6)';
+  --color-secondary-700: 'oklch(48.8% 0.217 264.4)';
+  --color-secondary-800: 'oklch(42.4% 0.181 265.6)';
+  --color-secondary-900: 'oklch(37.9% 0.138 265.5)';
+  --color-secondary-950: 'oklch(28.2% 0.087 267.9)';
+  --color-accent-50: 'oklch(98.6% 0.018 100.1)';
+  --color-accent-100: 'oklch(97.1% 0.036 96.7)';
+  --color-accent-200: 'oklch(94.2% 0.072 97.2)';
+  --color-accent-300: 'oklch(90.7% 0.108 97.2)';
+  --color-accent-400: 'oklch(86% 0.142 95.7)';
+  --color-accent-500: 'oklch(76.7% 0.139 91.1)';
+  --color-accent-600: 'oklch(67.6% 0.126 88.4)';
+  --color-accent-700: 'oklch(57% 0.105 85.7)';
+  --color-accent-800: 'oklch(48.6% 0.086 85.6)';
+  --color-accent-900: 'oklch(42.5% 0.071 85.4)';
+  --color-accent-950: 'oklch(29.3% 0.047 84.7)';
+}
