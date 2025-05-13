@@ -180,6 +180,9 @@
   body {
     @apply bg-background text-foreground transition-colors duration-300;
   }
+  html {
+    scrollbar-gutter: stable both-edges;
+  }
 }
 
 /* The components layer is a good place to put custom styles for any third-party components you're using */
