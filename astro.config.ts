@@ -4,6 +4,7 @@ import partytown from '@astrojs/partytown'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwindcss from '@tailwindcss/vite'
+import icon from 'astro-icon'
 import { defineConfig, fontProviders } from 'astro/config'
 import { defaultLocale, locales } from './src/i18n/utils'
 
@@ -46,6 +47,7 @@ export default defineConfig({
       },
     }),
     react(),
+    icon(),
   ],
   markdown: {
     syntaxHighlight: 'shiki',
