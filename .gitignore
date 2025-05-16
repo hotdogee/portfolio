@@ -23,5 +23,6 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+private-docs/
 portfolio-next/
 src/pages/**/*.tsx
