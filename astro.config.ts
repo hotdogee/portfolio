@@ -5,12 +5,14 @@ import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwindcss from '@tailwindcss/vite'
 import icon from 'astro-icon'
+import pagefind from 'astro-pagefind'
 import { defineConfig, fontProviders } from 'astro/config'
 import { defaultLocale, locales } from './src/i18n/utils'
 
 // https://astro.build/config
 export default defineConfig({
   site: 'https://hanl.in',
+  trailingSlash: 'never',
   i18n: {
     defaultLocale: defaultLocale,
     locales: [...locales],
@@ -48,6 +50,11 @@ export default defineConfig({
     }),
     react(),
     icon(),
+    pagefind({
+      indexConfig: {
+        forceLanguage: 'zh-TW',
+      },
+    }),
   ],
   markdown: {
     syntaxHighlight: 'shiki',
