@@ -67,6 +67,9 @@ import { Sun, Moon } from 'lucide-react'
   // this makes sure there is no flash of unstyled content (FOUC) on page switch
   document.addEventListener('astro:before-swap', (event) => {
     applyTheme(getCurrentTheme(), event.newDocument)
+    event.newDocument
+      .getElementById('themeToggleAstro')
+      ?.classList.remove('bg-accent', 'dark:bg-accent')
   })
   // Initialize theme on page load
   applyTheme(getCurrentTheme())
@@ -77,6 +80,8 @@ import { Sun, Moon } from 'lucide-react'
       applyTheme(preferredTheme)
     }
   })
+  // document.getElementById('themeToggleAstro')?.classList.remove('bg-accent', 'dark:bg-accent')
+  // only astro:page-load event is fired when the page is loaded
   document.addEventListener('astro:page-load', () => {
     const themeToggleBtn = document.getElementById('themeToggleAstro')
     if (themeToggleBtn) {
@@ -94,7 +99,13 @@ import { Sun, Moon } from 'lucide-react'
         const y = event.clientY
         const endRadius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y))
         const transition = document.startViewTransition(async () => {
+          // prevents flash of unstyled content (FOUC)
+          // during view transition, the hover effect is removed
+          themeToggleBtn.style.backgroundColor = 'var(--accent)'
           toggleTheme()
+        })
+        transition.finished.then(() => {
+          themeToggleBtn.style.backgroundColor = ''
         })
         transition.ready.then(() => {
           const clipPath = [
@@ -122,6 +133,14 @@ import { Sun, Moon } from 'lucide-react'
         })
       }
       themeToggleBtn.addEventListener('click', handleToggleClick)
+      // if (themeToggleBtn) {
+      //   themeToggleBtn.addEventListener('mouseover', () => {
+      //     themeToggleBtn.classList.add('bg-accent', 'dark:bg-accent')
+      //   })
+      //   themeToggleBtn.addEventListener('mouseout', () => {
+      //     themeToggleBtn.classList.remove('bg-accent', 'dark:bg-accent')
+      //   })
+      // }
     } else {
       console.error("Theme toggle button with id 'themeToggleAstro' not found.")
     }
