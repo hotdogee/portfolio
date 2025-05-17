@@ -1,34 +1,46 @@
 ---
+import { Image } from 'astro:assets'
+import profile from '@assets/profile.jpg'
 import { Link } from '@components/ui/link'
-import { Button } from '@/components/ui/button'
+import { Button } from '@components/ui/button'
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Search } from 'lucide-react'
 import ThemeToggle from './ThemeToggle.astro'
 import LanguageSwitcher from './LanguageSwitcher.astro'
-import { useTranslations, defaultLocale, type Language } from '@i18n/utils'
-const { lang } = Astro.params
-const currentLocale = lang ?? defaultLocale
-const t = useTranslations(lang as Language)
+import { useTranslations, defaultLocale } from '@i18n/utils'
+const { locale } = Astro.params
+const currentLocale = locale ?? defaultLocale
+const t = useTranslations(locale)
 
 // Navigation links
 const navLinks = [
-  { href: '/', label: t('nav.home') },
+  // { href: undefined, label: t('nav.home') },
   { href: '/about', label: t('nav.about') },
   { href: '/projects', label: t('nav.projects') },
   { href: '/experience', label: t('nav.experience') },
   { href: '/skills', label: t('nav.skills') },
   { href: '/education', label: t('nav.education') },
-  { href: '/blog', label: t('nav.blog') },
+  { href: '/articles', label: t('nav.blog') },
   { href: '/contact', label: t('nav.contact') },
 ]
+interface Props {
+  showCta?: boolean
+}
+const { showCta = false } = Astro.props as Props
 ---
 
 <header
   class="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur"
 >
   <div class="container flex h-16 items-center justify-between">
-    <div class="flex items-center gap-2">
-      <a href={getRelativeLocaleUrl(currentLocale, '/')} class="text-xl font-bold tracking-tight">
+    <div class="flex items-center gap-2 transition-transform hover:scale-110">
+      <a href={getRelativeLocaleUrl(currentLocale, undefined)}>
+        <Image src={profile} class="size-10 rounded-full" alt="Profile Picture" />
+      </a>
+      <a
+        href={getRelativeLocaleUrl(currentLocale, undefined)}
+        class="text-xl font-bold tracking-tight"
+      >
         {t('name')}
       </a>
     </div>
@@ -47,14 +59,27 @@ const navLinks = [
       }
     </nav>
     <div class="flex items-center gap-2">
+      <Link
+        href={getRelativeLocaleUrl(currentLocale, '/search')}
+        variant="outline"
+        size="icon"
+        title="Search"
+      >
+        <Search />
+        <span class="sr-only">Search</span>
+      </Link>
       <LanguageSwitcher />
       <ThemeToggle />
-      <Link
-        href={getRelativeLocaleUrl(currentLocale, '/contact')}
-        className="hidden md:inline-flex"
-      >
-        {t('button.contact')}
-      </Link>
+      {
+        showCta && (
+          <Link
+            href={getRelativeLocaleUrl(currentLocale, '/contact')}
+            className="hidden md:inline-flex"
+          >
+            {t('button.contact')}
+          </Link>
+        )
+      }
       <Button variant="outline" size="icon" id="menu-toggle" className="md:hidden">
         <X className="menu-icon hidden h-5 w-5" />
         <Menu className="close-icon h-5 w-5" />
@@ -72,31 +97,29 @@ const navLinks = [
           </a>
         ))
       }
-      <a
-        href={getRelativeLocaleUrl(currentLocale, '/contact')}
-        class="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex h-10 w-full items-center justify-center rounded-md px-4 text-sm font-medium transition-colors"
-      >
-        {t('button.contact')}
-      </a>
+      {
+        showCta && (
+          <Link href={getRelativeLocaleUrl(currentLocale, '/contact')} className="w-full">
+            {t('button.contact')}
+          </Link>
+        )
+      }
     </div>
   </div>
 </header>
 
 <script>
-  console.log('Header script loaded')
   document.addEventListener('astro:page-load', () => {
     const menuToggle = document.getElementById('menu-toggle')
     const mobileMenu = document.getElementById('mobile-menu')
     const menuIcon = document.querySelector('.menu-icon')
     const closeIcon = document.querySelector('.close-icon')
-    console.log(menuToggle, mobileMenu, menuIcon, closeIcon)
     if (menuToggle && mobileMenu && menuIcon && closeIcon) {
       menuToggle.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden')
         menuIcon.classList.toggle('hidden')
         closeIcon.classList.toggle('hidden')
       })
-
       // Also close menu when clicking on mobile navigation links
       const mobileLinks = mobileMenu.querySelectorAll('a')
       mobileLinks.forEach((link) => {
