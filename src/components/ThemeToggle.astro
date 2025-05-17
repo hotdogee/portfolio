@@ -1,33 +1,35 @@
 ---
-// Import the Button component from the portfolio-next project.
-// The original theme-toggle.tsx used "@components/ui/button", which in its Next.js context,
-// resolved to "portfolio-next/components/ui/button".
-// In this Astro component, we use a relative path to access it.
-import { Button } from '../../portfolio-next/components/ui/button'
+import { Button } from '@components/ui/button'
 import { Sun, Moon } from 'lucide-react'
 ---
 
-<Button variant="outline" size="icon" id="themeToggleAstro" title="Toggle theme" client:load>
-  <Sun
-    className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90"
-  />
+<Button variant="outline" size="icon" id="themeToggleAstro" title="Toggle theme">
+  <Sun className="scale-100 rotate-0 transition-all duration-1000 dark:scale-0 dark:rotate-90" />
   <Moon
-    className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0"
+    className="absolute scale-0 rotate-90 transition-all duration-1000 dark:scale-100 dark:rotate-0"
   />
   <span class="sr-only">Toggle theme</span>
 </Button>
 
 <script is:inline>
-  const applyTheme = (theme) => {
-    if (theme === 'light') {
-      document.documentElement.classList.remove('dark')
-    } else {
-      document.documentElement.classList.add('dark')
-    }
-  }
+  //  is:inline makes sure there is no flash of unstyled content (FOUC) on refresh
   const storeTheme = (theme) => {
     if (typeof localStorage !== 'undefined') {
       localStorage.setItem('theme', theme)
+    }
+  }
+  const toggleTheme = () => {
+    const isDark = document.documentElement.classList.toggle('dark')
+    storeTheme(isDark ? 'dark' : 'light')
+  }
+  const isDark = () => {
+    return document.documentElement.classList.contains('dark')
+  }
+  const applyTheme = (theme, doc = document) => {
+    if (theme === 'light') {
+      doc.documentElement.classList.remove('dark')
+    } else {
+      doc.documentElement.classList.add('dark')
     }
   }
   const getCurrentTheme = () => {
@@ -52,25 +54,63 @@ import { Sun, Moon } from 'lucide-react'
 
     return preferredTheme
   }
-  document.addEventListener('astro:after-swap', () => {
-    // Apply the theme to the document
-    applyTheme(getCurrentTheme())
+  // document.addEventListener('astro:after-swap', () => {
+  //   // Apply the theme to the document
+  //   applyTheme(getCurrentTheme())
+  // })
+  // this makes sure there is no flash of unstyled content (FOUC) on page switch
+  document.addEventListener('astro:before-swap', (event) => {
+    applyTheme(getCurrentTheme(), event.newDocument)
   })
   // Initialize theme on page load
-  const currentTheme = getCurrentTheme()
-  applyTheme(currentTheme)
-  // Also store the determined theme (especially if it came from prefers-color-scheme and wasn't in localStorage yet)
-  storeTheme(currentTheme)
+  applyTheme(getCurrentTheme())
+  // Listen for changes in system color scheme
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!('theme' in localStorage)) {
+      const preferredTheme = e.matches ? 'dark' : 'light'
+      applyTheme(preferredTheme)
+    }
+  })
   document.addEventListener('astro:page-load', () => {
     const themeToggleBtn = document.getElementById('themeToggleAstro')
     if (themeToggleBtn) {
       // Handle toggle click
-      const handleToggleClick = () => {
-        const element = document.documentElement
-        element.classList.toggle('dark')
-        const isDark = element.classList.contains('dark')
-        const newTheme = isDark ? 'dark' : 'light'
-        storeTheme(newTheme)
+      const handleToggleClick = (event) => {
+        const shouldAnimate =
+          'startViewTransition' in document &&
+          !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        if (!shouldAnimate) {
+          console.warn('View transitions are not supported in this browser.')
+          toggleTheme()
+          return
+        }
+        const x = event.clientX
+        const y = event.clientY
+        const endRadius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y))
+        const transition = document.startViewTransition(async () => {
+          toggleTheme()
+        })
+        transition.ready.then(() => {
+          const clipPath = [
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${endRadius}px at ${x}px ${y}px)`,
+          ]
+          document.documentElement.animate(
+            {
+              clipPath: isDark() ? [...clipPath].reverse() : clipPath,
+            },
+            {
+              duration: 1000,
+              easing: isDark() ? 'cubic-bezier(0.16, 1, 0.3, 1)' : 'cubic-bezier(0.7, 0, 0.84, 0)',
+              // easing: isDark()
+              //   ? 'cubic-bezier(0.22, 1, 0.36, 1)'
+              //   : 'cubic-bezier(0.64, 0, 0.78, 0)',
+              pseudoElement: isDark()
+                ? '::view-transition-old(root)'
+                : '::view-transition-new(root)',
+            }
+          )
+        })
       }
       themeToggleBtn.addEventListener('click', handleToggleClick)
     } else {
@@ -78,3 +118,23 @@ import { Sun, Moon } from 'lucide-react'
     }
   })
 </script>
+
+<style is:global>
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+  }
+  ::view-transition-old(root) {
+    z-index: 1;
+  }
+  ::view-transition-new(root) {
+    z-index: 9999;
+  }
+  .dark::view-transition-old(root) {
+    z-index: 9999;
+  }
+  .dark::view-transition-new(root) {
+    z-index: 1;
+  }
+</style>
