@@ -22,7 +22,7 @@ export default defineConfig({
     },
   },
   prefetch: {
-    prefetchAll: false,
+    prefetchAll: true,
   },
   vite: {
     plugins: [tailwindcss()],
