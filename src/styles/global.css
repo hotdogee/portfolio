@@ -60,6 +60,9 @@
 
 @theme {
   --animate-fade-in-up: fade-in-up 0.5s ease-in forwards;
+  --animate-fade-in-left: fade-in-left 0.5s ease-in 0.3s forwards;
+  --animate-fade-in-right: fade-in-right 0.5s ease-in 0.3s forwards;
+
   @keyframes fade-in-up {
     from {
       opacity: 0;
@@ -70,6 +73,37 @@
       transform: translateY(0);
     }
   }
+
+  @keyframes fade-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fade-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+@theme {
+  --ease-in-expo: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+  --ease-in-quint: cubic-bezier(0.64, 0, 0.78, 0);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
 }
 
 :root {
@@ -191,8 +225,14 @@
   * {
     @apply border-border outline-ring/50;
   }
+  /* body,
+  header,
+  footer,
+  [data-slot='card'] {
+    @apply bg-background text-foreground transition-colors duration-500;
+  } */
   body {
-    @apply bg-background text-foreground transition-colors duration-300;
+    @apply bg-background text-foreground;
   }
   html {
     scrollbar-gutter: stable both-edges;
@@ -201,7 +241,46 @@
 
 /* The components layer is a good place to put custom styles for any third-party components you're using */
 @layer components {
+  .prose h2 {
+    @apply mt-10 mb-6 border-b pb-2 text-3xl font-bold;
+  }
+  .prose h3 {
+    @apply mt-8 mb-4 text-2xl font-semibold;
+  }
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+  .prose ul {
+    @apply mb-4 list-disc space-y-1 pl-6;
+  }
+  .prose a {
+    @apply text-primary hover:underline;
+  }
+  .prose code {
+    @apply bg-muted rounded-md px-1.5 py-0.5 text-sm;
+  }
+  .prose pre > code {
+    @apply block overflow-x-auto p-4;
+  }
+}
+
+@layer utility {
   [data-slot='card-title'] {
-    @apply text-2xl;
+    @apply text-2xl leading-7;
+  }
+  [data-slot='card-header'] {
+    @apply gap-0;
+  }
+  [data-slot='input'] {
+    @apply focus-visible:ring-ring h-10 focus-visible:ring-2;
+  }
+  .pagefind-ui__button {
+    @apply focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-background hover:bg-accent hover:text-accent-foreground dark:bg-background/30 dark:border-input dark:hover:bg-accent inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-md border px-4 py-2 text-sm font-medium whitespace-nowrap shadow-xs transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 has-[>svg]:px-3 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4;
+  }
+  .pagefind-ui__search-input {
+    @apply file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input focus-visible:border-ring focus-visible:ring-ring aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive flex h-9 h-10 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:ring-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm;
+  }
+  mark {
+    @apply bg-accent;
   }
 }
