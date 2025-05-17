@@ -16,6 +16,7 @@
     "@astrojs/sitemap": "^3.3.1",
     "@fontsource/noto-color-emoji": "^5.2.7",
     "@formatjs/intl-localematcher": "^0.6.1",
+    "@radix-ui/react-avatar": "^1.1.9",
     "@radix-ui/react-slot": "^1.2.2",
     "@radix-ui/react-tabs": "^1.1.11",
     "@tailwindcss/vite": "^4.1.6",
