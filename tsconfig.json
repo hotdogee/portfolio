@@ -10,6 +10,7 @@
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
+      "@assets/*": ["src/assets/*"],
       "@i18n/*": ["src/i18n/*"]
     }
   }
