@@ -93,17 +93,20 @@ export const onRequest = defineMiddleware(async (context, next) => {
     // skip devtools
     return new Response(null, { status: 204 })
   }
-  if (url.pathname.startsWith('/favicon')) {
-    // skip host-meta
+
+  // Skip certain paths that don't need locale handling
+  const skipPaths = ['/favicon', '/robots.txt', '/rss.xml', '/.', '/_']
+  if (skipPaths.some((path) => url.pathname.startsWith(path))) {
     return next()
   }
+
   // --- Priority 1: URL locale ---
   // Check if the URL path starts with a supported locale prefix.
   let locale = url.pathname.split('/')[1]
   console.log(`locale=${locale}, url=${url.pathname}, defaultLocale=${defaultLocale}`)
   if (locale === defaultLocale) {
     // redirect /defaultLocale{} -> /{}, and set cookie
-    console.log(`redirect to /${url.pathname.replace(`/${locale}`, '')}`)
+    console.log(`redirect to ${url.pathname.replace(`/${locale}`, '')}`)
     return redirect(newUrl(url.pathname.replace(`/${locale}`, '')))
   }
   if (typeof locale === 'string' && (locales as readonly string[]).includes(locale)) {
