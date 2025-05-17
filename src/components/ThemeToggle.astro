@@ -3,7 +3,13 @@ import { Button } from '@components/ui/button'
 import { Sun, Moon } from 'lucide-react'
 ---
 
-<Button variant="outline" size="icon" id="themeToggleAstro" title="Toggle theme">
+<Button
+  variant="outline"
+  size="icon"
+  id="themeToggleAstro"
+  title="Toggle theme"
+  className="cursor-pointer"
+>
   <Sun className="scale-100 rotate-0 transition-all duration-1000 dark:scale-0 dark:rotate-90" />
   <Moon
     className="absolute scale-0 rotate-90 transition-all duration-1000 dark:scale-100 dark:rotate-0"
@@ -100,11 +106,14 @@ import { Sun, Moon } from 'lucide-react'
               clipPath: isDark() ? [...clipPath].reverse() : clipPath,
             },
             {
-              duration: 1000,
-              easing: isDark() ? 'cubic-bezier(0.16, 1, 0.3, 1)' : 'cubic-bezier(0.7, 0, 0.84, 0)',
+              duration: 400,
+              // easing: isDark() ? 'cubic-bezier(0.16, 1, 0.3, 1)' : 'cubic-bezier(0.7, 0, 0.84, 0)',
               // easing: isDark()
               //   ? 'cubic-bezier(0.22, 1, 0.36, 1)'
               //   : 'cubic-bezier(0.64, 0, 0.78, 0)',
+              easing: isDark()
+                ? 'cubic-bezier(0, 1.134, 1, 0.619)'
+                : 'cubic-bezier(0, 0.381, 1, -0.134)',
               pseudoElement: isDark()
                 ? '::view-transition-old(root)'
                 : '::view-transition-new(root)',
@@ -129,10 +138,10 @@ import { Sun, Moon } from 'lucide-react'
     z-index: 1;
   }
   ::view-transition-new(root) {
-    z-index: 9999;
+    z-index: 10;
   }
   .dark::view-transition-old(root) {
-    z-index: 9999;
+    z-index: 10;
   }
   .dark::view-transition-new(root) {
     z-index: 1;

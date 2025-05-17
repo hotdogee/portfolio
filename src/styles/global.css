@@ -104,6 +104,8 @@
   --ease-in-quint: cubic-bezier(0.64, 0, 0.78, 0);
   --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
+  --ease-out-in-custom: cubic-bezier(0, 0.381, 1, -0.134);
+  --ease-in-out-custom: cubic-bezier(0, 1.134, 1, 0.619);
 }
 
 :root {
