@@ -204,6 +204,10 @@ const { showCta = false } = Astro.props as Props
       animation-duration: 0.375s;
     }
 
+    ::view-transition-group(root) {
+      pointer-events: none;
+    }
+
     ::view-transition-group(nav-0) {
       z-index: 1;
     }
