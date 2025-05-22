@@ -10,10 +10,10 @@ import {
 } from '@components/ui/card'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { ArrowRight, Dna, Cpu, CuboidIcon } from 'lucide-react'
-import { useTranslations, defaultLocale, type Language } from '@i18n/utils'
-const { lang } = Astro.params
-const currentLocale = lang ?? defaultLocale
-const t = useTranslations(lang as Language)
+import { useTranslations, defaultLocale } from '@i18n/utils'
+const { locale } = Astro.params
+const currentLocale = locale ?? defaultLocale
+const t = useTranslations(locale)
 ---
 
 <section class="py-12 md:py-24">

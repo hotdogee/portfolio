@@ -1,8 +1,8 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { defaultLocale } from '@i18n/utils'
-const { lang } = Astro.params
-const currentLocale = lang ?? defaultLocale
+const { locale } = Astro.params
+const currentLocale = locale ?? defaultLocale
 ---
 
 <div class="nav-links">
