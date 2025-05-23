@@ -1,0 +1,114 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@components/ui/card'
+import { Badge } from '@components/ui/badge'
+import { Calendar1, CalendarSync, Clock, User } from 'lucide-react'
+import {
+  articleDates,
+  defaultLocale,
+  getLocaleSlugFromId,
+  localeDate,
+  localeReadingTime,
+} from '@i18n/utils'
+import CategoryBadge from '@components/blog/CategoryBadge.astro'
+
+interface Props {
+  article: CollectionEntry<'articles'>
+  index?: number
+}
+
+const { locale } = Astro.params
+const currentLocale = locale || defaultLocale
+const { article, index = 0 } = Astro.props as Props
+const { id, data, body } = article
+const { slug } = getLocaleSlugFromId(id)
+const articleUrl = getRelativeLocaleUrl(currentLocale, `/articles/${slug}`)
+const readingTime = localeReadingTime(String(body), currentLocale)
+const { title, excerpt, author, image, categories = [], tags = [], draft, changes } = data
+const { published, updated } = articleDates(changes)
+---
+
+<div
+  class="opacity-0"
+  style={`animation: fade-in-up 0.5s ease-in ${(0.1 * (index + 1)).toFixed(1)}s forwards;`}
+>
+  <Card
+    className="flex h-full flex-col overflow-hidden pt-0 transition-shadow duration-300 hover:shadow-md"
+  >
+    {
+      image && (
+        <a href={articleUrl}>
+          <div class="relative h-48 w-full overflow-hidden">
+            <img
+              src={image.url || '/placeholder.svg'}
+              alt={image.alt || 'Blog post image'}
+              class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+        </a>
+      )
+    }
+    <CardHeader>
+      <div class="mb-2 flex flex-wrap gap-2">
+        {categories.slice(0, 2).map((category) => <CategoryBadge category={category} />)}
+      </div>
+      <a href={articleUrl}>
+        <CardTitle className="line-clamp-2">{title}</CardTitle>
+        <CardDescription className="line-clamp-3" />
+      </a>
+    </CardHeader>
+    <a href={articleUrl}>
+      <CardContent className="flex-grow">
+        <p class="text-muted-foreground line-clamp-3">{excerpt}</p>
+      </CardContent>
+    </a>
+    <a href={articleUrl}>
+      <CardFooter className="text-muted-foreground text-sm">
+        <div class="flex flex-wrap items-center gap-4">
+          {
+            draft && (
+              <Badge variant="secondary" className="mr-1">
+                Draft
+              </Badge>
+            )
+          }
+          {
+            updated && (
+              <div class="flex items-center">
+                <CalendarSync className="mr-1 h-3 w-3" />
+                <span>{localeDate(updated, currentLocale)}</span>
+              </div>
+            )
+          }
+          {
+            published && !updated && (
+              <div class="flex items-center">
+                <Calendar1 className="mr-1 h-3 w-3" />
+                <span>{localeDate(published, currentLocale)}</span>
+              </div>
+            )
+          }
+          <div class="flex items-center">
+            <Clock className="mr-1 h-3 w-3" />
+            <span>{readingTime}</span>
+          </div>
+          <!-- <div class="flex items-center">
+            <User className="mr-1 h-3 w-3" />
+            <span>{author}</span>
+          </div> -->
+        </div>
+      </CardFooter>
+    </a>
+  </Card>
+</div>
+
+<style></style>
