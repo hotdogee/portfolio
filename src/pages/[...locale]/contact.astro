@@ -5,15 +5,11 @@ import {
   Linkedin,
   Mail,
   Download,
-  ExternalLink,
   FlaskConical,
   GraduationCap,
   FileText,
 } from 'lucide-react'
-import { Button } from '@components/ui/button'
-import { Input } from '@components/ui/input'
-import { Textarea } from '@components/ui/textarea'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/card'
 export { getLocalizedStaticPaths as getStaticPaths } from '@i18n/utils'
 import { defaultLocale } from '@i18n/utils'
 import { ContactForm } from '@components/ContactForm'
@@ -92,7 +88,7 @@ const t = (key: string) => {
         </p>
       </div>
 
-      <div class="mt-12 grid gap-8 md:grid-cols-2 lg:gap-12">
+      <div class="mt-12 grid gap-8 lg:grid-cols-2 xl:gap-12">
         <div class="animate-fade-in-left opacity-0">
           <ContactForm
             client:load

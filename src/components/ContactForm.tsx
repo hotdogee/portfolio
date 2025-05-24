@@ -156,7 +156,7 @@ export function ContactForm({ i18n = {} }: ContactFormProps) {
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <div className="grid grid-cols-1 gap-8 gap-y-4 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-8 gap-y-4 sm:max-lg:grid-cols-2 xl:grid-cols-2">
               <FormField
                 control={form.control}
                 name="name"
