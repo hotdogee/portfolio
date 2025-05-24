@@ -1,0 +1,200 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Download,
+  ExternalLink,
+  FlaskConical,
+  GraduationCap,
+  FileText,
+} from 'lucide-react'
+import { Button } from '@components/ui/button'
+import { Input } from '@components/ui/input'
+import { Textarea } from '@components/ui/textarea'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@components/ui/card'
+export { getLocalizedStaticPaths as getStaticPaths } from '@i18n/utils'
+import { defaultLocale } from '@i18n/utils'
+import { ContactForm } from '@components/ContactForm'
+
+const translations = {
+  en: {
+    title: "Let's Innovate Together",
+    description:
+      "Whether you're developing cutting-edge AI systems, advancing sustainable energy, or exploring new frontiers in bioinformatics, I'd be excited to discuss how my interdisciplinary expertise could help achieve your goals.",
+    formTitle: 'Get in Touch',
+    formDescription:
+      "Share a brief description of your project or opportunity below, and I'll respond within 24 hours. Alternatively, reach out directly via email.",
+    namePlaceholder: 'Name',
+    emailPlaceholder: 'Email',
+    messagePlaceholder: 'Message',
+    sendButtonText: 'Send Message',
+    sendingText: 'Sending...',
+    successMessage: "Message sent! I'll get back to you soon.",
+    errorMessage: 'There was an error sending your message. Please try again later.',
+    nameRequired: 'Name is required.',
+    emailInvalid: 'Please enter a valid email address.',
+    messageRequired: 'Message is required',
+    formSubject: 'Portfolio User Inquiry',
+    connectTitle: 'Connect Online',
+    resourcesTitle: 'Download Resources',
+    buttonDownload: 'Download CV',
+    buttonViewPublications: 'View Publications',
+  },
+  tw: {
+    title: '攜手共創價值',
+    description:
+      '無論貴單位正在開發尖端的 AI 系統、推動永續能源發展，或是在生醫資訊學領域探索未知疆界，我都非常樂意與您探討，如何運用我的跨領域專業知識，助您達成目標。',
+    formTitle: '與我聯繫',
+    formDescription:
+      '請在下方簡要描述您的專案或合作機會，我將於 24 小時內回覆。也歡迎直接透過電子郵件與我聯繫。',
+    namePlaceholder: '姓名',
+    emailPlaceholder: '電子郵件',
+    messagePlaceholder: '訊息',
+    sendButtonText: '發送訊息',
+    sendingText: '發送中...',
+    successMessage: '訊息已送出！我將盡快回覆您。',
+    errorMessage: '發送訊息時發生錯誤，請稍後再試。',
+    nameRequired: '姓名為必填欄位。',
+    emailInvalid: '請輸入有效的電子郵件地址。',
+    messageRequired: '訊息為必填欄位。',
+    formSubject: '作品集訊息',
+    connectTitle: '線上交流',
+    resourcesTitle: '相關下載',
+    buttonDownload: '下載履歷',
+    buttonViewPublications: '查看著作',
+  },
+}
+
+const { locale } = Astro.params
+const currentLocale = locale ?? defaultLocale
+const t = (key: string) => {
+  const locale = currentLocale as keyof typeof translations
+  return translations[locale]?.[key as keyof (typeof translations)[typeof locale]] || key
+}
+---
+
+<BaseLayout title={t('title')} description={t('description')}>
+  <section class="py-6 md:py-12">
+    <div class="container px-4 md:px-6">
+      <div class="mx-auto max-w-3xl text-center transition duration-500">
+        <h1
+          class="animate-fade-in-up mb-4 text-3xl font-bold tracking-tighter opacity-0 sm:text-4xl md:text-5xl"
+        >
+          {t('title')}
+        </h1>
+        <p
+          class="text-muted-foreground mb-8 opacity-0 md:text-xl"
+          style="animation: fade-in-up 0.5s ease-in 0.2s forwards;"
+        >
+          {t('description')}
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-8 md:grid-cols-2 lg:gap-12">
+        <div class="animate-fade-in-left opacity-0">
+          <ContactForm
+            client:load
+            i18n={{
+              title: t('formTitle'),
+              description: t('formDescription'),
+              namePlaceholder: t('namePlaceholder'),
+              emailPlaceholder: t('emailPlaceholder'),
+              messagePlaceholder: t('messagePlaceholder'),
+              sendButtonText: t('sendButtonText'),
+              sendingText: t('sendingText'),
+              successMessage:
+                "Your message has been sent successfully. We'll get back to you soon!",
+              errorMessage: 'There was an error sending your message. Please try again later.',
+              nameRequired: 'Name is required.',
+              emailInvalid: 'Please enter a valid email address.',
+              messageRequired: 'Message is required',
+              formSubject: 'Portfolio User Inquiry',
+            }}
+          />
+        </div>
+
+        <div class="animate-fade-in-right space-y-8 opacity-0">
+          <Card>
+            <CardHeader>
+              <CardTitle>{t('connectTitle')}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div class="grid grid-cols-2 gap-4">
+                <a
+                  href="https://github.com/hotdogee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-background hover:bg-accent hover:text-accent-foreground border-input focus-visible:ring-ring inline-flex h-11 w-full items-center justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-sm transition-colors focus-visible:ring-1 focus-visible:outline-none"
+                >
+                  <Github className="mr-2 size-5" /> GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/hotdogee/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-background hover:bg-accent hover:text-accent-foreground border-input focus-visible:ring-ring inline-flex h-11 w-full items-center justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-sm transition-colors focus-visible:ring-1 focus-visible:outline-none"
+                >
+                  <Linkedin className="mr-2 size-5" /> LinkedIn
+                </a>
+                <a
+                  href="https://www.researchgate.net/profile/Han-Lin-23"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-background hover:bg-accent hover:text-accent-foreground border-input focus-visible:ring-ring inline-flex h-11 w-full items-center justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-sm transition-colors focus-visible:ring-1 focus-visible:outline-none"
+                >
+                  <FlaskConical className="mr-2 size-5" /> ResearchGate
+                </a>
+                <a
+                  href="https://scholar.google.com/citations?hl=en&user=3pkoNyUAAAAJ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-background hover:bg-accent hover:text-accent-foreground border-input focus-visible:ring-ring inline-flex h-11 w-full items-center justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-sm transition-colors focus-visible:ring-1 focus-visible:outline-none"
+                >
+                  <GraduationCap className="mr-2 size-5" /> Google Scholar
+                </a>
+              </div>
+
+              <div class="mt-6">
+                <a
+                  href="mailto:hanlin@ntu.edu.tw"
+                  class="bg-secondary text-secondary-foreground hover:bg-secondary/80 inline-flex h-11 w-full items-center justify-center rounded-md px-8 text-sm font-medium shadow transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+                >
+                  <Mail className="mr-2 size-5" /> hanlin@ntu.edu.tw
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>{t('resourcesTitle')}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div class="space-y-4">
+                <a
+                  href="/cv.pdf"
+                  target="_blank"
+                  class="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex h-11 w-full items-center justify-center rounded-md px-8 text-sm font-medium shadow transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+                >
+                  <Download className="mr-2 size-5" />
+                  {t('buttonDownload')}
+                </a>
+                <a
+                  href="/research"
+                  class="bg-background hover:bg-accent hover:text-accent-foreground border-input focus-visible:ring-ring inline-flex h-11 w-full items-center justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-sm transition-colors focus-visible:ring-1 focus-visible:outline-none"
+                >
+                  <FileText className="mr-2 size-5" />
+                  {t('buttonViewPublications')}
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script></script>
