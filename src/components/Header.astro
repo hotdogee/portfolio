@@ -18,8 +18,8 @@ const navLinks = [
   { href: '/about', label: t('nav.about') },
   { href: '/projects', label: t('nav.projects') },
   { href: '/experience', label: t('nav.experience') },
-  { href: '/skills', label: t('nav.skills') },
-  { href: '/education', label: t('nav.education') },
+  { href: '/expertise', label: t('nav.expertise') },
+  { href: '/research', label: t('nav.research') },
   { href: '/articles', label: t('nav.blog') },
   { href: '/contact', label: t('nav.contact') },
 ]
@@ -31,9 +31,9 @@ const { showCta = false } = Astro.props as Props
 ---
 
 <header
-  class="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur"
+  class="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full backdrop-blur"
 >
-  <div class="container flex h-16 items-center justify-between">
+  <div class="container flex h-16 items-center justify-between border-b">
     <div class="flex items-center gap-2 transition-transform hover:scale-110">
       <a
         href={getRelativeLocaleUrl(currentLocale, undefined)}
@@ -62,7 +62,7 @@ const { showCta = false } = Astro.props as Props
     </div>
 
     <!-- Desktop Navigation -->
-    <nav class="hidden items-center gap-1 md:flex">
+    <nav class="hidden items-center gap-1 lg:flex">
       {
         navLinks.map((link, index) => (
           <a
@@ -99,25 +99,35 @@ const { showCta = false } = Astro.props as Props
         showCta && (
           <Link
             href={getRelativeLocaleUrl(currentLocale, '/contact')}
-            className="hidden md:inline-flex"
+            className="hidden lg:inline-flex"
           >
             {t('button.contact')}
           </Link>
         )
       }
-      <Button variant="outline" size="icon" id="menu-toggle" className="md:hidden">
+      <Button variant="outline" size="icon" id="menu-toggle" className="lg:hidden">
         <X className="menu-icon hidden h-5 w-5" />
         <Menu className="close-icon h-5 w-5" />
       </Button>
     </div>
   </div>
-
   <!-- Mobile Navigation -->
-  <div id="mobile-menu" class="hidden border-t md:hidden">
-    <div class="container flex flex-col space-y-4 py-4">
+  <div id="mobile-menu" class="mobile-menu-hidden border-b lg:hidden">
+    <div class="container flex flex-col space-y-4 py-4 text-center">
       {
-        navLinks.map((link) => (
-          <a href={getRelativeLocaleUrl(currentLocale, link.href)} class="py-2 text-sm font-medium">
+        navLinks.map((link, index) => (
+          <a
+            href={getRelativeLocaleUrl(currentLocale, link.href)}
+            class:list={[
+              'relative py-2 text-sm font-medium',
+              {
+                'active before:absolute before:inset-0 before:z-[-1] before:rounded-xl before:bg-gradient-to-r before:from-[#59ed4f] before:to-[#05b7ff] dark:before:from-[#118324] dark:before:to-[#2575fc]':
+                  Astro.url.pathname.includes(link.href),
+                'hover:text-primary': !Astro.url.pathname.includes(link.href),
+              },
+            ]}
+            style={`view-transition-name: nav-${index + 1};`}
+          >
             {link.label}
           </a>
         ))
@@ -141,7 +151,8 @@ const { showCta = false } = Astro.props as Props
     const closeIcon = document.querySelector('.close-icon')
     if (menuToggle && mobileMenu && menuIcon && closeIcon) {
       menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden')
+        mobileMenu.classList.toggle('mobile-menu-hidden')
+        mobileMenu.classList.toggle('mobile-menu-visible')
         menuIcon.classList.toggle('hidden')
         closeIcon.classList.toggle('hidden')
       })
@@ -149,7 +160,8 @@ const { showCta = false } = Astro.props as Props
       const mobileLinks = mobileMenu.querySelectorAll('a')
       mobileLinks.forEach((link) => {
         link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden')
+          mobileMenu.classList.add('mobile-menu-hidden')
+          mobileMenu.classList.remove('mobile-menu-visible')
           menuIcon.classList.remove('hidden')
           closeIcon.classList.add('hidden')
         })
@@ -174,6 +186,24 @@ const { showCta = false } = Astro.props as Props
 </script>
 
 <style is:inline>
+  /* Mobile menu transitions */
+  .mobile-menu-hidden {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      opacity 0.3s ease-in-out,
+      max-height 0.3s ease-in-out;
+  }
+
+  .mobile-menu-visible {
+    opacity: 1;
+    max-height: 500px;
+    transition:
+      opacity 0.3s ease-in-out,
+      max-height 0.3s ease-in-out;
+  }
+
   /* #search-button:hover {
     view-transition-class: hover;
   }

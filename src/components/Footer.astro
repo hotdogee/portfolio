@@ -8,8 +8,8 @@ const t = useTranslations(locale)
 
 <footer class="bg-background border-t">
   <div class="container py-8 md:py-12">
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
-      <div class="md:col-span-2">
+    <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+      <div class="col-span-2">
         <a href={getRelativeLocaleUrl(currentLocale, '/')} class="text-xl font-bold tracking-tight">
           {t('name')}
         </a>
@@ -92,7 +92,7 @@ const t = useTranslations(locale)
         </div>
       </div>
 
-      <div>
+      <div class="max-md:hidden">
         <ul class="mt-4 space-y-2 text-sm">
           <li>
             <a href={getRelativeLocaleUrl(currentLocale, '/')} class="hover:text-primary">
@@ -117,16 +117,16 @@ const t = useTranslations(locale)
         </ul>
       </div>
 
-      <div>
+      <div class="max-md:hidden">
         <ul class="mt-4 space-y-2 text-sm">
           <li>
-            <a href={getRelativeLocaleUrl(currentLocale, '/skills')} class="hover:text-primary">
-              {t('nav.skills')}
+            <a href={getRelativeLocaleUrl(currentLocale, '/expertise')} class="hover:text-primary">
+              {t('nav.expertise')}
             </a>
           </li>
           <li>
-            <a href={getRelativeLocaleUrl(currentLocale, '/education')} class="hover:text-primary">
-              {t('nav.education')}
+            <a href={getRelativeLocaleUrl(currentLocale, '/research')} class="hover:text-primary">
+              {t('nav.research')}
             </a>
           </li>
           <li>

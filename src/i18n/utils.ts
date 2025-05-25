@@ -30,7 +30,7 @@ export const ui = {
     'home.hero.title':
       'Accelerating Innovation at the Intersection of AI, Bioinformatics, and Electronics',
     'home.hero.description':
-      'With a unique background spanning artificial intelligence, bioinformatics, and electrical engineering, I develop innovative technologies that bridge hardware and software to solve complex scientific and industrial challenges. My work ranges from designing high-efficiency geothermal systems to creating cutting-edge deep learning models for protein analysis, all driven by a commitment to advancing human knowledge through technological innovation.',
+      "I'm Han Lin, a Research Engineer driven to unravel complexity and build what's next. From architecting custom hardware to developing sophisticated AI and deploying robust cloud systems, I translate intricate scientific theory into tangible, high-impact solutions. Certified by Google, Microsoft, and AWS in AI and Cybersecurity.",
     'home.hero.domains': 'AI • Bioinformatics • Electronics',
     'home.featured.title': 'Featured Projects',
     'home.featured.annotate.title': 'ANNotate: Revolutionizing Protein Analysis',
@@ -62,7 +62,7 @@ export const ui = {
 
     // Navigation
     'nav.home': '首頁',
-    'nav.about': '關於我',
+    'nav.about': '關於',
     'nav.projects': '專案',
     'nav.experience': '經歷',
     'nav.skills': '技能',
@@ -75,7 +75,7 @@ export const ui = {
     // Home page
     'home.hero.title': '跨界整合人工智慧、生物資訊與電子工程，擘劃創新解決方案',
     'home.hero.description':
-      '憑藉在人工智慧、生物資訊學及電機工程領域的獨特多重背景，我致力於開發尖端技術，整合軟硬體以應對複雜的科學及工業挑戰。我的專案範疇廣泛，從設計高效率地熱發電系統，到建構用於蛋白質分析的頂尖深度學習模型，這一切的驅動力，皆源於我致力透過技術創新，拓展人類知識的疆界。',
+      '憑藉在人工智慧、生物資訊學及電子工程領域的獨特多重背景，我致力於開發尖端技術，整合軟硬體以應對複雜的科學及工業挑戰。我的專案範疇廣泛，從設計高效率地熱發電系統，到建構用於蛋白質分析的頂尖深度學習模型，這一切的驅動力，皆源於我致力透過技術創新，拓展人類知識的疆界。',
     'home.hero.domains': 'AI • 生物資訊 • 電子工程',
     'home.featured.title': '精選專案',
     'home.featured.annotate.title': 'ANNotate：革新蛋白質分析技術',
