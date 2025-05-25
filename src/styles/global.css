@@ -143,6 +143,33 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.137 0.036 258.5);
+  --card: oklch(0.98 0 0);
+  --card-foreground: oklch(0.137 0.036 258.5);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.137 0.036 258.5);
+  --primary: oklch(0.627 0.17 149.2);
+  --primary-foreground: oklch(0.97 0.015 12.4);
+  --secondary: oklch(0.623 0.188 259.8);
+  --secondary-foreground: oklch(0.208 0.04 265.7);
+  --muted: oklch(0.968 0.007 247.9);
+  --muted-foreground: oklch(0.555 0.041 257.4);
+  --accent: oklch(0.86 0.173 91.8);
+  --accent-foreground: oklch(0.208 0.04 265.7);
+  --destructive: oklch(0.637 0.208 25.3);
+  --destructive-foreground: oklch(0.984 0.003 247.9);
+  --border: oklch(0.929 0.013 255.5);
+  --input: oklch(0.929 0.013 255.5);
+  --ring: oklch(0.627 0.17 149.2);
+  --radius: 0.5rem;
+}
+
+:root {
+  --background: oklch(0.95 0 0);
+}
+
 .dark {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
@@ -177,33 +204,11 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-:root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.137 0.036 258.5);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.137 0.036 258.5);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.137 0.036 258.5);
-  --primary: oklch(0.627 0.17 149.2);
-  --primary-foreground: oklch(0.97 0.015 12.4);
-  --secondary: oklch(0.623 0.188 259.8);
-  --secondary-foreground: oklch(0.208 0.04 265.7);
-  --muted: oklch(0.968 0.007 247.9);
-  --muted-foreground: oklch(0.555 0.041 257.4);
-  --accent: oklch(0.86 0.173 91.8);
-  --accent-foreground: oklch(0.208 0.04 265.7);
-  --destructive: oklch(0.637 0.208 25.3);
-  --destructive-foreground: oklch(0.984 0.003 247.9);
-  --border: oklch(0.929 0.013 255.5);
-  --input: oklch(0.929 0.013 255.5);
-  --ring: oklch(0.627 0.17 149.2);
-  --radius: 0.5rem;
-}
-
 .dark {
   --background: oklch(0.137 0.036 258.5);
+  --background: #151c27;
   --foreground: oklch(0.984 0.003 247.9);
-  --card: oklch(0.137 0.036 258.5);
+  --card: oklch(0.17 0.03 248.29);
   --card-foreground: oklch(0.984 0.003 247.9);
   --popover: oklch(0.137 0.036 258.5);
   --popover-foreground: oklch(0.984 0.003 247.9);
@@ -215,7 +220,7 @@
   --muted-foreground: oklch(0.711 0.035 256.8);
   --accent: oklch(0.7 0.16 90);
   --accent-foreground: oklch(0.984 0.003 247.9);
-  --destructive: oklch(0.396 0.133 25.7);
+  --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.984 0.003 247.9);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(28% 0.037 260);
@@ -270,19 +275,33 @@
   [data-slot='card-title'] {
     @apply text-2xl leading-7;
   }
-  [data-slot='card-header'] {
+  /* [data-slot='card-header'] {
     @apply gap-0;
-  }
+  } */
   [data-slot='input'] {
-    @apply focus-visible:ring-ring h-10 focus-visible:ring-2;
+    @apply focus-visible:ring-ring h-11 focus-visible:ring-2;
+  }
+  [data-slot='form-item'] {
+    @apply grid-rows-[auto_auto_1fr];
   }
   .pagefind-ui__button {
     @apply focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-background hover:bg-accent hover:text-accent-foreground dark:bg-background/30 dark:border-input dark:hover:bg-accent inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-md border px-4 py-2 text-sm font-medium whitespace-nowrap shadow-xs transition-all outline-none focus-visible:ring-[3px] disabled:pointer-events-none disabled:opacity-50 has-[>svg]:px-3 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4;
   }
   .pagefind-ui__search-input {
-    @apply file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input focus-visible:border-ring focus-visible:ring-ring aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive flex h-9 h-10 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:ring-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm;
+    @apply file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input focus-visible:border-ring focus-visible:ring-ring aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive flex h-10 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:ring-2 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm;
   }
   mark {
     @apply bg-accent;
+  }
+  .text-stroke {
+    text-shadow:
+      -0.5px -0.5px 0.5px black,
+      0.5px -0.5px 0.5px black,
+      -0.5px 0.5px 0.5px black,
+      0.5px 0.5px 0.5px black,
+      -0.5px 0px 0.5px black,
+      0.5px 0px 0.5px black,
+      0px 0.5px 0.5px black,
+      0px -0.5px 0.5px black;
   }
 }

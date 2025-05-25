@@ -1,0 +1,213 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+import {
+  Heart,
+  Brain,
+  Sparkles,
+  Rocket,
+  Sprout,
+  Zap,
+  Download,
+  Flame,
+  Infinity,
+} from 'lucide-react'
+export { getLocalizedStaticPaths as getStaticPaths } from '@i18n/utils'
+import { defaultLocale } from '@i18n/utils'
+
+const translations = {
+  en: {
+    title: 'About | Han Lin',
+    pageTitle: 'Deconstruct. Design. Discover.',
+    pageTitleBadge: 'A Lifelong Quest for Knowledge',
+    description:
+      "Delve into Han Lin's journey from a curious mind in Iowa to a research engineer in Taiwan. Discover his expertise in deconstructing complex challenges, designing innovative hardware and software solutions, and driving impactful advancements in AI, biotech, and sustainable energy.",
+    bio: [
+      "My journey from Iowa to Taiwan is a story of relentless curiosity and a drive to innovate, spanning continents and disciplines. From my earliest days, I wasn't content just knowing things worked—I had to understand how. This drive led me to explore the hidden workings of electronic devices through careful deconstruction, and simultaneously inspired me to build and invent – from crafting cardboard robots for show-and-tell to designing original games for active, outdoor play. This Iowa upbringing instilled a practical, hands-on approach to problem-solving that cultivated an engineer's mindset early on: a blend of curious deconstruction and joyful invention that forms the bedrock of my approach to innovation.",
+      "This burgeoning engineer's mindset quickly embraced the digital realm. Fluent with Macintosh systems by six and building custom PCs by ten, I launched my first award-winning website at fourteen—earning second place in a National HomePage Design Competition. My hunger for deeper technical challenges saw me proactively completing a graduate-level MEMS curriculum in high school, an early immersion into the intricate dance between physical systems and electronic control.",
+      "Inspired by the promise of artificial intelligence in science fiction, a core ambition crystallized: to build truly intelligent systems. I realized this vision demanded a fundamental, first-principles mastery of the underlying hardware. This imperative guided my major in Electronics Engineering, where I immersed myself in solid-state physics, systems engineering, and chip design—including hands-on clean room fabrication—while excelling in computer science coursework, such as cryptography, networking and compression. This deep hardware/software foundation then paved the way for a Master's in Electronics Design Automation, focusing on Evolutionary Algorithms, and a PhD candidacy in Biomedical Electronics and Bioinformatics, applying this engineering toolkit to unravel biological complexities and forge novel solutions.",
+      "My engineering foundation broadened through global experiences at the National Agriculture Library (NAL) in Maryland and Japan's Nara Institute of Science and Technology (NAIST). These tenures were crucial for bridging bioinformatics theory with practical genomic research, deepening my understanding of complex organizational challenges and cross-cultural collaboration. This holistic perspective was then applied to spearhead pioneering sustainable energy solutions with Lanyang Geothermal in Taiwan. Across biotech, healthcare, and energy, my core strength lies in seeing beyond disciplinary silos, transforming complex scientific questions into robust, engineered realities. This comprehensive, full-stack perspective—understanding systems from the silicon to the algorithm, from the molecule to the deployed application—is my signature, enabling impactful contributions at the intersection of technology, science, and human ingenuity.",
+      'This interdisciplinary, first-principles approach proved transformative for the Lanyang Geothermal power system—a challenge many experts deemed insurmountable. By reimagining the process from its thermodynamic roots and designing custom hardware and software, we achieved a remarkable 50% increase in thermal efficiency. Similarly, this integrated methodology led to AI models that accelerated protein analysis 100-fold while maintaining 95% accuracy. These achievements underscore my core belief: true innovation emerges at the intersection of deep domain knowledge, a willingness to challenge assumptions, and the engineering prowess to turn visionary ideas into high-impact solutions.',
+      "This journey has forged a deeply ingrained philosophy to approach any challenge from first principles, then creatively synthesize knowledge across disciplines and engineer holistic solutions that span hardware, software, and deep domain expertise. Whether tackling intricate biological questions, designing efficient energy systems, or pioneering AI applications, this integrated, full-stack approach consistently unlocks novel pathways. I am driven to leverage this distinct blend of deep hardware understanding, sophisticated software expertise, and scientific insight to tackle the next generation of challenges, eager to contribute to world-class projects that redefine what's possible and push the boundaries of human knowledge.",
+    ],
+    strengthsTitle: 'Strengths & Values',
+    strengths:
+      'As an INTP-A (Logician), I thrive on analysis, originality, and objective truth-seeking. My Gallup CliftonStrengths – Deliberative, Relator, Learner, Ideation, and Achiever – paint a picture of a serious, careful decision-maker who values deep relationships, is constantly driven to learn and improve, finds connections between disparate ideas, and possesses the stamina to see complex projects through to completion. This unique blend empowers me to dissect challenges, envision novel solutions, and tenaciously bring them to life.',
+    values: [
+      {
+        name: 'Kind',
+        icon: Heart,
+        description:
+          'I believe the most powerful innovations are those that serve humanity. Kindness guides my collaborations, ensuring respectful partnerships and solutions designed with positive human impact at their core.',
+      },
+      {
+        name: 'Curious',
+        icon: Brain,
+        description:
+          "My work is fueled by an insatiable desire to understand 'why' and explore 'what if'. Curiosity drives me to delve deep, question assumptions, and uncover novel pathways to groundbreaking solutions.",
+      },
+      {
+        name: 'Creative',
+        icon: Sparkles,
+        description:
+          'Innovation requires looking beyond established approaches. I value first principles thinking that challenges assumptions and generates novel solutions to complex problems.',
+      },
+      {
+        name: 'Courage',
+        icon: Rocket,
+        description:
+          'Progress demands willingness to tackle difficult challenges and pursue unproven ideas. I value the courage to attempt what others consider impossible.',
+      },
+      {
+        name: 'Liberty',
+        icon: Flame,
+        description:
+          'I believe groundbreaking ideas flourish in an environment of intellectual freedom and open discourse, like that fostered by a free and democratic society. This liberty is essential for the unhindered pursuit of knowledge and the creation of truly transformative solutions.',
+      },
+      {
+        name: 'Abundance',
+        icon: Infinity,
+        description:
+          'I am driven by the conviction that human ingenuity will create a future of abundance. My work is dedicated to actively developing innovative solutions that expand possibilities, foster prosperity, and contribute to an opportunity-rich world for all.',
+      },
+    ],
+    downloadButtonText: 'Download CV',
+  },
+  tw: {
+    title: '關於 | 林翰',
+    pageTitle: '解構・建構・發明',
+    pageTitleBadge: '創新之路的幕後推手',
+    description:
+      '探索林翰的歷程——從在愛荷華州萌芽的好奇心，到成為台灣的研究工程師。了解他如何解構複雜挑戰，設計創新的軟硬體解決方案，並在人工智慧、生物科技及永續能源領域推動深具影響力的進展。',
+    bio: [
+      '我從美國愛荷華州到台灣的這段歷程，是一部交織著無盡好奇心與創新熱忱的篇章，足跡遍及世界各地，探索橫跨多元學科。自幼年起，我便不甘於僅知其然，更渴望窮究其所以然。這股動力，驅使我拆解家裡所有的電器，探索其內部的運作原理；同時也激勵我動手打造與發明——從製作紙板機器人，到為戶外活動設計原創的動態遊戲。在愛荷華的成長歲月，培養了我務實、親自動手的解題態度，也早早在我心中植入了工程師的思維：一種結合了好奇探索的解構精神與樂在其中的創造發明，這正是我創新思維的基石。',
+      '這股初萌的工程師心態，迅速引領我投身數位浪潮。六歲便能嫻熟操作 Macintosh 系統，十歲已可自行組裝客製化個人電腦。十四歲那年，我架設了人生第一個獲獎網站，在全國網頁設計競賽中榮獲亞軍。為了追求更艱深的技術挑戰，我更在高中階段便主動修習了研究所等級的微機電系統（ MEMS ）課程，提早沉浸於實體系統與電子控制間精妙互動的領域。',
+      '科幻作品中人工智慧的無限可能深深啟發了我，一個核心的宏願油然而生：打造真正具有智慧的系統。我體認到，要實現此一願景，必須從第一原理出發，徹底掌握底層硬體。這份使命感驅使我主修電子工程，深入鑽研固態物理、系統工程與晶片設計——實際進入無塵室操作晶圓製程——同時，在密碼學、網路與壓縮等電腦科學課程中亦表現優異。這深厚的軟硬體根基，為我後續攻讀專注於演化演算法的電子設計自動化碩士，乃至成為生物醫學電子與生物資訊學領域的博士候選人鋪平道路，運用這套工程學養，剖析錯綜複雜的生物問題，並打造創新的解決方案。',
+      '我在美國馬里蘭州的國家農業圖書館（ National Agriculture Library , NAL ）及日本奈良先端科學技術大學院大學（ Nara Institute of Science and Technology , NAIST ）的國際歷練，進一步拓展了我的工程視野。這些經驗不僅是串連生物資訊理論與基因體學實務研究的關鍵，更深化了我對複雜組織運作及跨文化協作的體悟。我將這套宏觀視角應用於台灣的蘭陽地熱計畫，引領團隊開發創新的永續能源方案。橫跨生物科技、醫療保健及能源產業，我的核心競爭力在於能洞察並打破學科壁壘，將艱澀的科學難題，轉化為堅實可行的工程實踐。這種從晶片到演算法、從分子結構到應用程式部署的全面「全端」思維，正是我的獨特之處，讓我在科技、科學與人類智慧的交匯處，持續做出深具影響力的貢獻。',
+      '這種跨領域、凡事探究第一原理的策略，為蘭陽地熱的發電系統帶來了突破性成果——此前，許多專家均認為此一挑戰窒礙難行。透過從熱力學基礎重新擘劃流體動線，並量身打造專屬的軟硬體監控系統，我們實現了熱效率提升百分之五十的卓越成果。這種整合性的方法論亦催生出能將蛋白質功能分析速度提升百倍、同時維持百分之九十五準確度的深度學習模型。這些成果印證了我的核心理念：真正的創新，源自於深厚的領域知識、勇於挑戰既有假設的精神，以及將前瞻構想化為高效解決方案的工程實力。',
+      '這趟旅程已淬鍊成一套解題哲學：面對任何挑戰，必先回歸第一原理思考，繼而創造性地融合跨領域知識，打造橫跨硬體、軟體與專業領域的整體解決方案。無論是拆解錯綜複雜的生物謎團、設計高效率的能源系統，抑或開拓人工智慧的嶄新應用，這套整合性的「全端」方略，總能引領我尋得蹊徑。我熱切期盼能運用自身在硬體深度理解、尖端軟體技術及敏銳的科學洞察力，迎向下一個世代的挑戰，並為那些重新定義未來可能、拓展人類知識疆域的世界級團隊貢獻心力。',
+    ],
+    strengthsTitle: '天賦特質與價值觀',
+    strengths:
+      '身為 INTP-A（邏輯學家類型）人格，我樂於分析思辨、追求獨到見解與探求客觀真理。我的蓋洛普天賦特質——審慎 (Deliberative)、親和 (Relator)、學習 (Learner)、創意 (Ideation) 及成就 (Achiever)——勾勒出一個行事嚴謹、深思熟慮的決策者樣貌：我重視深厚的人際連結，恆常保有學習精進的熱忱，擅於串聯看似迥異的觀點，並且具備貫徹始終、完成複雜專案的毅力。這些獨特的特質組合，賦予我剖析挑戰、構思創新方案，並堅毅不撓地將其付諸實現的能力。',
+    values: [
+      {
+        name: '與人為善',
+        icon: Heart,
+        description:
+          '我堅信科技的進步應以增進人類福祉為依歸。仁慈之心引領我與人協作，確保彼此尊重，並以對人類社會帶來正面影響為核心，構思解決方案。',
+      },
+      {
+        name: '精進睿智',
+        icon: Brain,
+        description:
+          '我追求知識的嚴謹與深刻的理解，深信真正優雅的解決方案源於對事物根本原理的透徹掌握。正是這份好奇心，驅使我深入研究，挑戰既有假設，進而找出通往開創性解決方案的嶄新路徑。',
+      },
+      {
+        name: '勇於創新',
+        icon: Sparkles,
+        description:
+          '創新之道，在於跳脫既有框架。我推崇「第一原理」思維，勇於挑戰定見，為複雜難題打造獨到解方。',
+      },
+      {
+        name: '無畏挑戰',
+        icon: Rocket,
+        description:
+          '欲求進步，必先勇於面對艱鉅挑戰，大膽嘗試未經實證的構想。我欽佩那份挑戰世俗眼光、敢於嘗試不可能的勇氣。',
+      },
+      {
+        name: '崇尚自由',
+        icon: Flame,
+        description:
+          '我堅信，唯有在思想自由、言論開放的環境，開創性的思維方能茁壯。此種自由，是我們得以不受桎梏地追求真知、打造真正變革性解決方案的基石。',
+      },
+      {
+        name: '創造豐饒',
+        icon: Infinity,
+        description:
+          '我深信人類的智慧與巧思，必將開創豐盛的未來。我的使命，便是積極研發創新方案，藉此開拓更多可能、促進繁榮，為所有人打造一個充滿機遇的世界。',
+      },
+    ],
+    downloadButtonText: '下載履歷',
+  },
+}
+
+const { locale } = Astro.params
+const currentLocale = locale ?? defaultLocale
+const t = (key: string) => {
+  const locale = currentLocale as keyof typeof translations
+  return translations[locale]?.[key as keyof (typeof translations)[typeof locale]] || key
+}
+---
+
+<BaseLayout title={t('title') as string} description={t('description') as string}>
+  <section class="md:py-2">
+    <div class="container px-4 md:px-6">
+      <div class="animate-fade-in-up mx-auto max-w-3xl transition duration-500">
+        <div class="mb-8 space-y-4 text-center">
+          <div
+            class="dark:bg-accent dark:text-accent-foreground bg-accent text-accent-foreground inline-flex items-center rounded-lg px-3 py-1 text-sm font-medium"
+          >
+            {t('pageTitleBadge')}
+          </div>
+          <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            {t('pageTitle')}
+          </h1>
+        </div>
+
+        <div class="text-muted-foreground space-y-6">
+          {
+            (t('bio') as string[]).map((paragraph, index) => (
+              <p
+                class={`leading-7 opacity-0`}
+                style={`animation: fade-in-up 0.5s ease-in ${(0.1 * (index + 1)).toFixed(1)}s forwards;`}
+              >
+                {paragraph}
+              </p>
+            ))
+          }
+        </div>
+
+        <div class="mt-12 opacity-0" style={`animation: fade-in-up 0.5s ease-in 0.5s forwards;`}>
+          <h2 class="mb-4 text-center text-2xl font-bold tracking-tighter sm:text-3xl">
+            {t('strengthsTitle')}
+          </h2>
+          <p class="text-muted-foreground mb-8 leading-7">{t('strengths')}</p>
+
+          <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {
+              (t('values') as any[]).map((value, index) => {
+                const Icon = value.icon
+                return (
+                  <div
+                    class="bg-card flex flex-col items-center rounded-lg border p-4 text-center opacity-0"
+                    style={`animation: fade-in-up 0.5s ease-in ${(0.5 + 0.1 * (index + 1)).toFixed(1)}s forwards;`}
+                  >
+                    <div class="bg-primary/10 mb-2 flex h-12 w-12 items-center justify-center rounded-full">
+                      <Icon className="text-primary h-6 w-6" />
+                    </div>
+                    <h3 class="mb-2 text-lg font-semibold">{value.name}</h3>
+                    <p class="text-muted-foreground text-sm">{value.description}</p>
+                  </div>
+                )
+              })
+            }
+          </div>
+        </div>
+
+        <div
+          class="mt-12 flex justify-center opacity-0"
+          style={`animation: fade-in-up 0.5s ease-in 1.2s forwards;`}
+        >
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            class="focus-visible:ring-ring bg-primary text-primary-foreground hover:bg-primary/90 inline-flex h-11 items-center justify-center rounded-md px-8 text-sm font-medium shadow transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+          >
+            <Download className="mr-2 h-4 w-4" />
+            {t('downloadButtonText')}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
