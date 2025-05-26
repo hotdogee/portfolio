@@ -4,38 +4,72 @@ import { Font } from 'astro:assets'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import '../styles/global.css'
-import { useTranslations, getCurrentLocale } from '@i18n/utils'
+import { useTranslations, getLang } from '@lib/utils'
 
 export interface Props {
-  pageTitle?: string
+  title?: string
   description?: string
 }
 
-const { lang } = Astro.params
-const t = useTranslations(lang)
-const { pageTitle = t('site.title'), description = t('site.description') } = Astro.props
+const { locale } = Astro.params
+const t = useTranslations(locale)
+const { title = t('site.title'), description = t('site.description') } = Astro.props
+const anim = {
+  old: {
+    name: 'bump',
+    duration: '0.5s',
+    easing: 'ease-in',
+    direction: 'reverse',
+  },
+  new: {
+    name: 'bump',
+    duration: '0.5s',
+    easing: 'ease-in-out',
+  },
+}
+
+const customTransition = {
+  forwards: anim,
+  backwards: anim,
+}
 ---
 
-<html lang={getCurrentLocale(lang)} transition:name="root" transition:animate="none">
+<html lang={getLang(locale)} transition:name="root" transition:animate="fade">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <title>{title}</title>
     <meta name="description" content={description} />
     <!-- Fonts -->
     <Font cssVariable="--font-inter" preload />
     <ClientRouter />
   </head>
   <body>
-    <main class="flex min-h-screen flex-col">
+    <div class="flex min-h-screen flex-col">
       <Header />
-      <div class="container mx-auto flex-grow px-4 py-8">
+      <main class="container mx-auto flex-grow px-4 py-8">
         <slot />
-      </div>
+      </main>
       <Footer />
-    </main>
+    </div>
   </body>
 </html>
+<style is:global>
+  @keyframes bump {
+    0% {
+      opacity: 0;
+      transform: scale(1) translateX(200px);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateX(0);
+    }
+  }
+</style>
