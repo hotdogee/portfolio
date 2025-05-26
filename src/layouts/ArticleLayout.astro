@@ -1,0 +1,130 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import BaseLayout from './BaseLayout.astro'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { Button } from '@components/ui/button'
+import { Card, CardHeader, CardContent } from '@components/ui/card'
+import { Badge } from '@components/ui/badge'
+import { Link } from '@components/ui/link'
+import {
+  datesFromChanges,
+  defaultLocale,
+  getLocaleSlugFromId,
+  localeDate,
+  localeReadingTime,
+} from '@lib/utils'
+import { ArrowLeft } from 'lucide-react'
+import { Calendar1, CalendarSync, Clock, User } from 'lucide-react'
+import { Icon } from 'astro-icon/components'
+import CategoryBadge from '@components/CategoryBadge.astro'
+import TagBadge from '@components/TagBadge.astro'
+// Translations for page-specific text
+const translations = {
+  en: {
+    backToArticles: 'Back to Articles',
+  },
+  tw: {
+    backToArticles: '返回文章列表',
+  },
+}
+
+const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
+  return translations[currentLocale]?.[key] || translations['en']?.[key]
+}
+
+interface Props {
+  article: CollectionEntry<'articles'>
+  headings?: { depth: number; slug: string; text: string }[]
+}
+
+const { locale } = Astro.params
+const currentLocale = (locale || defaultLocale) as keyof typeof translations
+const { article, headings } = Astro.props as Props
+const { id, data, body } = article
+const { slug } = getLocaleSlugFromId(id)
+const articleUrl = getRelativeLocaleUrl(currentLocale, `/articles/${slug}`)
+const readingTime = localeReadingTime(String(body), currentLocale)
+const { title, excerpt, author, image, categories = [], tags = [], draft, changes } = data
+const { published, updated } = datesFromChanges(changes)
+---
+
+<BaseLayout title={title} description={excerpt}>
+  <section class="py-1 md:py-2">
+    <div class="container max-w-3xl px-4 md:px-6">
+      <div class="mb-8">
+        <Link href={getRelativeLocaleUrl(currentLocale, `/articles`)} variant="ghost">
+          <ArrowLeft className="ml-2 h-4 w-4" />
+          {t('backToArticles')}
+        </Link>
+      </div>
+      <div class="grid gap-8">
+        <div class="animate-fade-in-up">
+          <article class="prose prose-lg dark:prose-invert max-w-none">
+            <div class="mb-8">
+              <div class="mb-4 flex flex-wrap gap-2">
+                {categories.map((category) => <CategoryBadge category={category} />)}
+              </div>
+              <h1 class="mb-4 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                {title}
+              </h1>
+              <div class="text-muted-foreground mb-6 flex flex-wrap items-center gap-4">
+                {
+                  draft && (
+                    <Badge variant="secondary" className="mr-1">
+                      Draft
+                    </Badge>
+                  )
+                }
+                {
+                  updated && (
+                    <div class="flex items-center">
+                      <CalendarSync className="mr-1 h-4 w-4" />
+                      <span>{localeDate(updated, currentLocale)}</span>
+                    </div>
+                  )
+                }
+                {
+                  published && !updated && (
+                    <div class="flex items-center">
+                      <Calendar1 className="mr-1 h-4 w-4" />
+                      <span>{localeDate(published, currentLocale)}</span>
+                    </div>
+                  )
+                }
+                <div class="flex items-center">
+                  <Clock className="mr-1 h-4 w-4" />
+                  <span>{readingTime}</span>
+                </div>
+                <div class="flex items-center">
+                  <User client:visible className="mr-1 h-4 w-4" />
+                  <span>{author}</span>
+                </div>
+              </div>
+              {
+                image && (
+                  <div class="relative mb-8 aspect-video w-full overflow-hidden rounded-lg">
+                    <img
+                      src={image.url || '/placeholder.svg'}
+                      alt={image.alt || 'Blog post image'}
+                      class="absolute inset-0 h-full w-full object-cover"
+                      loading="eager"
+                    />
+                  </div>
+                )
+              }
+              <div class="mb-6 border-b pb-6">
+                <p class="text-muted-foreground text-xl">{excerpt}</p>
+              </div>
+              <div class="mb-8 flex flex-wrap gap-2">
+                {tags.map((tag) => <TagBadge tag={tag} />)}
+              </div>
+            </div>
+            <slot />
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style></style>
