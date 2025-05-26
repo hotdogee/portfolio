@@ -1,0 +1,428 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@components/ui/card'
+import { Badge } from '@components/ui/badge'
+import { GraduationCap, BookOpen, ExternalLink, FileText, Calendar } from 'lucide-react'
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
+import { defaultLocale } from '@lib/utils'
+import { Link } from '@components/ui/link'
+
+const translations = {
+  en: {
+    title: 'Research | Han Lin',
+    pageTitleBadge: 'Advancing Knowledge',
+    pageTitle: 'Academic Foundation',
+    description:
+      "My academic journey has provided the theoretical foundation for my practical work. From my earliest exploration of electronics engineering to my doctoral research in biomedical electronics and bioinformatics, I've sought knowledge that bridges disciplines and challenges conventional boundaries.",
+    educationTitle: 'Education',
+    dissertation: 'Dissertation:',
+    activities: 'Activities:',
+    courses: 'Courses:',
+    googleScholarButton: 'View on Google Scholar',
+    education: [
+      {
+        degree: 'Ph.D. Candidate',
+        institution: 'National Taiwan University',
+        field: 'Biomedical Electronics and Bioinformatics',
+        period: '',
+        dissertation:
+          'Design and implementation of recurrent neural network models for function and structure prediction of protein sequences',
+      },
+      {
+        degree: 'Master of Science (M.S.)',
+        institution: 'National Taiwan University',
+        field: 'Electronic Design Automation',
+        period: '',
+        dissertation:
+          'A Genetic Algorithm Approach to Combinatorial Optimization for Targeted Drug Combination Design and Microarray Feature Selection with Cluster Analysis',
+      },
+      {
+        degree: 'Bachelor of Science (B.S.)',
+        institution: 'National Chiao Tung University',
+        field: 'Electronics Engineering',
+        period: '',
+        activities:
+          'Campus Computer Communication Association (CCCA), Student Association of Electronics Engineering, Mei-Chu Tournament Association',
+      },
+      {
+        degree: 'Additional Education',
+        institution: 'Udacity',
+        field: 'Artificial Intelligence and Cybersecurity',
+        period: '',
+        courses: [
+          'Ethical Hacker Nanodegree Program',
+          'Introduction to Artificial Intelligence (Andrew Ng)',
+          'Programming a Robotic Car (Sebastian Thrun)',
+          'Design of Computer Programs (Peter Norvig)',
+        ],
+      },
+    ],
+    publications: {
+      title: 'Publications',
+      description:
+        'My research contributions span genomics, bioinformatics, and artificial intelligence, with publications in peer-reviewed journals and conference proceedings. These works reflect my commitment to advancing scientific knowledge and developing novel computational approaches to biological problems.',
+      papers: [
+        {
+          title: 'The GFF3toolkit: QC and Merge Pipeline for Genome Annotation',
+          authors:
+            'Chen, Mei-Ju May; **Lin, Han**; Chiang, Li-Mei; Childers, Christopher P; Poelchau, Monica F',
+          journal: 'Insect Genomics: Methods and Protocols: 75-87',
+          year: '2019',
+          url: 'https://link.springer.com/protocol/10.1007/978-1-4939-8775-7_7',
+        },
+        {
+          title:
+            'Genome of the Asian longhorned beetle (Anoplophora glabripennis), a globally significant invasive species, reveals key functional and evolutionary innovations at the beetle-plant interface',
+          authors:
+            'McKenna, Duane D.; Scully, Erin D.; Pauchet, Yannick; Hoover, Kelli; Kirsch, Roy; Geib, Scott M.; Mitchell, Robert F.; Waterhouse, Robert M.; Ahn, Seung-Joon; Arsala, Deanna; Benoit, Joshua B.; Blackmon, Heath; Bledsoe, Tiffany; Bowsher, Julia H.; Busch, André; Calla, Bernarda; Chao, Hsu; Childers, Anna K.; Childers, Christopher; Clarke, Dave J.; Cohen, Lorna; Demuth, Jeffery P.; Dinh, Huyen; Doddapaneni, HarshaVardhan; Dolan, Amanda; Duan, Jian J.; Dugan, Shannon; Friedrich, Markus; Glastad, Karl M.; Goodisman, Michael A. D.; Haddad, Stephanie; Han, Yi; Hughes, Daniel S. T.; Ioannidis, Panagiotis; Johnston, J. Spencer; Jones, Jeffery W.; Kuhn, Leslie A.; Lance, David R.; Lee, Chien-Yueh; Lee, Sandra L.; **Lin, Han**; Lynch, Jeremy A.; Moczek, Armin P.; Murali, Shwetha C.; Muzny, Donna M.; Nelson, David R.; Palli, Subba R.; Panfilio, Kristen A.; Pers, Dan; Poelchau, Monica F.; Quan, Honghu; Qu, Jiaxin; Ray, Ann M.; Rinehart, Joseph P.; Robertson, Hugh M.; Roehrdanz, Richard; Rosendale, Andrew J.; Shin, Seunggwan; Silva, Christian; Torson, Alex S.; Jentzsch, Iris M. Vargas; Werren, John H.; Worley, Kim C.; Yocum, George; Zdobnov, Evgeny M.; Gibbs, Richard A.; Richards, Stephen',
+          journal: 'Genome biology 17: 1-18',
+          year: '2016',
+          url: 'https://link.springer.com/article/10.1186/s13059-016-1088-8',
+        },
+        {
+          title:
+            'Unique features of a global human ectoparasite identified through sequencing of the bed bug genome',
+          authors:
+            'Benoit, Joshua B.; Adelman, Zach N.; Reinhardt, Klaus; Dolan, Amanda; Poelchau, Monica; Jennings, Emily C.; Szuter, Elise M.; Hagan, Richard W.; Gujar, Hemant; Shukla, Jayendra Nath; Zhu, Fang; Mohan, M.; Nelson, David R.; Rosendale, Andrew J.; Derst, Christian; Resnik, Valentina; Wernig, Sebastian; Menegazzi, Pamela; Wegener, Christian; Peschel, Nicolai; Hendershot, Jacob M.; Blenau, Wolfgang; Predel, Reinhard; Johnston, Paul R.; Ioannidis, Panagiotis; Waterhouse, Robert M.; Nauen, Ralf; Schorn, Corinna; Ott, Mark-Christoph; Maiwald, Frank; Johnston, J. Spencer; Gondhalekar, Ameya D.; Scharf, Michael E.; Peterson, Brittany F.; Raje, Kapil R.; Hottel, Benjamin A.; Armisén, David; Crumière, Antonin Jean Johan; Refki, Peter Nagui; Santos, Maria Emilia; Sghaier, Essia; Viala, Sèverine; Khila, Abderrahman; Ahn, Seung-Joon; Childers, Christopher; Lee, Chien-Yueh; **Lin, Han**; Hughes, Daniel S. T.; Duncan, Elizabeth J.; Murali, Shwetha C.; Qu, Jiaxin; Dugan, Shannon; Lee, Sandra L.; Chao, Hsu; Dinh, Huyen; Han, Yi; Doddapaneni, Harshavardhan; Worley, Kim C.; Muzny, Donna M.; Wheeler, David; Panfilio, Kristen A.; Vargas Jentzsch, Iris M.; Vargo, Edward L.; Booth, Warren; Friedrich, Markus; Weirauch, Matthew T.; Anderson, Michelle A. E.; Jones, Jeffery W.; Mittapalli, Omprakash; Zhao, Chaoyang; Zhou, Jing-Jiang; Evans, Jay D.; Attardo, Geoffrey M.; Robertson, Hugh M.; Zdobnov, Evgeny M.; Ribeiro, Jose M. C.; Gibbs, Richard A.; Werren, John H.; Palli, Subba R.; Schal, Coby; Richards, Stephen',
+          journal: 'Nature communications 7(1): 10165',
+          year: '2016',
+          url: 'https://www.nature.com/articles/ncomms10165',
+        },
+        {
+          title:
+            'The i5k Workspace@ NAL-enabling genomic data access, visualization and curation of arthropod genomes',
+          authors:
+            'Poelchau, Monica; Childers, Christopher; Moore, Gary; Tsavatapalli, Vijaya; Evans, Jay; Lee, Chien-Yueh; **Lin, Han**; Lin, Jun-Wei; Hackett, Kevin',
+          journal: 'Nucleic acids research 43(D1): D714-D719',
+          year: '2015',
+          url: 'https://academic.oup.com/nar/article/43/D1/D714/2439695',
+        },
+        {
+          title:
+            'Transcriptome alterations of mitochondrial and coagulation function in schizophrenia by cortical sequencing analysis',
+          authors:
+            'Huang, Kuo-Chuan; Yang, Ko-Chun; **Lin, Han**; Tsao, Theresa Tsun-Hui; Lee, Sheng-An',
+          journal: 'BMC genomics 15: 1-16',
+          year: '2014',
+          url: 'https://link.springer.com/article/10.1186/1471-2164-15-S9-S6',
+        },
+        {
+          title: 'Genotyping of human neutrophil antigens (HNA) from whole genome sequencing data',
+          authors:
+            'Chu, Hsueh-Ting; **Lin, Han**; Tsao, Theresa Tsun-Hui; Chang, Chun-Fan; Hsiao, William WL; Yeh, Tze-Jung; Chang, Ching-Mao; Liu, Yen-Wenn; Wang, Tse-Yi; Yang, Ko-Chun',
+          journal: 'BMC Medical Genomics 6: 1-8',
+          year: '2013',
+          url: 'https://link.springer.com/article/10.1186/1755-8794-6-31',
+        },
+        {
+          title:
+            'EBARDenovo: highly accurate de novo assembly of RNA-Seq with efficient chimera-detection',
+          authors:
+            'Chu, Hsueh-Ting; Hsiao, William WL; Chen, Jen-Chih; Yeh, Tze-Jung; Tsai, Mong-Hsun; **Lin, Han**; Liu, Yen-Wenn; Lee, Sheng-An; Chen, Chaur-Chin; Tsao, Theresa TH',
+          journal: 'Bioinformatics 29(8): 1004-1010',
+          year: '2013',
+          url: 'https://academic.oup.com/bioinformatics/article/29/8/1004/229508',
+        },
+      ],
+    },
+  },
+  tw: {
+    title: '研究 | 林翰',
+    pageTitleBadge: '知識的躍進',
+    pageTitle: '學術基石',
+    description:
+      '我的學術歷程為我的實務工作奠定了堅實的理論基礎。從早期對電子工程的探索，到攻讀生物醫學電子與生物資訊學博士學位，我不斷追求能夠串聯不同學科、挑戰傳統疆界的知識。',
+    educationTitle: '教育背景',
+    dissertation: '論文題目：',
+    activities: '參與活動：',
+    courses: '課程：',
+    googleScholarButton: '前往 Google Scholar 查看',
+    education: [
+      {
+        degree: '博士候選人 (Ph.D. Candidate)',
+        institution: '國立台灣大學',
+        field: '生醫電子與生物資訊研究所',
+        period: '',
+        dissertation: '設計與實現用於蛋白質序列功能與結構預測之遞歸神經網路模型',
+      },
+      {
+        degree: '碩士 (M.S.)',
+        institution: '國立台灣大學',
+        field: '電子工程研究所 (EDA 組)',
+        period: '',
+        dissertation: '應用於標靶藥物組合設計及結合群集分析之微陣列特徵選取的組合最佳化基因演算法',
+      },
+      {
+        degree: '學士 (B.S.)',
+        institution: '國立交通大學',
+        field: '電子工程學系',
+        period: '',
+        activities: '校園計算機通訊協會 (CCCA)、電子工程學系學生會、梅竹賽籌備委員會',
+      },
+      {
+        degree: '其他進修',
+        institution: 'Udacity',
+        field: '人工智慧與網路安全',
+        period: '',
+        courses: [
+          '白帽駭客專業認證',
+          '人工智慧導論 (Andrew Ng)',
+          '自駕車程式設計 (Sebastian Thrun)',
+          '電腦程式設計 (Peter Norvig)',
+        ],
+      },
+    ],
+    publications: {
+      title: '學術著作',
+      description:
+        '我的研究成果橫跨基因體學、生物資訊學及人工智慧等領域，相關論文已發表於多本同儕審查期刊及國際研討會論文集。這些著作反映了我致力於拓展科學知識疆界，並開發創新計算方法以解決生物學難題的熱忱。',
+      papers: [
+        {
+          title: 'The GFF3toolkit: QC and Merge Pipeline for Genome Annotation',
+          authors:
+            'Chen, Mei-Ju May; **Lin, Han**; Chiang, Li-Mei; Childers, Christopher P; Poelchau, Monica F',
+          journal: 'Insect Genomics: Methods and Protocols: 75-87',
+          year: '2019',
+          url: 'https://link.springer.com/protocol/10.1007/978-1-4939-8775-7_7',
+        },
+        {
+          title:
+            'Genome of the Asian longhorned beetle (Anoplophora glabripennis), a globally significant invasive species, reveals key functional and evolutionary innovations at the beetle-plant interface',
+          authors:
+            'McKenna, Duane D.; Scully, Erin D.; Pauchet, Yannick; Hoover, Kelli; Kirsch, Roy; Geib, Scott M.; Mitchell, Robert F.; Waterhouse, Robert M.; Ahn, Seung-Joon; Arsala, Deanna; Benoit, Joshua B.; Blackmon, Heath; Bledsoe, Tiffany; Bowsher, Julia H.; Busch, André; Calla, Bernarda; Chao, Hsu; Childers, Anna K.; Childers, Christopher; Clarke, Dave J.; Cohen, Lorna; Demuth, Jeffery P.; Dinh, Huyen; Doddapaneni, HarshaVardhan; Dolan, Amanda; Duan, Jian J.; Dugan, Shannon; Friedrich, Markus; Glastad, Karl M.; Goodisman, Michael A. D.; Haddad, Stephanie; Han, Yi; Hughes, Daniel S. T.; Ioannidis, Panagiotis; Johnston, J. Spencer; Jones, Jeffery W.; Kuhn, Leslie A.; Lance, David R.; Lee, Chien-Yueh; Lee, Sandra L.; **Lin, Han**; Lynch, Jeremy A.; Moczek, Armin P.; Murali, Shwetha C.; Muzny, Donna M.; Nelson, David R.; Palli, Subba R.; Panfilio, Kristen A.; Pers, Dan; Poelchau, Monica F.; Quan, Honghu; Qu, Jiaxin; Ray, Ann M.; Rinehart, Joseph P.; Robertson, Hugh M.; Roehrdanz, Richard; Rosendale, Andrew J.; Shin, Seunggwan; Silva, Christian; Torson, Alex S.; Jentzsch, Iris M. Vargas; Werren, John H.; Worley, Kim C.; Yocum, George; Zdobnov, Evgeny M.; Gibbs, Richard A.; Richards, Stephen',
+          journal: 'Genome biology 17: 1-18',
+          year: '2016',
+          url: 'https://link.springer.com/article/10.1186/s13059-016-1088-8',
+        },
+        {
+          title:
+            'Unique features of a global human ectoparasite identified through sequencing of the bed bug genome',
+          authors:
+            'Benoit, Joshua B.; Adelman, Zach N.; Reinhardt, Klaus; Dolan, Amanda; Poelchau, Monica; Jennings, Emily C.; Szuter, Elise M.; Hagan, Richard W.; Gujar, Hemant; Shukla, Jayendra Nath; Zhu, Fang; Mohan, M.; Nelson, David R.; Rosendale, Andrew J.; Derst, Christian; Resnik, Valentina; Wernig, Sebastian; Menegazzi, Pamela; Wegener, Christian; Peschel, Nicolai; Hendershot, Jacob M.; Blenau, Wolfgang; Predel, Reinhard; Johnston, Paul R.; Ioannidis, Panagiotis; Waterhouse, Robert M.; Nauen, Ralf; Schorn, Corinna; Ott, Mark-Christoph; Maiwald, Frank; Johnston, J. Spencer; Gondhalekar, Ameya D.; Scharf, Michael E.; Peterson, Brittany F.; Raje, Kapil R.; Hottel, Benjamin A.; Armisén, David; Crumière, Antonin Jean Johan; Refki, Peter Nagui; Santos, Maria Emilia; Sghaier, Essia; Viala, Sèverine; Khila, Abderrahman; Ahn, Seung-Joon; Childers, Christopher; Lee, Chien-Yueh; **Lin, Han**; Hughes, Daniel S. T.; Duncan, Elizabeth J.; Murali, Shwetha C.; Qu, Jiaxin; Dugan, Shannon; Lee, Sandra L.; Chao, Hsu; Dinh, Huyen; Han, Yi; Doddapaneni, Harshavardhan; Worley, Kim C.; Muzny, Donna M.; Wheeler, David; Panfilio, Kristen A.; Vargas Jentzsch, Iris M.; Vargo, Edward L.; Booth, Warren; Friedrich, Markus; Weirauch, Matthew T.; Anderson, Michelle A. E.; Jones, Jeffery W.; Mittapalli, Omprakash; Zhao, Chaoyang; Zhou, Jing-Jiang; Evans, Jay D.; Attardo, Geoffrey M.; Robertson, Hugh M.; Zdobnov, Evgeny M.; Ribeiro, Jose M. C.; Gibbs, Richard A.; Werren, John H.; Palli, Subba R.; Schal, Coby; Richards, Stephen',
+          journal: 'Nature communications 7(1): 10165',
+          year: '2016',
+          url: 'https://www.nature.com/articles/ncomms10165',
+        },
+        {
+          title:
+            'The i5k Workspace@ NAL-enabling genomic data access, visualization and curation of arthropod genomes',
+          authors:
+            'Poelchau, Monica; Childers, Christopher; Moore, Gary; Tsavatapalli, Vijaya; Evans, Jay; Lee, Chien-Yueh; **Lin, Han**; Lin, Jun-Wei; Hackett, Kevin',
+          journal: 'Nucleic acids research 43(D1): D714-D719',
+          year: '2015',
+          url: 'https://academic.oup.com/nar/article/43/D1/D714/2439695',
+        },
+        {
+          title:
+            'Transcriptome alterations of mitochondrial and coagulation function in schizophrenia by cortical sequencing analysis',
+          authors:
+            'Huang, Kuo-Chuan; Yang, Ko-Chun; **Lin, Han**; Tsao, Theresa Tsun-Hui; Lee, Sheng-An',
+          journal: 'BMC genomics 15: 1-16',
+          year: '2014',
+          url: 'https://link.springer.com/article/10.1186/1471-2164-15-S9-S6',
+        },
+        {
+          title: 'Genotyping of human neutrophil antigens (HNA) from whole genome sequencing data',
+          authors:
+            'Chu, Hsueh-Ting; **Lin, Han**; Tsao, Theresa Tsun-Hui; Chang, Chun-Fan; Hsiao, William WL; Yeh, Tze-Jung; Chang, Ching-Mao; Liu, Yen-Wenn; Wang, Tse-Yi; Yang, Ko-Chun',
+          journal: 'BMC Medical Genomics 6: 1-8',
+          year: '2013',
+          url: 'https://link.springer.com/article/10.1186/1755-8794-6-31',
+        },
+        {
+          title:
+            'EBARDenovo: highly accurate de novo assembly of RNA-Seq with efficient chimera-detection',
+          authors:
+            'Chu, Hsueh-Ting; Hsiao, William WL; Chen, Jen-Chih; Yeh, Tze-Jung; Tsai, Mong-Hsun; **Lin, Han**; Liu, Yen-Wenn; Lee, Sheng-An; Chen, Chaur-Chin; Tsao, Theresa TH',
+          journal: 'Bioinformatics 29(8): 1004-1010',
+          year: '2013',
+          url: 'https://academic.oup.com/bioinformatics/article/29/8/1004/229508',
+        },
+      ],
+    },
+  },
+}
+
+const { locale } = Astro.params
+const currentLocale = locale ?? defaultLocale
+const t = (key: string): any => {
+  const locale = currentLocale as keyof typeof translations
+  return translations[locale]?.[key as keyof (typeof translations)[typeof locale]] || key
+}
+---
+
+<BaseLayout title={t('title') as string} description={t('description') as string}>
+  <section class="md:py-2">
+    <div class="container px-4 md:px-6">
+      <div class="animate-fade-in-up mx-auto max-w-3xl transition duration-500">
+        <div class="mb-8 space-y-4 text-center">
+          <div
+            class="dark:bg-accent dark:text-accent-foreground bg-accent text-accent-foreground inline-flex items-center rounded-lg px-3 py-1 text-sm font-medium"
+          >
+            {t('pageTitleBadge')}
+          </div>
+          <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            {t('pageTitle')}
+          </h1>
+          <p class="text-muted-foreground mb-12 md:text-xl">{t('description')}</p>
+        </div>
+      </div>
+
+      <div class="grid gap-12">
+        <div>
+          <h2
+            class="mb-6 flex items-center text-2xl font-bold opacity-0"
+            style="animation: fade-in-up 0.5s ease-in 0.1s forwards;"
+          >
+            <GraduationCap className="mr-2 h-6 w-6" />
+            {t('educationTitle')}
+          </h2>
+
+          <div class="grid gap-6 md:grid-cols-2">
+            {
+              (t('education') as any[]).map((edu, index) => (
+                <div
+                  class="opacity-0"
+                  style={`animation: fade-in-up 0.5s ease-in ${(0.2 + 0.1 * index).toFixed(1)}s forwards;`}
+                >
+                  <Card className="h-full gap-3">
+                    <CardHeader>
+                      <div class="flex items-start justify-between">
+                        <div>
+                          <CardTitle>{edu.degree}</CardTitle>
+                          <CardDescription>{edu.institution}</CardDescription>
+                        </div>{' '}
+                        {edu.period && (
+                          <Badge variant="outline" className="flex items-center">
+                            <Calendar className="mr-1 h-3 w-3" />
+                            {edu.period}
+                          </Badge>
+                        )}
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <p class="mb-2 font-medium">{edu.field}</p>
+                      {edu.dissertation && (
+                        <div class="mt-4">
+                          <p class="text-sm font-medium">{t('dissertation')}</p>
+                          <p class="text-muted-foreground text-sm">{edu.dissertation}</p>
+                        </div>
+                      )}
+                      {edu.activities && (
+                        <div class="mt-4">
+                          <p class="text-sm font-medium">{t('activities')}</p>
+                          <p class="text-muted-foreground text-sm">{edu.activities}</p>
+                        </div>
+                      )}
+                      {edu.courses && (
+                        <div class="mt-4">
+                          <p class="text-sm font-medium">{t('courses')}</p>
+                          <ul class="text-muted-foreground mt-2 space-y-1 text-sm">
+                            {edu.courses.map((course: string) => (
+                              <li class="flex items-start">
+                                <div class="bg-primary mt-1.5 mr-2 h-1 w-1 rounded-full" />
+                                <span>{course}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </CardContent>
+                  </Card>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+
+        <div>
+          <h2
+            class="mb-6 flex items-center text-2xl font-bold opacity-0"
+            style="animation: fade-in-up 0.5s ease-in 0.3s forwards;"
+          >
+            <BookOpen className="mr-2 h-6 w-6" />
+            {t('publications').title}
+          </h2>
+
+          <div class="opacity-0" style="animation: fade-in-up 0.5s ease-in 0.4s forwards;">
+            <p class="text-muted-foreground mb-8">{t('publications').description}</p>
+
+            <Card className="p-1">
+              <CardContent className="p-6">
+                <div class="space-y-6">
+                  {
+                    t('publications').papers.map((paper: any, index: number) => (
+                      <div
+                        class="border-b pb-4 opacity-0 last:border-0 last:pb-0"
+                        style={`animation: fade-in-up 0.5s ease-in ${(0.4 + 0.1 * index).toFixed(1)}s forwards;`}
+                      >
+                        <div class="flex items-start justify-between gap-4">
+                          <div>
+                            <h3 class="font-medium">{paper.title}</h3>
+                            <p
+                              class="text-muted-foreground mt-1 text-sm"
+                              set:html={paper.authors.replace(
+                                /\*\*Lin, Han\*\*/g,
+                                '<strong>Lin, Han</strong>'
+                              )}
+                            />
+                            <p class="mt-1 text-sm">
+                              <span class="italic">{paper.journal}</span>, {paper.year}
+                            </p>
+                          </div>
+                          <Link className="" variant={'outline'} href={paper.url} target="_blank">
+                            <FileText className="h-4 w-4" />
+                          </Link>
+                        </div>
+                      </div>
+                    ))
+                  }
+                </div>
+              </CardContent>
+            </Card>
+
+            <div
+              class="mt-8 flex justify-center opacity-0"
+              style="animation: fade-in-up 0.5s ease-in 0.8s forwards;"
+            >
+              <a
+                href="https://scholar.google.com/citations?hl=en&user=3pkoNyUAAAAJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="focus-visible:ring-ring bg-primary text-primary-foreground hover:bg-primary/90 inline-flex h-10 items-center justify-center rounded-md px-4 py-2 text-sm font-medium shadow transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+              >
+                <ExternalLink className="mr-2 h-4 w-4" />
+                {t('googleScholarButton')}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<style is:inline>
+  strong {
+    font-weight: 600;
+    color: var(--color-secondary);
+  }
+  .dark {
+    strong {
+      color: var(--color-accent);
+    }
+  }
+</style>
