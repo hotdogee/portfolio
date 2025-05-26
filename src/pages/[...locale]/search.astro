@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content'
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
+import { defaultLocale } from '@lib/utils'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import BlogCard from '@components/ArticleCard.astro'
+import BlogSidebar from '@components/ArticleSidebar.astro'
+import SearchField from '@components/SearchField.astro'
+
+const translations = {
+  en: {
+    title: 'Search Results | Articles | Han Lin',
+    pageTitle: 'Search',
+    description: 'Search for my articles and insights.',
+    noArticlesFound: 'No articles found.',
+  },
+  tw: {
+    title: '搜尋結果 | 文章 | 林翰',
+    pageTitle: '搜尋',
+    description: '搜尋我的文章和見解。',
+    noArticlesFound: '目前沒有文章。',
+  },
+}
+const { locale } = Astro.params
+const currentLocale = (locale || defaultLocale) as keyof typeof translations
+const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
+  return translations[currentLocale]?.[key] || translations['en']?.[key]
+}
+---
+
+<BaseLayout title={t('title')} description={t('description')}>
+  <section class="py-6 md:py-12">
+    <div class="container px-4 md:px-6">
+      <div class="animate-fade-in-up mx-auto mb-12 max-w-3xl text-center">
+        <h1 class="mb-4 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          {t('pageTitle')}
+        </h1>
+        <p class="text-muted-foreground md:text-xl">
+          {t('description')}
+        </p>
+      </div>
+      <SearchField
+        id="search"
+        className="pagefind-ui"
+        uiOptions={{
+          showImages: false,
+        }}
+      />
+    </div>
+  </section>
+</BaseLayout>
+
+<style></style>
