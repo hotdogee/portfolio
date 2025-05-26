@@ -1,0 +1,31 @@
+---
+import { Badge } from '@components/ui/badge'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { cn } from '@/lib/utils'
+import { defaultLocale, slugify, useTranslations } from '@i18n/utils'
+
+interface Props {
+  category: string
+  count?: number
+  className?: string
+  type?: 'articles' | 'projects' // Add new prop 'type'
+}
+
+const { locale } = Astro.params
+const currentLocale = locale || defaultLocale
+const { category, count, className, type = 'articles' } = Astro.props // Destructure 'type' with a default value
+const t = useTranslations(currentLocale, 'categories')
+const categorySlug = slugify(category)
+---
+
+<a
+  href={getRelativeLocaleUrl(
+    currentLocale,
+    `/${type}/category/${encodeURIComponent(categorySlug)}` // Use the 'type' prop in the href
+  )}
+>
+  <Badge variant="secondary" className={cn('hover:bg-secondary/80', className)}>
+    {t(categorySlug)}
+    {count !== undefined && <span class="ml-1 text-xs">({count})</span>}
+  </Badge>
+</a>
