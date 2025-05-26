@@ -3,6 +3,7 @@ import { Button } from './button'
 
 export interface LinkProps extends React.ComponentProps<typeof Button> {
   href: string
+  target?: string
   children: React.ReactNode
 }
 
