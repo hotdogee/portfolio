@@ -12,13 +12,13 @@ import {
 import { Badge } from '@components/ui/badge'
 import { Calendar1, CalendarSync, Clock, User } from 'lucide-react'
 import {
-  articleDates,
+  datesFromChanges,
   defaultLocale,
   getLocaleSlugFromId,
   localeDate,
   localeReadingTime,
-} from '@i18n/utils'
-import CategoryBadge from '@components/blog/CategoryBadge.astro'
+} from '@lib/utils'
+import CategoryBadge from '@components/CategoryBadge.astro'
 
 interface Props {
   article: CollectionEntry<'articles'>
@@ -33,7 +33,7 @@ const { slug } = getLocaleSlugFromId(id)
 const articleUrl = getRelativeLocaleUrl(currentLocale, `/articles/${slug}`)
 const readingTime = localeReadingTime(String(body), currentLocale)
 const { title, excerpt, author, image, categories = [], tags = [], draft, changes } = data
-const { published, updated } = articleDates(changes)
+const { published, updated } = datesFromChanges(changes)
 ---
 
 <div
