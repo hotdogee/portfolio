@@ -1,5 +1,5 @@
 import { match } from '@formatjs/intl-localematcher'
-import { LOCALE_COOKIE, defaultLocale, locales } from '@i18n/utils'
+import { LOCALE_COOKIE, defaultLocale, locales } from '@lib/utils'
 import { defineMiddleware } from 'astro:middleware'
 import Negotiator from 'negotiator'
 

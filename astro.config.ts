@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite'
 import icon from 'astro-icon'
 import pagefind from 'astro-pagefind'
 import { defineConfig, fontProviders } from 'astro/config'
-import { defaultLocale, locales } from './src/i18n/utils'
+import { defaultLocale, locales } from './src/lib/utils'
 
 // https://astro.build/config
 export default defineConfig({
