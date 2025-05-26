@@ -1,0 +1,25 @@
+---
+import { Badge } from '@components/ui/badge'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { cn } from '@/lib/utils'
+import { defaultLocale, slugify, useTranslations } from '@i18n/utils'
+
+interface Props {
+  tag: string
+  count?: number
+  className?: string
+}
+
+const { locale } = Astro.params
+const currentLocale = locale || defaultLocale
+const { tag, count, className } = Astro.props
+const t = useTranslations(currentLocale, 'tags')
+const tagSlug = slugify(tag)
+---
+
+<a href={getRelativeLocaleUrl(currentLocale, `/articles/tag/${encodeURIComponent(tagSlug)}`)}>
+  <Badge variant="outline" className={cn('hover:bg-accent/20', className)}>
+    #{t(tagSlug)}
+    {count !== undefined && <span class="ml-1 text-xs">({count})</span>}
+  </Badge>
+</a>
