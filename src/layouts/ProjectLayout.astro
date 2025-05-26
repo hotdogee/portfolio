@@ -1,0 +1,237 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { Button } from '@components/ui/button'
+import { Card, CardHeader, CardContent } from '@components/ui/card'
+import { Badge } from '@components/ui/badge'
+import { Link } from '@components/ui/link'
+import { defaultLocale, getLocaleSlugFromId } from '@lib/utils'
+import { ArrowLeft } from 'lucide-react'
+import { Icon } from 'astro-icon/components'
+
+// Translations for page-specific text
+const translations = {
+  en: {
+    backToProjects: 'Back to Projects',
+    projectLinks: 'Project Links',
+    technologiesUsed: 'Technologies Used',
+  },
+  tw: {
+    backToProjects: '返回專案列表',
+    projectLinks: '專案連結',
+    technologiesUsed: '使用技術',
+  },
+}
+
+const { locale } = Astro.params
+const currentLocale = (locale || defaultLocale) as keyof typeof translations
+const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
+  return translations[currentLocale]?.[key] || translations['en']?.[key]
+}
+
+export interface Props {
+  frontmatter: Record<string, any>
+  headings?: { depth: number; slug: string; text: string }[]
+}
+
+const { frontmatter, headings } = Astro.props as Props
+
+const {
+  // slug,
+  title,
+  subtitle,
+  icon,
+  color = 'primary', // Default color theme
+  image = {
+    src: '',
+    alt: '',
+  },
+  tech = [],
+  links = [],
+  cards = [],
+} = frontmatter
+---
+
+<BaseLayout title={title} description={subtitle}>
+  <section class="py-1 md:py-2">
+    <div class="container px-4 md:px-6">
+      <div class="mb-8">
+        <Link href={getRelativeLocaleUrl(currentLocale, `/projects`)} variant="ghost">
+          <ArrowLeft className="ml-2 h-4 w-4" />
+          {t('backToProjects')}
+        </Link>
+      </div>
+      <div class="grid gap-8 lg:grid-cols-[2fr_1fr]">
+        <div class="animate-fade-in-up">
+          <div class="mb-4 flex items-center gap-3">
+            <div
+              class={`w-12 h-12 rounded-lg bg-${color}-100 dark:bg-${color}-900/20 flex items-center justify-center`}
+            >
+              {
+                icon && (
+                  <Icon name={icon} class={`h-8 w-8 text-${color}-600 dark:text-${color}-400`} />
+                )
+              }
+            </div>
+            <div>
+              <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl">{title}</h1>
+              <p class="text-muted-foreground">{subtitle}</p>
+            </div>
+          </div>
+          <div class="bg-muted relative mb-8 aspect-video overflow-hidden rounded-lg">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <p class="text-muted-foreground">{image.alt}</p>
+            </div>
+          </div>
+          <div class="prose dark:prose-invert max-w-none lg:col-span-2">
+            <slot />
+          </div>
+        </div>
+        <aside class="animate-fade-in-right space-y-6 opacity-0">
+          {
+            links && links.length > 0 && (
+              <Card>
+                <CardContent className="">
+                  <h3 class="mb-4 text-lg font-semibold">{t('projectLinks')}</h3>
+                  <div class="space-y-3">
+                    {links.map((link) => (
+                      <Link
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full"
+                        variant={link.variant || 'default'}
+                      >
+                        <Icon name={link.icon} class={`mr-2 h-4 w-4`} /> {link.text}
+                      </Link>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            )
+          }
+          {
+            tech && tech.length > 0 && (
+              <Card>
+                <CardContent className="">
+                  <h3 class="mb-4 text-lg font-semibold">{t('technologiesUsed')}</h3>
+                  <div class="flex flex-wrap justify-start gap-3">
+                    {tech.map((tech) => (
+                      <Badge variant="secondary" className="px-3 py-1 text-sm">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            )
+          }
+          {
+            cards &&
+              cards.length > 0 &&
+              cards.map((card) => (
+                <Card className="shadow-lg transition-all duration-300 hover:shadow-xl">
+                  <CardContent>
+                    <h3 class="mb-4 text-lg font-semibold">{card.title}</h3>
+                    {card.type === 'diagram' && (
+                      <div>
+                        <div class="bg-muted mb-2 flex aspect-video items-center justify-center rounded">
+                          <p class="text-muted-foreground text-sm">{card.image_placeholder}</p>
+                          {/* <img src={card.image_path} alt={card.alt_text} class="rounded object-cover w-full h-full" /> */}
+                        </div>
+                        {card.caption && (
+                          <p class="text-muted-foreground text-sm italic">{card.caption}</p>
+                        )}
+                      </div>
+                    )}
+                    {card.type === 'metrics' && card.metrics && (
+                      <ul class="space-y-3">
+                        {card.metrics.map((metric) => (
+                          <li class="text-sm">
+                            <div class="flex justify-between">
+                              <span>{metric.label}</span>
+                              <strong>{metric.value}</strong>
+                            </div>
+                            {typeof metric.percentage === 'number' && (
+                              <div class="bg-muted mt-1 h-2.5 w-full overflow-hidden rounded-full">
+                                <div
+                                  class={`bg-secondary h-2.5 rounded-full`}
+                                  style={`width: ${metric.percentage}%`}
+                                />
+                              </div>
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    {card.type === 'list' && card.items && (
+                      <ul class="space-y-4">
+                        {card.items.map((item) => (
+                          <a href={item.url} target="_blank" rel="noopener noreferrer">
+                            <div class="flex items-center gap-3 rounded-lg border p-3">
+                              {item.icon && (
+                                <div class="bg-muted flex h-10 w-10 items-center justify-center rounded-full">
+                                  <Icon name={item.icon} class={`h-5 w-5`} />
+                                </div>
+                              )}
+                              <div>
+                                <p class="text-sm font-medium">{item.name}</p>
+                                {item.description && (
+                                  <p class="text-muted-foreground text-xs">{item.description}</p>
+                                )}
+                              </div>
+                            </div>
+                          </a>
+                        ))}
+                      </ul>
+                    )}
+                  </CardContent>
+                </Card>
+              ))
+          }
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .project-header-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .project-content-slide-up {
+    animation: slideUp 0.5s ease-out 0.2s forwards;
+    opacity: 0; /* Start hidden */
+  }
+
+  .project-sidebar-slide-up {
+    animation: slideUp 0.5s ease-out 0.4s forwards;
+    opacity: 0; /* Start hidden */
+  }
+
+  .project-section-fade-in {
+    animation: fadeIn 0.5s ease-out 0.6s forwards;
+    opacity: 0; /* Start hidden */
+  }
+</style>
