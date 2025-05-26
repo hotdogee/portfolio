@@ -1,0 +1,108 @@
+---
+import { getCollection } from 'astro:content'
+import { locales, defaultLocale, slugify, useTranslations, type Locale } from '@lib/utils'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import ProjectCard from '@components/ProjectCard.astro'
+import ProjectCategoriesSidebar from '@components/ProjectCategoriesSidebar.astro'
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects')
+  if (!projects || projects.length === 0) {
+    return []
+  }
+  const categories = [...new Set(projects.flatMap((project) => project.data.categories || []))]
+  // Create paths for all locales and categories
+  const paths = categories.flatMap((category) => {
+    return [undefined, ...locales].map((locale) => {
+      return {
+        params: {
+          locale,
+          category: slugify(category),
+        },
+      }
+    })
+  })
+  return paths
+}
+
+const { locale, category } = Astro.params
+const currentLocale = (locale || defaultLocale) as Locale
+const tc = useTranslations(currentLocale, 'categories')
+const categorySlug = category ? decodeURIComponent(category) : ''
+
+const translations = {
+  en: {
+    title: `${tc(categorySlug)} | Projects | Han Lin`,
+    pageTitle: `Category: ${tc(categorySlug)}`,
+    description: `Projects about ${tc(categorySlug)}`,
+    noProjectsFound: 'No projects in this category.',
+  },
+  tw: {
+    title: `${tc(categorySlug)} | 專案 | 林翰`,
+    pageTitle: `主題：${tc(categorySlug)}`,
+    description: `關於 ${tc(categorySlug)} 的專案`,
+    noProjectsFound: '目前沒有相關主題的專案。',
+  },
+}
+const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
+  return translations[currentLocale]?.[key] || translations['en']?.[key]
+}
+
+// Fetch projects by locale
+const projects = await getCollection('projects', ({ id }) => {
+  // Filter projects by language if needed
+  const langPrefix = id.split('/')[0]
+  return langPrefix === currentLocale
+})
+
+// Extract categories and tags for sidebar
+const categories = [...new Set(projects.flatMap((project) => project.data.categories || []))].map(
+  (category) => ({
+    name: category,
+    count: projects.filter((project) => project.data.categories?.includes(category)).length,
+  })
+)
+
+// Filter projects by category
+const categoryProjects = projects.filter(
+  (project) =>
+    project.data.categories && project.data.categories.map((c) => slugify(c)).includes(categorySlug)
+)
+---
+
+<BaseLayout title={t('title')} description={t('description')}>
+  <section class="py-6 md:py-12">
+    <div class="container px-4 md:px-6">
+      <div class="animate-fade-in-up mx-auto mb-12 max-w-3xl text-center">
+        <h1 class="mb-4 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          {t('pageTitle')}
+        </h1>
+        <p class="text-muted-foreground md:text-xl">
+          {t('description')}
+        </p>
+      </div>
+      <div class="grid gap-8 lg:grid-cols-3">
+        <div class="lg:col-span-2">
+          <div class="grid gap-6 md:grid-cols-2">
+            {
+              categoryProjects.length > 0 ? (
+                categoryProjects.map((project, index) => (
+                  <ProjectCard project={project} index={index} />
+                ))
+              ) : (
+                <div class="py-12 text-center md:col-span-2">
+                  <p class="text-muted-foreground">{t('noProjectsFound')}</p>
+                </div>
+              )
+            }
+          </div>
+        </div>
+        <div>
+          <ProjectCategoriesSidebar categories={categories} />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style></style>
