@@ -1,0 +1,50 @@
+---
+import { getCollection, render } from 'astro:content'
+import ArticleLayout from '@layouts/ArticleLayout.astro'
+import { locales, defaultLocale, getLocaleSlugFromId } from '@lib/utils'
+
+export async function getStaticPaths() {
+  const articleList = await getCollection('articles')
+  if (!articleList || articleList.length === 0) {
+    return []
+  }
+  // Group articles by slug across locales
+  const articles = articleList.reduce<Record<string, Record<string, any>>>((acc, article) => {
+    const { locale, slug } = getLocaleSlugFromId(article.id)
+    if (!acc[slug]) {
+      acc[slug] = {}
+    }
+    acc[slug][locale] = article
+    return acc
+  }, {})
+  // Create paths for all locales and slugs
+  const paths = Object.entries(articles).flatMap(([slug, localeArticle]) => {
+    const fallbackLocale = Object.keys(localeArticle).sort()[0] // Get the first locale as fallback
+    return [undefined, ...locales].map((locale) => {
+      return {
+        params: {
+          locale,
+          slug,
+        },
+        props: {
+          article:
+            (locale ? localeArticle[locale] : false) ||
+            localeArticle[defaultLocale] ||
+            localeArticle[fallbackLocale],
+        },
+      }
+    })
+  })
+  return paths
+}
+
+const { article } = Astro.props
+// Render the MDX content
+const { Content, headings } = await render(article)
+---
+
+<ArticleLayout article={article} headings={headings}>
+  <Content />
+</ArticleLayout>
+
+<style></style>
