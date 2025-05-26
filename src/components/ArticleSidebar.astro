@@ -1,0 +1,111 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/card'
+import { Input } from '@components/ui/input'
+import { Button } from '@components/ui/button'
+import CategoryBadge from './CategoryBadge.astro'
+import TagBadge from './TagBadge.astro'
+import { Search } from 'lucide-react'
+import { defaultLocale } from '@lib/utils'
+
+const { locale } = Astro.params
+const currentLocale = locale ?? defaultLocale
+const translations = {
+  en: {
+    'sidebar.search': 'Site Search',
+    'sidebar.search.placeholder': 'Search...',
+    'sidebar.categories': 'Article Categories',
+    'sidebar.tags': 'Article Tags',
+    'sidebar.search.sr': 'Search',
+  },
+  tw: {
+    'sidebar.search': '全站搜尋',
+    'sidebar.search.placeholder': '搜尋...',
+    'sidebar.categories': '文章主題',
+    'sidebar.tags': '文章標籤',
+    'sidebar.search.sr': '搜尋',
+  },
+}
+const t = (key: string) => {
+  const locale = currentLocale as keyof typeof translations
+  return translations[locale]?.[key as keyof (typeof translations)[typeof locale]] || key
+}
+
+interface ArticleCategory {
+  name: string
+  count: number
+}
+
+interface ArticleTag {
+  name: string
+  count: number
+}
+
+interface Props {
+  categories: ArticleCategory[]
+  tags: ArticleTag[]
+}
+
+const { categories, tags } = Astro.props
+const searchUrl = getRelativeLocaleUrl(currentLocale, '/search?q=')
+console.log('searchUrl', searchUrl)
+---
+
+<div class="space-y-6">
+  <Card>
+    <CardHeader>
+      <CardTitle>{t('sidebar.search')}</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <form id="article-search-form" class="flex gap-2">
+        <Input id="article-search-input" placeholder={t('sidebar.search.placeholder')} />
+        <Button type="submit" size="icon" className="size-11">
+          <Search className="h-4 w-4" />
+          <span class="sr-only">{t('sidebar.search.sr')}</span>
+        </Button>
+      </form>
+    </CardContent>
+  </Card>
+  <Card>
+    <CardHeader>
+      <CardTitle>{t('sidebar.categories')}</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <div class="flex flex-wrap gap-2">
+        {
+          categories.map((category) => (
+            <CategoryBadge category={category.name} count={category.count} />
+          ))
+        }
+      </div>
+    </CardContent>
+  </Card>
+  <Card>
+    <CardHeader>
+      <CardTitle>{t('sidebar.tags')}</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <div class="flex flex-wrap gap-2">
+        {tags.map((tag) => <TagBadge tag={tag.name} count={tag.count} />)}
+      </div>
+    </CardContent>
+  </Card>
+</div>
+
+<script define:vars={{ searchUrl }}>
+  document.addEventListener('astro:page-load', () => {
+    const searchForm = document.getElementById('article-search-form')
+    const searchInput = document.getElementById('article-search-input')
+    searchForm?.addEventListener('submit', (event) => {
+      event.preventDefault()
+      if (searchInput) {
+        const query = searchInput.value.trim()
+        if (query) {
+          window.location.href = `${searchUrl}${encodeURIComponent(query)}`
+        }
+      }
+    })
+  })
+</script>
+
+<style></style>

@@ -1,0 +1,56 @@
+---
+import { Button } from '@components/ui/button'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+
+interface Props {
+  currentPage: number
+  totalPages: number
+  basePath: string
+}
+
+const { currentPage, totalPages, basePath } = Astro.props
+
+const prevPage = currentPage > 1 ? currentPage - 1 : null
+const nextPage = currentPage < totalPages ? currentPage + 1 : null
+
+const prevPageLink = prevPage ? `${basePath}${prevPage === 1 ? '' : `/${prevPage}`}` : null
+const nextPageLink = nextPage ? `${basePath}/${nextPage}` : null
+---
+
+<div class="mt-8 flex items-center justify-between">
+  {
+    prevPageLink ? (
+      <Button variant="outline" asChild>
+        <a href={prevPageLink}>
+          <ChevronLeft className="mr-2 h-4 w-4" />
+          Previous
+        </a>
+      </Button>
+    ) : (
+      <Button variant="outline" disabled>
+        <ChevronLeft className="mr-2 h-4 w-4" />
+        Previous
+      </Button>
+    )
+  }
+
+  <div class="text-muted-foreground text-sm">
+    Page {currentPage} of {totalPages}
+  </div>
+
+  {
+    nextPageLink ? (
+      <Button variant="outline" asChild>
+        <a href={nextPageLink}>
+          Next
+          <ChevronRight className="ml-2 h-4 w-4" />
+        </a>
+      </Button>
+    ) : (
+      <Button variant="outline" disabled>
+        Next
+        <ChevronRight className="ml-2 h-4 w-4" />
+      </Button>
+    )
+  }
+</div>
