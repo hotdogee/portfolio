@@ -1,19 +1,23 @@
-import type { APIRoute } from 'astro';
-import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
+import rss from '@astrojs/rss'
+import { datesFromChanges } from '@lib/utils'
+import type { APIRoute } from 'astro'
+import { getCollection } from 'astro:content'
 
 export const GET: APIRoute = async ({ site }) => {
-  const posts = await getCollection('blog');
+  const articles = await getCollection('articles')
   return rss({
     title: 'Han Lin',
     description: 'Random thoughts and ideas',
     site: site as URL,
-    items: posts.map((post) => ({
-      title: post.data.title,
-      pubDate: post.data.pubDate,
-      description: post.data.description,
-      link: `/posts/${post.id}/`,
-    })),
+    items: articles.map((article) => {
+      const { published, updated } = datesFromChanges(article.data.changes)
+      return {
+        title: article.data.title,
+        pubDate: updated || published || undefined,
+        description: article.data.excerpt,
+        link: `/articles/${article.id}/`,
+      }
+    }),
     customData: `<language>en-us</language>`,
-  });
-};
+  })
+}
