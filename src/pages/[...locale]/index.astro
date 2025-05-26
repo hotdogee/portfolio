@@ -2,9 +2,7 @@
 import BaseLayout from '@layouts/BaseLayout.astro'
 import HeroSection from '@components/HeroSection.astro'
 import FeaturedProjects from '@components/FeaturedProjects.astro'
-export { getLocalizedStaticPaths as getStaticPaths } from '@i18n/utils'
-
-const { lang } = Astro.params
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
 ---
 
 <BaseLayout>
