@@ -1,6 +1,6 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import { useTranslations, defaultLocale } from '@i18n/utils'
+import { useTranslations, defaultLocale } from '@lib/utils'
 const { locale } = Astro.params
 const currentLocale = locale ?? defaultLocale
 const t = useTranslations(locale)

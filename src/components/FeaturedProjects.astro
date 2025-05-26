@@ -1,155 +1,90 @@
 ---
 import { Link } from '@components/ui/link'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@components/ui/card'
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import { ArrowRight, Dna, Cpu, CuboidIcon } from 'lucide-react'
-import { useTranslations, defaultLocale } from '@i18n/utils'
+import { Grid3x3 } from 'lucide-react'
+import { defaultLocale, datesFromChanges, getLocaleSlugFromId } from '@lib/utils'
+import { getCollection, type CollectionEntry } from 'astro:content'
+import ProjectCard from '@components/ProjectCard.astro'
+
+const translations = {
+  en: {
+    titleBadge: 'The Interdisciplinary Edge',
+    title: 'Featured Projects',
+    subtitle:
+      "My fascination lies at the intersection where disciplines converge. With a deep understanding of fundamental physics, complex biological systems, and the intricacies of hardware and software, I architect and build full-stack solutions that tackle previously intractable problems. If you're looking for a partner to push boundaries, you've come to the right place.",
+    noProjectsFound: 'No projects found for this language.',
+    viewAllProjects: 'View All Projects',
+  },
+  tw: {
+    titleBadge: '跨領域優勢',
+    title: '精選專案',
+    subtitle:
+      '我的熱情在於跨學科的交匯點。憑藉對基礎物理學、分子生物系統以及軟硬體整合設計的深刻理解，我擅長規劃並建構解決棘手問題的全端解決方案。如果您正在尋找一位能共同突破界限的夥伴，那麼您來對地方了。',
+    noProjectsFound: '目前沒有此語言的專案。',
+    viewAllProjects: '查看所有專案',
+  },
+}
 const { locale } = Astro.params
-const currentLocale = locale ?? defaultLocale
-const t = useTranslations(locale)
+const currentLocale = (locale || defaultLocale) as keyof typeof translations
+const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
+  return translations[currentLocale]?.[key] || translations['en']?.[key]
+}
+
+// Fetch all projects and filter by current locale
+const projects = (
+  await getCollection('projects', ({ id }) => {
+    const { locale } = getLocaleSlugFromId(id)
+    return locale === currentLocale
+  })
+).sort((a, b) => {
+  // those with featured label should be on top
+  const featuredA = a.data.featured || 0
+  const featuredB = b.data.featured || 0
+  const dateA = datesFromChanges(a.data.changes).published || new Date(0)
+  const dateB = datesFromChanges(b.data.changes).published || new Date(0)
+  return featuredB - featuredA || dateA.getTime() - dateB.getTime()
+})
 ---
 
-<section class="py-12 md:py-24">
+<section class="py-8 md:py-12">
   <div class="container px-4 md:px-6">
     <div class="flex flex-col items-center justify-center space-y-4 text-center">
-      <div class="animate-fadeIn">
+      <div class="animate-fade-in-up space-y-4">
+        <div
+          class="dark:bg-accent dark:text-accent-foreground bg-accent text-accent-foreground inline-flex items-center rounded-lg px-3 py-1 text-sm font-medium"
+        >
+          {t('titleBadge')}
+        </div>
         <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-          {t('home.featured.title')}
+          {t('title')}
         </h2>
+        <p class="text-muted-foreground md:text-xl/relaxed">
+          {t('subtitle')}
+        </p>
       </div>
     </div>
-    <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      <div class="animate-fadeInUp">
-        <Card className="flex h-full flex-col">
-          <CardHeader className="flex flex-grow flex-col">
-            <div
-              class="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-green-100 dark:bg-green-900/20"
-            >
-              <Dna className="h-6 w-6 text-green-600 dark:text-green-400" />
-            </div>
-            <CardTitle>{t('home.featured.annotate.title')}</CardTitle>
-            <CardDescription className="flex-grow"
-              >{t('home.featured.annotate.description')}</CardDescription
-            >
-          </CardHeader>
-          <CardFooter className="flex flex-col gap-4">
-            <div
-              class="bg-muted flex h-40 w-full items-center justify-center overflow-hidden rounded-lg"
-            >
-              <p class="text-muted-foreground text-sm">Project Screenshot</p>
-            </div>
-            <Link
-              href={getRelativeLocaleUrl(currentLocale, '/projects/annotate')}
-              variant="outline"
-              className="w-full"
-            >
-              {t('button.view')}
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </CardFooter>
-        </Card>
-      </div>
-
-      <div class="animate-fadeInUp" style="animation-delay: 200ms;">
-        <Card className="flex h-full flex-col">
-          <CardHeader className="flex flex-grow flex-col">
-            <div
-              class="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-900/20"
-            >
-              <Cpu className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-            </div>
-            <CardTitle>{t('home.featured.scada.title')}</CardTitle>
-            <CardDescription className="flex-grow"
-              >{t('home.featured.scada.description')}</CardDescription
-            >
-          </CardHeader>
-          <CardFooter className="flex flex-col gap-4">
-            <div
-              class="bg-muted flex h-40 w-full items-center justify-center overflow-hidden rounded-lg"
-            >
-              <p class="text-muted-foreground text-sm">Project Screenshot</p>
-            </div>
-            <Link
-              href={getRelativeLocaleUrl(currentLocale, '/projects/scada')}
-              variant="outline"
-              className="w-full"
-            >
-              {t('button.view')}
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </CardFooter>
-        </Card>
-      </div>
-
-      <div class="animate-fadeInUp" style="animation-delay: 400ms;">
-        <Card className="flex h-full flex-col">
-          <CardHeader className="flex flex-grow flex-col">
-            <div
-              class="mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-amber-100 dark:bg-amber-900/20"
-            >
-              <CuboidIcon className="h-6 w-6 text-amber-600 dark:text-amber-400" />
-            </div>
-            <CardTitle>{t('home.featured.origami.title')}</CardTitle>
-            <CardDescription className="flex-grow"
-              >{t('home.featured.origami.description')}</CardDescription
-            >
-          </CardHeader>
-          <CardFooter className="flex flex-col gap-4">
-            <div
-              class="bg-muted flex h-40 w-full items-center justify-center overflow-hidden rounded-lg"
-            >
-              <p class="text-muted-foreground text-sm">Project Screenshot</p>
-            </div>
-            <Link
-              href={getRelativeLocaleUrl(currentLocale, '/projects/origami')}
-              variant="outline"
-              className="w-full"
-            >
-              {t('button.view')}
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </CardFooter>
-        </Card>
-      </div>
-    </div>
-    <div class="mt-12 flex justify-center">
-      <Link href={getRelativeLocaleUrl(currentLocale, '/projects')}>
-        {t('button.view.all')}
-        <ArrowRight className="ml-2 h-4 w-4" />
+    {
+      projects.length > 0 ? (
+        <div class="mt-8 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+          {projects.map((project: CollectionEntry<'projects'>, index: number) => (
+            <ProjectCard project={project} index={index} />
+          ))}
+        </div>
+      ) : (
+        <p class="text-muted-foreground text-center">{t('noProjectsFound')}</p>
+      )
+    }
+    <div class="mt-8 flex justify-center">
+      <Link
+        href={getRelativeLocaleUrl(currentLocale, '/projects')}
+        variant={'outline'}
+        className="flex items-center"
+      >
+        <Grid3x3 className="mr-1 h-4 w-4" />
+        {t('viewAllProjects')}
       </Link>
     </div>
   </div>
 </section>
 
-<style>
-  .animate-fadeIn {
-    opacity: 0;
-    animation: fadeIn 0.5s forwards;
-  }
-
-  .animate-fadeInUp {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s forwards;
-  }
-
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-</style>
+<style></style>
