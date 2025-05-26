@@ -1,0 +1,113 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@components/ui/card'
+import { Badge } from '@components/ui/badge'
+import { Link } from '@components/ui/link'
+import { defaultLocale, getLocaleSlugFromId } from '@lib/utils'
+import CategoryBadge from '@components/CategoryBadge.astro'
+import { ArrowRight } from 'lucide-react'
+import { Icon } from 'astro-icon/components'
+
+// make sure tailwind class names are statically detectable at build-time
+const colorVariants = {
+  amber: 'dark:bg-amber-900/20 dark:text-amber-400 bg-amber-100 text-amber-600',
+  green: 'dark:bg-green-900/20 dark:text-green-400 bg-green-100 text-green-600',
+  blue: 'dark:bg-blue-900/20 dark:text-blue-400 bg-blue-100 text-blue-600',
+  primary: 'bg-primary text-primary',
+}
+
+const translations = {
+  en: {
+    projectScreenshot: 'Project Screenshot',
+    viewDetails: 'View Details',
+  },
+  tw: {
+    projectScreenshot: '專案截圖',
+    viewDetails: '查看詳情',
+  },
+}
+const { locale } = Astro.params
+const currentLocale = (locale || defaultLocale) as keyof typeof translations
+const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
+  return translations[currentLocale]?.[key] || translations['en']?.[key]
+}
+
+interface Props {
+  project: CollectionEntry<'projects'>
+  index?: number
+}
+const { project, index = 0 } = Astro.props as Props
+const { id, data } = project
+const { slug } = getLocaleSlugFromId(id)
+const color = (data.color || 'primary') as keyof typeof colorVariants
+const projectUrl = getRelativeLocaleUrl(currentLocale, `/projects/${slug}`)
+---
+
+<div
+  class:list={['opacity-0']}
+  style={`animation: fade-in-up 0.3s ease-in ${(0.1 * (index + 1)).toFixed(1)}s forwards;`}
+>
+  <Card className={`flex h-full flex-col gap-5`}>
+    <CardHeader>
+      <div class="flex justify-center">
+        <div
+          class:list={[
+            colorVariants[color],
+            `w-fit items-center rounded-lg px-3 py-1 text-sm font-medium`,
+          ]}
+        >
+          {data.tagline}
+        </div>
+      </div>
+      <div class="mt-4 flex items-start justify-start gap-4">
+        <div
+          class:list={[
+            colorVariants[color],
+            `flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg`,
+          ]}
+        >
+          {data.icon && <Icon name={data.icon} class={`h-8 w-8`} />}
+        </div>
+        <div class="flex flex-col justify-center">
+          <CardTitle>{data.title}</CardTitle>
+          {data.subtitle && <CardDescription>{data.subtitle}</CardDescription>}
+        </div>
+      </div>
+    </CardHeader>
+    <CardContent className="flex-grow">
+      <p class="text-muted-foreground">{data.description}</p>
+    </CardContent>
+    <CardFooter className="flex flex-col items-start justify-start gap-4">
+      {
+        data.categories && (
+          <div class="mb-2 flex flex-wrap gap-2">
+            {data.categories.slice(0, 3).map((category) => (
+              <CategoryBadge
+                type="projects"
+                category={category}
+                className="bg-accent text-accent-foreground hover:bg-accent/80"
+              />
+            ))}
+          </div>
+        )
+      }
+      <div class="bg-muted flex h-40 w-full items-center justify-center overflow-hidden rounded-lg">
+        <p class="text-muted-foreground text-sm">{data.image?.alt || t('projectScreenshot')}</p>
+      </div>
+      <Link href={projectUrl} className="w-full">
+        {t('viewDetails')}
+        <ArrowRight className="ml-2 h-4 w-4" />
+      </Link>
+    </CardFooter>
+  </Card>
+</div>
+
+<style></style>
