@@ -10,13 +10,14 @@ import {
   FileText,
 } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/card'
-export { getLocalizedStaticPaths as getStaticPaths } from '@i18n/utils'
-import { defaultLocale } from '@i18n/utils'
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
+import { defaultLocale } from '@lib/utils'
 import { ContactForm } from '@components/ContactForm'
 
 const translations = {
   en: {
-    title: "Let's Innovate Together",
+    title: 'Contact | Han Lin',
+    pageTitle: "Let's Innovate Together",
     description:
       "Whether you're developing cutting-edge AI systems, advancing sustainable energy, or exploring new frontiers in bioinformatics, I'd be excited to discuss how my interdisciplinary expertise could help achieve your goals.",
     formTitle: 'Get in Touch',
@@ -39,7 +40,8 @@ const translations = {
     buttonViewPublications: 'View Publications',
   },
   tw: {
-    title: '攜手共創價值',
+    title: '聯絡 | 林翰',
+    pageTitle: '攜手共創價值',
     description:
       '無論貴單位正在開發尖端的 AI 系統、推動永續能源發展，或是在生醫資訊學領域探索未知疆界，我都非常樂意與您探討，如何運用我的跨領域專業知識，助您達成目標。',
     formTitle: '與我聯繫',
@@ -78,7 +80,7 @@ const t = (key: string) => {
         <h1
           class="animate-fade-in-up mb-4 text-3xl font-bold tracking-tighter opacity-0 sm:text-4xl md:text-5xl"
         >
-          {t('title')}
+          {t('pageTitle')}
         </h1>
         <p
           class="text-muted-foreground mb-8 opacity-0 md:text-xl"

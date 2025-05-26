@@ -1,0 +1,83 @@
+---
+import { getCollection } from 'astro:content'
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
+import { defaultLocale } from '@lib/utils'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import BlogCard from '@components/ArticleCard.astro'
+import BlogSidebar from '@components/ArticleSidebar.astro'
+
+const translations = {
+  en: {
+    title: 'Articles | Han Lin',
+    pageTitle: 'Blog',
+    description: 'Articles and insights on AI, bioinformatics, and electronics engineering.',
+    noArticlesFound: 'No articles found.',
+  },
+  tw: {
+    title: '文章 | 林翰',
+    pageTitle: '部落格',
+    description: '探索我橫跨人工智慧、生物資訊學及電子工程領域的文章和見解。',
+    noArticlesFound: '目前沒有文章。',
+  },
+}
+const { locale } = Astro.params
+const currentLocale = (locale || defaultLocale) as keyof typeof translations
+const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
+  return translations[currentLocale]?.[key] || translations['en']?.[key]
+}
+
+// Fetch articles by locale
+const articles = await getCollection('articles', ({ id }) => {
+  // Filter articles by language if needed
+  const langPrefix = id.split('/')[0]
+  return langPrefix === currentLocale
+})
+
+// Extract categories and tags for sidebar
+const categories = [...new Set(articles.flatMap((post) => post.data.categories || []))].map(
+  (category) => ({
+    name: category,
+    count: articles.filter((post) => post.data.categories?.includes(category)).length,
+  })
+)
+
+const tags = [...new Set(articles.flatMap((post) => post.data.tags || []))].map((tag) => ({
+  name: tag,
+  count: articles.filter((post) => post.data.tags?.includes(tag)).length,
+}))
+---
+
+<BaseLayout title={t('title')} description={t('description')}>
+  <section class="py-6 md:py-12">
+    <div class="container px-4 md:px-6">
+      <div class="animate-fade-in-up mx-auto mb-12 max-w-3xl text-center">
+        <h1 class="mb-4 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          {t('pageTitle')}
+        </h1>
+        <p class="text-muted-foreground md:text-xl">
+          {t('description')}
+        </p>
+      </div>
+      <div class="grid gap-8 lg:grid-cols-3">
+        <div class="lg:col-span-2">
+          <div class="grid gap-6 md:grid-cols-2">
+            {
+              articles.length > 0 ? (
+                articles.map((article, index) => <BlogCard article={article} index={index} />)
+              ) : (
+                <div class="py-12 text-center md:col-span-2">
+                  <p class="text-muted-foreground">{t('noArticlesFound')}</p>
+                </div>
+              )
+            }
+          </div>
+        </div>
+        <div class="animate-fade-in-up">
+          <BlogSidebar categories={categories} tags={tags} />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style></style>
