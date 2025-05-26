@@ -1,0 +1,111 @@
+---
+import { getCollection } from 'astro:content'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
+import { datesFromChanges, defaultLocale, getLocaleSlugFromId } from '@lib/utils'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { Link } from '@components/ui/link'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@components/ui/card'
+import { ArrowRight } from 'lucide-react'
+import { Icon } from 'astro-icon/components'
+import CategoryBadge from '@components/CategoryBadge.astro'
+import ProjectCard from '@components/ProjectCard.astro'
+
+const translations = {
+  en: {
+    title: 'Projects | Han Lin',
+    pageTitle: 'Projects',
+    description:
+      'Explore my key projects spanning AI, bioinformatics, and electronics engineering.',
+    viewDetails: 'View Details',
+    projectScreenshot: 'Project Screenshot',
+    noProjectsFound: 'No projects found for this language.',
+    viewProjectDetailsFallback: 'View project details.',
+  },
+  tw: {
+    title: '專案 | 林翰',
+    pageTitle: '專案項目',
+    description: '探索我橫跨人工智慧、生物資訊學及電子工程領域的專案項目',
+    viewDetails: '查看詳情',
+    projectScreenshot: '專案截圖',
+    noProjectsFound: '目前沒有此語言的專案。',
+    viewProjectDetailsFallback: '查看專案詳情。',
+  },
+}
+const { locale } = Astro.params
+const currentLocale = (locale || defaultLocale) as keyof typeof translations
+const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
+  return translations[currentLocale]?.[key] || translations['en']?.[key]
+}
+
+// Fetch all projects and filter by current locale
+const projects = (
+  await getCollection('projects', ({ id }) => {
+    const { locale } = getLocaleSlugFromId(id)
+    return locale === currentLocale
+  })
+).sort((a, b) => {
+  // those with featured label should be on top
+  const featuredA = a.data.featured || 0
+  const featuredB = b.data.featured || 0
+  const dateA = datesFromChanges(a.data.changes).published || new Date(0)
+  const dateB = datesFromChanges(b.data.changes).published || new Date(0)
+  return featuredB - featuredA || dateA.getTime() - dateB.getTime()
+})
+
+// This interface should match your projects collection schema in content.config.ts
+interface ProjectFrontmatter {
+  slug?: string
+  icon?: string
+  color?: string
+  featured?: number
+  tagline?: string
+  title: string
+  subtitle?: string
+  description?: string
+  categories?: string[]
+  image?: {
+    src: string
+    alt: string
+  }
+  tech?: string[]
+  links?: { text: string; href: string; icon?: string; variant?: string }[]
+  cards?: any[] // Define more specific types if needed
+  draft?: boolean
+  changes?: Record<string, string>[]
+}
+---
+
+<BaseLayout title={t('title')} description={t('description')}>
+  <section class="py-6 md:py-12">
+    <div class="container px-4 md:px-6">
+      <div class="animate-fade-in-up mx-auto max-w-3xl text-center">
+        <h1 class="mb-4 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          {t('pageTitle')}
+        </h1>
+        <p class="text-muted-foreground mb-12 md:text-xl">{t('description')}</p>
+      </div>
+
+      {
+        projects.length > 0 ? (
+          <div class="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+            {projects.map((project, index) => (
+              <ProjectCard project={project} index={index} />
+            ))}
+          </div>
+        ) : (
+          <p class="text-muted-foreground text-center">{t('noProjectsFound')}</p>
+        )
+      }
+    </div>
+  </section>
+</BaseLayout>
+
+<style></style>
