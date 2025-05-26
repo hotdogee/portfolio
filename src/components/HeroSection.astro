@@ -1,6 +1,6 @@
 ---
 import { Button } from '@components/ui/button'
-import { useTranslations, defaultLocale } from '@i18n/utils'
+import { useTranslations, defaultLocale } from '@lib/utils'
 const { locale } = Astro.params
 const currentLocale = locale ?? defaultLocale
 const t = useTranslations(locale)
@@ -12,8 +12,11 @@ const t = useTranslations(locale)
       <div class="flex flex-col justify-center space-y-4">
         <div class="hero-content" data-astro-transition="fade">
           <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-            {t('home.hero.title')}
+            Han Lin
           </h1>
+          <h2 class="text-xl font-bold tracking-tighter sm:text-2xl md:text-3xl">
+            {t('home.hero.title')}
+          </h2>
           <p class="text-muted-foreground mt-4 max-w-[700px] md:text-xl">
             {t('home.hero.description')}
           </p>
