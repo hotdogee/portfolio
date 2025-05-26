@@ -2,6 +2,14 @@
 @import 'tw-animate-css';
 @plugin '@tailwindcss/typography';
 
+/* Default Tailwind breakpoints
+ * sm: 40rem  (640px)
+ * md: 48rem  (768px)
+ * lg: 64rem  (1024px)
+ * xl: 80rem  (1280px)
+ * 2xl: 96rem (1536px)
+ */
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 @utility container {
@@ -220,6 +228,8 @@
   --muted-foreground: oklch(0.711 0.035 256.8);
   --accent: oklch(0.7 0.16 90);
   --accent-foreground: oklch(0.984 0.003 247.9);
+  --accent: oklch(0.78 0.15 89.68);
+  --accent-foreground: oklch(0.208 0.04 265.7);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.984 0.003 247.9);
   --border: oklch(1 0 0 / 10%);
