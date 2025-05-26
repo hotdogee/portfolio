@@ -10,9 +10,11 @@ import { Sun, Moon } from 'lucide-react'
   title="Toggle theme"
   className="cursor-pointer"
 >
-  <Sun className="scale-100 rotate-0 transition-all duration-1000 dark:scale-0 dark:rotate-90" />
+  <Sun
+    className="scale-100 rotate-0 transition-transform duration-1000 dark:scale-0 dark:rotate-90"
+  />
   <Moon
-    className="absolute scale-0 rotate-90 transition-all duration-1000 dark:scale-100 dark:rotate-0"
+    className="absolute scale-0 rotate-90 transition-transform duration-1000 dark:scale-100 dark:rotate-0"
   />
   <span class="sr-only">Toggle theme</span>
 </Button>
