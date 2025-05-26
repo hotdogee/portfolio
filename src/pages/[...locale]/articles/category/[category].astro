@@ -1,0 +1,113 @@
+---
+import { getCollection } from 'astro:content'
+import { locales, defaultLocale, slugify, useTranslations, type Locale } from '@lib/utils'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import BlogCard from '@components/ArticleCard.astro'
+import BlogSidebar from '@components/ArticleSidebar.astro'
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles')
+  if (!articles || articles.length === 0) {
+    return []
+  }
+  const categories = [...new Set(articles.flatMap((article) => article.data.categories || []))]
+  // Create paths for all locales and categories
+  const paths = categories.flatMap((category) => {
+    return [undefined, ...locales].map((locale) => {
+      return {
+        params: {
+          locale,
+          category: slugify(category),
+        },
+      }
+    })
+  })
+  return paths
+}
+
+const { locale, category } = Astro.params
+const currentLocale = (locale || defaultLocale) as Locale
+const tc = useTranslations(currentLocale, 'categories')
+const categorySlug = category ? decodeURIComponent(category) : ''
+
+const translations = {
+  en: {
+    title: `${tc(categorySlug)} | Articles | Han Lin`,
+    pageTitle: `Category: ${tc(categorySlug)}`,
+    description: `Articles and insights about ${tc(categorySlug)}`,
+    noArticlesFound: 'No articles in this category.',
+  },
+  tw: {
+    title: `${tc(categorySlug)} | 文章 | 林翰`,
+    pageTitle: `主題：${tc(categorySlug)}`,
+    description: `關於 ${tc(categorySlug)} 的文章和見解`,
+    noArticlesFound: '目前沒有相關主題的文章。',
+  },
+}
+const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
+  return translations[currentLocale]?.[key] || translations['en']?.[key]
+}
+
+// Fetch articles by locale
+const articles = await getCollection('articles', ({ id }) => {
+  // Filter articles by language if needed
+  const langPrefix = id.split('/')[0]
+  return langPrefix === currentLocale
+})
+
+// Extract categories and tags for sidebar
+const categories = [...new Set(articles.flatMap((article) => article.data.categories || []))].map(
+  (category) => ({
+    name: category,
+    count: articles.filter((article) => article.data.categories?.includes(category)).length,
+  })
+)
+
+const tags = [...new Set(articles.flatMap((article) => article.data.tags || []))].map((tag) => ({
+  name: tag,
+  count: articles.filter((article) => article.data.tags?.includes(tag)).length,
+}))
+
+// Filter articles by category
+const categoryArticles = articles.filter(
+  (article) =>
+    article.data.categories && article.data.categories.map((c) => slugify(c)).includes(categorySlug)
+)
+---
+
+<BaseLayout title={t('title')} description={t('description')}>
+  <section class="py-6 md:py-12">
+    <div class="container px-4 md:px-6">
+      <div class="animate-fade-in-up mx-auto mb-12 max-w-3xl text-center">
+        <h1 class="mb-4 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+          {t('pageTitle')}
+        </h1>
+        <p class="text-muted-foreground md:text-xl">
+          {t('description')}
+        </p>
+      </div>
+      <div class="grid gap-8 lg:grid-cols-3">
+        <div class="lg:col-span-2">
+          <div class="grid gap-6 md:grid-cols-2">
+            {
+              categoryArticles.length > 0 ? (
+                categoryArticles.map((article, index) => (
+                  <BlogCard article={article} index={index} />
+                ))
+              ) : (
+                <div class="py-12 text-center md:col-span-2">
+                  <p class="text-muted-foreground">{t('noArticlesFound')}</p>
+                </div>
+              )
+            }
+          </div>
+        </div>
+        <div>
+          <BlogSidebar categories={categories} tags={tags} />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style></style>
