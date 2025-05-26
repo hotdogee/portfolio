@@ -1,0 +1,50 @@
+---
+import { getCollection, render } from 'astro:content'
+import ProjectLayout from '@layouts/ProjectLayout.astro'
+import { locales, defaultLocale, getLocaleSlugFromId } from '@lib/utils'
+
+export async function getStaticPaths() {
+  const projectList = await getCollection('projects')
+  // console.log(`projectList: ${projectList.length}`)
+  if (!projectList || projectList.length === 0) {
+    return []
+  }
+  // id: 'en/software/post-1'
+  const projects = projectList.reduce<Record<string, Record<string, any>>>((acc, project) => {
+    const { locale, slug } = getLocaleSlugFromId(project.id)
+    if (!acc[slug]) {
+      acc[slug] = {}
+    }
+    acc[slug][locale] = project
+    return acc
+  }, {})
+  const path = Object.entries(projects).flatMap(([slug, localeProject]) => {
+    const fallbackLocale = Object.keys(localeProject).sort()[0] // Get the first locale as fallback
+    return [undefined, ...locales].map((locale) => {
+      return {
+        params: {
+          locale,
+          slug,
+        },
+        props: {
+          project: locale
+            ? localeProject[locale]
+            : false || localeProject[defaultLocale] || localeProject[fallbackLocale],
+        },
+      }
+    })
+  })
+  // console.log('Paths:', path)
+  return path
+}
+
+const { locale, slug } = Astro.params
+// console.log(`Locale: ${locale}, Slug: ${slug}`)
+const { project } = Astro.props
+// console.log('Project:', project)
+const { Content, headings } = await render(project)
+---
+
+<ProjectLayout frontmatter={project.data} headings={headings}>
+  <Content />
+</ProjectLayout>
