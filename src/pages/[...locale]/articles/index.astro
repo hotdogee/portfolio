@@ -9,14 +9,18 @@ import BlogSidebar from '@components/ArticleSidebar.astro'
 const translations = {
   en: {
     title: 'Articles | Han Lin',
-    pageTitle: 'Blog',
-    description: 'Articles and insights on AI, bioinformatics, and electronics engineering.',
+    pageTitleBadge: 'Musings on Tech, Science & Invention',
+    pageTitle: 'The Curiosity Circuit',
+    description:
+      "My mind is always connecting dots. This space is an extension of that process, a place to delve into emerging technologies, dissect complex ideas, and share perspectives on the ever-evolving landscape of AI, bioinformatics, electronics, and the human ingenuity that drives them. Let's explore the 'why' and 'what if' together.",
     noArticlesFound: 'No articles found.',
   },
   tw: {
     title: '文章 | 林翰',
-    pageTitle: '部落格',
-    description: '探索我橫跨人工智慧、生物資訊學及電子工程領域的文章和見解。',
+    pageTitleBadge: '漫談科技、科學與發明之道',
+    pageTitle: '奇想迴路',
+    description:
+      '我的思緒總在不同的點子間跳躍、串連。這裡便是我思考脈絡的延伸，一個致力於鑽研新興科技、拆解複雜概念，並針對 AI、生物資訊、電子學等日新月異的領域，以及驅動這一切的人類巧思，分享個人見聞的平台。讓我們一起探究事物的「所以然」，並大膽思索「無限可能」。',
     noArticlesFound: '目前沒有文章。',
   },
 }
@@ -48,15 +52,20 @@ const tags = [...new Set(articles.flatMap((post) => post.data.tags || []))].map(
 ---
 
 <BaseLayout title={t('title')} description={t('description')}>
-  <section class="py-6 md:py-12">
+  <section class="md:py-2">
     <div class="container px-4 md:px-6">
-      <div class="animate-fade-in-up mx-auto mb-12 max-w-3xl text-center">
-        <h1 class="mb-4 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-          {t('pageTitle')}
-        </h1>
-        <p class="text-muted-foreground md:text-xl">
-          {t('description')}
-        </p>
+      <div class="animate-fade-in-up mx-auto max-w-3xl transition duration-500">
+        <div class="mb-8 space-y-4 text-center">
+          <div
+            class="dark:bg-accent dark:text-accent-foreground bg-accent text-accent-foreground inline-flex items-center rounded-lg px-3 py-1 text-sm font-medium"
+          >
+            {t('pageTitleBadge')}
+          </div>
+          <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            {t('pageTitle')}
+          </h1>
+          <p class="text-muted-foreground mb-12 md:text-xl">{t('description')}</p>
+        </div>
       </div>
       <div class="grid gap-8 lg:grid-cols-3">
         <div class="lg:col-span-2">

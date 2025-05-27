@@ -17,10 +17,11 @@ import { ContactForm } from '@components/ContactForm'
 const translations = {
   en: {
     title: 'Contact | Han Lin',
+    pageTitleBadge: 'Get in Touch',
     pageTitle: "Let's Innovate Together",
     description:
-      "Whether you're developing cutting-edge AI systems, advancing sustainable energy, or exploring new frontiers in bioinformatics, I'd be excited to discuss how my interdisciplinary expertise could help achieve your goals.",
-    formTitle: 'Get in Touch',
+      "The next breakthrough often begins with a conversation. I'm passionate about collaborating with visionaries, researchers, and forward-thinking teams. If you're looking to solve complex problems, pioneer new technologies, or explore groundbreaking research, I'm ready to listen and contribute. Reach out, and let's discuss how we can innovate together.",
+    formTitle: 'Start a Conversation',
     formDescription:
       "Share a brief description of your project or opportunity below, and I'll respond within 24 hours. Alternatively, reach out directly via email.",
     namePlaceholder: 'Name',
@@ -34,17 +35,18 @@ const translations = {
     emailInvalid: 'Please enter a valid email address.',
     messageRequired: 'Message is required',
     formSubject: 'Portfolio User Inquiry',
-    connectTitle: 'Connect Online',
+    connectTitle: "Let's Connect",
     resourcesTitle: 'Download Resources',
     buttonDownload: 'Download CV',
     buttonViewPublications: 'View Publications',
   },
   tw: {
     title: '聯絡 | 林翰',
+    pageTitleBadge: '形塑未來',
     pageTitle: '攜手共創價值',
     description:
-      '無論貴單位正在開發尖端的 AI 系統、推動永續能源發展，或是在生醫資訊學領域探索未知疆界，我都非常樂意與您探討，如何運用我的跨領域專業知識，助您達成目標。',
-    formTitle: '與我聯繫',
+      '下一個重大突破，往往源於一場對話。我熱切期盼與富有遠見的開創者、研究學者及具前瞻思維的團隊攜手並進。若您正致力解決棘手難題、開拓嶄新科技，或探索前所未有的研究領域，我樂於傾聽並貢獻己力。歡迎隨時與我聯繫，讓我們共同打造卓越非凡的成果。',
+    formTitle: '啟動對話',
     formDescription:
       '請在下方簡要描述您的專案或合作機會，我將於 24 小時內回覆。也歡迎直接透過電子郵件與我聯繫。',
     namePlaceholder: '姓名',
@@ -58,7 +60,7 @@ const translations = {
     emailInvalid: '請輸入有效的電子郵件地址。',
     messageRequired: '訊息為必填欄位。',
     formSubject: '作品集訊息',
-    connectTitle: '線上交流',
+    connectTitle: '建立連結',
     resourcesTitle: '相關下載',
     buttonDownload: '下載履歷',
     buttonViewPublications: '查看著作',
@@ -67,27 +69,27 @@ const translations = {
 
 const { locale } = Astro.params
 const currentLocale = locale ?? defaultLocale
-const t = (key: string) => {
+const t = (key: string): any => {
   const locale = currentLocale as keyof typeof translations
   return translations[locale]?.[key as keyof (typeof translations)[typeof locale]] || key
 }
 ---
 
 <BaseLayout title={t('title')} description={t('description')}>
-  <section class="py-6 md:py-12">
+  <section class="md:py-2">
     <div class="container px-4 md:px-6">
-      <div class="mx-auto max-w-3xl text-center transition duration-500">
-        <h1
-          class="animate-fade-in-up mb-4 text-3xl font-bold tracking-tighter opacity-0 sm:text-4xl md:text-5xl"
-        >
-          {t('pageTitle')}
-        </h1>
-        <p
-          class="text-muted-foreground mb-8 opacity-0 md:text-xl"
-          style="animation: fade-in-up 0.5s ease-in 0.2s forwards;"
-        >
-          {t('description')}
-        </p>
+      <div class="animate-fade-in-up mx-auto max-w-3xl transition duration-500">
+        <div class="mb-8 space-y-4 text-center">
+          <div
+            class="dark:bg-accent dark:text-accent-foreground bg-accent text-accent-foreground inline-flex items-center rounded-lg px-3 py-1 text-sm font-medium"
+          >
+            {t('pageTitleBadge')}
+          </div>
+          <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            {t('pageTitle')}
+          </h1>
+          <p class="text-muted-foreground mb-12 md:text-xl">{t('description')}</p>
+        </div>
       </div>
 
       <div class="mt-12 grid gap-8 lg:grid-cols-2 xl:gap-12">
@@ -121,20 +123,20 @@ const t = (key: string) => {
             <CardContent>
               <div class="grid grid-cols-2 gap-4">
                 <a
-                  href="https://github.com/hotdogee"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="bg-background hover:bg-accent hover:text-accent-foreground border-input focus-visible:ring-ring inline-flex h-11 w-full items-center justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-sm transition-colors focus-visible:ring-1 focus-visible:outline-none"
-                >
-                  <Github className="mr-2 size-5" /> GitHub
-                </a>
-                <a
                   href="https://www.linkedin.com/in/hotdogee/"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="bg-background hover:bg-accent hover:text-accent-foreground border-input focus-visible:ring-ring inline-flex h-11 w-full items-center justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-sm transition-colors focus-visible:ring-1 focus-visible:outline-none"
                 >
                   <Linkedin className="mr-2 size-5" /> LinkedIn
+                </a>
+                <a
+                  href="https://github.com/hotdogee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="bg-background hover:bg-accent hover:text-accent-foreground border-input focus-visible:ring-ring inline-flex h-11 w-full items-center justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-sm transition-colors focus-visible:ring-1 focus-visible:outline-none"
+                >
+                  <Github className="mr-2 size-5" /> GitHub
                 </a>
                 <a
                   href="https://www.researchgate.net/profile/Han-Lin-23"

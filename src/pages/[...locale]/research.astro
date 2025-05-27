@@ -10,8 +10,8 @@ import { Link } from '@components/ui/link'
 const translations = {
   en: {
     title: 'Research | Han Lin',
-    pageTitleBadge: 'Advancing Knowledge',
-    pageTitle: 'Academic Foundation',
+    pageTitleBadge: 'Academic Foundation',
+    pageTitle: 'Advancing Knowledge',
     description:
       "My academic journey has provided the theoretical foundation for my practical work. From my earliest exploration of electronics engineering to my doctoral research in biomedical electronics and bioinformatics, I've sought knowledge that bridges disciplines and challenges conventional boundaries.",
     educationTitle: 'Education',
@@ -65,8 +65,8 @@ const translations = {
   },
   tw: {
     title: '研究 | 林翰',
-    pageTitleBadge: '知識的躍進',
-    pageTitle: '學術基石',
+    pageTitleBadge: '學術基石',
+    pageTitle: '知識的躍進',
     description:
       '我的學術歷程為我的實務工作奠定了堅實的理論基礎。從早期對電子工程的探索，到攻讀生物醫學電子與生物資訊學博士學位，我不斷追求能夠串聯不同學科、挑戰傳統疆界的知識。',
     educationTitle: '教育背景',
@@ -266,13 +266,19 @@ const papers = [
 
       <div class="grid gap-12">
         <div>
-          <h2
-            class="mb-6 flex items-center text-2xl font-bold opacity-0"
+          <div
+            class="mb-6 flex items-center gap-3 opacity-0"
             style="animation: fade-in-up 0.5s ease-in 0.1s forwards;"
           >
-            <GraduationCap className="mr-2 h-6 w-6" />
-            {t('educationTitle')}
-          </h2>
+            <div
+              class="bg-accent text-accent-foreground flex h-12 w-12 items-center justify-center rounded-full"
+            >
+              <GraduationCap className="h-6 w-6" />
+            </div>
+            <h2 class="text-2xl font-bold tracking-tighter sm:text-3xl">
+              {t('educationTitle')}
+            </h2>
+          </div>
 
           <div class="grid gap-6 md:grid-cols-2">
             {
@@ -316,7 +322,7 @@ const papers = [
                           <ul class="text-muted-foreground mt-2 space-y-1 text-sm">
                             {edu.courses.map((course: string) => (
                               <li class="flex items-start">
-                                <div class="bg-primary mt-1.5 mr-2 h-1 w-1 rounded-full" />
+                                <div class="bg-secondary mt-1.5 mr-2 h-1 w-1 rounded-full" />
                                 <span>{course}</span>
                               </li>
                             ))}
@@ -332,13 +338,19 @@ const papers = [
         </div>
 
         <div>
-          <h2
-            class="mb-6 flex items-center text-2xl font-bold opacity-0"
-            style="animation: fade-in-up 0.5s ease-in 0.3s forwards;"
+          <div
+            class="mb-6 flex items-center gap-3 opacity-0"
+            style="animation: fade-in-up 0.5s ease-in 0.1s forwards;"
           >
-            <BookOpen className="mr-2 h-6 w-6" />
-            {t('publications').title}
-          </h2>
+            <div
+              class="bg-accent text-accent-foreground flex h-12 w-12 items-center justify-center rounded-full"
+            >
+              <BookOpen className="h-6 w-6" />
+            </div>
+            <h2 class="text-2xl font-bold tracking-tighter sm:text-3xl">
+              {t('publications').title}
+            </h2>
+          </div>
 
           <div class="opacity-0" style="animation: fade-in-up 0.5s ease-in 0.4s forwards;">
             <p class="text-muted-foreground mb-8">{t('publications').description}</p>

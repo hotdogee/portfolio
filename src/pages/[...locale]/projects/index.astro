@@ -1,29 +1,17 @@
 ---
 import { getCollection } from 'astro:content'
-import { getRelativeLocaleUrl } from 'astro:i18n'
 export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
 import { datesFromChanges, defaultLocale, getLocaleSlugFromId } from '@lib/utils'
 import BaseLayout from '@layouts/BaseLayout.astro'
-import { Link } from '@components/ui/link'
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@components/ui/card'
-import { ArrowRight } from 'lucide-react'
-import { Icon } from 'astro-icon/components'
-import CategoryBadge from '@components/CategoryBadge.astro'
 import ProjectCard from '@components/ProjectCard.astro'
 
 const translations = {
   en: {
     title: 'Projects | Han Lin',
-    pageTitle: 'Projects',
+    pageTitleBadge: 'A Portfolio of Impact',
+    pageTitle: 'Innovations in Action',
     description:
-      'Explore my key projects spanning AI, bioinformatics, and electronics engineering.',
+      "Welcome to my workshop of ideas made real. This portfolio highlights key projects where I've architected and built solutions at the dynamic crossroads of AI, Bioinformatics, and Electronics. Discover how complex challenges were met with innovative engineering, leading to tangible breakthroughs and powerful tools that drive research and industry forward.",
     viewDetails: 'View Details',
     projectScreenshot: 'Project Screenshot',
     noProjectsFound: 'No projects found for this language.',
@@ -31,8 +19,10 @@ const translations = {
   },
   tw: {
     title: '專案 | 林翰',
-    pageTitle: '專案項目',
-    description: '探索我橫跨人工智慧、生物資訊學及電子工程領域的專案項目',
+    pageTitleBadge: '跨領域實績選粹',
+    pageTitle: '創新實踐',
+    description:
+      '歡迎蒞臨我的創新實踐工坊。本作品集聚焦我在 AI、生物資訊及電子工程的交集處，親自擘劃並構築的解決方案。探索如何運用創新工程克服艱鉅挑戰，催生具體突破，並鍛造出驅動學術研究與產業前行的強大工具。',
     viewDetails: '查看詳情',
     projectScreenshot: '專案截圖',
     noProjectsFound: '目前沒有此語言的專案。',
@@ -84,13 +74,20 @@ interface ProjectFrontmatter {
 ---
 
 <BaseLayout title={t('title')} description={t('description')}>
-  <section class="py-6 md:py-12">
+  <section class="md:py-2">
     <div class="container px-4 md:px-6">
-      <div class="animate-fade-in-up mx-auto max-w-3xl text-center">
-        <h1 class="mb-4 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-          {t('pageTitle')}
-        </h1>
-        <p class="text-muted-foreground mb-12 md:text-xl">{t('description')}</p>
+      <div class="animate-fade-in-up mx-auto max-w-3xl transition duration-500">
+        <div class="mb-8 space-y-4 text-center">
+          <div
+            class="dark:bg-accent dark:text-accent-foreground bg-accent text-accent-foreground inline-flex items-center rounded-lg px-3 py-1 text-sm font-medium"
+          >
+            {t('pageTitleBadge')}
+          </div>
+          <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            {t('pageTitle')}
+          </h1>
+          <p class="text-muted-foreground mb-12 md:text-xl">{t('description')}</p>
+        </div>
       </div>
 
       {
