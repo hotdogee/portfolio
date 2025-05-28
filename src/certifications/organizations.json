@@ -42,7 +42,7 @@
     "name": "AWS",
     "icon": {
       "light": "/src/certifications/images/organizations/aws-icon.svg",
-      "dark": "/src/certifications/images/organizations/aws-icon.svg",
+      "dark": "/src/certifications/images/organizations/aws-icon-dark.svg",
       "alt": "AWS Icon"
     },
     "logo": {
@@ -64,7 +64,7 @@
       "alt": "Coursera Logo"
     }
   },
-  "deeplearning-ai": {
+  "deeplearningai": {
     "name": "DeepLearning.AI",
     "icon": {
       "light": "/src/certifications/images/organizations/deeplearning-ai-icon.svg",
@@ -81,7 +81,7 @@
     "name": "EF SET",
     "icon": {
       "light": "/src/certifications/images/organizations/ef-set-icon.svg",
-      "dark": "/src/certifications/images/organizations/ef-set-icon.svg",
+      "dark": "/src/certifications/images/organizations/ef-set-icon-dark.svg",
       "alt": "EF SET Icon"
     },
     "logo": {
@@ -116,16 +116,16 @@
       "alt": "Google Logo"
     }
   },
-  "institute-for-information-industry": {
+  "institute-information-industry": {
     "name": "Institute For Information Industry",
     "icon": {
-      "light": "/src/certifications/images/organizations/institute-for-information-industry-icon.svg",
-      "dark": "/src/certifications/images/organizations/institute-for-information-industry-icon.svg",
+      "light": "/src/certifications/images/organizations/institute-information-industry-icon.svg",
+      "dark": "/src/certifications/images/organizations/institute-information-industry-icon-dark.svg",
       "alt": "Institute For Information Industry Icon"
     },
     "logo": {
-      "light": "/src/certifications/images/organizations/institute-for-information-industry-logo.svg",
-      "dark": "/src/certifications/images/organizations/institute-for-information-industry-logo-dark.svg",
+      "light": "/src/certifications/images/organizations/institute-information-industry-logo.svg",
+      "dark": "/src/certifications/images/organizations/institute-information-industry-logo-dark.svg",
       "alt": "Institute For Information Industry Logo"
     }
   },
@@ -168,16 +168,16 @@
       "alt": "Microsoft Logo"
     }
   },
-  "ministry-of-education": {
+  "ministry-education": {
     "name": "Ministry Of Education",
     "icon": {
-      "light": "/src/certifications/images/organizations/ministry-of-education-icon.svg",
-      "dark": "/src/certifications/images/organizations/ministry-of-education-icon.svg",
+      "light": "/src/certifications/images/organizations/ministry-education-icon.svg",
+      "dark": "/src/certifications/images/organizations/ministry-education-icon.svg",
       "alt": "Ministry Of Education Icon"
     },
     "logo": {
-      "light": "/src/certifications/images/organizations/ministry-of-education-logo.svg",
-      "dark": "/src/certifications/images/organizations/ministry-of-education-logo-dark.svg",
+      "light": "/src/certifications/images/organizations/ministry-education-logo.svg",
+      "dark": "/src/certifications/images/organizations/ministry-education-logo-dark.svg",
       "alt": "Ministry Of Education Logo"
     }
   },
