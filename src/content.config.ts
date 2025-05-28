@@ -1,6 +1,8 @@
 // Import the glob loader
 import { glob } from 'astro/loaders'
 // Import utilities from `astro:content`
+import certs from '@/certifications/certifications.json'
+import { slugify } from '@lib/utils'
 import { defineCollection, z } from 'astro:content'
 // Define a `loader` and `schema` for each collection
 // title: 'My First Blog Post'
@@ -123,5 +125,41 @@ const projects = defineCollection({
   }),
 })
 
+const certifications = defineCollection({
+  loader: async () => {
+    return certs.reduce(
+      (acc, cert) => {
+        const id = slugify(cert.name)
+        acc[id] = { ...cert, id }
+        return acc
+      },
+      {} as Record<string, (typeof certs)[number] & { id: string }>
+    )
+  },
+  schema: z.object({
+    slug: z.string().optional(),
+    featured: z.number().optional(), // sorted descending
+    name: z.string(),
+    organization: z.string(),
+    issue: z.string().optional(),
+    expire: z.string().optional(),
+    identifier: z.string().optional(),
+    url: z.string().optional(),
+    skills: z.array(z.string()).optional(),
+    badge: z
+      .object({
+        url: z.string(),
+        alt: z.string(),
+      })
+      .optional(),
+    certificate: z
+      .object({
+        url: z.string(),
+        alt: z.string(),
+      })
+      .optional(),
+  }),
+})
+
 // Export a single `collections` object to register your collection(s)
-export const collections = { articles, projects }
+export const collections = { articles, projects, certifications }
