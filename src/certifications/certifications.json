@@ -1,0 +1,1281 @@
+[  {
+    "name": "Generative AI Leader",
+    "organization": "Google",
+    "issue": "May 2025",
+    "expire": "May 2028",
+    "identifier": "ac0bdb93185f419eb2214522d4296c7c",
+    "url": "https://www.credly.com/badges/5c6a2127-5bbf-452a-9179-e19795057115/linked_in_profile",
+    "skills": [
+      "AI Ethics",
+      "Artificial Intelligence (AI)",
+      "Artificial Intelligence Applications",
+      "Business Acumen",
+      "Business Analysis",
+      "Business Awareness",
+      "Cloud Computing",
+      "Generative AI",
+      "Google Cloud Platform (GCP)",
+      "Strategic Business Units"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-certified-generative-ai-leader-2025-badge.png",
+      "alt": "Google Certified Generative AI Leader Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-certified-generative-ai-leader-2025-certificate.png",
+      "alt": "Google Certified Generative AI Leader Certificate"
+    }
+  },
+  {
+    "name": "Microsoft Certified Cybersecurity Architect Expert SC-100",
+    "organization": "Microsoft",
+    "issue": "May 2025",
+    "expire": "May 2026",
+    "identifier": "A9A383FD75C41BBF",
+    "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/A9A383FD75C41BBF",
+    "skills": [
+      "Evaluate Security Posture",
+      "Governance Risk Compliance",
+      "Microsoft Cybersecurity Architect",
+      "Microsoft Defender",
+      "Risk Management",
+      "Securing Data Strategy",
+      "Securing Server Strategy",
+      "Security Operations Strategy",
+      "Zero Trust Architecture",
+      "Zero Trust Strategy",
+      "Design solutions that align with security best practices and priorities",
+      "Design security operations, identity, and compliance capabilities",
+      "Design security solutions for infrastructure",
+      "Design security solutions for applications and data"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/microsoft-certified-sc-100-cybersecurity-architect-expert-2025-badge.png",
+      "alt": "Microsoft Certified Cybersecurity Architect Expert SC-100 Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/microsoft-certified-sc-100-cybersecurity-architect-expert-2025-certificate.png",
+      "alt": "Microsoft Certified Cybersecurity Architect Expert SC-100 Certificate"
+    }
+  },
+  {
+    "name": "Microsoft Certified DevOps Engineer Expert AZ-400",
+    "organization": "Microsoft",
+    "issue": "May 2025",
+    "expire": "May 2026",
+    "identifier": "DBA52D6172D9A584",
+    "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/DBA52D6172D9A584?sharingId",
+    "skills": [
+      "DevOps",
+      "DevSecOps",
+      "GitOps",
+      "Design and implement processes and communications",
+      "Design and implement a source control strategy",
+      "Design and implement build and release pipelines",
+      "Develop a security and compliance plan",
+      "Implement an instrumentation strategy"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/microsoft-certified-az-400-devops-engineer-expert-2025-badge.png",
+      "alt": "Microsoft Certified DevOps Engineer Expert AZ-400 Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/microsoft-certified-az-400-devops-engineer-expert-2025-certificate.png",
+      "alt": "Microsoft Certified DevOps Engineer Expert AZ-400 Certificate"
+    }
+  },
+  {
+    "name": "Salesforce Certified AI Associate",
+    "organization": "Salesforce",
+    "issue": "Apr 2025",
+    "expire": "Apr 2026",
+    "identifier": "6121887",
+    "url": "https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=I1QEKan+5MctJYwAqRZoMArZ/lUUIJ9lfDiT6nDawM0puS8X+L9JFrMo/Bn6aVCu",
+    "skills": [
+      "Artificial Intelligence (AI)",
+      "Generative AI",
+      "AI Fundamentals",
+      "AI Capabilities in CRM",
+      "Ethical Considerations of AI",
+      "Data for AI"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/salesforce-certified-ai-associate-2025-badge.png",
+      "alt": "Salesforce Certified AI Associate Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/salesforce-certified-ai-associate-2025-certificate.png",
+      "alt": "Salesforce Certified AI Associate Certificate"
+    }
+  },
+  {
+    "name": "Microsoft Certified Azure Security Engineer Associate AZ-500",
+    "organization": "Microsoft",
+    "issue": "Mar 2025",
+    "expire": "Mar 2026",
+    "identifier": "2FC4CBECC42B1E60",
+    "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/2FC4CBECC42B1E60?sharingId",
+    "skills": [
+      "Security Engineering",
+      "Data Security",
+      "Cloud Security",
+      "Network Security",
+      "Cybersecurity",
+      "Secure identity and access",
+      "Secure networking",
+      "Secure compute, storage, and databases",
+      "Secure Azure using Microsoft Defender for Cloud and Microsoft Sentinel"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/microsoft-certified-az-500-azure-security-engineer-associate-2025-badge.png",
+      "alt": "Microsoft Certified Azure Security Engineer Associate AZ-500 Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/microsoft-certified-az-500-azure-security-engineer-associate-2025-certificate.png",
+      "alt": "Microsoft Certified Azure Security Engineer Associate AZ-500 Certificate"
+    }
+  },
+  {
+    "name": "Ethical Hacker",
+    "organization": "Udacity",
+    "issue": "Feb 2025",
+    "identifier": "ea9a0c00-f938-11ef-b781-23b598b957fe",
+    "url": "https://www.udacity.com/certificate/e/ea9a0c00-f938-11ef-b781-23b598b957fe",
+    "skills": [
+      "Open Source Intelligence",
+      "Vulnerability Management",
+      "Penetration Testing",
+      "Owasp wstg",
+      "Metasploit",
+      "Link analysis",
+      "Vulnerability assessment",
+      "Cybersecurity reconnaissance",
+      "Report writing",
+      "Social engineering",
+      "Phishing",
+      "Gophish",
+      "Security risk classification",
+      "Nessus",
+      "Security assessment",
+      "Vulnerability exploitation",
+      "SQLmap",
+      "Wpscan",
+      "Maltego",
+      "Cvss",
+      "Malware development",
+      "Automated penetration testing",
+      "Nmap",
+      "Vulnerability scanning",
+      "Semi-automated penetration testing",
+      "Burp suite",
+      "Exploratory data analysis",
+      "Nikto",
+      "Vulnerability research",
+      "Digital footprint removal",
+      "Password attacks",
+      "Osint tools",
+      "Exploit code execution",
+      "Open source vulnerability database",
+      "Digital footprint analysis",
+      "SQL injection",
+      "Cybersecurity pivoting",
+      "Web hacking",
+      "Cherrytree",
+      "Backdoors",
+      "Passive cybersecurity reconnaissance",
+      "On-premise cyber attacks",
+      "Service enumeration",
+      "Advanced persistent threat",
+      "Steganography",
+      "Owasp zap",
+      "Active cybersecurity reconnaissance",
+      "Data exfiltration",
+      "Dig",
+      "Router hacking",
+      "Privilege escalation",
+      "Traceroute",
+      "Dirb",
+      "Netdiscover",
+      "Red teaming",
+      "Port scanning",
+      "Nslookup",
+      "John the ripper",
+      "Cyber attack persistence",
+      "Keystroke logging",
+      "Port forwarding",
+      "Web application vulnerability scanning",
+      "Hash cat",
+      "Exploitdb",
+      "Veil-evasion",
+      "Google hacking"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/udacity-ethical-hacker-nanodegree-2025-badge.png",
+      "alt": "Udacity Ethical Hacker Nanodegree Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/udacity-ethical-hacker-nanodegree-2025-certificate.png",
+      "alt": "Udacity Ethical Hacker Nanodegree Certificate"
+    }
+  },
+  {
+    "name": "Google Certified Associate Google Workspace Administrator",
+    "organization": "Google",
+    "issue": "Feb 2025",
+    "expire": "Feb 2028",
+    "identifier": "f646d43ee24c4e69b368505384c3b5ed",
+    "url": "https://www.credly.com/badges/c6eca2f5-aaee-48d5-943c-7e0b14a6d478/linked_in_profile",
+    "skills": [
+      "Data Governance",
+      "Google Workspace",
+      "Help Desk Support",
+      "Identity And Access Management (IAM)",
+      "Productivity Software",
+      "Security Policies",
+      "System Administration",
+      "Troubleshooting",
+      "User Account Management"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-certified-associate-google-workspace-administrator-2025-badge.png",
+      "alt": "Google Certified Associate Google Workspace Administrator Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-certified-associate-google-workspace-administrator-2025-certificate.png",
+      "alt": "Google Certified Associate Google Workspace Administrator Certificate"
+    }
+  },
+  {
+    "name": "Google Certified Professional Cloud Database Engineer",
+    "organization": "Google",
+    "issue": "Feb 2025",
+    "expire": "Feb 2027",
+    "identifier": "7b08b30cabeb4d0381acfe1e2db54d14",
+    "url": "https://www.credly.com/badges/83fbf92c-3837-4bb2-919f-566b7400fbfe/linked_in_profile",
+    "skills": [
+      "Backup And Recovery",
+      "Cloud SQL",
+      "Database Administration",
+      "Database Management Systems (DBMS Systems)",
+      "Database Scalability",
+      "Data Migration",
+      "Google Cloud Platform (GCP)",
+      "Identity And Access Management (IAM)"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-certified-professional-cloud-database-engineer-2025-badge.png",
+      "alt": "Google Certified Professional Cloud Database Engineer Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-certified-professional-cloud-database-engineer-2025-certificate.png",
+      "alt": "Google Certified Professional Cloud Database Engineer Certificate"
+    }
+  },
+  {
+    "name": "Google Certified Professional Cloud DevOps Engineer",
+    "organization": "Google",
+    "issue": "Feb 2025",
+    "expire": "Feb 2027",
+    "identifier": "21a38765356644029b9a76a7ae0bbb12",
+    "url": "https://www.credly.com/badges/76451edd-6b16-40c8-952c-dc5ec3a6f027/linked_in_profile",
+    "skills": [
+      "CI/CD",
+      "Cloud Computing",
+      "Cloud Security",
+      "DevOps",
+      "Google Cloud Platform (GCP)",
+      "Infrastructure as Code (IaC)",
+      "Infrastructure Automation",
+      "Kubernetes",
+      "Scalability",
+      "Site Reliability Engineering",
+      "System Monitoring"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-certified-professional-cloud-devops-engineer-2025-badge.png",
+      "alt": "Google Certified Professional Cloud DevOps Engineer Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-certified-professional-cloud-devops-engineer-2025-certificate.png",
+      "alt": "Google Certified Professional Cloud DevOps Engineer Certificate"
+    }
+  },
+  {
+    "name": "Google Certified Professional Cloud Developer",
+    "organization": "Google",
+    "issue": "Feb 2025",
+    "expire": "Feb 2027",
+    "identifier": "320df0bfa4ca4a37b27c16cddf6e5865",
+    "url": "https://www.credly.com/badges/d3586440-7c66-4595-8bef-70e918099a04/linked_in_profile",
+    "skills": [
+      "Application Security",
+      "CI/CD",
+      "Cloud API",
+      "Cloud-Native Applications",
+      "Cloud Run",
+      "Cloud Storage",
+      "Eventing",
+      "GKE",
+      "Google Cloud Platform (GCP)",
+      "Identity And Access Management (IAM)",
+      "Message Queueing",
+      "Scalability"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-certified-professional-cloud-developer-2025-badge.png",
+      "alt": "Google Certified Professional Cloud Developer Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-certified-professional-cloud-developer-2025-certificate.png",
+      "alt": "Google Certified Professional Cloud Developer Certificate"
+    }
+  },
+  {
+    "name": "TOEIC 985/990",
+    "organization": "ETS",
+    "issue": "Dec 2020",
+    "expire": "Dec 2022",
+    "identifier": "",
+    "url": "",
+    "skills": [
+      "Advanced English Listening Comprehension",
+      "Proficient English Reading Comprehension",
+      "Near-Native English Proficiency",
+      "Business‑Level Vocabulary"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/toeic-2025-badge.jpg",
+      "alt": "TOEIC 985/990 Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/toeic-2025-certificate.jpg",
+      "alt": "TOEIC 985/990 Certificate"
+    }
+  },
+  {
+    "name": "EF SET English Certificate 87/100 (C2 Proficient)",
+    "organization": "EF Standard English Test (EF SET)",
+    "issue": "Dec 2020",
+    "expire": "",
+    "identifier": "s5gLzz",
+    "url": "https://www.efset.org/cert/s5gLzz",
+    "skills": [
+      "Information Synthesis",
+      "Academic Proficiency",
+      "Professional Communication",
+      "Comprehensive Writing"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/ef-set-english-test-2025-badge.png",
+      "alt": "EF SET English Certificate C2 Proficient Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/ef-set-english-test-2025-certificate.png",
+      "alt": "EF SET English Certificate C2 Proficient Certificate"
+    }
+  },
+  {
+    "name": "Generative AI Art Design Certification - Level 2",
+    "organization": "Institute for Information Industry",
+    "issue": "Jan 2025",
+    "expire": "Jan 2027",
+    "identifier": "RA03250122006",
+    "url": "https://www.iiiedu.org.tw/certifications/recordnew",
+    "skills": [
+      "Generative AI",
+      "Prompt Engineering",
+      "Generative AI Art and Design Application Skills",
+      "Generative AI Ethics and Law",
+      "Generative AI Art and Design",
+      "Generative AI Art Practical Application"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/institute-for-information-industry-certified-generative-ai-art-design-level-2-2025-badge.png",
+      "alt": "Generative AI Art Design Certification Level 2 Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/institute-for-information-industry-certified-generative-ai-art-design-level-2-2025-certificate.png",
+      "alt": "Generative AI Art Design Certification Level 2 Certificate"
+    }
+  },
+  {
+    "name": "Google Certified Professional Cloud Network Engineer",
+    "organization": "Google",
+    "issue": "Jan 2025",
+    "expire": "Jan 2027",
+    "identifier": "9cc9fdb9992c49e2bda40a34f9c5ed73",
+    "url": "https://www.credly.com/badges/04b35518-16c5-4a2f-9d20-d8f17464c26c/linked_in_profile",
+    "skills": [
+      "Firewalls",
+      "Google Cloud Platform (GCP)",
+      "Network Architecture",
+      "Network Design",
+      "Network Engineering",
+      "Network Monitoring",
+      "Network Performance",
+      "Network Security",
+      "Network Troubleshooting",
+      "Routing Protocols",
+      "TCP/IP"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-certified-professional-cloud-network-engineer-2025-badge.png",
+      "alt": "Google Certified Professional Cloud Network Engineer Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-certified-professional-cloud-network-engineer-2025-certificate.png",
+      "alt": "Google Certified Professional Cloud Network Engineer Certificate"
+    }
+  },
+  {
+    "name": "Google Cybersecurity Professional Certificate",
+    "organization": "Google",
+    "issue": "Jan 2025",
+    "identifier": "ZKY0PH67MYSF",
+    "url": "https://coursera.org/verify/professional-cert/ZKY0PH67MYSF",
+    "skills": [
+      "Authentication",
+      "Cybersecurity Assessment",
+      "Information Assurance",
+      "Information Security",
+      "Information Systems",
+      "Intrusion Detection and IDS tools",
+      "Linux",
+      "Network Analyzer (sniffing) tools",
+      "Network Security",
+      "NIST Cybersecurity Framework (CSF)",
+      "Python",
+      "Risk Assessment",
+      "Risk Management Framework",
+      "Security Information and Event Management (SIEM) tools",
+      "SQL",
+      "Threat Analysis",
+      "Vulnerability Assessment"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-cybersecurity-professional-2025-badge.png",
+      "alt": "Google Cybersecurity Professional Certificate Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-cybersecurity-professional-2025-certificate.png",
+      "alt": "Google Cybersecurity Professional Certificate"
+    }
+  },
+  {
+    "name": "Meta Certified Digital Marketing Associate",
+    "organization": "Meta",
+    "issue": "Jan 2025",
+    "expire": "Jan 2027",
+    "identifier": "122058955",
+    "url": "https://www.credly.com/badges/19ce38e2-d72a-46b5-b9ef-d64771c903b2/linked_in_profile",
+    "skills": [
+      "Ads Manager",
+      "Advertising Objectives",
+      "Digital Marketing",
+      "Digital Media Buying",
+      "Facebook",
+      "Facebook Ads",
+      "Facebook Messenger",
+      "Facebook Reporting",
+      "Instagram",
+      "Instagram Advertising",
+      "Social Media Marketing",
+      "WhatsApp Campaign"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/meta-certified-digital-marketing-associate-2025-badge.png",
+      "alt": "Meta Certified Digital Marketing Associate Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/meta-certified-digital-marketing-associate-2025-certificate.png",
+      "alt": "Meta Certified Digital Marketing Associate Certificate"
+    }
+  },
+  {
+    "name": "Google Certified Professional Cloud Security Engineer",
+    "organization": "Google",
+    "issue": "Dec 2024",
+    "expire": "Dec 2026",
+    "identifier": "808c447e0d514dcc9bc3a6774d7b0f93",
+    "url": "https://www.credly.com/badges/c41c9a8a-0b9f-4f43-a161-4bc050c9b51d/public_url",
+    "skills": [
+      "Cloud Security",
+      "Cybersecurity",
+      "Data Governance",
+      "Data Security",
+      "Google Cloud Platform (GCP)",
+      "Identity And Access Management (IAM)",
+      "Network Security",
+      "Security Controls",
+      "Security Engineering"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-certified-professional-cloud-security-engineer-2024-badge.png",
+      "alt": "Google Certified Professional Cloud Security Engineer Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-certified-professional-cloud-security-engineer-2024-certificate.png",
+      "alt": "Google Certified Professional Cloud Security Engineer Certificate"
+    }
+  },
+  {
+    "name": "Google Certified Professional Workspace Administrator",
+    "organization": "Google",
+    "issue": "Dec 2024",
+    "expire": "Dec 2026",
+    "identifier": "0911a98c87bc42d2a1423a6ec4990586",
+    "url": "https://www.credly.com/badges/9d1398ac-e13b-45c8-a281-aaf05c749c51/linked_in_profile",
+    "skills": [
+      "Google Workspace",
+      "Help Desk Support",
+      "Identity And Access Management (IAM)",
+      "Productivity Software",
+      "System Administration",
+      "Teleconferencing",
+      "User Account Management"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-certified-professional-google-workspace-administrator-2024-badge.png",
+      "alt": "Google Certified Professional Workspace Administrator Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-certified-professional-google-workspace-administrator-2024-certificate.png",
+      "alt": "Google Certified Professional Workspace Administrator Certificate"
+    }
+  },
+  {
+    "name": "Microsoft Certified Azure AI Engineer Associate AI-102",
+    "organization": "Microsoft",
+    "issue": "Dec 2024",
+    "expire": "Dec 2025",
+    "identifier": "93AB72EB1C7F256C",
+    "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/93AB72EB1C7F256C?sharingId",
+    "skills": [
+      "Foundation Models",
+      "Machine Learning",
+      "Azure OpenAI",
+      "Computer Vision",
+      "Generative AI",
+      "Artificial Intelligence (AI)",
+      "Azure AI Services",
+      "Plan and manage an Azure AI solution",
+      "Implement generative AI solutions",
+      "Implement an agentic solution",
+      "Implement computer vision solutions",
+      "Implement natural language processing solutions",
+      "Implement knowledge mining and information extraction solutions"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/microsoft-certified-ai-102-azure-ai-engineer-associate-2024-badge.png",
+      "alt": "Microsoft Certified Azure AI Engineer Associate AI-102 Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/microsoft-certified-ai-102-azure-ai-engineer-associate-2024-certificate.png",
+      "alt": "Microsoft Certified Azure AI Engineer Associate AI-102 Certificate"
+    }
+  },
+  {
+    "name": "Microsoft Certified Azure Data Engineer Associate DP-203",
+    "organization": "Microsoft",
+    "issue": "Dec 2024",
+    "expire": "Dec 2025",
+    "identifier": "8A92F43FE71DEB57",
+    "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/8A92F43FE71DEB57?sharingId",
+    "skills": [
+      "Data Lakes",
+      "Data Governance",
+      "Data Pipelines",
+      "Databricks",
+      "Design and implement data storage",
+      "Develop data processing",
+      "Secure, monitor, and optimize data storage and data processing"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/microsoft-certified-dp-203-azure-data-engineer-associate-2024-badge.png",
+      "alt": "Microsoft Certified Azure Data Engineer Associate DP-203 Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/microsoft-certified-dp-203-azure-data-engineer-associate-2024-certificate.png",
+      "alt": "Microsoft Certified Azure Data Engineer Associate DP-203 Certificate"
+    }
+  },
+  {
+    "name": "Microsoft Certified Azure Data Scientist Associate DP-100",
+    "organization": "Microsoft",
+    "issue": "Dec 2024",
+    "expire": "Dec 2025",
+    "identifier": "62B3D6279522723F",
+    "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/62B3D6279522723F?sharingId",
+    "skills": [
+      "Machine Learning",
+      "Data Science",
+      "MLOps",
+      "MLflow",
+      "Artificial Intelligence (AI)",
+      "Design and prepare a machine learning solution",
+      "Explore data, and run experiments",
+      "Train and deploy models",
+      "Optimize language models for AI applications"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/microsoft-certified-dp-100-azure-data-scientist-associate-2024-badge.png",
+      "alt": "Microsoft Certified Azure Data Scientist Associate DP-100 Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/microsoft-certified-dp-100-azure-data-scientist-associate-2024-certificate.png",
+      "alt": "Microsoft Certified Azure Data Scientist Associate DP-100 Certificate"
+    }
+  },
+  {
+    "name": "Microsoft Certified Azure Solutions Architect Expert AZ-305",
+    "organization": "Microsoft",
+    "issue": "Dec 2024",
+    "expire": "Dec 2025",
+    "identifier": "5A05F445D9E87EDB",
+    "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/5A05F445D9E87EDB?sharingId",
+    "skills": [
+      "Cloud Architecture",
+      "Infrastructure as code (IaC)",
+      "Azure Architect",
+      "Cloud Migration",
+      "Digital Transformation",
+      "Design identity, governance, and monitoring solutions",
+      "Design data storage solutions",
+      "Design business continuity solutions",
+      "Design infrastructure solutions"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/microsoft-certified-az-305-azure-solutions-architect-expert-2024-badge.png",
+      "alt": "Microsoft Certified Azure Solutions Architect Expert AZ-305 Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/microsoft-certified-az-305-azure-solutions-architect-expert-2024-certificate.png",
+      "alt": "Microsoft Certified Azure Solutions Architect Expert AZ-305 Certificate"
+    }
+  },
+  {
+    "name": "Generative AI Certification",
+    "organization": "Institute for Information Industry",
+    "issue": "Nov 2024",
+    "expire": "Nov 2026",
+    "identifier": "RA02241113010",
+    "url": "https://www.iiiedu.org.tw/certifications/recordnew",
+    "skills": [
+      "Foundation Models",
+      "Prompt Engineering",
+      "Generative AI",
+      "Artificial Intelligence (AI)",
+      "Ethical and Legal Frameworks in Generative AI"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/institute-for-information-industry-certified-generative-ai-2025-badge.png",
+      "alt": "Institute for Information Industry Generative AI Certification Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/institute-for-information-industry-certified-generative-ai-2025-certificate.png",
+      "alt": "Institute for Information Industry Generative AI Certification Certificate"
+    }
+  },
+  {
+    "name": "Google Certified Associate Cloud Engineer",
+    "organization": "Google",
+    "issue": "Nov 2024",
+    "expire": "Nov 2027",
+    "identifier": "48d4394ee83346aa8e325d4057ed1dee",
+    "url": "https://www.credly.com/badges/a60cfb97-f91d-40d5-aadc-b7995eda46f1/linked_in_profile",
+    "skills": [
+      "Cloud Architecture",
+      "Cloud Computing",
+      "Cloud Security",
+      "Cloud Storage",
+      "Compute Engine",
+      "GKE",
+      "Google Cloud Platform (GCP)",
+      "Identity And Access Management (IAM)",
+      "Infrastructure as Code (IaC)",
+      "Networking",
+      "Pub/sub",
+      "SQL"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-certified-associate-cloud-engineer-2024-badge.png",
+      "alt": "Google Certified Associate Cloud Engineer Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-certified-associate-cloud-engineer-2024-certificate.png",
+      "alt": "Google Certified Associate Cloud Engineer Certificate"
+    }
+  },
+  {
+    "name": "Google Certified Associate Data Practitioner",
+    "organization": "Google",
+    "issue": "Nov 2024",
+    "expire": "Nov 2027",
+    "identifier": "724a9a00760b46b79c37d5139fcac467",
+    "url": "https://www.credly.com/badges/a144c9d0-c7ae-4cd2-8166-c3f84900c97e/linked_in_profile",
+    "skills": [
+      "Analytical Skills",
+      "BigQuery",
+      "Business Intelligence (BI)",
+      "Cloud Computing",
+      "Cloud Storage",
+      "Data Analytics",
+      "Data Ingestion",
+      "Data Pipelines",
+      "Data Processing",
+      "Data Transformation",
+      "Data Visualization",
+      "Digital Transformation",
+      "Google Cloud Platform (GCP)",
+      "SQL"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-certified-associate-data-practitioner-2024-badge.png",
+      "alt": "Google Certified Associate Data Practitioner Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-certified-associate-data-practitioner-2024-certificate.png",
+      "alt": "Google Certified Associate Data Practitioner Certificate"
+    }
+  },
+  {
+    "name": "Google Certified Professional Cloud Architect",
+    "organization": "Google",
+    "issue": "Nov 2024",
+    "expire": "Nov 2026",
+    "identifier": "79ea1ec16c894642a836bb229dcec141",
+    "url": "https://www.credly.com/badges/fccc70de-65ea-4a98-9a45-1d664714710d/linked_in_profile",
+    "skills": [
+      "Cloud Architecture",
+      "Cloud Computing",
+      "Cloud Security",
+      "Cloud Storage",
+      "Databases",
+      "GKE",
+      "Google Cloud Platform (GCP)",
+      "Identity And Access Management (IAM)",
+      "Networking",
+      "Scalability",
+      "workload migration"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-certified-professional-cloud-architect-2024-badge.png",
+      "alt": "Google Certified Professional Cloud Architect Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-certified-professional-cloud-architect-2024-certificate.png",
+      "alt": "Google Certified Professional Cloud Architect Certificate"
+    }
+  },
+  {
+    "name": "Microsoft Certified Azure Administrator Associate AZ-104",
+    "organization": "Microsoft",
+    "issue": "Nov 2024",
+    "expire": "Nov 2025",
+    "identifier": "9BC72D0AF4C41F06",
+    "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/9BC72D0AF4C41F06?sharingId",
+    "skills": [
+      "Azure Administration",
+      "Infrastructure as code (IaC)",
+      "Cloud Administration",
+      "Digital Transformation",
+      "Cloud Computing",
+      "Manage Azure identities and governance",
+      "Implement and manage storage",
+      "Deploy and manage Azure compute resources",
+      "Implement and manage virtual networking",
+      "Monitor and maintain Azure resources"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/microsoft-certified-az-104-azure-administrator-associate-2024-badge.png",
+      "alt": "Microsoft Certified Azure Administrator Associate AZ-104 Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/microsoft-certified-az-104-azure-administrator-associate-2024-certificate.png",
+      "alt": "Microsoft Certified Azure Administrator Associate AZ-104 Certificate"
+    }
+  },
+  {
+    "name": "MongoDB Certified Associate Atlas Administrator",
+    "organization": "MongoDB",
+    "issue": "Nov 2024",
+    "identifier": "MDB79ghg0yjwp",
+    "url": "https://learn.mongodb.com/c/Ll2utIA9Reyg_cMb43mbYA",
+    "skills": [
+      "MongoDB Atlas",
+      "Cloud Administration",
+      "MongoDB",
+      "Backup and restore clusters",
+      "Cloud Security",
+      "configuring Atlas",
+      "Database Upgrades",
+      "Logging And Monitoring",
+      "MongoDB AI & Vector Search Basics",
+      "User Management"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/mongodb-certified-associate-atlas-administrator-2024-badge.png",
+      "alt": "MongoDB Certified Associate Atlas Administrator Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/mongodb-certified-associate-atlas-administrator-2024-certificate.png",
+      "alt": "MongoDB Certified Associate Atlas Administrator Certificate"
+    }
+  },
+  {
+    "name": "GitHub Copilot",
+    "organization": "GitHub",
+    "issue": "Oct 2024",
+    "expire": "Oct 2027",
+    "identifier": "cbe4112a-98d3-419b-b282-2d84fed368d4",
+    "url": "https://www.credly.com/badges/cbe4112a-98d3-419b-b282-2d84fed368d4/linked_in_profile",
+    "skills": [
+      "GitHub Copilot",
+      "Prompt Engineering",
+      "Generative AI",
+      "Artificial Intelligence (AI)",
+      "Data Utilization",
+      "GitHub",
+      "Workflow Optimization"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/github-certified-copilot-2024-badge.png",
+      "alt": "GitHub Copilot Certification Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/github-certified-copilot-2024-certificate.png",
+      "alt": "GitHub Copilot Certification Certificate"
+    }
+  },
+  {
+    "name": "Google Certified Professional Data Engineer",
+    "organization": "Google",
+    "issue": "Oct 2024",
+    "expire": "Oct 2026",
+    "identifier": "51a5de1e88324e94a85c75914f6a2ca5",
+    "url": "https://www.credly.com/badges/c385b7cb-33c0-49d1-9aba-6a7bc992e826/linked_in_profile",
+    "skills": [
+      "BigQuery",
+      "Cloud Storage",
+      "Data Engineering",
+      "Data Lakes",
+      "Data Pipelines",
+      "Data Processing Systems",
+      "Data Security",
+      "Data Transformation",
+      "Data Warehouses",
+      "Google Cloud Platform (GCP)"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-certified-professional-data-engineer-2024-badge.png",
+      "alt": "Google Certified Professional Data Engineer Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-certified-professional-data-engineer-2024-certificate.png",
+      "alt": "Google Certified Professional Data Engineer Certificate"
+    }
+  },
+  {
+    "name": "MongoDB Certified Associate Data Modeler",
+    "organization": "MongoDB",
+    "issue": "Oct 2024",
+    "identifier": "MDB32mmtq7gr4",
+    "url": "https://learn.mongodb.com/c/ei8kNARsTXmVMwV8Wdo6JA",
+    "skills": [
+      "Data Governance",
+      "Data Management",
+      "Data Modeling",
+      "Data Storage",
+      "JSON",
+      "MongoDB",
+      "MongoDB Data",
+      "Query Languages"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/mongodb-certified-associate-data-modeler-2024-badge.png",
+      "alt": "MongoDB Certified Associate Data Modeler Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/mongodb-certified-associate-data-modeler-2024-certificate.png",
+      "alt": "MongoDB Certified Associate Data Modeler Certificate"
+    }
+  },
+  {
+    "name": "MongoDB Certified Associate Database Administrator",
+    "organization": "MongoDB",
+    "issue": "Oct 2024",
+    "identifier": "MDBg20kmdh2b1",
+    "url": "https://learn.mongodb.com/c/gS83TsFJQdaeZx46cxwjBw",
+    "skills": [
+      "Application Administration",
+      "CRUD",
+      "MongoDB",
+      "MongoDB Indexes",
+      "MongoDB Philosophy & Features",
+      "Replication",
+      "Server Administration",
+      "Sharding"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/mongodb-certified-associate-database-administrator-2024-badge.png",
+      "alt": "MongoDB Certified Associate Database Administrator Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/mongodb-certified-associate-database-administrator-2024-certificate.png",
+      "alt": "MongoDB Certified Associate Database Administrator Certificate"
+    }
+  },
+  {
+    "name": "MongoDB Certified Associate Developer - Node.js",
+    "organization": "MongoDB",
+    "issue": "Oct 2024",
+    "identifier": "MDB23lea3yx0q",
+    "url": "https://learn.mongodb.com/c/vyjhu4kvTNqskC4H0krZog",
+    "skills": [
+      "CRUD",
+      "Data Modeling",
+      "Drivers",
+      "JavaScript (Programming Language)",
+      "MongoDB",
+      "MongoDB Document Model",
+      "MongoDB Indexes",
+      "MongoDB Tools & Tooling",
+      "Node",
+      "Node.js",
+      "Software Engineering"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/mongodb-certified-associate-developer-2024-badge.png",
+      "alt": "MongoDB Certified Associate Developer Node.js Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/mongodb-certified-associate-developer-2024-certificate.png",
+      "alt": "MongoDB Certified Associate Developer Node.js Certificate"
+    }
+  },
+  {
+    "name": "AWS Certified AI Practitioner",
+    "organization": "Amazon Web Services (AWS)",
+    "issue": "Sep 2024",
+    "expire": "Sep 2027",
+    "identifier": "b1338ea34f5045dcbd427f2cfb8cb3c7",
+    "url": "https://www.credly.com/badges/494da167-c241-43aa-bdbc-731aaf5c153f/linked_in_profile",
+    "skills": [
+      "AI and ML on AWS - Foundational",
+      "Amazon Web Services",
+      "Artificial Intelligence (AI)",
+      "AWS",
+      "AWS Certification",
+      "AWS Cloud",
+      "Cloud Certification",
+      "Foundation Models",
+      "Generative AI",
+      "Machine Learning (ML)"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/aws-certified-ai-practitioner-2024-badge.png",
+      "alt": "AWS Certified AI Practitioner Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/aws-certified-ai-practitioner-2024-certificate.png",
+      "alt": "AWS Certified AI Practitioner Certificate"
+    }
+  },
+  {
+    "name": "AWS Certified Cloud Practitioner",
+    "organization": "Amazon Web Services (AWS)",
+    "issue": "Aug 2024",
+    "expire": "Aug 2027",
+    "identifier": "2e0d727905e04275a5be6607827ff764",
+    "url": "https://www.credly.com/badges/32a97846-e50f-4b9b-8a60-b6c8d0773332/linked_in_profile",
+    "skills": [
+      "Amazon Web Services",
+      "AWS",
+      "AWS Certification",
+      "AWS Cloud",
+      "Cloud Certification",
+      "Cloud Computing",
+      "Cloud Platform",
+      "Cloud Services"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/aws-certified-cloud-practitioner-2024-badge.png",
+      "alt": "AWS Certified Cloud Practitioner Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/aws-certified-cloud-practitioner-2024-certificate.png",
+      "alt": "AWS Certified Cloud Practitioner Certificate"
+    }
+  },
+  {
+    "name": "Google Certified Cloud Digital Leader",
+    "organization": "Google",
+    "issue": "Sep 2024",
+    "expire": "Sep 2027",
+    "identifier": "03a65d2c9d5f43618acc33a3596f6f45",
+    "url": "https://www.credly.com/badges/784112bf-811f-4578-a5ac-14bf0e77306e/linked_in_profile",
+    "skills": [
+      "Artificial Intelligence (AI)",
+      "Cloud Computing",
+      "Cloud Digital Leader",
+      "Cloud Security",
+      "Data Governance",
+      "Google Cloud",
+      "Google Cloud Platform (GCP)",
+      "Digital Transformation",
+      "Security and Trust"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-certified-cloud-digital-leader-2024-badge.png",
+      "alt": "Google Certified Cloud Digital Leader Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-certified-cloud-digital-leader-2024-certificate.jpg",
+      "alt": "Google Certified Cloud Digital Leader Certificate"
+    }
+  },
+  {
+    "name": "Google Certified Professional Machine Learning Engineer",
+    "organization": "Google",
+    "issue": "Sep 2024",
+    "expire": "Sep 2026",
+    "identifier": "a2cf65ef64ef483d869559ad7d645377",
+    "url": "https://www.credly.com/badges/3125474c-dbc1-450b-a12c-a16c56b10181/linked_in_profile",
+    "skills": [
+      "Machine Learning",
+      "MLOps",
+      "Vertex AI",
+      "Computer Vision",
+      "Artificial Intelligence (AI)",
+      "AutoML",
+      "BigQuery ML",
+      "Cloud Storage",
+      "Data Processing",
+      "Google Cloud Platform (GCP)",
+      "ML APIs",
+      "Responsible AI",
+      "Scalability"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-certified-professional-machine-learning-engineer-2024-badge.png",
+      "alt": "Google Certified Professional Machine Learning Engineer Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-certified-professional-machine-learning-engineer-2024-certificate.jpg",
+      "alt": "Google Certified Professional Machine Learning Engineer Certificate"
+    }
+  },
+  {
+    "name": "GitHub Actions",
+    "organization": "GitHub",
+    "issue": "Jul 2024",
+    "expire": "Jul 2027",
+    "identifier": "6ef12cf4-46cf-4059-acc3-710afddd239a",
+    "url": "https://www.credly.com/badges/6ef12cf4-46cf-4059-acc3-710afddd239a/linked_in_profile",
+    "skills": [
+      "Continuous Integration (CI)",
+      "Continuous Delivery (CD)",
+      "DevOps",
+      "Build Pipeline",
+      "GitHub",
+      "GitHub Actions",
+      "Release Management"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/github-certified-actions-2024-badge.png",
+      "alt": "GitHub Actions Certification Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/github-certified-actions-2024-certificate.jpg",
+      "alt": "GitHub Actions Certification Certificate"
+    }
+  },
+  {
+    "name": "GitHub Administration",
+    "organization": "GitHub",
+    "issue": "Jul 2024",
+    "expire": "Jul 2027",
+    "identifier": "96e957d0-eab6-4c7c-97eb-b8fa3b3b24b2",
+    "url": "https://www.credly.com/badges/96e957d0-eab6-4c7c-97eb-b8fa3b3b24b2/linked_in_profile",
+    "skills": [
+      "Software Development Security",
+      "Cloud Administration",
+      "DevOps",
+      "GHEC",
+      "GHES",
+      "GitHub",
+      "GitHub Enterprise",
+      "System Administration"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/github-certified-administration-2024-badge.png",
+      "alt": "GitHub Administration Certification Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/github-certified-administration-2024-certificate.jpg",
+      "alt": "GitHub Administration Certification Certificate"
+    }
+  },
+  {
+    "name": "GitHub Advanced Security",
+    "organization": "GitHub",
+    "issue": "Jul 2024",
+    "expire": "Jul 2027",
+    "identifier": "ada75c5f-2d75-4e02-99c2-9b2d2868b630",
+    "url": "https://www.credly.com/badges/ada75c5f-2d75-4e02-99c2-9b2d2868b630/linked_in_profile",
+    "skills": [
+      "Software Development Security",
+      "Code scanning",
+      "Dependency Management",
+      "DevOps",
+      "DevSecOps",
+      "GHAS",
+      "GitHub",
+      "GitHub Actions",
+      "GitHub Advanced Security",
+      "Secret scanning"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/github-certified-advanced-security-2024-badge.png",
+      "alt": "GitHub Advanced Security Certification Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/github-certified-advanced-security-2024-certificate.jpg",
+      "alt": "GitHub Advanced Security Certification Certificate"
+    }
+  },
+  {
+    "name": "LinkedIn Certified Marketing Insider",
+    "organization": "LinkedIn",
+    "issue": "Jul 2024",
+    "identifier": "2qpwtfowvvta",
+    "url": "https://verify.skilljar.com/c/2qpwtfowvvta",
+    "skills": ["Content and Creative Design", "Social Media Marketing", "Marketing Strategy"],
+    "badge": {
+      "url": "/src/certifications/images/linkedin-certified-marketing-insider-2024-badge.png",
+      "alt": "LinkedIn Certified Marketing Insider Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/linkedin-certified-marketing-insider-2024-certificate.png",
+      "alt": "LinkedIn Certified Marketing Insider Certificate"
+    }
+  },
+  {
+    "name": "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional",
+    "organization": "Oracle",
+    "issue": "Jul 2024",
+    "identifier": "312779921OCI2024GAIOCP",
+    "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=6A29CC43B3C49A6E93E0C8B054FBF1D2A0D70FCD44AAF3D1EC02F83C7C8C12CE",
+    "skills": [
+      "Foundation Models",
+      "Machine Learning",
+      "Oracle Cloud",
+      "Generative AI",
+      "Artificial Intelligence (AI)",
+      "Understand Large Language Models (LLMs)",
+      "Proficient in using OCI Generative AI Service",
+      "Build a Retrieval-Augmented Generation (RAG) based chatbot using OCI Generative AI Service"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/oracle-certified-generative-ai-professional-2024-badge.png",
+      "alt": "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/oracle-certified-generative-ai-professional-2024-certificate.png",
+      "alt": "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional Certificate"
+    }
+  },
+  {
+    "name": "Fundamentals of Deep Learning",
+    "organization": "NVIDIA",
+    "issue": "Dec 2022",
+    "identifier": "bf7bfde7da9641789141774954b2bf61",
+    "url": "https://courses.nvidia.com/certificates/bf7bfde7da9641789141774954b2bf61/",
+    "skills": ["Machine Learning", "Deep Learning", "Artificial Intelligence (AI)"]
+  },
+  {
+    "name": "AI CUP 2019 - 2nd Place",
+    "organization": "Ministry of Education",
+    "issue": "Apr 2020",
+    "identifier": "QmcT6G84bJ5ZpHYzKfZZqZFQRHt4yNHTPoajviZUNCwS3s",
+    "url": "https://certs.turingchain.tech/ipfs?hash=QmcT6G84bJ5ZpHYzKfZZqZFQRHt4yNHTPoajviZUNCwS3s",
+    "skills": ["Machine Learning", "Deep Learning", "TensorFlow", "Artificial Intelligence (AI)"],
+    "badge": {
+      "url": "/src/certifications/images/aicup-2019-badge.jpg",
+      "alt": "AI CUP 2019 2nd Place Badge"
+    },
+    "certificate": {
+      "url": "/src/certifications/images/aicup-2019-certificate.png",
+      "alt": "AI CUP 2019 2nd Place Certificate"
+    }
+  },
+  {
+    "name": "TensorFlow Developer Certificate",
+    "organization": "Google for Developers",
+    "issue": "Mar 2020",
+    "identifier": "15685055",
+    "url": "https://www.credential.net/ff8a7060-0408-4546-9090-41db3e05d3dc",
+    "skills": ["Machine Learning", "Deep Learning", "TensorFlow", "Artificial Intelligence (AI)"]
+  },
+  {
+    "name": "Deep Learning",
+    "organization": "NVIDIA",
+    "issue": "Sep 2016",
+    "url": "https://photos.app.goo.gl/N6Jdb4ponfNcieEfA",
+    "skills": [
+      "Machine Learning",
+      "Deep Learning",
+      "Computer Vision",
+      "Artificial Intelligence (AI)"
+    ]
+  },
+  {
+    "name": "Google AdWords Certification",
+    "organization": "Google",
+    "issue": "Aug 2013",
+    "url": "https://photos.app.goo.gl/uvz8MMgXTFAv8nnC6",
+    "skills": [
+      "Marketing Strategy",
+      "Google Ads",
+      "Search Engine Marketing (SEM)",
+      "Pay-Per-Click (PPC)"
+    ]
+  },
+  {
+    "name": "Cloud Architecture with Google Cloud Professional Certificate",
+    "organization": "Coursera",
+    "issue": "Apr 2020",
+    "expire": "Jan 2023",
+    "identifier": "CYW3B9KTFFVS",
+    "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/CYW3B9KTFFVS",
+    "skills": [
+      "Cloud Architecture",
+      "Google Cloud Platform (GCP)",
+      "Infrastructure as Code (IaC)",
+      "Cloud Security"
+    ]
+  },
+  {
+    "name": "Cloud Engineering with Google Cloud Professional Certificate",
+    "organization": "Coursera",
+    "issue": "Apr 2020",
+    "expire": "Jan 2023",
+    "identifier": "YRHW4XPXPUE4",
+    "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/YRHW4XPXPUE4",
+    "skills": [
+      "Cloud Engineering",
+      "Google Cloud Platform (GCP)",
+      "Infrastructure as Code (IaC)",
+      "Cloud Security"
+    ]
+  },
+  {
+    "name": "TensorFlow Specialization",
+    "organization": "DeepLearning.AI",
+    "issue": "Mar 2020",
+    "expire": "Jan 2023",
+    "identifier": "FF97FBGQ3NFC",
+    "url": "https://coursera.org/share/7163da7bc9eaee187bbcbb43ae228f37",
+    "skills": ["Machine Learning", "Deep Learning", "TensorFlow", "Artificial Intelligence (AI)"]
+  }
+]
