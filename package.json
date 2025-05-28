@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "extract-certs": "node util/extract-cert-data.js",
+    "slugify": "tsx util/slugify-cli.js"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",
@@ -50,6 +52,9 @@
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tw-animate-css": "^1.2.9"
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.4",
+    "tw-animate-css": "^1.2.9",
+    "typescript": "^5.8.3"
   }
 }
