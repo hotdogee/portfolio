@@ -1,0 +1,131 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@components/ui/card'
+import { Badge } from '@components/ui/badge'
+import { Link } from '@components/ui/link'
+import { defaultLocale, getLocaleSlugFromId, slugify } from '@lib/utils'
+import CategoryBadge from '@components/CategoryBadge.astro'
+import { ArrowRight, Award, ShieldCheck } from 'lucide-react'
+import { Icon } from 'astro-icon/components'
+import organizations from '@/certifications/organizations.json'
+
+// make sure tailwind class names are statically detectable at build-time
+const colorVariants = {
+  amber: 'dark:bg-amber-900/20 dark:text-amber-400 bg-amber-100 text-amber-600',
+  green: 'dark:bg-green-900/20 dark:text-green-400 bg-green-100 text-green-600',
+  blue: 'dark:bg-blue-900/20 dark:text-blue-400 bg-blue-100 text-blue-600',
+  primary: 'bg-primary text-primary',
+}
+
+const translations = {
+  en: {
+    certificationScreenshot: 'Certification Screenshot',
+    viewDetails: 'View Details',
+    verify: 'Verify',
+  },
+  tw: {
+    certificationScreenshot: '認證截圖',
+    viewDetails: '查看詳情',
+    verify: '驗證',
+  },
+}
+const { locale } = Astro.params
+const currentLocale = (locale || defaultLocale) as keyof typeof translations
+const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
+  return translations[currentLocale]?.[key] || translations['en']?.[key]
+}
+
+interface Props {
+  certification: CollectionEntry<'certifications'>
+  index?: number
+}
+const { certification, index = 0 } = Astro.props as Props
+const { id, data } = certification
+const { slug } = getLocaleSlugFromId(id)
+const certificationUrl = getRelativeLocaleUrl(currentLocale, `/certifications/${slug}`)
+const { name, organization, issue, badge, url } = data
+const org = (organizations as Record<string, any>)?.[slugify(organization)]
+---
+
+<div
+  class="opacity-0"
+  style={`animation: fade-in-up 0.5s ease-in ${(0.1 * (index + 1)).toFixed(1)}s forwards;`}
+>
+  <Card
+    className="flex h-full flex-col gap-0 overflow-hidden pt-0 pb-4 transition-shadow duration-300 hover:shadow-md"
+  >
+    <a href={certificationUrl}>
+      <div class="relative aspect-square w-full overflow-hidden p-3">
+        <img
+          src={badge?.url || '/placeholder.svg'}
+          alt={badge?.alt || 'Badge'}
+          class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+          loading="lazy"
+        />
+      </div>
+    </a>
+    <CardHeader className="flex-grow px-4">
+      {/* Replaced original CardTitle for organization with this div */}
+      <div class="flex items-center">
+        {
+          org?.icon && (
+            <div class="mr-1.5 flex-shrink-0">
+              <img
+                src={org.icon.light}
+                alt={org.icon.alt}
+                class="size-5 object-contain dark:hidden"
+                loading="lazy"
+              />
+              <img
+                src={org.icon.dark}
+                alt={org.icon.alt}
+                class="hidden size-5 object-contain dark:block"
+                loading="lazy"
+              />
+            </div>
+          )
+        }
+        <CardTitle className="line-clamp-1 text-xs leading-3.5 font-normal"
+          >{organization}</CardTitle
+        >
+      </div>
+      <a href={certificationUrl}>
+        <CardTitle className="mb-1 line-clamp-2 text-xs leading-3.5 font-normal">{name}</CardTitle>
+      </a>
+    </CardHeader>
+    <a href={certificationUrl}>
+      <CardFooter className="text-muted-foreground px-4 text-xs">
+        <div class="flex flex-wrap items-center gap-4">
+          {
+            issue && (
+              <div class="flex items-center">
+                <Award className="mr-1 h-3 w-3" />
+                <span>{issue}</span>
+              </div>
+            )
+          }
+        </div>
+      </CardFooter>
+    </a>
+    {
+      url && (
+        <div class="px-4 pt-2 pb-0">
+          <Link href={url} className="h-8 w-full" variant={'outline'}>
+            <ShieldCheck className="mr-0 h-4 w-4" />
+            {t('verify')}
+          </Link>
+        </div>
+      )
+    }
+  </Card>
+</div>
+
+<style></style>
