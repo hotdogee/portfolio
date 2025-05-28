@@ -125,7 +125,7 @@
       "Secure Identity and Access",
       "Secure Networking",
       "Secure Compute, Storage, and Databases",
-      "Secure Azure Using Microsoft Defender for Cloud and Microsoft Sentinel"
+      "Secure Azure using Microsoft Defender for Cloud and Microsoft Sentinel"
     ],
     "badge": {
       "url": "/src/certifications/images/microsoft-certified-az-500-azure-security-engineer-associate-2025-badge.png",
@@ -354,8 +354,8 @@
     }
   },
   {
-    "name": "EF SET English Certificate 87/100 (C2 Proficient)",
-    "organization": "EF Standard English Test (EF SET)",
+    "name": "English C2 Proficient 87/100",
+    "organization": "EF SET",
     "issue": "Dec 2020",
     "expire": "",
     "identifier": "s5gLzz",
@@ -368,11 +368,11 @@
     ],
     "badge": {
       "url": "/src/certifications/images/ef-set-english-test-2025-badge.png",
-      "alt": "EF SET English Certificate C2 Proficient Badge"
+      "alt": "EF SET English C2 Proficient Badge"
     },
     "certificate": {
       "url": "/src/certifications/images/ef-set-english-test-2025-certificate.png",
-      "alt": "EF SET English Certificate C2 Proficient Certificate"
+      "alt": "EF SET English C2 Proficient Certificate"
     }
   },
   {
@@ -553,7 +553,7 @@
     "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/93AB72EB1C7F256C?sharingId",
     "skills": [
       "Foundation Models",
-      "Machine Learning",
+      "Machine Learning (ML)",
       "Azure OpenAI",
       "Computer Vision",
       "Generative AI",
@@ -608,7 +608,7 @@
     "identifier": "62B3D6279522723F",
     "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/62B3D6279522723F?sharingId",
     "skills": [
-      "Machine Learning",
+      "Machine Learning (ML)",
       "Data Science",
       "MLOps",
       "MLflow",
@@ -956,13 +956,13 @@
   },
   {
     "name": "AWS Certified AI Practitioner",
-    "organization": "Amazon Web Services (AWS)",
+    "organization": "AWS",
     "issue": "Sep 2024",
     "expire": "Sep 2027",
     "identifier": "b1338ea34f5045dcbd427f2cfb8cb3c7",
     "url": "https://www.credly.com/badges/494da167-c241-43aa-bdbc-731aaf5c153f/linked_in_profile",
     "skills": [
-      "AI and ML on AWS - Foundational",
+      "AI and ML on AWS",
       "Amazon Web Services",
       "Artificial Intelligence (AI)",
       "AWS",
@@ -984,7 +984,7 @@
   },
   {
     "name": "AWS Certified Cloud Practitioner",
-    "organization": "Amazon Web Services (AWS)",
+    "organization": "AWS",
     "issue": "Aug 2024",
     "expire": "Aug 2027",
     "identifier": "2e0d727905e04275a5be6607827ff764",
@@ -1043,7 +1043,7 @@
     "identifier": "a2cf65ef64ef483d869559ad7d645377",
     "url": "https://www.credly.com/badges/3125474c-dbc1-450b-a12c-a16c56b10181/linked_in_profile",
     "skills": [
-      "Machine Learning",
+      "Machine Learning (ML)",
       "MLOps",
       "Vertex AI",
       "Computer Vision",
@@ -1169,13 +1169,13 @@
     "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=6A29CC43B3C49A6E93E0C8B054FBF1D2A0D70FCD44AAF3D1EC02F83C7C8C12CE",
     "skills": [
       "Foundation Models",
-      "Machine Learning",
+      "Machine Learning (ML)",
       "Oracle Cloud",
       "Generative AI",
       "Artificial Intelligence (AI)",
-      "Understand Large Language Models (LLMs)",
+      "Large Language Models (LLMs)",
       "Proficient in using OCI Generative AI Service",
-      "Build a Retrieval-Augmented Generation (RAG) based chatbot using OCI Generative AI Service"
+      "Build a Retrieval-Augmented Generation (RAG) based Chatbot using OCI Generative AI Service"
     ],
     "badge": {
       "url": "/src/certifications/images/oracle-certified-generative-ai-professional-2024-badge.png",
@@ -1192,15 +1192,20 @@
     "issue": "Dec 2022",
     "identifier": "bf7bfde7da9641789141774954b2bf61",
     "url": "https://courses.nvidia.com/certificates/bf7bfde7da9641789141774954b2bf61/",
-    "skills": ["Machine Learning", "Deep Learning", "Artificial Intelligence (AI)"]
+    "skills": ["Machine Learning (ML)", "Deep Learning", "Artificial Intelligence (AI)"]
   },
   {
-    "name": "AI CUP 2019 - 2nd Place",
+    "name": "AI CUP - 2nd Place",
     "organization": "Ministry of Education",
     "issue": "Apr 2020",
     "identifier": "QmcT6G84bJ5ZpHYzKfZZqZFQRHt4yNHTPoajviZUNCwS3s",
     "url": "https://certs.turingchain.tech/ipfs?hash=QmcT6G84bJ5ZpHYzKfZZqZFQRHt4yNHTPoajviZUNCwS3s",
-    "skills": ["Machine Learning", "Deep Learning", "TensorFlow", "Artificial Intelligence (AI)"],
+    "skills": [
+      "Machine Learning (ML)",
+      "Deep Learning",
+      "TensorFlow",
+      "Artificial Intelligence (AI)"
+    ],
     "badge": {
       "url": "/src/certifications/images/aicup-2019-badge.jpg",
       "alt": "AI CUP 2019 2nd Place Badge"
@@ -1212,11 +1217,16 @@
   },
   {
     "name": "TensorFlow Developer Certificate",
-    "organization": "Google for Developers",
+    "organization": "Google",
     "issue": "Mar 2020",
     "identifier": "15685055",
     "url": "https://www.credential.net/ff8a7060-0408-4546-9090-41db3e05d3dc",
-    "skills": ["Machine Learning", "Deep Learning", "TensorFlow", "Artificial Intelligence (AI)"]
+    "skills": [
+      "Machine Learning (ML)",
+      "Deep Learning",
+      "TensorFlow",
+      "Artificial Intelligence (AI)"
+    ]
   },
   {
     "name": "Deep Learning",
@@ -1224,7 +1234,7 @@
     "issue": "Sep 2016",
     "url": "https://photos.app.goo.gl/N6Jdb4ponfNcieEfA",
     "skills": [
-      "Machine Learning",
+      "Machine Learning (ML)",
       "Deep Learning",
       "Computer Vision",
       "Artificial Intelligence (AI)"
@@ -1277,6 +1287,11 @@
     "expire": "Jan 2023",
     "identifier": "FF97FBGQ3NFC",
     "url": "https://coursera.org/share/7163da7bc9eaee187bbcbb43ae228f37",
-    "skills": ["Machine Learning", "Deep Learning", "TensorFlow", "Artificial Intelligence (AI)"]
+    "skills": [
+      "Machine Learning (ML)",
+      "Deep Learning",
+      "TensorFlow",
+      "Artificial Intelligence (AI)"
+    ]
   }
 ]
