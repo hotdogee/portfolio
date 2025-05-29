@@ -1,0 +1,46 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { getCollection, render } from 'astro:content'
+import CertificationLayout from '@layouts/CertificationLayout.astro'
+import { locales, defaultLocale, getLocaleSlugFromId } from '@lib/utils'
+
+export async function getStaticPaths() {
+  const certificationList = await getCollection('certifications')
+  // console.log(`certificationList: ${certificationList.length}`)
+  if (!certificationList || certificationList.length === 0) {
+    return []
+  }
+  // id: 'en/software/post-1'
+  const certifications = certificationList.reduce<
+    Record<string, CollectionEntry<'certifications'>>
+  >((acc, certification) => {
+    acc[certification.id] = certification
+    return acc
+  }, {})
+  const path = Object.entries(certifications).flatMap(([slug, cert]) => {
+    return [undefined, ...locales].map((locale) => {
+      return {
+        params: {
+          locale,
+          slug,
+        },
+        props: {
+          certification: cert,
+        },
+      }
+    })
+  })
+  // console.log('Paths:', path)
+  return path
+}
+
+const { locale, slug } = Astro.params
+// console.log(`Locale: ${locale}, Slug: ${slug}`)
+const { certification } = Astro.props
+// console.log('Certification:', certification)
+const { Content, headings } = await render(certification)
+---
+
+<CertificationLayout frontmatter={certification.data} headings={headings}>
+  <Content />
+</CertificationLayout>
