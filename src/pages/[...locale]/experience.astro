@@ -12,6 +12,7 @@ const translations = {
     pageTitle: 'Engineering Impact',
     description:
       "Every role has been an opportunity to learn, contribute, and push the envelope. From designing novel geothermal turbines to pioneering AI in protein analysis and engineering critical EMR systems, my professional journey reflects a commitment to deep technical engagement and leadership. Explore the milestones that have shaped my expertise and the value I've delivered.",
+    keyAchievements: 'Key Achievements:',
     experiences: [
       {
         company: 'Lanyang Geothermal Corp',
@@ -81,6 +82,7 @@ const translations = {
     pageTitle: '創新紀實',
     description:
       '每個職位都是一個學習成長、貢獻所長並挑戰極限的契機。從設計新型地熱渦輪機到開創 AI 在蛋白質分析的應用，以及建構關鍵的 EMR 系統，我的專業旅程反映了對技術的深耕和領導力的承諾。歡迎探索這些淬鍊我專業能力的里程碑，以及我為團隊與專案所創造的實質價值。',
+    keyAchievements: '關鍵成果：',
     experiences: [
       {
         company: '蘭陽地熱股份有限公司',
@@ -200,7 +202,7 @@ const t = (key: string): any => {
                   <Card className="py-3 md:py-2">
                     <CardContent className="m-0 md:m-5">
                       <p class="mb-4">{experience.description}</p>
-                      <h4 class="mb-2 font-semibold">Key Achievements:</h4>
+                      <h4 class="mb-2 font-semibold">{t('keyAchievements')}</h4>
                       <ul class="space-y-2">
                         {experience.achievements.map((achievement: string) => (
                           <li class="flex items-start">

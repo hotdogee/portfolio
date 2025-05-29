@@ -35,7 +35,7 @@ const bundlePath = `${import.meta.env.BASE_URL}pagefind/`
         ...opts,
         element: elSelector,
         bundlePath,
-        processResult: function (result) {
+        processResult: function (result: { url: string }) {
           // strip trailing slash from url, unless it is '/'
           if (result.url !== '/') {
             result.url = result.url.replace(/\/$/, '')
