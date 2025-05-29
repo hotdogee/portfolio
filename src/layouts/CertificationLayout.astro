@@ -1,0 +1,287 @@
+---
+import BaseLayout from './BaseLayout.astro'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { Button } from '@components/ui/button'
+import { Card, CardHeader, CardContent } from '@components/ui/card'
+import { Badge } from '@components/ui/badge'
+import { Link } from '@components/ui/link'
+import { defaultLocale, getLocaleSlugFromId, slugify } from '@lib/utils'
+import {
+  ArrowLeft,
+  Award,
+  Sparkles,
+  ExternalLink,
+  BadgeCheck,
+  ShieldCheck,
+  Fingerprint,
+} from 'lucide-react' // Added ExternalLink, BadgeCheck
+import { Icon } from 'astro-icon/components'
+import organizations from '@/certifications/organizations.json'
+import SkillBadge from '@components/SkillBadge.astro'
+
+export interface Props {
+  frontmatter: Record<string, any>
+  headings?: { depth: number; slug: string; text: string }[]
+}
+
+const { frontmatter, headings } = Astro.props as Props
+
+const {
+  // slug,
+  id,
+  name = {
+    en: '',
+    tw: '',
+  },
+  organization,
+  issue,
+  expire,
+  identifier,
+  description = {
+    en: '',
+    tw: '',
+  },
+  official,
+  verify,
+  skills = [],
+  badge = {
+    url: '',
+    alt: '',
+  },
+  certificate = {
+    url: '',
+    alt: '',
+  },
+} = frontmatter
+
+// Translations for page-specific text
+const translations = {
+  en: {
+    title: `${name.en} | Certifications | Han Lin`,
+    description: `Han Lin is ${organization} Certified in ${name.en}`,
+    backToCertifications: 'All Certifications',
+    certificationLinks: 'Certification Links',
+    technologiesUsed: 'Technologies Used',
+    skills: 'Skills',
+    officialPage: 'Official Page',
+    verifyBadge: 'Verify',
+    certificationId: 'Certification ID',
+  },
+  tw: {
+    title: `${name.tw} | 國際認證 | 林翰`,
+    description: `林翰持有 ${organization} 的 ${name.tw} 認證`,
+    backToCertifications: '返回所有認證',
+    certificationLinks: '認證連結',
+    technologiesUsed: '使用技術',
+    skills: '技能',
+    officialPage: '官網',
+    verifyBadge: '驗證',
+    certificationId: '認證碼',
+  },
+}
+
+const { locale } = Astro.params
+const currentLocale = (locale || defaultLocale) as keyof typeof translations
+const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
+  return translations[currentLocale]?.[key] || translations['en']?.[key]
+}
+const org = (organizations as Record<string, any>)?.[slugify(organization)]
+---
+
+<BaseLayout title={t('title')} description={t('description')}>
+  <section class="py-1 md:py-2">
+    <div class="container px-4 md:px-6">
+      <div class="mb-8">
+        <Link href={getRelativeLocaleUrl(currentLocale, `/certifications`)} variant="ghost">
+          <ArrowLeft className="ml-2 h-4 w-4" />
+          {t('backToCertifications')}
+        </Link>
+      </div>
+      <div class="grid gap-8 md:grid-cols-[1fr_2fr]">
+        <div class="">
+          <div class="relative aspect-square w-full overflow-hidden p-3">
+            <img
+              src={badge?.url || '/placeholder.svg'}
+              alt={badge?.alt[currentLocale] || 'Badge'}
+              class="h-full w-full object-cover transition-transform hover:scale-105"
+              style={`view-transition-name: badge-${id};`}
+              loading="lazy"
+            />
+          </div>
+          <div class="mb-6 hidden w-full flex-wrap items-center gap-3 md:flex">
+            {
+              official && (
+                <Link
+                  href={official}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center flex-1 h-11 text-sm"
+                  variant="outline"
+                >
+                  <ExternalLink className="mr-0 size-5" />
+                  {t('officialPage')}
+                </Link>
+              )
+            }
+            {
+              verify && (
+                <div
+                  class="inline-flex flex-1 items-center"
+                  style={`view-transition-name: verify-${id};`}
+                >
+                  <Link
+                    href={verify}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" h-11 text-sm w-full"
+                    variant="outline"
+                  >
+                    <ShieldCheck className="mr-0 size-5" />
+                    {t('verifyBadge')}
+                  </Link>
+                </div>
+              )
+            }
+          </div>
+        </div>
+        <div class="">
+          <div class="mb-4 items-center space-y-4">
+            <div class="flex items-center">
+              {
+                org?.logo && (
+                  <div
+                    class="mr-1.5 flex-shrink-0"
+                    style={`view-transition-name: organization-${id};`}
+                  >
+                    <img
+                      src={org.logo.light}
+                      alt={org.logo.alt}
+                      class="h-10 object-contain dark:hidden"
+                      loading="lazy"
+                    />
+                    <img
+                      src={org.logo.dark}
+                      alt={org.logo.alt}
+                      class="hidden h-10 object-contain dark:block"
+                      loading="lazy"
+                    />
+                  </div>
+                )
+              }
+            </div>
+            <h1
+              class="w-fit text-3xl font-bold tracking-tighter sm:text-4xl"
+              style={`view-transition-name: name-${id};`}
+            >
+              {name.en}
+            </h1>
+            <div class="text-muted-foreground mb-6 flex flex-wrap items-center gap-4">
+              {
+                issue && (
+                  <div class="flex items-center" style={`view-transition-name: issue-${id};`}>
+                    <Award className="mr-1 h-4 w-4" />
+                    <span>{issue}</span>
+                  </div>
+                )
+              }
+            </div>
+          </div>
+          <div class="mb-6 flex w-full flex-wrap items-center gap-3 md:hidden">
+            {
+              official && (
+                <Link
+                  href={official}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  variant="outline"
+                  className="inline-flex items-center flex-1 h-11 text-sm"
+                >
+                  <ExternalLink className="mr-0 size-5" />
+                  {t('officialPage')}
+                </Link>
+              )
+            }
+            {
+              verify && (
+                <div
+                  class="inline-flex flex-1 items-center"
+                  style={`view-transition-name: verify-${id};`}
+                >
+                  <Link
+                    href={verify}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    variant="outline"
+                    className=" h-11 text-sm w-full"
+                  >
+                    <ShieldCheck className="mr-0 size-5" />
+                    {t('verifyBadge')}
+                  </Link>
+                </div>
+              )
+            }
+          </div>
+          <div class="opacity-0" style={`animation: fade-in-up 0.3s ease-in 0.4s forwards;`}>
+            {
+              description && (
+                <div class="mb-6">
+                  <p class="text-lg">{description[currentLocale]}</p>
+                </div>
+              )
+            }
+            {
+              certificate && (
+                <div class="relative mb-8 overflow-hidden rounded-lg">
+                  <img
+                    src={certificate.url || '/placeholder.svg'}
+                    alt={certificate.alt[currentLocale] || 'Certificate'}
+                    class=""
+                    loading="eager"
+                  />
+                </div>
+              )
+            }
+            <div
+              class="mb-6 flex items-center gap-3 opacity-0"
+              style="animation: fade-in-up 0.5s ease-in 0.1s forwards;"
+            >
+              <div
+                class="bg-accent text-accent-foreground flex h-12 w-12 items-center justify-center rounded-full"
+              >
+                <Sparkles className="h-6 w-6" />
+              </div>
+              <h2 class="text-2xl font-bold tracking-tighter sm:text-3xl">
+                {t('skills')}
+              </h2>
+            </div>
+            <div class="flex flex-wrap justify-start gap-3">
+              {skills.map((skill: string) => <SkillBadge skill={skill} />)}
+            </div>
+            {
+              identifier && (
+                <div>
+                  <div
+                    class="my-6 flex items-center gap-3 pt-2 opacity-0"
+                    style="animation: fade-in-up 0.5s ease-in 0.1s forwards;"
+                  >
+                    <div class="bg-accent text-accent-foreground flex h-12 w-12 items-center justify-center rounded-full">
+                      <Fingerprint className="h-6 w-6" />
+                    </div>
+                    <h2 class="text-2xl font-bold tracking-tighter sm:text-3xl">
+                      {t('certificationId')}
+                    </h2>
+                  </div>
+                  <div class="">
+                    <p class="text-lg">{identifier}</p>
+                  </div>
+                </div>
+              )
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style></style>
