@@ -129,7 +129,7 @@ const certifications = defineCollection({
   loader: async () => {
     return certs.reduce(
       (acc, cert) => {
-        const id = slugify(cert.name)
+        const id = slugify(typeof cert.name === 'string' ? cert.name : cert.name.en)
         acc[id] = { ...cert, id }
         return acc
       },
@@ -137,25 +137,42 @@ const certifications = defineCollection({
     )
   },
   schema: z.object({
+    id: z.string().optional(),
     slug: z.string().optional(),
     featured: z.number().optional(), // sorted descending
-    name: z.string(),
+    name: z.object({
+      en: z.string(),
+      tw: z.string(),
+    }),
     organization: z.string(),
     issue: z.string().optional(),
     expire: z.string().optional(),
     identifier: z.string().optional(),
-    url: z.string().optional(),
+    description: z
+      .object({
+        en: z.string(),
+        tw: z.string(),
+      })
+      .optional(),
+    official: z.string().optional(),
+    verify: z.string().optional(),
     skills: z.array(z.string()).optional(),
     badge: z
       .object({
         url: z.string(),
-        alt: z.string(),
+        alt: z.object({
+          en: z.string(),
+          tw: z.string(),
+        }),
       })
       .optional(),
     certificate: z
       .object({
         url: z.string(),
-        alt: z.string(),
+        alt: z.object({
+          en: z.string(),
+          tw: z.string(),
+        }),
       })
       .optional(),
   }),
