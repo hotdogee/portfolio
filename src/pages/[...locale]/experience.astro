@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro'
-import { Card, CardContent } from '@components/ui/card'
+import { Card, CardContent, CardHeader } from '@components/ui/card'
 import { Calendar } from 'lucide-react'
 export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
 import { defaultLocale } from '@lib/utils'
@@ -21,8 +21,8 @@ const translations = {
           'At Lanyang Geothermal, I lead engineering initiatives to advance renewable energy technology through innovative approaches to geothermal power generation. My work spans hardware design, software development, and system integration-all focused on maximizing the efficiency and reliability of renewable energy extraction.',
         achievements: [
           'Led a team of engineers in designing and constructing a research-grade geothermal power plant',
-          'Implemented novel total-flow turbine technology that increased thermal efficiency by 50% for brine temperatures ranging from 150 to 200 degrees Celsius',
-          'Designed a modern SCADA/IoT system for real-time monitoring and control across multiple platforms',
+          'Implemented novel total-flow turbine technology for brine temperatures ranging from 150 to 200 degrees Celsius with successful grid output of 150kW',
+          'Designed a modern SCADA/IoT system for real-time monitoring and control across multiple platforms that increased thermal efficiency by 50%',
         ],
       },
       {
@@ -33,7 +33,7 @@ const translations = {
           'Working with BIOTOOLS, I applied cutting-edge AI techniques to solve complex bioinformatics challenges. My focus was developing neural network models that could dramatically accelerate protein analysis while maintaining high accuracy, transforming how researchers approach proteomic data.',
         achievements: [
           'Designed, implemented, and deployed end-to-end neural network models for protein sequence functional prediction',
-          'Achieved an accuracy of 90% on Pfam, Gene Ontology, Human Phenotype Ontology, and Disorder Ontology while reducing compute time by 100 times',
+          'Achieved an accuracy of 95% on Gene Ontology, Human Phenotype Ontology, and Disorder Ontology while reducing compute time by 100 times',
           'Developed STAMP-CLI, a command line interface for metagenomic profile statistical analysis, packaged as public Docker images for cross-platform compatibility',
         ],
       },
@@ -90,28 +90,28 @@ const translations = {
           '任職於蘭陽地熱期間，我主導多項工程計畫，透過地熱發電的創新方法，致力推動再生能源技術的發展。我的職責涵蓋硬體設計、軟體開發及系統整合，核心目標在於最大化再生能源擷取的效率與可靠度。',
         achievements: [
           '帶領工程團隊設計並建置一座研究級地熱發電廠',
-          '導入創新的全流式渦輪 (total-flow turbine) 技術，針對攝氏 150 至 200 度的地熱滷水，成功將熱效率提升了 50%',
-          '設計現代化 SCADA/IoT 系統，能在多個平台進行即時監控與控制',
+          '導入創新的全流式渦輪 (total-flow turbine) 技術，針對攝氏 150 至 200 度的地熱滷水，成功與台電並網輸出 150kW',
+          '設計現代化 SCADA/IoT 系統，能在多個平台進行即時監控與控制，成功提升熱效率 50%',
         ],
       },
       {
-        company: '碩英股份有限公司 (BIOTOOLS Co., Ltd.)',
+        company: '圖爾思生物技術股份有限公司 (BIOTOOLS)',
         position: '人工智慧研究員',
         period: '2019 年 2 月 – 2022 年 1 月',
         description:
-          '在碩英公司服務期間，我運用尖端人工智慧技術，解決複雜的生物資訊學挑戰。我的研發重點在於建構神經網路模型，以期在維持高準確度的前提下，大幅加速蛋白質分析流程，從而革新研究人員處理蛋白質體學數據的模式。',
+          '在圖爾思服務期間，我運用尖端人工智慧技術，解決複雜的生物資訊學挑戰。我的研發重點在於建構神經網路模型，以期在維持高準確度的前提下，大幅加速蛋白質分析流程，從而革新研究人員處理蛋白質體學數據的模式。',
         achievements: [
           '設計、建置並部署了用於蛋白質序列功能預測的端對端神經網路模型',
-          '在 Pfam 、 Gene Ontology (基因本體論)、 Human Phenotype Ontology (人類表型本體論) 及 Disorder Ontology (蛋白質無序本體論) 等資料庫上均達到 90% 的準確率，同時將運算時間縮短了百倍',
+          '在 Gene Ontology (基因本體論)、 Human Phenotype Ontology (人類表型本體論) 及 Disorder Ontology (蛋白質無序本體論) 等資料庫上均達到 95% 的準確率，同時將運算時間縮短了百倍',
           '開發了 STAMP-CLI ，這是一套用於總體基因體學圖譜統計分析的命令列工具，並將其打包成公開的 Docker 映像檔，以利跨平台使用',
         ],
       },
       {
-        company: '博鑫醫電股份有限公司 (Binflux Inc)',
+        company: '沛智生醫科技股份有限公司 (Binflux)',
         position: '資深軟體工程師',
         period: '2017 年 1 月 – 2019 年 1 月',
         description:
-          '在博鑫醫電，我負責領導現代醫療資訊科技的設計與實施，核心專案為開發適用於生殖醫學中心的電子病歷 (EMR) 系統。此職務要求高度的細心、以資訊安全為核心的系統架構，以及與醫療專業人員的緊密協作，共同打造能提升病患照護品質的系統。',
+          '在沛智生醫，我負責領導現代醫療資訊科技的設計與實施，核心專案為開發適用於生殖醫學中心的電子病歷 (EMR) 系統。此職務要求高度的細心、以資訊安全為核心的系統架構，以及與醫療專業人員的緊密協作，共同打造能提升病患照護品質的系統。',
         achievements: [
           '參與共同設計的 EMR 系統，成功為生殖醫學中心提升了 20% 的案例處理量',
           '自動化開發工具的導入，使開發時程縮短了 30%',
@@ -119,11 +119,11 @@ const translations = {
         ],
       },
       {
-        company: '台灣基康股份有限公司 (Meridigen Biotech)',
+        company: '宣捷生物科技股份有限公司 (Meridigen Biotech)',
         position: '軟體工程師',
         period: '2015 年 6 月 – 2016 年 12 月',
         description:
-          '在台灣基康任職期間，我的工作核心在於整合生物學與電腦科學，開發影像分析系統，以提升顯微細胞分析的準確度與效率。透過與生物學家直接合作，我打造出能有效縮短分析時間並同時提高準確性的工具。',
+          '在宣捷生物科技任職期間，我的工作核心在於整合生物學與電腦科學，開發影像分析系統，以提升顯微細胞分析的準確度與效率。透過與生物學家直接合作，我打造出能有效縮短分析時間並同時提高準確性的工具。',
         achievements: [
           '開發的網頁式影像分析系統，將顯微細胞影像的運算時間縮短了五倍',
           '細胞計數與面積判定的錯誤率低於 1%',
@@ -172,40 +172,45 @@ const t = (key: string): any => {
       </div>
 
       <div class="relative">
-        <div class="bg-border absolute left-1/2 h-full w-0.5 -translate-x-1/2 transform"></div>
+        <div
+          class="bg-border absolute left-1/2 hidden h-full w-0.5 -translate-x-1/2 transform lg:block"
+        >
+        </div>
         <div class="space-y-12">
           {
             t('experiences').map((experience: any, index: number) => (
               <div
-                class="relative opacity-0"
+                class="relative opacity-0 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8"
                 style={`animation: fade-in-up 0.5s ease-in ${(0.3 + 0.1 * index).toFixed(1)}s forwards;`}
               >
-                <div class="mb-4 flex items-center">
-                  <div class="bg-primary absolute left-1/2 z-10 -ml-[0.5px] h-4 w-4 -translate-x-1/2 transform rounded-full" />
-                  <div class={`w-1/2 pr-8 text-right ${index % 2 === 1 ? 'md:order-2' : ''}`}>
-                    <h3 class="text-lg font-bold">{experience.company}</h3>
-                    <p class="text-primary font-medium">{experience.position}</p>
-                    <div class="text-muted-foreground mt-2 flex items-center justify-end text-sm">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      <span>{experience.period}</span>
-                    </div>
+                <div class="bg-primary absolute left-1/2 z-10 -ml-[0.5px] hidden h-4 w-4 -translate-x-1/2 transform rounded-full lg:block" />
+                <div
+                  class={`text-center ${index % 2 === 1 ? 'lg:order-2 lg:pl-8 lg:text-left' : 'lg:pr-8 lg:text-right'}`}
+                >
+                  <h3 class="text-lg font-bold">{experience.company}</h3>
+                  <p class="text-primary font-medium">{experience.position}</p>
+                  <div
+                    class={`text-muted-foreground mt-1 flex items-center justify-center text-sm ${index % 2 === 1 ? 'lg:justify-start' : 'lg:justify-end'}`}
+                  >
+                    <Calendar className="h-4 w-4 mr-1" />
+                    <span>{experience.period}</span>
                   </div>
-                  <div class={`w-1/2 pl-8 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
-                    <Card>
-                      <CardContent className="p-6">
-                        <p class="mb-4">{experience.description}</p>
-                        <h4 class="mb-2 font-semibold">Key Achievements:</h4>
-                        <ul class="space-y-2">
-                          {experience.achievements.map((achievement: string) => (
-                            <li class="flex items-start">
-                              <div class="bg-primary mt-1.5 mr-2 h-1.5 w-1.5 rounded-full" />
-                              <span class="text-sm">{achievement}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </CardContent>
-                    </Card>
-                  </div>
+                </div>
+                <div class={`max-lg:pt-4 ${index % 2 === 1 ? 'lg:order-1 lg:pr-8' : 'lg:pl-8'}`}>
+                  <Card className="py-3 md:py-2">
+                    <CardContent className="m-0 md:m-5">
+                      <p class="mb-4">{experience.description}</p>
+                      <h4 class="mb-2 font-semibold">Key Achievements:</h4>
+                      <ul class="space-y-2">
+                        {experience.achievements.map((achievement: string) => (
+                          <li class="flex items-start">
+                            <div class="bg-primary mt-1.5 mr-2 aspect-square h-2 rounded-full" />
+                            <span class="text-sm">{achievement}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
                 </div>
               </div>
             ))
@@ -214,17 +219,6 @@ const t = (key: string): any => {
       </div>
     </div>
   </section>
-
-  <style>
-    @keyframes fade-in-up {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
 </BaseLayout>
+
+<style></style>
