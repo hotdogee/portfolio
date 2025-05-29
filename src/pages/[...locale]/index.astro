@@ -2,10 +2,12 @@
 import BaseLayout from '@layouts/BaseLayout.astro'
 import HeroSection from '@components/HeroSection.astro'
 import FeaturedProjects from '@components/FeaturedProjects.astro'
+import FeaturedCertifications from '@components/FeaturedCertifications.astro'
 export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
 ---
 
 <BaseLayout>
   <HeroSection />
   <FeaturedProjects />
+  <FeaturedCertifications />
 </BaseLayout>

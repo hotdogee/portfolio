@@ -42,6 +42,7 @@
     }
   },
   {
+    "featured": 74,
     "name": {
       "en": "Cybersecurity Architect Expert SC-100",
       "tw": "網路安全架構師專家 SC-100"
@@ -631,6 +632,7 @@
     }
   },
   {
+    "featured": 71,
     "name": {
       "en": "Digital Marketing Associate",
       "tw": "數位行銷助理"
@@ -862,6 +864,7 @@
     }
   },
   {
+    "featured": 73,
     "name": {
       "en": "Azure Solutions Architect Expert AZ-305",
       "tw": "Azure 解決方案架構師專家 AZ-305"
@@ -1018,6 +1021,7 @@
     }
   },
   {
+    "featured": 75,
     "name": {
       "en": "Professional Cloud Architect",
       "tw": "專業雲端架構師"
@@ -1321,6 +1325,7 @@
     }
   },
   {
+    "featured": 72,
     "name": {
       "en": "AWS Certified AI Practitioner",
       "tw": "AWS 認證 AI 從業人員"
@@ -1435,6 +1440,7 @@
     }
   },
   {
+    "featured": 76,
     "name": {
       "en": "Professional Machine Learning Engineer",
       "tw": "專業機器學習工程師"
