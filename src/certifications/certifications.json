@@ -86,6 +86,7 @@
     }
   },
   {
+    "featured": 55,
     "name": {
       "en": "DevOps Engineer Expert AZ-400",
       "tw": "DevOps 工程師專家 AZ-400"
@@ -123,6 +124,7 @@
     }
   },
   {
+    "featured": 36,
     "name": {
       "en": "AI Associate",
       "tw": "AI 助理"
@@ -365,6 +367,7 @@
     }
   },
   {
+    "featured": 62,
     "name": {
       "en": "Professional Cloud DevOps Engineer",
       "tw": "專業雲端 DevOps 工程師"
@@ -446,6 +449,7 @@
     }
   },
   {
+    "featured": 32,
     "name": {
       "en": "TOEIC 985/990",
       "tw": "多益英語測驗 985/990"
@@ -464,7 +468,7 @@
       "Business-Level Vocabulary"
     ],
     "badge": {
-      "url": "/src/certifications/images/toeic-2025-badge.jpg",
+      "url": "/src/certifications/images/toeic-2025-badge.png",
       "alt": {
         "en": "TOEIC 985/990 Badge",
         "tw": "多益英語測驗 985/990 徽章"
@@ -473,10 +477,19 @@
     "certificate": {
       "url": "/src/certifications/images/toeic-2025-certificate.jpg",
       "alt": {
-        "en": "TOEIC 985/990 Certificate",
-        "tw": "多益英語測驗 985/990 證書"
+        "en": "TOEIC 985/990 Golden Certificate",
+        "tw": "多益英語測驗 985/990 金色證書"
       }
-    }
+    },
+    "evidence": [
+      {
+        "url": "/src/certifications/images/toeic-2025-certificate-2.jpg",
+        "alt": {
+          "en": "TOEIC 985/990 Score Certificate",
+          "tw": "多益英語測驗 985/990 分數證書"
+        }
+      }
+    ]
   },
   {
     "name": {
@@ -547,6 +560,7 @@
     }
   },
   {
+    "featured": 63,
     "name": {
       "en": "Professional Cloud Network Engineer",
       "tw": "專業雲端網路工程師"
@@ -674,6 +688,7 @@
     }
   },
   {
+    "featured": 64,
     "name": {
       "en": "Professional Cloud Security Engineer",
       "tw": "專業雲端安全工程師"
@@ -748,6 +763,7 @@
     }
   },
   {
+    "featured": 54,
     "name": {
       "en": "Azure AI Engineer Associate AI-102",
       "tw": "Azure AI 工程師助理 AI-102"
@@ -790,6 +806,7 @@
     }
   },
   {
+    "featured": 52,
     "name": {
       "en": "Azure Data Engineer Associate DP-203",
       "tw": "Azure 資料工程師助理 DP-203"
@@ -826,6 +843,7 @@
     }
   },
   {
+    "featured": 53,
     "name": {
       "en": "Azure Data Scientist Associate DP-100",
       "tw": "Azure 資料科學家助理 DP-100"
@@ -1175,6 +1193,7 @@
     }
   },
   {
+    "featured": 65,
     "name": {
       "en": "Professional Data Engineer",
       "tw": "專業資料工程師"
@@ -1622,6 +1641,7 @@
     }
   },
   {
+    "featured": 34,
     "name": {
       "en": "Generative AI Professional",
       "tw": "生成式 AI 專業人員"
@@ -1658,6 +1678,7 @@
     }
   },
   {
+    "featured": 35,
     "name": {
       "en": "Fundamentals of Deep Learning",
       "tw": "深度學習基礎"
@@ -1668,9 +1689,24 @@
     "description": { "en": "", "tw": "" },
     "official": "",
     "verify": "https://courses.nvidia.com/certificates/bf7bfde7da9641789141774954b2bf61/",
-    "skills": ["Machine Learning (ML)", "Deep Learning", "Artificial Intelligence (AI)"]
+    "skills": ["Machine Learning (ML)", "Deep Learning", "Artificial Intelligence (AI)"],
+    "badge": {
+      "url": "/src/certifications/images/nvidia-deep-learning-fundamentals-2022-badge.png",
+      "alt": {
+        "en": "NVIDIA Deep Learning Institute Fundamentals of Deep Learning 2022 Badge",
+        "tw": "NVIDIA 認證「深度學習基礎理論與實踐」徽章"
+      }
+    },
+    "certificate": {
+      "url": "/src/certifications/images/nvidia-deep-learning-fundamentals-2022-certificate.png",
+      "alt": {
+        "en": "NVIDIA Deep Learning Institute Fundamentals of Deep Learning 2022 Certificate",
+        "tw": "NVIDIA 認證「深度學習基礎理論與實踐」證書"
+      }
+    }
   },
   {
+    "featured": 33,
     "name": {
       "en": "AI CUP - 2nd Place",
       "tw": "AI CUP - 第二名"
@@ -1688,7 +1724,7 @@
       "Artificial Intelligence (AI)"
     ],
     "badge": {
-      "url": "/src/certifications/images/aicup-2019-badge.jpg",
+      "url": "/src/certifications/images/aicup-2019-badge.png",
       "alt": {
         "en": "AI CUP 2019 2nd Place Badge",
         "tw": "AI CUP 2019 第二名徽章"
@@ -1700,7 +1736,16 @@
         "en": "AI CUP 2019 2nd Place Certificate",
         "tw": "AI CUP 2019 第二名證書"
       }
-    }
+    },
+    "evidence": [
+      {
+        "url": "/src/certifications/images/aicup-2019-certificate-2.jpg",
+        "alt": {
+          "en": "AI CUP 2019 2nd Place Certificate by Ministry of Education",
+          "tw": "AI CUP 2019 第二名 教育部證書"
+        }
+      }
+    ]
   },
   {
     "name": {
@@ -1718,12 +1763,26 @@
       "Deep Learning",
       "TensorFlow",
       "Artificial Intelligence (AI)"
-    ]
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-tensorflow-developer-2020-badge.png",
+      "alt": {
+        "en": "Google TensorFlow Developer 2020 Badge",
+        "tw": "Google 認證「TensorFlow 開發者」徽章"
+      }
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-tensorflow-developer-2020-certificate.jpg",
+      "alt": {
+        "en": "Google TensorFlow Developer 2020 Certificate",
+        "tw": "Google 認證「TensorFlow 開發者」證書"
+      }
+    }
   },
   {
     "name": {
-      "en": "Deep Learning",
-      "tw": "深度學習"
+      "en": "Deep Learning for Medical Analysis",
+      "tw": "深度學習醫學分析"
     },
     "organization": "NVIDIA",
     "issue": "Sep 2016",
@@ -1734,8 +1793,23 @@
       "Machine Learning (ML)",
       "Deep Learning",
       "Computer Vision",
-      "Artificial Intelligence (AI)"
-    ]
+      "Artificial Intelligence (AI)",
+      "Medical Analysis"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/nvidia-deep-learning-medical-analysis-2016-badge.png",
+      "alt": {
+        "en": "NVIDIA Deep Learning Institute Deep Learning for Medical Analysis 2016 Badge",
+        "tw": "NVIDIA 認證「深度學習醫學分析」徽章"
+      }
+    },
+    "certificate": {
+      "url": "/src/certifications/images/nvidia-deep-learning-medical-analysis-2016-certificate.jpg",
+      "alt": {
+        "en": "NVIDIA Deep Learning Institute Deep Learning for Medical Analysis 2016 Certificate",
+        "tw": "NVIDIA 認證「深度學習醫學分析」證書"
+      }
+    }
   },
   {
     "name": {
@@ -1752,7 +1826,21 @@
       "Google Ads",
       "Search Engine Marketing (SEM)",
       "Pay-Per-Click (PPC)"
-    ]
+    ],
+    "badge": {
+      "url": "/src/certifications/images/google-adwords-2013-badge.png",
+      "alt": {
+        "en": "Google AdWords 2013 Badge",
+        "tw": "Google AdWords 2013 徽章"
+      }
+    },
+    "certificate": {
+      "url": "/src/certifications/images/google-adwords-2013-certificate.jpg",
+      "alt": {
+        "en": "Google AdWords 2013 Certificate",
+        "tw": "Google AdWords 2013 證書"
+      }
+    }
   },
   {
     "name": {
@@ -1771,7 +1859,21 @@
       "Google Cloud Platform (GCP)",
       "Infrastructure as Code (IaC)",
       "Cloud Security"
-    ]
+    ],
+    "badge": {
+      "url": "/src/certifications/images/coursera-cloud-architecture-professional-certificate-2020-badge.png",
+      "alt": {
+        "en": "Coursera Cloud Architecture Professional Certificate 2020 Badge",
+        "tw": "Coursera 雲端架構專業證書 2020 徽章"
+      }
+    },
+    "certificate": {
+      "url": "/src/certifications/images/coursera-cloud-architecture-professional-certificate-2020-certificate.jpg",
+      "alt": {
+        "en": "Coursera Cloud Architecture Professional Certificate 2020 Certificate",
+        "tw": "Coursera 雲端架構專業證書 2020 證書"
+      }
+    }
   },
   {
     "name": {
@@ -1790,7 +1892,21 @@
       "Google Cloud Platform (GCP)",
       "Infrastructure as Code (IaC)",
       "Cloud Security"
-    ]
+    ],
+    "badge": {
+      "url": "/src/certifications/images/coursera-cloud-engineering-professional-certificate-2020-badge.png",
+      "alt": {
+        "en": "Coursera Cloud Engineering Professional Certificate 2020 Badge",
+        "tw": "Coursera 雲端工程專業證書 2020 徽章"
+      }
+    },
+    "certificate": {
+      "url": "/src/certifications/images/coursera-cloud-engineering-professional-certificate-2020-certificate.jpg",
+      "alt": {
+        "en": "Coursera Cloud Engineering Professional Certificate 2020 Certificate",
+        "tw": "Coursera 雲端工程專業證書 2020 證書"
+      }
+    }
   },
   {
     "name": {
@@ -1803,12 +1919,26 @@
     "identifier": "FF97FBGQ3NFC",
     "description": { "en": "", "tw": "" },
     "official": "",
-    "verify": "https://coursera.org/share/7163da7bc9eaee187bbcbb43ae228f37",
+    "verify": "https://coursera.org/verify/professional-cert/FF97FBGQ3NFC",
     "skills": [
       "Machine Learning (ML)",
       "Deep Learning",
       "TensorFlow",
       "Artificial Intelligence (AI)"
-    ]
+    ],
+    "badge": {
+      "url": "/src/certifications/images/deeplearningai-tensorflow-specialization-2020-badge.png",
+      "alt": {
+        "en": "DeepLearning.AI TensorFlow Specialization 2020 Badge",
+        "tw": "DeepLearning.AI TensorFlow 專業課程 2020 徽章"
+      }
+    },
+    "certificate": {
+      "url": "/src/certifications/images/deeplearningai-tensorflow-specialization-2020-certificate.jpg",
+      "alt": {
+        "en": "DeepLearning.AI TensorFlow Specialization 2020 Certificate",
+        "tw": "DeepLearning.AI TensorFlow 專業課程 2020 證書"
+      }
+    }
   }
 ]

@@ -175,6 +175,17 @@ const certifications = defineCollection({
         }),
       })
       .optional(),
+    evidence: z
+      .array(
+        z.object({
+          url: z.string(),
+          alt: z.object({
+            en: z.string(),
+            tw: z.string(),
+          }),
+        })
+      )
+      .optional(),
   }),
 })
 

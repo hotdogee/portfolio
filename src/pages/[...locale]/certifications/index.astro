@@ -36,7 +36,7 @@ const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
   return translations[currentLocale]?.[key] || translations['en']?.[key]
 }
 
-// Fetch all certifications and filter by current locale
+// Fetch all certifications and sort by featured status and issue date
 export const certifications = (await getCollection('certifications')).sort((a, b) => {
   // those with featured label should be on top
   const featuredA = a.data.featured || 0
