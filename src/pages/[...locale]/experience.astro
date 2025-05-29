@@ -1,0 +1,230 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { Card, CardContent } from '@components/ui/card'
+import { Calendar } from 'lucide-react'
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
+import { defaultLocale } from '@lib/utils'
+
+const translations = {
+  en: {
+    title: 'Experience | Han Lin',
+    pageTitleBadge: 'Professional Journey',
+    pageTitle: 'Engineering Impact',
+    description:
+      "Every role has been an opportunity to learn, contribute, and push the envelope. From designing novel geothermal turbines to pioneering AI in protein analysis and engineering critical EMR systems, my professional journey reflects a commitment to deep technical engagement and leadership. Explore the milestones that have shaped my expertise and the value I've delivered.",
+    experiences: [
+      {
+        company: 'Lanyang Geothermal Corp',
+        position: 'Research Engineer',
+        period: 'June 2015 – Present',
+        description:
+          'At Lanyang Geothermal, I lead engineering initiatives to advance renewable energy technology through innovative approaches to geothermal power generation. My work spans hardware design, software development, and system integration-all focused on maximizing the efficiency and reliability of renewable energy extraction.',
+        achievements: [
+          'Led a team of engineers in designing and constructing a research-grade geothermal power plant',
+          'Implemented novel total-flow turbine technology that increased thermal efficiency by 50% for brine temperatures ranging from 150 to 200 degrees Celsius',
+          'Designed a modern SCADA/IoT system for real-time monitoring and control across multiple platforms',
+        ],
+      },
+      {
+        company: 'BIOTOOLS Co., Ltd.',
+        position: 'Artificial Intelligence Researcher',
+        period: 'February 2019 – January 2022',
+        description:
+          'Working with BIOTOOLS, I applied cutting-edge AI techniques to solve complex bioinformatics challenges. My focus was developing neural network models that could dramatically accelerate protein analysis while maintaining high accuracy, transforming how researchers approach proteomic data.',
+        achievements: [
+          'Designed, implemented, and deployed end-to-end neural network models for protein sequence functional prediction',
+          'Achieved an accuracy of 90% on Pfam, Gene Ontology, Human Phenotype Ontology, and Disorder Ontology while reducing compute time by 100 times',
+          'Developed STAMP-CLI, a command line interface for metagenomic profile statistical analysis, packaged as public Docker images for cross-platform compatibility',
+        ],
+      },
+      {
+        company: 'Binflux Inc',
+        position: 'Senior Software Engineer',
+        period: 'January 2017 – January 2019',
+        description:
+          'At Binflux, I led the design and implementation of modern healthcare technology, specifically developing electronic medical record (EMR) systems for fertility centers. This role demanded meticulous attention to detail, security-focused architecture, and close collaboration with medical professionals to create systems that enhanced patient care.',
+        achievements: [
+          'Co-designed an EMR system that increased case numbers by 20% for fertility centers',
+          'Reduced development time by 30% through automated development tools',
+          'Designed and implemented an IoT system with secure network interfaces for various medical devices, including microscope CCD cameras and cryogenic label printers',
+        ],
+      },
+      {
+        company: 'Meridigen Biotech',
+        position: 'Software Engineer',
+        period: 'June 2015 – December 2016',
+        description:
+          'My work at Meridigen centered on bridging biology and computer science, developing image analysis systems that enabled more accurate and efficient microscopic cell analysis. By working directly with biologists, I created tools that reduced analysis time while improving accuracy.',
+        achievements: [
+          'Developed a web-based image analysis system that reduced compute time by five times',
+          'Achieved less than a 1% error rate for cell count and area determination for microscopic cell images',
+        ],
+      },
+      {
+        company: 'National Agriculture Library',
+        position: 'Research Engineer',
+        period: 'May 2014 – May 2015',
+        description:
+          'During my time at the National Agriculture Library, I focused on building tools for genomic data analysis and visualization. I created systems that made complex genomic information more accessible to researchers, contributing to the advancement of agricultural science.',
+        achievements: [
+          'Designed an HTML5 user interface for NCBI BLAST+',
+          'Developed a Python library to manipulate genomic features and validate GFF3 files',
+          'Contributed new features and bug fixes to the JBrowse genome browser',
+          'Improved the exonerate sequence alignment tool',
+        ],
+      },
+    ],
+  },
+  tw: {
+    title: '經歷 | 林翰',
+    pageTitleBadge: '實戰經歷',
+    pageTitle: '創新紀實',
+    description:
+      '每個職位都是一個學習成長、貢獻所長並挑戰極限的契機。從設計新型地熱渦輪機到開創 AI 在蛋白質分析的應用，以及建構關鍵的 EMR 系統，我的專業旅程反映了對技術的深耕和領導力的承諾。歡迎探索這些淬鍊我專業能力的里程碑，以及我為團隊與專案所創造的實質價值。',
+    experiences: [
+      {
+        company: '蘭陽地熱股份有限公司',
+        position: '研究工程師',
+        period: '2015 年 6 月 – 迄今',
+        description:
+          '任職於蘭陽地熱期間，我主導多項工程計畫，透過地熱發電的創新方法，致力推動再生能源技術的發展。我的職責涵蓋硬體設計、軟體開發及系統整合，核心目標在於最大化再生能源擷取的效率與可靠度。',
+        achievements: [
+          '帶領工程團隊設計並建置一座研究級地熱發電廠',
+          '導入創新的全流式渦輪 (total-flow turbine) 技術，針對攝氏 150 至 200 度的地熱滷水，成功將熱效率提升了 50%',
+          '設計現代化 SCADA/IoT 系統，能在多個平台進行即時監控與控制',
+        ],
+      },
+      {
+        company: '碩英股份有限公司 (BIOTOOLS Co., Ltd.)',
+        position: '人工智慧研究員',
+        period: '2019 年 2 月 – 2022 年 1 月',
+        description:
+          '在碩英公司服務期間，我運用尖端人工智慧技術，解決複雜的生物資訊學挑戰。我的研發重點在於建構神經網路模型，以期在維持高準確度的前提下，大幅加速蛋白質分析流程，從而革新研究人員處理蛋白質體學數據的模式。',
+        achievements: [
+          '設計、建置並部署了用於蛋白質序列功能預測的端對端神經網路模型',
+          '在 Pfam 、 Gene Ontology (基因本體論)、 Human Phenotype Ontology (人類表型本體論) 及 Disorder Ontology (蛋白質無序本體論) 等資料庫上均達到 90% 的準確率，同時將運算時間縮短了百倍',
+          '開發了 STAMP-CLI ，這是一套用於總體基因體學圖譜統計分析的命令列工具，並將其打包成公開的 Docker 映像檔，以利跨平台使用',
+        ],
+      },
+      {
+        company: '博鑫醫電股份有限公司 (Binflux Inc)',
+        position: '資深軟體工程師',
+        period: '2017 年 1 月 – 2019 年 1 月',
+        description:
+          '在博鑫醫電，我負責領導現代醫療資訊科技的設計與實施，核心專案為開發適用於生殖醫學中心的電子病歷 (EMR) 系統。此職務要求高度的細心、以資訊安全為核心的系統架構，以及與醫療專業人員的緊密協作，共同打造能提升病患照護品質的系統。',
+        achievements: [
+          '參與共同設計的 EMR 系統，成功為生殖醫學中心提升了 20% 的案例處理量',
+          '自動化開發工具的導入，使開發時程縮短了 30%',
+          '設計並建置了一套 IoT 系統，為多種醫療設備（包含顯微鏡 CCD 相機及低溫標籤列印機）提供安全的網路介面',
+        ],
+      },
+      {
+        company: '台灣基康股份有限公司 (Meridigen Biotech)',
+        position: '軟體工程師',
+        period: '2015 年 6 月 – 2016 年 12 月',
+        description:
+          '在台灣基康任職期間，我的工作核心在於整合生物學與電腦科學，開發影像分析系統，以提升顯微細胞分析的準確度與效率。透過與生物學家直接合作，我打造出能有效縮短分析時間並同時提高準確性的工具。',
+        achievements: [
+          '開發的網頁式影像分析系統，將顯微細胞影像的運算時間縮短了五倍',
+          '細胞計數與面積判定的錯誤率低於 1%',
+        ],
+      },
+      {
+        company: '美國國家農業圖書館 (National Agriculture Library)',
+        position: '研究工程師',
+        period: '2014 年 5 月 – 2015 年 5 月',
+        description:
+          '在美國國家農業圖書館服務期間，我專注於建構基因體數據分析與視覺化的工具。我所創建的系統，讓研究人員能更便捷地取用複雜的基因體資訊，為農業科學的進展貢獻一己之力。',
+        achievements: [
+          '為 NCBI BLAST+ 設計了 HTML5 使用者介面',
+          '開發了一套 Python 函式庫，用於操作基因體特徵及驗證 GFF3 格式檔案',
+          '為 JBrowse 基因體瀏覽器貢獻了新功能與錯誤修復',
+          '改良了 exonerate 序列比對工具',
+        ],
+      },
+    ],
+  },
+}
+
+const { locale } = Astro.params
+const currentLocale = locale ?? defaultLocale
+const t = (key: string): any => {
+  const locale = currentLocale as keyof typeof translations
+  return translations[locale]?.[key as keyof (typeof translations)[typeof locale]] || key
+}
+---
+
+<BaseLayout title={t('title') as string} description={t('description') as string}>
+  <section class="md:py-2">
+    <div class="container px-4 md:px-6">
+      <div class="animate-fade-in-up mx-auto max-w-3xl transition duration-500">
+        <div class="mb-8 space-y-4 text-center">
+          <div
+            class="dark:bg-accent dark:text-accent-foreground bg-accent text-accent-foreground inline-flex items-center rounded-lg px-3 py-1 text-sm font-medium"
+          >
+            {t('pageTitleBadge')}
+          </div>
+          <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            {t('pageTitle')}
+          </h1>
+          <p class="text-muted-foreground mb-12 md:text-xl">{t('description')}</p>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="bg-border absolute left-1/2 h-full w-0.5 -translate-x-1/2 transform"></div>
+        <div class="space-y-12">
+          {
+            t('experiences').map((experience: any, index: number) => (
+              <div
+                class="relative opacity-0"
+                style={`animation: fade-in-up 0.5s ease-in ${(0.3 + 0.1 * index).toFixed(1)}s forwards;`}
+              >
+                <div class="mb-4 flex items-center">
+                  <div class="bg-primary absolute left-1/2 z-10 -ml-[0.5px] h-4 w-4 -translate-x-1/2 transform rounded-full" />
+                  <div class={`w-1/2 pr-8 text-right ${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                    <h3 class="text-lg font-bold">{experience.company}</h3>
+                    <p class="text-primary font-medium">{experience.position}</p>
+                    <div class="text-muted-foreground mt-2 flex items-center justify-end text-sm">
+                      <Calendar className="h-4 w-4 mr-1" />
+                      <span>{experience.period}</span>
+                    </div>
+                  </div>
+                  <div class={`w-1/2 pl-8 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
+                    <Card>
+                      <CardContent className="p-6">
+                        <p class="mb-4">{experience.description}</p>
+                        <h4 class="mb-2 font-semibold">Key Achievements:</h4>
+                        <ul class="space-y-2">
+                          {experience.achievements.map((achievement: string) => (
+                            <li class="flex items-start">
+                              <div class="bg-primary mt-1.5 mr-2 h-1.5 w-1.5 rounded-full" />
+                              <span class="text-sm">{achievement}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</BaseLayout>

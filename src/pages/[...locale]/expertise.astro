@@ -1,0 +1,548 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+import {
+  Brain,
+  Cloud,
+  Code,
+  Cpu,
+  Dna,
+  Award,
+  GraduationCap,
+  Lightbulb,
+  ShieldCheck,
+  WandSparkles,
+} from 'lucide-react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@components/ui/card'
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
+import { cn, defaultLocale, slugify } from '@lib/utils'
+import { getCollection, type CollectionEntry } from 'astro:content'
+import { certifications, orgCerts } from './certifications/index.astro'
+import CertificationCard from '@components/CertificationCard.astro'
+import organizationsJsonData from '@/certifications/organizations.json' // Renamed import
+import { Link } from '@components/ui/link'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+
+// Ensure organizations is treated as Record<string, any>
+const organizations: Record<string, any> = organizationsJsonData
+
+const translations = {
+  en: {
+    title: 'Expertise | Han Lin',
+    pageTitleBadge: 'Technical Expertise',
+    pageTitle: 'The Toolkit of an Innovator',
+    description:
+      "My technical expertise spans multiple domains, reflecting my interdisciplinary approach to problem-solving. From deep learning and cloud architecture to hardware design and bioinformatics, I've developed a versatile skillset that allows me to address challenges from multiple perspectives and integrate solutions across traditional boundaries.",
+    skillCategories: [
+      {
+        name: 'AI & Machine Learning',
+        icon: Brain,
+        skills: [
+          'Deep Learning (TensorFlow, PyTorch, LLMs)',
+          'Neural Network Architecture Design',
+          'Computer Vision (OpenCV)',
+          'Natural Language Processing',
+          'Recurrent Neural Networks (LSTM, GRU)',
+          'MLOps (Vertex AI, MLflow)',
+        ],
+      },
+      {
+        name: 'Cloud & Infrastructure',
+        icon: Cloud,
+        skills: [
+          'Google Cloud Platform (GCP)',
+          'Amazon Web Services (AWS)',
+          'Microsoft Azure',
+          'Kubernetes (GKE, EKS)',
+          'CI/CD (Jenkins, GitHub Actions)',
+          'Infrastructure as Code',
+        ],
+      },
+      {
+        name: 'Software Development',
+        icon: Code,
+        skills: [
+          'Python (Django, Scientific Libraries)',
+          'JavaScript/TypeScript (Node.js, Vue 3, React)',
+          'Database Design (MongoDB, PostgreSQL)',
+          'Windows Programming (C#, WPF)',
+          'Genetic Algorithms',
+          'Microservices Architecture',
+        ],
+      },
+      {
+        name: 'Hardware & Electronics',
+        icon: Cpu,
+        skills: [
+          'Embedded Systems',
+          'PCB Design (EagleCAD)',
+          'Sensor Integration (I2C, MODBUS-RTU)',
+          'SCADA Systems',
+          'IoT Networks',
+          'Digital Design with FPGA (Verilog/VHDL)',
+        ],
+      },
+      {
+        name: 'Bioinformatics',
+        icon: Dna,
+        skills: [
+          'Next Generation Sequencing (NGS)',
+          'RNAseq Denovo Assembly',
+          'Microarray Analysis',
+          'Proteomics',
+          'Drug Discovery',
+          'NCBI BLAST+, GFF3, STAMP',
+        ],
+      },
+      {
+        name: 'Cybersecurity',
+        icon: ShieldCheck,
+        skills: [
+          'Security Engineering & Architecture',
+          'Encryption & Data Protection',
+          'Network Security',
+          'Cloud Security (GCP, AWS, Azure)',
+          'Ethical Hacking & Penetration Testing',
+          'Security Audits & Compliance',
+        ],
+      },
+    ],
+    certifications: {
+      title: 'Certifications',
+      description:
+        "Continuous learning is central to my professional philosophy. I've pursued extensive certification across cloud platforms, AI specialties, and cybersecurity to ensure my work leverages current best practices. These credentials reflect not just technical knowledge, but a commitment to building solutions that are scalable, secure, and forward-looking.",
+      categories: [
+        {
+          name: 'Microsoft Certifications',
+          items: [
+            'Azure AI Engineer Associate AI-102',
+            'Azure Data Engineer Associate DP-203',
+            'Azure Data Scientist Associate DP-100',
+            'Azure Solutions Architect Expert AZ-305',
+            'Azure Security Engineer Associate AZ-500',
+            'Azure Administrator Associate AZ-104',
+          ],
+        },
+        {
+          name: 'Google Certifications',
+          items: [
+            'Professional Machine Learning Engineer',
+            'Professional Cloud Architect',
+            'Professional Cloud Developer',
+            'Professional Cloud DevOps Engineer',
+            'Professional Cloud Security Engineer',
+            'Professional Data Engineer',
+            'Professional Cloud Network Engineer',
+            'Professional Cloud Database Engineer',
+            'Associate Cloud Engineer',
+            'Associate Data Practitioner',
+            'Associate Google Workspace Administrator',
+            'Cloud Digital Leader',
+          ],
+        },
+        {
+          name: 'AWS Certifications',
+          items: ['AWS Certified AI Practitioner', 'AWS Certified Cloud Practitioner'],
+        },
+        {
+          name: 'MongoDB Certifications',
+          items: [
+            'Associate Atlas Administrator',
+            'Associate Data Modeler',
+            'Associate Database Administrator',
+            'Associate Developer - Node.js',
+          ],
+        },
+        {
+          name: 'Other Certifications',
+          items: [
+            'GitHub Copilot',
+            'GitHub Actions',
+            'GitHub Administration',
+            'GitHub Advanced Security',
+            'Foundation of Ethical Hacking',
+            'TensorFlow Developer Certificate',
+            'Oracle Cloud Infrastructure 2024 Generative AI Certified Professional',
+          ],
+        },
+      ],
+    },
+    skillsTabLabel: 'Core Competencies',
+    certificationsTabLabel: 'Certifications',
+    skillProficiencyTitle: 'Skill Proficiency',
+    skillProficiencyDescription: 'Visual representation of my technical expertise',
+    otherCertifications: 'Other Certifications',
+    certified: 'Certified',
+    viewAllCertifications: 'All Certifications',
+  },
+  tw: {
+    title: '專長 | 林翰',
+    pageTitleBadge: '技術版圖',
+    pageTitle: '工程實力',
+    description:
+      '我的技術專長橫跨多個領域，充分體現我解決問題的跨學科思維。從深度學習、雲端架構，到硬體設計與生物資訊學，我已建構一套多元的技能組合，使我能從不同視角應對挑戰，並整合跨越傳統領域界線的解決方案。',
+    skillCategories: [
+      {
+        name: '人工智慧與機器學習',
+        icon: Brain,
+        skills: [
+          '深度學習 (TensorFlow、PyTorch、LLMs)',
+          '類神經網路架構設計',
+          '電腦視覺 (OpenCV)',
+          '自然語言處理 (NLP)',
+          '循環神經網路 (LSTM、GRU)',
+          'MLOps (Vertex AI、MLflow)',
+        ],
+      },
+      {
+        name: '雲端運算與基礎架構',
+        icon: Cloud,
+        skills: [
+          'Google Cloud Platform (GCP)',
+          'Amazon Web Services (AWS)',
+          'Microsoft Azure',
+          'Kubernetes (GKE、EKS)',
+          'CI/CD (Jenkins、GitHub Actions)',
+          '基礎設施即程式碼 (IaC)',
+        ],
+      },
+      {
+        name: '軟體工程與開發',
+        icon: Code,
+        skills: [
+          'Python (Django、科學運算)',
+          'JavaScript/TypeScript (Node.js、Vue 3、React)',
+          '資料庫設計 (MongoDB、PostgreSQL)',
+          'Windows 應用程式開發 (C#、WPF)',
+          '遺傳演算法',
+          '微服務架構',
+        ],
+      },
+      {
+        name: '硬體與電子工程',
+        icon: Cpu,
+        skills: [
+          '嵌入式系統開發',
+          'PCB 電路板設計 (EagleCAD)',
+          '感測器整合 (I2C、MODBUS-RTU)',
+          'SCADA 系統 (監控與數據擷取)',
+          '物聯網 (IoT) 應用',
+          'FPGA 數位邏輯設計 (Verilog/VHDL)',
+        ],
+      },
+      {
+        name: '生物資訊',
+        icon: Dna,
+        skills: [
+          '次世代基因定序 (NGS)',
+          'RNA 定序組裝 (RNAseq Denovo Assembly)',
+          '基因微陣列數據分析',
+          '蛋白質體學研究',
+          '新藥開發演算法',
+          'NCBI BLAST+、GFF3、STAMP',
+        ],
+      },
+      {
+        name: '網路與資安',
+        icon: ShieldCheck,
+        skills: [
+          '資安工程與系統架構',
+          '資料加密與個資保護',
+          '網路安全',
+          '雲端資安 (GCP、AWS、Azure)',
+          '白帽駭客與滲透測試',
+          '資安稽核與合規性',
+        ],
+      },
+    ],
+    certifications: {
+      title: '專業認證',
+      description:
+        '終身學習是我職涯發展的核心理念。我已在各大雲端平台、人工智慧專業及網路安全領域取得多項認證，以確保我的工作能應用當前業界的最佳實務。這些認證不僅代表技術知識的積累，更彰顯我致力於打造具備可擴展性、安全性與前瞻性的解決方案的決心。',
+      categories: [
+        {
+          name: 'Microsoft 相關認證',
+          items: [
+            'Azure AI 工程師助理 (AI-102)',
+            'Azure 資料工程師助理 (DP-203)',
+            'Azure 資料科學家助理 (DP-100)',
+            'Azure 解決方案架構師專家 (AZ-305)',
+            'Azure 安全工程師助理 (AZ-500)',
+            'Azure 系統管理員助理 (AZ-104)',
+          ],
+        },
+        {
+          name: 'Google 相關認證',
+          items: [
+            '專業機器學習工程師',
+            '專業雲端架構師',
+            '專業雲端開發人員',
+            '專業雲端 DevOps 工程師',
+            '專業雲端安全工程師',
+            '專業資料工程師',
+            '專業雲端網路工程師',
+            '專業雲端資料庫工程師',
+            '助理雲端工程師',
+            '助理資料從業人員',
+            '助理 Google Workspace 系統管理員',
+            '雲端數位領導者',
+          ],
+        },
+        {
+          name: 'AWS 相關認證',
+          items: ['AWS 認證 AI 從業人員', 'AWS 認證雲端從業人員'],
+        },
+        {
+          name: 'MongoDB 相關認證',
+          items: [
+            '助理 Atlas 系統管理員',
+            '助理資料模型師',
+            '助理資料庫系統管理員',
+            '助理開發人員 - Node.js',
+          ],
+        },
+        {
+          name: '其他專業認證',
+          items: [
+            'GitHub Copilot',
+            'GitHub Actions',
+            'GitHub Administration',
+            'GitHub Advanced Security',
+            '道德駭客基礎 (Foundation of Ethical Hacking)',
+            'TensorFlow 開發人員證書',
+            'Oracle Cloud Infrastructure 2024 生成式 AI 認證專家',
+          ],
+        },
+      ],
+    },
+    skillsTabLabel: '核心能力',
+    certificationsTabLabel: '國際認證',
+    skillProficiencyTitle: '技能熟練度',
+    skillProficiencyDescription: '技術專長視覺化呈現',
+    otherCertifications: '其他專業認證',
+    certified: '認證',
+    viewAllCertifications: '所有國際認證',
+  },
+}
+
+const { locale } = Astro.params
+const currentLocale = locale ?? defaultLocale
+const t = (key: string): any => {
+  const locale = currentLocale as keyof typeof translations
+  return translations[locale]?.[key as keyof (typeof translations)[typeof locale]] || key
+}
+
+const showcaseOrgs = ['Google', 'Microsoft', 'AWS', 'MongoDB', 'GitHub']
+
+const otherCerts = certifications.filter((certification: CollectionEntry<'certifications'>) => {
+  return !showcaseOrgs.includes(certification.data.organization)
+})
+
+const topBrands = [
+  'Google',
+  'Microsoft',
+  'AWS',
+  'Meta',
+  'MongoDB',
+  'GitHub',
+  'NVIDIA',
+  'LinkedIn',
+  'Oracle',
+  'Salesforce',
+]
+---
+
+<BaseLayout title={t('title') as string} description={t('description') as string}>
+  <section class="md:py-2">
+    <div class="container px-4 md:px-6">
+      <div class="animate-fade-in-up mx-auto max-w-3xl transition duration-500">
+        <div class="mb-8 space-y-4 text-center">
+          <div
+            class="dark:bg-accent dark:text-accent-foreground bg-accent text-accent-foreground inline-flex items-center rounded-lg px-3 py-1 text-sm font-medium"
+          >
+            {t('pageTitleBadge')}
+          </div>
+          <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            {t('pageTitle')}
+          </h1>
+          <p class="text-muted-foreground mb-12 md:text-xl">{t('description')}</p>
+        </div>
+      </div>
+      <!-- Skills Section -->
+      <div class="mb-12">
+        <div
+          class="mb-6 flex items-center gap-3 opacity-0"
+          style="animation: fade-in-up 0.5s ease-in 0.1s forwards;"
+        >
+          <div
+            class="bg-accent text-accent-foreground flex h-12 w-12 items-center justify-center rounded-full"
+          >
+            <WandSparkles className="h-6 w-6" />
+          </div>
+          <h2 class="text-2xl font-bold tracking-tighter sm:text-3xl">
+            {t('skillsTabLabel')}
+          </h2>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {
+            t('skillCategories').map((category: any, index: number) => {
+              const Icon = category.icon
+              return (
+                <div
+                  class="opacity-0"
+                  style={`animation: fade-in-up 0.5s ease-in ${(0.1 * (index + 1)).toFixed(1)}s forwards;`}
+                >
+                  <Card className="h-full gap-4">
+                    <CardHeader>
+                      <div class="flex items-center gap-2">
+                        <div class="bg-primary/10 text-primary flex h-10 w-10 items-center justify-center rounded-lg">
+                          <Icon className="h-5 w-5" />
+                        </div>
+                        <CardTitle>{category.name}</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <ul class="space-y-2">
+                        {category.skills.map((skill: string, i: number) => (
+                          <li class="flex items-start">
+                            <div class="bg-secondary mt-1.5 mr-2 h-1.5 w-1.5 rounded-full" />
+                            <span class="text-sm">{skill}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              )
+            })
+          }
+        </div>
+      </div>
+
+      <!-- Certifications Section -->
+      <div class="">
+        <div
+          class="mb-6 flex items-center gap-3 opacity-0"
+          style="animation: fade-in-up 0.5s ease-in 0.1s forwards;"
+        >
+          <div
+            class="bg-accent text-accent-foreground flex h-12 w-12 items-center justify-center rounded-full"
+          >
+            <Award className="h-6 w-6" />
+          </div>
+          <h2 class="text-2xl font-bold tracking-tighter sm:text-3xl">
+            {t('certificationsTabLabel')}
+          </h2>
+        </div>
+        <p class="text-muted-foreground mb-8">{t('certifications').description}</p>
+
+        <div class="grid gap-6 md:grid-cols-2">
+          {
+            showcaseOrgs.map((orgName: string, index: number) => {
+              const org = organizations?.[slugify(orgName)]
+              return (
+                <Card className="h-full gap-4">
+                  <CardHeader>
+                    <div class="flex items-center">
+                      {org?.icon && (
+                        <div class="mr-3 flex-shrink-0">
+                          <img
+                            src={org.icon.light}
+                            alt={org.icon.alt}
+                            class="size-6 object-contain dark:hidden"
+                            loading="lazy"
+                          />
+                          <img
+                            src={org.icon.dark}
+                            alt={org.icon.alt}
+                            class="hidden size-6 object-contain dark:block"
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
+                      <CardTitle className="text-xl sm:text-2xl">{`${orgName} ${t('certified')}`}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div class="grid grid-cols-2 gap-6 md:grid-cols-3">
+                      {orgCerts[orgName]
+                        ?.slice(0, 6)
+                        .map((certification: CollectionEntry<'certifications'>, index: number) => (
+                          <CertificationCard certification={certification} index={index} />
+                        ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              )
+            })
+          }
+          <Card className="h-full gap-4">
+            <CardHeader>
+              <div class="flex items-center">
+                <Award className="mr-3 size-6" />
+                <CardTitle className="text-xl sm:text-2xl"
+                  >{`${t('otherCertifications')}`}</CardTitle
+                >
+              </div>
+            </CardHeader>
+            <CardContent>
+              <div class="grid grid-cols-2 gap-6 md:grid-cols-3">
+                {
+                  otherCerts
+                    ?.slice(0, 6)
+                    .map((certification, index: number) => (
+                      <CertificationCard certification={certification} index={index} />
+                    ))
+                }
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        <div class="mt-8 flex flex-wrap justify-center gap-2">
+          {
+            topBrands.map((name: string) => {
+              const slug = slugify(name)
+              const org = (organizations as any)[slug] || {}
+              return (
+                <Link
+                  href={getRelativeLocaleUrl(currentLocale, `/certifications/organization/${slug}`)}
+                  className={cn('h-10')}
+                  variant={'outline'}
+                >
+                  {org.icon && (
+                    <div class="mr-1 flex-shrink-0">
+                      <img
+                        src={org.icon.light}
+                        alt={org.icon.alt}
+                        class="size-5 object-contain dark:hidden"
+                        loading="lazy"
+                      />
+                      <img
+                        src={org.icon.dark}
+                        alt={org.icon.alt}
+                        class="hidden size-5 object-contain dark:block"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+                  {name}
+                </Link>
+              )
+            })
+          }
+          <div class="mt-2 flex flex-wrap justify-center gap-2">
+            <Link
+              href={getRelativeLocaleUrl(currentLocale, '/certifications')}
+              variant={'outline'}
+              className="flex h-10 items-center"
+            >
+              <Award className="mr-1 size-5" />
+              {t('viewAllCertifications')}
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

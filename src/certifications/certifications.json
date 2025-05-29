@@ -1780,6 +1780,7 @@
     }
   },
   {
+    "featured": 31,
     "name": {
       "en": "Deep Learning for Medical Analysis",
       "tw": "深度學習醫學分析"
