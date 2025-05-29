@@ -1,0 +1,85 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/card'
+import { Input } from '@components/ui/input'
+import { Button } from '@components/ui/button'
+import CategoryBadge from './CategoryBadge.astro'
+import { Search } from 'lucide-react'
+import { defaultLocale, slugify, cn } from '@lib/utils'
+import organizations from '@/certifications/organizations.json'
+import { Badge } from '@components/ui/badge'
+import { Link } from '@components/ui/link'
+
+const { locale } = Astro.params
+const currentLocale = locale ?? defaultLocale
+const translations = {
+  en: {
+    allOrganizations: 'All Organizations',
+  },
+  tw: {
+    allOrganizations: '所有機構',
+  },
+}
+const t = (key: string) => {
+  const locale = currentLocale as keyof typeof translations
+  return translations[locale]?.[key as keyof (typeof translations)[typeof locale]] || key
+}
+
+interface Props {
+  orgs: string[]
+  class?: string
+  [key: string]: any
+}
+
+const { orgs, class: className, ...rest } = Astro.props
+---
+
+<div class:list={[className, 'mx-auto space-y-6']} {...rest}>
+  <div class="flex flex-wrap items-center justify-center gap-2">
+    <Link
+      href={getRelativeLocaleUrl(currentLocale, `/certifications/`)}
+      className={cn('h-10', {
+        'bg-card dark:bg-card ring-accent ring-2': Astro.url.pathname.endsWith('/certifications'),
+      })}
+      variant={'outline'}
+    >
+      {t('allOrganizations')}
+    </Link>
+    {
+      orgs.map((name: string) => {
+        const slug = slugify(name)
+        const org = (organizations as any)[slug] || {}
+        return (
+          <Link
+            href={getRelativeLocaleUrl(currentLocale, `/certifications/organization/${slug}`)}
+            className={cn('size-10', {
+              'bg-card dark:bg-card ring-accent ring-2': Astro.url.pathname.endsWith(
+                `/certifications/organization/${slug}`
+              ),
+            })}
+            variant={'outline'}
+          >
+            {org.icon && (
+              <div class="flex-shrink-0">
+                <img
+                  src={org.icon.light}
+                  alt={org.icon.alt}
+                  class="size-5 object-contain dark:hidden"
+                  loading="lazy"
+                />
+                <img
+                  src={org.icon.dark}
+                  alt={org.icon.alt}
+                  class="hidden size-5 object-contain dark:block"
+                  loading="lazy"
+                />
+              </div>
+            )}
+          </Link>
+        )
+      })
+    }
+  </div>
+</div>
+
+<style></style>
