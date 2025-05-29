@@ -1,27 +1,27 @@
 ---
 import { Link } from '@components/ui/link'
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import { Grid3x3 } from 'lucide-react'
+import { BrainCircuit, Grid3x3 } from 'lucide-react'
 import { defaultLocale, datesFromChanges, getLocaleSlugFromId } from '@lib/utils'
 import { getCollection, type CollectionEntry } from 'astro:content'
 import ProjectCard from '@components/ProjectCard.astro'
 
 const translations = {
   en: {
-    titleBadge: 'The Interdisciplinary Edge',
-    title: 'Featured Projects',
+    titleBadge: 'Impactful Engineering',
+    title: 'The Interdisciplinary Edge',
     subtitle:
       "My fascination lies at the intersection where disciplines converge. With a deep understanding of fundamental physics, complex biological systems, and the intricacies of hardware and software, I architect and build full-stack solutions that tackle previously intractable problems. If you're looking for a partner to push boundaries, you've come to the right place.",
     noProjectsFound: 'No projects found for this language.',
-    viewAllProjects: 'View All Projects',
+    viewAllProjects: 'All Projects',
   },
   tw: {
-    titleBadge: '跨領域優勢',
-    title: '精選專案',
+    titleBadge: '創新實踐',
+    title: '跨領域優勢',
     subtitle:
-      '我的熱情在於跨學科的交匯點。憑藉對基礎物理學、分子生物系統以及軟硬體整合設計的深刻理解，我擅長規劃並建構解決棘手問題的全端解決方案。如果您正在尋找一位能共同突破界限的夥伴，那麼您來對地方了。',
+      '我的熱情在於跨領域的交匯點。憑藉對基礎物理學、分子生物系統以及軟硬體整合設計的深刻理解，我擅長規劃並建構解決棘手問題的全端解決方案。如果您正在尋找一位能共同突破界限的夥伴，那麼您來對地方了。',
     noProjectsFound: '目前沒有此語言的專案。',
-    viewAllProjects: '查看所有專案',
+    viewAllProjects: '所有專案',
   },
 }
 const { locale } = Astro.params
@@ -80,7 +80,7 @@ const projects = (
         variant={'outline'}
         className="flex items-center"
       >
-        <Grid3x3 className="mr-1 h-4 w-4" />
+        <BrainCircuit className="mr-1 size-5" />
         {t('viewAllProjects')}
       </Link>
     </div>
