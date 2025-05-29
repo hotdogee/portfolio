@@ -1,11 +1,19 @@
 [
   {
-    "name": "Generative AI Leader",
+    "name": {
+      "en": "Generative AI Leader",
+      "tw": "Generative AI Leader"
+    },
     "organization": "Google",
     "issue": "May 2025",
     "expire": "May 2028",
     "identifier": "ac0bdb93185f419eb2214522d4296c7c",
-    "url": "https://www.credly.com/badges/5c6a2127-5bbf-452a-9179-e19795057115/linked_in_profile",
+    "description": {
+      "en": "A Generative AI Leader is a visionary professional with comprehensive knowledge of how generative AI (gen AI) can transform businesses. They have business-level knowledge of Google Cloud's gen AI offerings and understand how Google's AI-first approach can lead organizations toward innovative and responsible AI adoption. They influence gen AI-powered initiatives and identify opportunities across business functions and industries, using Google Cloud's enterprise-ready offerings to accelerate innovation.",
+      "tw": "「生成式 AI 領導者」是一位具有前瞻思維的專業人士，他們深入了解生成式 AI ( gen AI ) 如何為企業帶來變革。他們不僅對 Google Cloud 的 gen AI 產品有商業層面的認識，更了解 Google 以 AI 為先的策略如何協助企業創新，並以負責任的方式導入 AI 技術。這些領導者能影響由 gen AI 驅動的各項計畫，並運用 Google Cloud 的企業級解決方案，在不同業務部門和產業中發掘機會，加速創新。"
+    },
+    "official": "https://cloud.google.com/developers/generative-ai-leader",
+    "verify": "https://www.credly.com/badges/5c6a2127-5bbf-452a-9179-e19795057115/linked_in_profile",
     "skills": [
       "AI Ethics",
       "Artificial Intelligence (AI)",
@@ -20,20 +28,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/google-certified-generative-ai-leader-2025-badge.png",
-      "alt": "Google Certified Generative AI Leader Badge"
+      "alt": {
+        "en": "Google Certified Generative AI Leader Badge",
+        "tw": "Google 認證「生成式 AI 領導者」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/google-certified-generative-ai-leader-2025-certificate.png",
-      "alt": "Google Certified Generative AI Leader Certificate"
+      "alt": {
+        "en": "Google Certified Generative AI Leader Certificate",
+        "tw": "Google 認證「生成式 AI 領導者」證書"
+      }
     }
   },
   {
-    "name": "Cybersecurity Architect Expert SC-100",
+    "name": {
+      "en": "Cybersecurity Architect Expert SC-100",
+      "tw": "網路安全架構師專家 SC-100"
+    },
     "organization": "Microsoft",
     "issue": "May 2025",
     "expire": "May 2026",
     "identifier": "A9A383FD75C41BBF",
-    "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/A9A383FD75C41BBF",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/A9A383FD75C41BBF",
     "skills": [
       "Evaluate Security Posture",
       "Governance Risk Compliance",
@@ -52,20 +71,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/microsoft-certified-sc-100-cybersecurity-architect-expert-2025-badge.png",
-      "alt": "Microsoft Certified Cybersecurity Architect Expert SC-100 Badge"
+      "alt": {
+        "en": "Microsoft Certified Cybersecurity Architect Expert SC-100 Badge",
+        "tw": "Microsoft 認證「網路安全架構師專家 SC-100」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/microsoft-certified-sc-100-cybersecurity-architect-expert-2025-certificate.png",
-      "alt": "Microsoft Certified Cybersecurity Architect Expert SC-100 Certificate"
+      "alt": {
+        "en": "Microsoft Certified Cybersecurity Architect Expert SC-100 Certificate",
+        "tw": "Microsoft 認證「網路安全架構師專家 SC-100」證書"
+      }
     }
   },
   {
-    "name": "DevOps Engineer Expert AZ-400",
+    "name": {
+      "en": "DevOps Engineer Expert AZ-400",
+      "tw": "DevOps 工程師專家 AZ-400"
+    },
     "organization": "Microsoft",
     "issue": "May 2025",
     "expire": "May 2026",
     "identifier": "DBA52D6172D9A584",
-    "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/DBA52D6172D9A584?sharingId",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/DBA52D6172D9A584?sharingId",
     "skills": [
       "DevOps",
       "DevSecOps",
@@ -78,20 +108,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/microsoft-certified-az-400-devops-engineer-expert-2025-badge.png",
-      "alt": "Microsoft Certified DevOps Engineer Expert AZ-400 Badge"
+      "alt": {
+        "en": "Microsoft Certified DevOps Engineer Expert AZ-400 Badge",
+        "tw": "Microsoft 認證「DevOps 工程師專家 AZ-400」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/microsoft-certified-az-400-devops-engineer-expert-2025-certificate.png",
-      "alt": "Microsoft Certified DevOps Engineer Expert AZ-400 Certificate"
+      "alt": {
+        "en": "Microsoft Certified DevOps Engineer Expert AZ-400 Certificate",
+        "tw": "Microsoft 認證「DevOps 工程師專家 AZ-400」證書"
+      }
     }
   },
   {
-    "name": "AI Associate",
+    "name": {
+      "en": "AI Associate",
+      "tw": "AI 助理"
+    },
     "organization": "Salesforce",
     "issue": "Apr 2025",
     "expire": "Apr 2026",
     "identifier": "6121887",
-    "url": "https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=I1QEKan+5MctJYwAqRZoMArZ/lUUIJ9lfDiT6nDawM0puS8X+L9JFrMo/Bn6aVCu",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=I1QEKan+5MctJYwAqRZoMArZ/lUUIJ9lfDiT6nDawM0puS8X+L9JFrMo/Bn6aVCu",
     "skills": [
       "Artificial Intelligence (AI)",
       "Generative AI",
@@ -102,20 +143,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/salesforce-certified-ai-associate-2025-badge.png",
-      "alt": "Salesforce Certified AI Associate Badge"
+      "alt": {
+        "en": "Salesforce Certified AI Associate Badge",
+        "tw": "Salesforce 認證「AI 助理」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/salesforce-certified-ai-associate-2025-certificate.png",
-      "alt": "Salesforce Certified AI Associate Certificate"
+      "alt": {
+        "en": "Salesforce Certified AI Associate Certificate",
+        "tw": "Salesforce 認證「AI 助理」證書"
+      }
     }
   },
   {
-    "name": "Azure Security Engineer Associate AZ-500",
+    "name": {
+      "en": "Azure Security Engineer Associate AZ-500",
+      "tw": "Azure 安全工程師助理 AZ-500"
+    },
     "organization": "Microsoft",
     "issue": "Mar 2025",
     "expire": "Mar 2026",
     "identifier": "2FC4CBECC42B1E60",
-    "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/2FC4CBECC42B1E60?sharingId",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/2FC4CBECC42B1E60?sharingId",
     "skills": [
       "Security Engineering",
       "Data Security",
@@ -129,19 +181,30 @@
     ],
     "badge": {
       "url": "/src/certifications/images/microsoft-certified-az-500-azure-security-engineer-associate-2025-badge.png",
-      "alt": "Microsoft Certified Azure Security Engineer Associate AZ-500 Badge"
+      "alt": {
+        "en": "Microsoft Certified Azure Security Engineer Associate AZ-500 Badge",
+        "tw": "Microsoft 認證「Azure 安全工程師助理 AZ-500」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/microsoft-certified-az-500-azure-security-engineer-associate-2025-certificate.png",
-      "alt": "Microsoft Certified Azure Security Engineer Associate AZ-500 Certificate"
+      "alt": {
+        "en": "Microsoft Certified Azure Security Engineer Associate AZ-500 Certificate",
+        "tw": "Microsoft 認證「Azure 安全工程師助理 AZ-500」證書"
+      }
     }
   },
   {
-    "name": "Ethical Hacker",
+    "name": {
+      "en": "Ethical Hacker",
+      "tw": "道德駭客"
+    },
     "organization": "Udacity",
     "issue": "Feb 2025",
     "identifier": "ea9a0c00-f938-11ef-b781-23b598b957fe",
-    "url": "https://www.udacity.com/certificate/e/ea9a0c00-f938-11ef-b781-23b598b957fe",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.udacity.com/certificate/e/ea9a0c00-f938-11ef-b781-23b598b957fe",
     "skills": [
       "Open Source Intelligence",
       "Vulnerability Management",
@@ -212,20 +275,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/udacity-ethical-hacker-nanodegree-2025-badge.png",
-      "alt": "Udacity Ethical Hacker Nanodegree Badge"
+      "alt": {
+        "en": "Udacity Ethical Hacker Nanodegree Badge",
+        "tw": "Udacity 道德駭客納米學位徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/udacity-ethical-hacker-nanodegree-2025-certificate.png",
-      "alt": "Udacity Ethical Hacker Nanodegree Certificate"
+      "alt": {
+        "en": "Udacity Ethical Hacker Nanodegree Certificate",
+        "tw": "Udacity 道德駭客納米學位證書"
+      }
     }
   },
   {
-    "name": "Associate Google Workspace Administrator",
+    "name": {
+      "en": "Associate Google Workspace Administrator",
+      "tw": "Google Workspace 管理員助理"
+    },
     "organization": "Google",
     "issue": "Feb 2025",
     "expire": "Feb 2028",
     "identifier": "f646d43ee24c4e69b368505384c3b5ed",
-    "url": "https://www.credly.com/badges/c6eca2f5-aaee-48d5-943c-7e0b14a6d478/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/c6eca2f5-aaee-48d5-943c-7e0b14a6d478/linked_in_profile",
     "skills": [
       "Data Governance",
       "Google Workspace",
@@ -239,20 +313,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/google-certified-associate-google-workspace-administrator-2025-badge.png",
-      "alt": "Google Certified Associate Google Workspace Administrator Badge"
+      "alt": {
+        "en": "Google Certified Associate Google Workspace Administrator Badge",
+        "tw": "Google 認證「Google Workspace 管理員助理」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/google-certified-associate-google-workspace-administrator-2025-certificate.png",
-      "alt": "Google Certified Associate Google Workspace Administrator Certificate"
+      "alt": {
+        "en": "Google Certified Associate Google Workspace Administrator Certificate",
+        "tw": "Google 認證「Google Workspace 管理員助理」證書"
+      }
     }
   },
   {
-    "name": "Professional Cloud Database Engineer",
+    "name": {
+      "en": "Professional Cloud Database Engineer",
+      "tw": "專業雲端資料庫工程師"
+    },
     "organization": "Google",
     "issue": "Feb 2025",
     "expire": "Feb 2027",
     "identifier": "7b08b30cabeb4d0381acfe1e2db54d14",
-    "url": "https://www.credly.com/badges/83fbf92c-3837-4bb2-919f-566b7400fbfe/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/83fbf92c-3837-4bb2-919f-566b7400fbfe/linked_in_profile",
     "skills": [
       "Backup and Recovery",
       "Cloud SQL",
@@ -265,20 +350,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/google-certified-professional-cloud-database-engineer-2025-badge.png",
-      "alt": "Google Certified Professional Cloud Database Engineer Badge"
+      "alt": {
+        "en": "Google Certified Professional Cloud Database Engineer Badge",
+        "tw": "Google 認證「專業雲端資料庫工程師」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/google-certified-professional-cloud-database-engineer-2025-certificate.png",
-      "alt": "Google Certified Professional Cloud Database Engineer Certificate"
+      "alt": {
+        "en": "Google Certified Professional Cloud Database Engineer Certificate",
+        "tw": "Google 認證「專業雲端資料庫工程師」證書"
+      }
     }
   },
   {
-    "name": "Professional Cloud DevOps Engineer",
+    "name": {
+      "en": "Professional Cloud DevOps Engineer",
+      "tw": "專業雲端 DevOps 工程師"
+    },
     "organization": "Google",
     "issue": "Feb 2025",
     "expire": "Feb 2027",
     "identifier": "21a38765356644029b9a76a7ae0bbb12",
-    "url": "https://www.credly.com/badges/76451edd-6b16-40c8-952c-dc5ec3a6f027/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/76451edd-6b16-40c8-952c-dc5ec3a6f027/linked_in_profile",
     "skills": [
       "CI/CD",
       "Cloud Computing",
@@ -294,20 +390,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/google-certified-professional-cloud-devops-engineer-2025-badge.png",
-      "alt": "Google Certified Professional Cloud DevOps Engineer Badge"
+      "alt": {
+        "en": "Google Certified Professional Cloud DevOps Engineer Badge",
+        "tw": "Google 認證「專業雲端 DevOps 工程師」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/google-certified-professional-cloud-devops-engineer-2025-certificate.png",
-      "alt": "Google Certified Professional Cloud DevOps Engineer Certificate"
+      "alt": {
+        "en": "Google Certified Professional Cloud DevOps Engineer Certificate",
+        "tw": "Google 認證「專業雲端 DevOps 工程師」證書"
+      }
     }
   },
   {
-    "name": "Professional Cloud Developer",
+    "name": {
+      "en": "Professional Cloud Developer",
+      "tw": "專業雲端開發工程師"
+    },
     "organization": "Google",
     "issue": "Feb 2025",
     "expire": "Feb 2027",
     "identifier": "320df0bfa4ca4a37b27c16cddf6e5865",
-    "url": "https://www.credly.com/badges/d3586440-7c66-4595-8bef-70e918099a04/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/d3586440-7c66-4595-8bef-70e918099a04/linked_in_profile",
     "skills": [
       "Application Security",
       "CI/CD",
@@ -324,20 +431,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/google-certified-professional-cloud-developer-2025-badge.png",
-      "alt": "Google Certified Professional Cloud Developer Badge"
+      "alt": {
+        "en": "Google Certified Professional Cloud Developer Badge",
+        "tw": "Google 認證「專業雲端開發工程師」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/google-certified-professional-cloud-developer-2025-certificate.png",
-      "alt": "Google Certified Professional Cloud Developer Certificate"
+      "alt": {
+        "en": "Google Certified Professional Cloud Developer Certificate",
+        "tw": "Google 認證「專業雲端開發工程師」證書"
+      }
     }
   },
   {
-    "name": "TOEIC 985/990",
+    "name": {
+      "en": "TOEIC 985/990",
+      "tw": "多益英語測驗 985/990"
+    },
     "organization": "ETS",
-    "issue": "Dec 2020",
-    "expire": "Dec 2022",
+    "issue": "Feb 2025",
+    "expire": "Feb 2027",
     "identifier": "",
-    "url": "https://play.google.com/store/apps/details?id=com.examverifyapp.chunshin",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://play.google.com/store/apps/details?id=com.examverifyapp.chunshin",
     "skills": [
       "Advanced English Listening Comprehension",
       "Proficient English Reading Comprehension",
@@ -346,20 +464,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/toeic-2025-badge.jpg",
-      "alt": "TOEIC 985/990 Badge"
+      "alt": {
+        "en": "TOEIC 985/990 Badge",
+        "tw": "多益英語測驗 985/990 徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/toeic-2025-certificate.jpg",
-      "alt": "TOEIC 985/990 Certificate"
+      "alt": {
+        "en": "TOEIC 985/990 Certificate",
+        "tw": "多益英語測驗 985/990 證書"
+      }
     }
   },
   {
-    "name": "English C2 Proficient 87/100",
+    "name": {
+      "en": "English C2 Proficient 87/100",
+      "tw": "英語 C2 精通級 87/100"
+    },
     "organization": "EF SET",
-    "issue": "Dec 2020",
+    "issue": "Jan 2025",
     "expire": "",
-    "identifier": "s5gLzz",
-    "url": "https://www.efset.org/cert/s5gLzz",
+    "identifier": "MMRFrs",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.efset.org/cert/MMRFrs",
     "skills": [
       "Information Synthesis",
       "Academic Proficiency",
@@ -368,20 +497,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/ef-set-english-test-2025-badge.png",
-      "alt": "EF SET English C2 Proficient Badge"
+      "alt": {
+        "en": "EF SET English C2 Proficient Badge",
+        "tw": "EF SET 英語 C2 精通級徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/ef-set-english-test-2025-certificate.png",
-      "alt": "EF SET English C2 Proficient Certificate"
+      "alt": {
+        "en": "EF SET English C2 Proficient Certificate",
+        "tw": "EF SET 英語 C2 精通級證書"
+      }
     }
   },
   {
-    "name": "Generative AI Art Design - Level 2",
+    "name": {
+      "en": "Generative AI Art Design - Level 2",
+      "tw": "生成式 AI 藝術設計 - 二級"
+    },
     "organization": "Institute for Information Industry",
     "issue": "Jan 2025",
     "expire": "Jan 2027",
     "identifier": "RA03250122006",
-    "url": "https://www.iiiedu.org.tw/certifications/recordnew",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.iiiedu.org.tw/certifications/recordnew",
     "skills": [
       "Generative AI",
       "Prompt Engineering",
@@ -392,20 +532,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/institute-for-information-industry-certified-generative-ai-art-design-level-2-2025-badge.png",
-      "alt": "Generative AI Art Design Certification Level 2 Badge"
+      "alt": {
+        "en": "Generative AI Art Design Certification Level 2 Badge",
+        "tw": "生成式 AI 藝術設計二級認證徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/institute-for-information-industry-certified-generative-ai-art-design-level-2-2025-certificate.png",
-      "alt": "Generative AI Art Design Certification Level 2 Certificate"
+      "alt": {
+        "en": "Generative AI Art Design Certification Level 2 Certificate",
+        "tw": "生成式 AI 藝術設計二級認證證書"
+      }
     }
   },
   {
-    "name": "Professional Cloud Network Engineer",
+    "name": {
+      "en": "Professional Cloud Network Engineer",
+      "tw": "專業雲端網路工程師"
+    },
     "organization": "Google",
     "issue": "Jan 2025",
     "expire": "Jan 2027",
     "identifier": "9cc9fdb9992c49e2bda40a34f9c5ed73",
-    "url": "https://www.credly.com/badges/04b35518-16c5-4a2f-9d20-d8f17464c26c/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/04b35518-16c5-4a2f-9d20-d8f17464c26c/linked_in_profile",
     "skills": [
       "Firewalls",
       "Google Cloud Platform (GCP)",
@@ -421,19 +572,30 @@
     ],
     "badge": {
       "url": "/src/certifications/images/google-certified-professional-cloud-network-engineer-2025-badge.png",
-      "alt": "Google Certified Professional Cloud Network Engineer Badge"
+      "alt": {
+        "en": "Google Certified Professional Cloud Network Engineer Badge",
+        "tw": "Google 認證「專業雲端網路工程師」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/google-certified-professional-cloud-network-engineer-2025-certificate.png",
-      "alt": "Google Certified Professional Cloud Network Engineer Certificate"
+      "alt": {
+        "en": "Google Certified Professional Cloud Network Engineer Certificate",
+        "tw": "Google 認證「專業雲端網路工程師」證書"
+      }
     }
   },
   {
-    "name": "Cybersecurity Professional Certificate",
+    "name": {
+      "en": "Cybersecurity Professional Certificate",
+      "tw": "網路安全專業證書"
+    },
     "organization": "Google",
     "issue": "Jan 2025",
     "identifier": "ZKY0PH67MYSF",
-    "url": "https://coursera.org/verify/professional-cert/ZKY0PH67MYSF",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://coursera.org/verify/professional-cert/ZKY0PH67MYSF",
     "skills": [
       "Authentication",
       "Cybersecurity Assessment",
@@ -455,20 +617,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/google-cybersecurity-professional-2025-badge.png",
-      "alt": "Google Cybersecurity Professional Certificate Badge"
+      "alt": {
+        "en": "Google Cybersecurity Professional Certificate Badge",
+        "tw": "Google 網路安全專業證書徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/google-cybersecurity-professional-2025-certificate.png",
-      "alt": "Google Cybersecurity Professional Certificate"
+      "alt": {
+        "en": "Google Cybersecurity Professional Certificate",
+        "tw": "Google 網路安全專業證書"
+      }
     }
   },
   {
-    "name": "Digital Marketing Associate",
+    "name": {
+      "en": "Digital Marketing Associate",
+      "tw": "數位行銷助理"
+    },
     "organization": "Meta",
     "issue": "Jan 2025",
     "expire": "Jan 2027",
     "identifier": "122058955",
-    "url": "https://www.credly.com/badges/19ce38e2-d72a-46b5-b9ef-d64771c903b2/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/19ce38e2-d72a-46b5-b9ef-d64771c903b2/linked_in_profile",
     "skills": [
       "Ads Manager",
       "Advertising Objectives",
@@ -485,20 +658,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/meta-certified-digital-marketing-associate-2025-badge.png",
-      "alt": "Meta Certified Digital Marketing Associate Badge"
+      "alt": {
+        "en": "Meta Certified Digital Marketing Associate Badge",
+        "tw": "Meta 認證「數位行銷助理」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/meta-certified-digital-marketing-associate-2025-certificate.png",
-      "alt": "Meta Certified Digital Marketing Associate Certificate"
+      "alt": {
+        "en": "Meta Certified Digital Marketing Associate Certificate",
+        "tw": "Meta 認證「數位行銷助理」證書"
+      }
     }
   },
   {
-    "name": "Professional Cloud Security Engineer",
+    "name": {
+      "en": "Professional Cloud Security Engineer",
+      "tw": "專業雲端安全工程師"
+    },
     "organization": "Google",
     "issue": "Dec 2024",
     "expire": "Dec 2026",
     "identifier": "808c447e0d514dcc9bc3a6774d7b0f93",
-    "url": "https://www.credly.com/badges/c41c9a8a-0b9f-4f43-a161-4bc050c9b51d/public_url",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/c41c9a8a-0b9f-4f43-a161-4bc050c9b51d/public_url",
     "skills": [
       "Cloud Security",
       "Cybersecurity",
@@ -512,20 +696,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/google-certified-professional-cloud-security-engineer-2024-badge.png",
-      "alt": "Google Certified Professional Cloud Security Engineer Badge"
+      "alt": {
+        "en": "Google Certified Professional Cloud Security Engineer Badge",
+        "tw": "Google 認證「專業雲端安全工程師」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/google-certified-professional-cloud-security-engineer-2024-certificate.png",
-      "alt": "Google Certified Professional Cloud Security Engineer Certificate"
+      "alt": {
+        "en": "Google Certified Professional Cloud Security Engineer Certificate",
+        "tw": "Google 認證「專業雲端安全工程師」證書"
+      }
     }
   },
   {
-    "name": "Professional Workspace Administrator",
+    "name": {
+      "en": "Professional Workspace Administrator",
+      "tw": "專業工作區管理員"
+    },
     "organization": "Google",
     "issue": "Dec 2024",
     "expire": "Dec 2026",
     "identifier": "0911a98c87bc42d2a1423a6ec4990586",
-    "url": "https://www.credly.com/badges/9d1398ac-e13b-45c8-a281-aaf05c749c51/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/9d1398ac-e13b-45c8-a281-aaf05c749c51/linked_in_profile",
     "skills": [
       "Google Workspace",
       "Help Desk Support",
@@ -537,20 +732,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/google-certified-professional-google-workspace-administrator-2024-badge.png",
-      "alt": "Google Certified Professional Workspace Administrator Badge"
+      "alt": {
+        "en": "Google Certified Professional Workspace Administrator Badge",
+        "tw": "Google 認證「專業工作區管理員」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/google-certified-professional-google-workspace-administrator-2024-certificate.png",
-      "alt": "Google Certified Professional Workspace Administrator Certificate"
+      "alt": {
+        "en": "Google Certified Professional Workspace Administrator Certificate",
+        "tw": "Google 認證「專業工作區管理員」證書"
+      }
     }
   },
   {
-    "name": "Azure AI Engineer Associate AI-102",
+    "name": {
+      "en": "Azure AI Engineer Associate AI-102",
+      "tw": "Azure AI 工程師助理 AI-102"
+    },
     "organization": "Microsoft",
     "issue": "Dec 2024",
     "expire": "Dec 2025",
     "identifier": "93AB72EB1C7F256C",
-    "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/93AB72EB1C7F256C?sharingId",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/93AB72EB1C7F256C?sharingId",
     "skills": [
       "Foundation Models",
       "Machine Learning (ML)",
@@ -568,20 +774,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/microsoft-certified-ai-102-azure-ai-engineer-associate-2024-badge.png",
-      "alt": "Microsoft Certified Azure AI Engineer Associate AI-102 Badge"
+      "alt": {
+        "en": "Microsoft Certified Azure AI Engineer Associate AI-102 Badge",
+        "tw": "Microsoft 認證「Azure AI 工程師助理 AI-102」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/microsoft-certified-ai-102-azure-ai-engineer-associate-2024-certificate.png",
-      "alt": "Microsoft Certified Azure AI Engineer Associate AI-102 Certificate"
+      "alt": {
+        "en": "Microsoft Certified Azure AI Engineer Associate AI-102 Certificate",
+        "tw": "Microsoft 認證「Azure AI 工程師助理 AI-102」證書"
+      }
     }
   },
   {
-    "name": "Azure Data Engineer Associate DP-203",
+    "name": {
+      "en": "Azure Data Engineer Associate DP-203",
+      "tw": "Azure 資料工程師助理 DP-203"
+    },
     "organization": "Microsoft",
     "issue": "Dec 2024",
     "expire": "Dec 2025",
     "identifier": "8A92F43FE71DEB57",
-    "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/8A92F43FE71DEB57?sharingId",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/8A92F43FE71DEB57?sharingId",
     "skills": [
       "Data Lakes",
       "Data Governance",
@@ -593,20 +810,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/microsoft-certified-dp-203-azure-data-engineer-associate-2024-badge.png",
-      "alt": "Microsoft Certified Azure Data Engineer Associate DP-203 Badge"
+      "alt": {
+        "en": "Microsoft Certified Azure Data Engineer Associate DP-203 Badge",
+        "tw": "Microsoft 認證「Azure 資料工程師助理 DP-203」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/microsoft-certified-dp-203-azure-data-engineer-associate-2024-certificate.png",
-      "alt": "Microsoft Certified Azure Data Engineer Associate DP-203 Certificate"
+      "alt": {
+        "en": "Microsoft Certified Azure Data Engineer Associate DP-203 Certificate",
+        "tw": "Microsoft 認證「Azure 資料工程師助理 DP-203」證書"
+      }
     }
   },
   {
-    "name": "Azure Data Scientist Associate DP-100",
+    "name": {
+      "en": "Azure Data Scientist Associate DP-100",
+      "tw": "Azure 資料科學家助理 DP-100"
+    },
     "organization": "Microsoft",
     "issue": "Dec 2024",
     "expire": "Dec 2025",
     "identifier": "62B3D6279522723F",
-    "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/62B3D6279522723F?sharingId",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/62B3D6279522723F?sharingId",
     "skills": [
       "Machine Learning (ML)",
       "Data Science",
@@ -620,20 +848,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/microsoft-certified-dp-100-azure-data-scientist-associate-2024-badge.png",
-      "alt": "Microsoft Certified Azure Data Scientist Associate DP-100 Badge"
+      "alt": {
+        "en": "Microsoft Certified Azure Data Scientist Associate DP-100 Badge",
+        "tw": "Microsoft 認證「Azure 資料科學家助理 DP-100」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/microsoft-certified-dp-100-azure-data-scientist-associate-2024-certificate.png",
-      "alt": "Microsoft Certified Azure Data Scientist Associate DP-100 Certificate"
+      "alt": {
+        "en": "Microsoft Certified Azure Data Scientist Associate DP-100 Certificate",
+        "tw": "Microsoft 認證「Azure 資料科學家助理 DP-100」證書"
+      }
     }
   },
   {
-    "name": "Azure Solutions Architect Expert AZ-305",
+    "name": {
+      "en": "Azure Solutions Architect Expert AZ-305",
+      "tw": "Azure 解決方案架構師專家 AZ-305"
+    },
     "organization": "Microsoft",
     "issue": "Dec 2024",
     "expire": "Dec 2025",
     "identifier": "5A05F445D9E87EDB",
-    "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/5A05F445D9E87EDB?sharingId",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/5A05F445D9E87EDB?sharingId",
     "skills": [
       "Cloud Architecture",
       "Infrastructure as Code (IaC)",
@@ -647,20 +886,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/microsoft-certified-az-305-azure-solutions-architect-expert-2024-badge.png",
-      "alt": "Microsoft Certified Azure Solutions Architect Expert AZ-305 Badge"
+      "alt": {
+        "en": "Microsoft Certified Azure Solutions Architect Expert AZ-305 Badge",
+        "tw": "Microsoft 認證「Azure 解決方案架構師專家 AZ-305」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/microsoft-certified-az-305-azure-solutions-architect-expert-2024-certificate.png",
-      "alt": "Microsoft Certified Azure Solutions Architect Expert AZ-305 Certificate"
+      "alt": {
+        "en": "Microsoft Certified Azure Solutions Architect Expert AZ-305 Certificate",
+        "tw": "Microsoft 認證「Azure 解決方案架構師專家 AZ-305」證書"
+      }
     }
   },
   {
-    "name": "Generative AI",
+    "name": {
+      "en": "Generative AI",
+      "tw": "生成式人工智慧"
+    },
     "organization": "Institute for Information Industry",
     "issue": "Nov 2024",
     "expire": "Nov 2026",
     "identifier": "RA02241113010",
-    "url": "https://www.iiiedu.org.tw/certifications/recordnew",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.iiiedu.org.tw/certifications/recordnew",
     "skills": [
       "Foundation Models",
       "Prompt Engineering",
@@ -670,20 +920,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/institute-for-information-industry-certified-generative-ai-2025-badge.png",
-      "alt": "Institute for Information Industry Generative AI Certification Badge"
+      "alt": {
+        "en": "Institute for Information Industry Generative AI Certification Badge",
+        "tw": "財團法人資訊工業策進會認證「生成式人工智慧」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/institute-for-information-industry-certified-generative-ai-2025-certificate.png",
-      "alt": "Institute for Information Industry Generative AI Certification Certificate"
+      "alt": {
+        "en": "Institute for Information Industry Generative AI Certification Certificate",
+        "tw": "財團法人資訊工業策進會認證「生成式人工智慧」證書"
+      }
     }
   },
   {
-    "name": "Associate Cloud Engineer",
+    "name": {
+      "en": "Associate Cloud Engineer",
+      "tw": "雲端工程師助理"
+    },
     "organization": "Google",
     "issue": "Nov 2024",
     "expire": "Nov 2027",
     "identifier": "48d4394ee83346aa8e325d4057ed1dee",
-    "url": "https://www.credly.com/badges/a60cfb97-f91d-40d5-aadc-b7995eda46f1/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/a60cfb97-f91d-40d5-aadc-b7995eda46f1/linked_in_profile",
     "skills": [
       "Cloud Architecture",
       "Cloud Computing",
@@ -700,20 +961,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/google-certified-associate-cloud-engineer-2024-badge.png",
-      "alt": "Google Certified Associate Cloud Engineer Badge"
+      "alt": {
+        "en": "Google Certified Associate Cloud Engineer Badge",
+        "tw": "Google 認證「雲端工程師助理」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/google-certified-associate-cloud-engineer-2024-certificate.png",
-      "alt": "Google Certified Associate Cloud Engineer Certificate"
+      "alt": {
+        "en": "Google Certified Associate Cloud Engineer Certificate",
+        "tw": "Google 認證「雲端工程師助理」證書"
+      }
     }
   },
   {
-    "name": "Associate Data Practitioner",
+    "name": {
+      "en": "Associate Data Practitioner",
+      "tw": "資料實務人員助理"
+    },
     "organization": "Google",
     "issue": "Nov 2024",
     "expire": "Nov 2027",
     "identifier": "724a9a00760b46b79c37d5139fcac467",
-    "url": "https://www.credly.com/badges/a144c9d0-c7ae-4cd2-8166-c3f84900c97e/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/a144c9d0-c7ae-4cd2-8166-c3f84900c97e/linked_in_profile",
     "skills": [
       "Analytical Skills",
       "BigQuery",
@@ -732,20 +1004,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/google-certified-associate-data-practitioner-2024-badge.png",
-      "alt": "Google Certified Associate Data Practitioner Badge"
+      "alt": {
+        "en": "Google Certified Associate Data Practitioner Badge",
+        "tw": "Google 認證「資料實務人員助理」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/google-certified-associate-data-practitioner-2024-certificate.png",
-      "alt": "Google Certified Associate Data Practitioner Certificate"
+      "alt": {
+        "en": "Google Certified Associate Data Practitioner Certificate",
+        "tw": "Google 認證「資料實務人員助理」證書"
+      }
     }
   },
   {
-    "name": "Professional Cloud Architect",
+    "name": {
+      "en": "Professional Cloud Architect",
+      "tw": "專業雲端架構師"
+    },
     "organization": "Google",
     "issue": "Nov 2024",
     "expire": "Nov 2026",
     "identifier": "79ea1ec16c894642a836bb229dcec141",
-    "url": "https://www.credly.com/badges/fccc70de-65ea-4a98-9a45-1d664714710d/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/fccc70de-65ea-4a98-9a45-1d664714710d/linked_in_profile",
     "skills": [
       "Cloud Architecture",
       "Cloud Computing",
@@ -761,20 +1044,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/google-certified-professional-cloud-architect-2024-badge.png",
-      "alt": "Google Certified Professional Cloud Architect Badge"
+      "alt": {
+        "en": "Google Certified Professional Cloud Architect Badge",
+        "tw": "Google 認證「專業雲端架構師」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/google-certified-professional-cloud-architect-2024-certificate.png",
-      "alt": "Google Certified Professional Cloud Architect Certificate"
+      "alt": {
+        "en": "Google Certified Professional Cloud Architect Certificate",
+        "tw": "Google 認證「專業雲端架構師」證書"
+      }
     }
   },
   {
-    "name": "Azure Administrator Associate AZ-104",
+    "name": {
+      "en": "Azure Administrator Associate AZ-104",
+      "tw": "Azure 管理員助理 AZ-104"
+    },
     "organization": "Microsoft",
     "issue": "Nov 2024",
     "expire": "Nov 2025",
     "identifier": "9BC72D0AF4C41F06",
-    "url": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/9BC72D0AF4C41F06?sharingId",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/9BC72D0AF4C41F06?sharingId",
     "skills": [
       "Azure Administration",
       "Infrastructure as Code (IaC)",
@@ -789,19 +1083,30 @@
     ],
     "badge": {
       "url": "/src/certifications/images/microsoft-certified-az-104-azure-administrator-associate-2024-badge.png",
-      "alt": "Microsoft Certified Azure Administrator Associate AZ-104 Badge"
+      "alt": {
+        "en": "Microsoft Certified Azure Administrator Associate AZ-104 Badge",
+        "tw": "Microsoft 認證「Azure 管理員助理 AZ-104」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/microsoft-certified-az-104-azure-administrator-associate-2024-certificate.png",
-      "alt": "Microsoft Certified Azure Administrator Associate AZ-104 Certificate"
+      "alt": {
+        "en": "Microsoft Certified Azure Administrator Associate AZ-104 Certificate",
+        "tw": "Microsoft 認證「Azure 管理員助理 AZ-104」證書"
+      }
     }
   },
   {
-    "name": "Associate Atlas Administrator",
+    "name": {
+      "en": "Associate Atlas Administrator",
+      "tw": "Atlas 管理員助理"
+    },
     "organization": "MongoDB",
     "issue": "Nov 2024",
     "identifier": "MDB79ghg0yjwp",
-    "url": "https://learn.mongodb.com/c/Ll2utIA9Reyg_cMb43mbYA",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://learn.mongodb.com/c/Ll2utIA9Reyg_cMb43mbYA",
     "skills": [
       "MongoDB Atlas",
       "Cloud Administration",
@@ -816,20 +1121,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/mongodb-certified-associate-atlas-administrator-2024-badge.png",
-      "alt": "MongoDB Certified Associate Atlas Administrator Badge"
+      "alt": {
+        "en": "MongoDB Certified Associate Atlas Administrator Badge",
+        "tw": "MongoDB 認證「Atlas 管理員助理」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/mongodb-certified-associate-atlas-administrator-2024-certificate.png",
-      "alt": "MongoDB Certified Associate Atlas Administrator Certificate"
+      "alt": {
+        "en": "MongoDB Certified Associate Atlas Administrator Certificate",
+        "tw": "MongoDB 認證「Atlas 管理員助理」證書"
+      }
     }
   },
   {
-    "name": "GitHub Copilot",
+    "name": {
+      "en": "GitHub Copilot",
+      "tw": "GitHub Copilot"
+    },
     "organization": "GitHub",
     "issue": "Oct 2024",
     "expire": "Oct 2027",
     "identifier": "cbe4112a-98d3-419b-b282-2d84fed368d4",
-    "url": "https://www.credly.com/badges/cbe4112a-98d3-419b-b282-2d84fed368d4/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/cbe4112a-98d3-419b-b282-2d84fed368d4/linked_in_profile",
     "skills": [
       "GitHub Copilot",
       "Prompt Engineering",
@@ -841,20 +1157,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/github-certified-copilot-2024-badge.png",
-      "alt": "GitHub Copilot Certification Badge"
+      "alt": {
+        "en": "GitHub Copilot Certification Badge",
+        "tw": "GitHub 認證「GitHub Copilot」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/github-certified-copilot-2024-certificate.png",
-      "alt": "GitHub Copilot Certification Certificate"
+      "alt": {
+        "en": "GitHub Copilot Certification Certificate",
+        "tw": "GitHub 認證「GitHub Copilot」證書"
+      }
     }
   },
   {
-    "name": "Professional Data Engineer",
+    "name": {
+      "en": "Professional Data Engineer",
+      "tw": "專業資料工程師"
+    },
     "organization": "Google",
     "issue": "Oct 2024",
     "expire": "Oct 2026",
     "identifier": "51a5de1e88324e94a85c75914f6a2ca5",
-    "url": "https://www.credly.com/badges/c385b7cb-33c0-49d1-9aba-6a7bc992e826/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/c385b7cb-33c0-49d1-9aba-6a7bc992e826/linked_in_profile",
     "skills": [
       "BigQuery",
       "Cloud Storage",
@@ -869,19 +1196,30 @@
     ],
     "badge": {
       "url": "/src/certifications/images/google-certified-professional-data-engineer-2024-badge.png",
-      "alt": "Google Certified Professional Data Engineer Badge"
+      "alt": {
+        "en": "Google Certified Professional Data Engineer Badge",
+        "tw": "Google 認證「專業資料工程師」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/google-certified-professional-data-engineer-2024-certificate.png",
-      "alt": "Google Certified Professional Data Engineer Certificate"
+      "alt": {
+        "en": "Google Certified Professional Data Engineer Certificate",
+        "tw": "Google 認證「專業資料工程師」證書"
+      }
     }
   },
   {
-    "name": "Associate Data Modeler",
+    "name": {
+      "en": "Associate Data Modeler",
+      "tw": "資料建模人員助理"
+    },
     "organization": "MongoDB",
     "issue": "Oct 2024",
     "identifier": "MDB32mmtq7gr4",
-    "url": "https://learn.mongodb.com/c/ei8kNARsTXmVMwV8Wdo6JA",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://learn.mongodb.com/c/ei8kNARsTXmVMwV8Wdo6JA",
     "skills": [
       "Data Governance",
       "Data Management",
@@ -894,19 +1232,30 @@
     ],
     "badge": {
       "url": "/src/certifications/images/mongodb-certified-associate-data-modeler-2024-badge.png",
-      "alt": "MongoDB Certified Associate Data Modeler Badge"
+      "alt": {
+        "en": "MongoDB Certified Associate Data Modeler Badge",
+        "tw": "MongoDB 認證「資料建模人員助理」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/mongodb-certified-associate-data-modeler-2024-certificate.png",
-      "alt": "MongoDB Certified Associate Data Modeler Certificate"
+      "alt": {
+        "en": "MongoDB Certified Associate Data Modeler Certificate",
+        "tw": "MongoDB 認證「資料建模人員助理」證書"
+      }
     }
   },
   {
-    "name": "Associate Database Administrator",
+    "name": {
+      "en": "Associate Database Administrator",
+      "tw": "資料庫管理員助理"
+    },
     "organization": "MongoDB",
     "issue": "Oct 2024",
     "identifier": "MDBg20kmdh2b1",
-    "url": "https://learn.mongodb.com/c/gS83TsFJQdaeZx46cxwjBw",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://learn.mongodb.com/c/gS83TsFJQdaeZx46cxwjBw",
     "skills": [
       "Application Administration",
       "CRUD",
@@ -919,19 +1268,30 @@
     ],
     "badge": {
       "url": "/src/certifications/images/mongodb-certified-associate-database-administrator-2024-badge.png",
-      "alt": "MongoDB Certified Associate Database Administrator Badge"
+      "alt": {
+        "en": "MongoDB Certified Associate Database Administrator Badge",
+        "tw": "MongoDB 認證「資料庫管理員助理」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/mongodb-certified-associate-database-administrator-2024-certificate.png",
-      "alt": "MongoDB Certified Associate Database Administrator Certificate"
+      "alt": {
+        "en": "MongoDB Certified Associate Database Administrator Certificate",
+        "tw": "MongoDB 認證「資料庫管理員助理」證書"
+      }
     }
   },
   {
-    "name": "Associate Developer - Node.js",
+    "name": {
+      "en": "Associate Developer - Node.js",
+      "tw": "開發人員助理 - Node.js"
+    },
     "organization": "MongoDB",
     "issue": "Oct 2024",
     "identifier": "MDB23lea3yx0q",
-    "url": "https://learn.mongodb.com/c/vyjhu4kvTNqskC4H0krZog",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://learn.mongodb.com/c/vyjhu4kvTNqskC4H0krZog",
     "skills": [
       "CRUD",
       "Data Modeling",
@@ -947,20 +1307,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/mongodb-certified-associate-developer-2024-badge.png",
-      "alt": "MongoDB Certified Associate Developer Node.js Badge"
+      "alt": {
+        "en": "MongoDB Certified Associate Developer Node.js Badge",
+        "tw": "MongoDB 認證「開發人員助理 - Node.js」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/mongodb-certified-associate-developer-2024-certificate.png",
-      "alt": "MongoDB Certified Associate Developer Node.js Certificate"
+      "alt": {
+        "en": "MongoDB Certified Associate Developer Node.js Certificate",
+        "tw": "MongoDB 認證「開發人員助理 - Node.js」證書"
+      }
     }
   },
   {
-    "name": "AWS Certified AI Practitioner",
+    "name": {
+      "en": "AWS Certified AI Practitioner",
+      "tw": "AWS 認證 AI 從業人員"
+    },
     "organization": "AWS",
     "issue": "Sep 2024",
     "expire": "Sep 2027",
     "identifier": "b1338ea34f5045dcbd427f2cfb8cb3c7",
-    "url": "https://www.credly.com/badges/494da167-c241-43aa-bdbc-731aaf5c153f/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/494da167-c241-43aa-bdbc-731aaf5c153f/linked_in_profile",
     "skills": [
       "AI and ML on AWS",
       "Amazon Web Services",
@@ -975,20 +1346,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/aws-certified-ai-practitioner-2024-badge.png",
-      "alt": "AWS Certified AI Practitioner Badge"
+      "alt": {
+        "en": "AWS Certified AI Practitioner Badge",
+        "tw": "AWS 認證「AI 從業人員」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/aws-certified-ai-practitioner-2024-certificate.png",
-      "alt": "AWS Certified AI Practitioner Certificate"
+      "alt": {
+        "en": "AWS Certified AI Practitioner Certificate",
+        "tw": "AWS 認證「AI 從業人員」證書"
+      }
     }
   },
   {
-    "name": "AWS Certified Cloud Practitioner",
+    "name": {
+      "en": "AWS Certified Cloud Practitioner",
+      "tw": "AWS 認證雲端從業人員"
+    },
     "organization": "AWS",
     "issue": "Aug 2024",
     "expire": "Aug 2027",
     "identifier": "2e0d727905e04275a5be6607827ff764",
-    "url": "https://www.credly.com/badges/32a97846-e50f-4b9b-8a60-b6c8d0773332/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/32a97846-e50f-4b9b-8a60-b6c8d0773332/linked_in_profile",
     "skills": [
       "Amazon Web Services",
       "AWS",
@@ -1001,20 +1383,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/aws-certified-cloud-practitioner-2024-badge.png",
-      "alt": "AWS Certified Cloud Practitioner Badge"
+      "alt": {
+        "en": "AWS Certified Cloud Practitioner Badge",
+        "tw": "AWS 認證「雲端從業人員」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/aws-certified-cloud-practitioner-2024-certificate.png",
-      "alt": "AWS Certified Cloud Practitioner Certificate"
+      "alt": {
+        "en": "AWS Certified Cloud Practitioner Certificate",
+        "tw": "AWS 認證「雲端從業人員」證書"
+      }
     }
   },
   {
-    "name": "Cloud Digital Leader",
+    "name": {
+      "en": "Cloud Digital Leader",
+      "tw": "雲端數位領導者"
+    },
     "organization": "Google",
     "issue": "Sep 2024",
     "expire": "Sep 2027",
     "identifier": "03a65d2c9d5f43618acc33a3596f6f45",
-    "url": "https://www.credly.com/badges/784112bf-811f-4578-a5ac-14bf0e77306e/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/784112bf-811f-4578-a5ac-14bf0e77306e/linked_in_profile",
     "skills": [
       "Artificial Intelligence (AI)",
       "Cloud Computing",
@@ -1028,20 +1421,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/google-certified-cloud-digital-leader-2024-badge.png",
-      "alt": "Google Certified Cloud Digital Leader Badge"
+      "alt": {
+        "en": "Google Certified Cloud Digital Leader Badge",
+        "tw": "Google 認證「雲端數位領導者」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/google-certified-cloud-digital-leader-2024-certificate.jpg",
-      "alt": "Google Certified Cloud Digital Leader Certificate"
+      "alt": {
+        "en": "Google Certified Cloud Digital Leader Certificate",
+        "tw": "Google 認證「雲端數位領導者」證書"
+      }
     }
   },
   {
-    "name": "Professional Machine Learning Engineer",
+    "name": {
+      "en": "Professional Machine Learning Engineer",
+      "tw": "專業機器學習工程師"
+    },
     "organization": "Google",
     "issue": "Sep 2024",
     "expire": "Sep 2026",
     "identifier": "a2cf65ef64ef483d869559ad7d645377",
-    "url": "https://www.credly.com/badges/3125474c-dbc1-450b-a12c-a16c56b10181/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/3125474c-dbc1-450b-a12c-a16c56b10181/linked_in_profile",
     "skills": [
       "Machine Learning (ML)",
       "MLOps",
@@ -1059,20 +1463,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/google-certified-professional-machine-learning-engineer-2024-badge.png",
-      "alt": "Google Certified Professional Machine Learning Engineer Badge"
+      "alt": {
+        "en": "Google Certified Professional Machine Learning Engineer Badge",
+        "tw": "Google 認證「專業機器學習工程師」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/google-certified-professional-machine-learning-engineer-2024-certificate.jpg",
-      "alt": "Google Certified Professional Machine Learning Engineer Certificate"
+      "alt": {
+        "en": "Google Certified Professional Machine Learning Engineer Certificate",
+        "tw": "Google 認證「專業機器學習工程師」證書"
+      }
     }
   },
   {
-    "name": "GitHub Actions",
+    "name": {
+      "en": "GitHub Actions",
+      "tw": "GitHub Actions"
+    },
     "organization": "GitHub",
     "issue": "Jul 2024",
     "expire": "Jul 2027",
     "identifier": "6ef12cf4-46cf-4059-acc3-710afddd239a",
-    "url": "https://www.credly.com/badges/6ef12cf4-46cf-4059-acc3-710afddd239a/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/6ef12cf4-46cf-4059-acc3-710afddd239a/linked_in_profile",
     "skills": [
       "Continuous Integration (CI)",
       "Continuous Delivery (CD)",
@@ -1084,20 +1499,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/github-certified-actions-2024-badge.png",
-      "alt": "GitHub Actions Certification Badge"
+      "alt": {
+        "en": "GitHub Actions Certification Badge",
+        "tw": "GitHub 認證「GitHub Actions」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/github-certified-actions-2024-certificate.jpg",
-      "alt": "GitHub Actions Certification Certificate"
+      "alt": {
+        "en": "GitHub Actions Certification Certificate",
+        "tw": "GitHub 認證「GitHub Actions」證書"
+      }
     }
   },
   {
-    "name": "GitHub Administration",
+    "name": {
+      "en": "GitHub Administration",
+      "tw": "GitHub 管理"
+    },
     "organization": "GitHub",
     "issue": "Jul 2024",
     "expire": "Jul 2027",
     "identifier": "96e957d0-eab6-4c7c-97eb-b8fa3b3b24b2",
-    "url": "https://www.credly.com/badges/96e957d0-eab6-4c7c-97eb-b8fa3b3b24b2/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/96e957d0-eab6-4c7c-97eb-b8fa3b3b24b2/linked_in_profile",
     "skills": [
       "Software Development Security",
       "Cloud Administration",
@@ -1110,20 +1536,31 @@
     ],
     "badge": {
       "url": "/src/certifications/images/github-certified-administration-2024-badge.png",
-      "alt": "GitHub Administration Certification Badge"
+      "alt": {
+        "en": "GitHub Administration Certification Badge",
+        "tw": "GitHub 認證「GitHub 管理」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/github-certified-administration-2024-certificate.jpg",
-      "alt": "GitHub Administration Certification Certificate"
+      "alt": {
+        "en": "GitHub Administration Certification Certificate",
+        "tw": "GitHub 認證「GitHub 管理」證書"
+      }
     }
   },
   {
-    "name": "GitHub Advanced Security",
+    "name": {
+      "en": "GitHub Advanced Security",
+      "tw": "GitHub 進階安全"
+    },
     "organization": "GitHub",
     "issue": "Jul 2024",
     "expire": "Jul 2027",
     "identifier": "ada75c5f-2d75-4e02-99c2-9b2d2868b630",
-    "url": "https://www.credly.com/badges/ada75c5f-2d75-4e02-99c2-9b2d2868b630/linked_in_profile",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credly.com/badges/ada75c5f-2d75-4e02-99c2-9b2d2868b630/linked_in_profile",
     "skills": [
       "Software Development Security",
       "Code Scanning",
@@ -1138,35 +1575,57 @@
     ],
     "badge": {
       "url": "/src/certifications/images/github-certified-advanced-security-2024-badge.png",
-      "alt": "GitHub Advanced Security Certification Badge"
+      "alt": {
+        "en": "GitHub Advanced Security Certification Badge",
+        "tw": "GitHub 認證「GitHub 進階安全」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/github-certified-advanced-security-2024-certificate.jpg",
-      "alt": "GitHub Advanced Security Certification Certificate"
+      "alt": {
+        "en": "GitHub Advanced Security Certification Certificate",
+        "tw": "GitHub 認證「GitHub 進階安全」證書"
+      }
     }
   },
   {
-    "name": "Marketing Insider",
+    "name": {
+      "en": "Marketing Insider",
+      "tw": "行銷達人"
+    },
     "organization": "LinkedIn",
     "issue": "Jul 2024",
     "identifier": "2qpwtfowvvta",
-    "url": "https://verify.skilljar.com/c/2qpwtfowvvta",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://verify.skilljar.com/c/2qpwtfowvvta",
     "skills": ["Content and Creative Design", "Social Media Marketing", "Marketing Strategy"],
     "badge": {
       "url": "/src/certifications/images/linkedin-certified-marketing-insider-2024-badge.png",
-      "alt": "LinkedIn Certified Marketing Insider Badge"
+      "alt": {
+        "en": "LinkedIn Certified Marketing Insider Badge",
+        "tw": "LinkedIn 認證「行銷達人」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/linkedin-certified-marketing-insider-2024-certificate.png",
-      "alt": "LinkedIn Certified Marketing Insider Certificate"
+      "alt": {
+        "en": "LinkedIn Certified Marketing Insider Certificate",
+        "tw": "LinkedIn 認證「行銷達人」證書"
+      }
     }
   },
   {
-    "name": "Generative AI Professional",
+    "name": {
+      "en": "Generative AI Professional",
+      "tw": "生成式 AI 專業人員"
+    },
     "organization": "Oracle",
     "issue": "Jul 2024",
     "identifier": "312779921OCI2024GAIOCP",
-    "url": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=6A29CC43B3C49A6E93E0C8B054FBF1D2A0D70FCD44AAF3D1EC02F83C7C8C12CE",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=6A29CC43B3C49A6E93E0C8B054FBF1D2A0D70FCD44AAF3D1EC02F83C7C8C12CE",
     "skills": [
       "Foundation Models",
       "Machine Learning (ML)",
@@ -1179,27 +1638,43 @@
     ],
     "badge": {
       "url": "/src/certifications/images/oracle-certified-generative-ai-professional-2024-badge.png",
-      "alt": "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional Badge"
+      "alt": {
+        "en": "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional Badge",
+        "tw": "Oracle 認證「生成式 AI 專業人員」徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/oracle-certified-generative-ai-professional-2024-certificate.png",
-      "alt": "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional Certificate"
+      "alt": {
+        "en": "Oracle Cloud Infrastructure 2024 Generative AI Certified Professional Certificate",
+        "tw": "Oracle 認證「生成式 AI 專業人員」證書"
+      }
     }
   },
   {
-    "name": "Fundamentals of Deep Learning",
+    "name": {
+      "en": "Fundamentals of Deep Learning",
+      "tw": "深度學習基礎"
+    },
     "organization": "NVIDIA",
     "issue": "Dec 2022",
     "identifier": "bf7bfde7da9641789141774954b2bf61",
-    "url": "https://courses.nvidia.com/certificates/bf7bfde7da9641789141774954b2bf61/",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://courses.nvidia.com/certificates/bf7bfde7da9641789141774954b2bf61/",
     "skills": ["Machine Learning (ML)", "Deep Learning", "Artificial Intelligence (AI)"]
   },
   {
-    "name": "AI CUP - 2nd Place",
+    "name": {
+      "en": "AI CUP - 2nd Place",
+      "tw": "AI CUP - 第二名"
+    },
     "organization": "Ministry of Education",
     "issue": "Apr 2020",
     "identifier": "QmcT6G84bJ5ZpHYzKfZZqZFQRHt4yNHTPoajviZUNCwS3s",
-    "url": "https://certs.turingchain.tech/ipfs?hash=QmcT6G84bJ5ZpHYzKfZZqZFQRHt4yNHTPoajviZUNCwS3s",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://certs.turingchain.tech/ipfs?hash=QmcT6G84bJ5ZpHYzKfZZqZFQRHt4yNHTPoajviZUNCwS3s",
     "skills": [
       "Machine Learning (ML)",
       "Deep Learning",
@@ -1208,19 +1683,30 @@
     ],
     "badge": {
       "url": "/src/certifications/images/aicup-2019-badge.jpg",
-      "alt": "AI CUP 2019 2nd Place Badge"
+      "alt": {
+        "en": "AI CUP 2019 2nd Place Badge",
+        "tw": "AI CUP 2019 第二名徽章"
+      }
     },
     "certificate": {
       "url": "/src/certifications/images/aicup-2019-certificate.png",
-      "alt": "AI CUP 2019 2nd Place Certificate"
+      "alt": {
+        "en": "AI CUP 2019 2nd Place Certificate",
+        "tw": "AI CUP 2019 第二名證書"
+      }
     }
   },
   {
-    "name": "TensorFlow Developer Certificate",
+    "name": {
+      "en": "TensorFlow Developer Certificate",
+      "tw": "TensorFlow 開發者證書"
+    },
     "organization": "Google",
     "issue": "Mar 2020",
     "identifier": "15685055",
-    "url": "https://www.credential.net/ff8a7060-0408-4546-9090-41db3e05d3dc",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.credential.net/ff8a7060-0408-4546-9090-41db3e05d3dc",
     "skills": [
       "Machine Learning (ML)",
       "Deep Learning",
@@ -1229,10 +1715,15 @@
     ]
   },
   {
-    "name": "Deep Learning",
+    "name": {
+      "en": "Deep Learning",
+      "tw": "深度學習"
+    },
     "organization": "NVIDIA",
     "issue": "Sep 2016",
-    "url": "https://photos.app.goo.gl/N6Jdb4ponfNcieEfA",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://photos.app.goo.gl/N6Jdb4ponfNcieEfA",
     "skills": [
       "Machine Learning (ML)",
       "Deep Learning",
@@ -1241,10 +1732,15 @@
     ]
   },
   {
-    "name": "AdWords Certification",
+    "name": {
+      "en": "AdWords Certification",
+      "tw": "AdWords 認證"
+    },
     "organization": "Google",
     "issue": "Aug 2013",
-    "url": "https://photos.app.goo.gl/uvz8MMgXTFAv8nnC6",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://photos.app.goo.gl/uvz8MMgXTFAv8nnC6",
     "skills": [
       "Marketing Strategy",
       "Google Ads",
@@ -1253,12 +1749,17 @@
     ]
   },
   {
-    "name": "Cloud Architecture Professional Certificate",
+    "name": {
+      "en": "Cloud Architecture Professional Certificate",
+      "tw": "雲端架構專業證書"
+    },
     "organization": "Coursera",
     "issue": "Apr 2020",
     "expire": "Jan 2023",
     "identifier": "CYW3B9KTFFVS",
-    "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/CYW3B9KTFFVS",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.coursera.org/account/accomplishments/specialization/certificate/CYW3B9KTFFVS",
     "skills": [
       "Cloud Architecture",
       "Google Cloud Platform (GCP)",
@@ -1267,12 +1768,17 @@
     ]
   },
   {
-    "name": "Cloud Engineering Professional Certificate",
+    "name": {
+      "en": "Cloud Engineering Professional Certificate",
+      "tw": "雲端工程專業證書"
+    },
     "organization": "Coursera",
     "issue": "Apr 2020",
     "expire": "Jan 2023",
     "identifier": "YRHW4XPXPUE4",
-    "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/YRHW4XPXPUE4",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://www.coursera.org/account/accomplishments/specialization/certificate/YRHW4XPXPUE4",
     "skills": [
       "Cloud Engineering",
       "Google Cloud Platform (GCP)",
@@ -1281,12 +1787,17 @@
     ]
   },
   {
-    "name": "TensorFlow Specialization",
+    "name": {
+      "en": "TensorFlow Specialization",
+      "tw": "TensorFlow 專業課程"
+    },
     "organization": "DeepLearning.AI",
     "issue": "Mar 2020",
     "expire": "Jan 2023",
     "identifier": "FF97FBGQ3NFC",
-    "url": "https://coursera.org/share/7163da7bc9eaee187bbcbb43ae228f37",
+    "description": { "en": "", "tw": "" },
+    "official": "",
+    "verify": "https://coursera.org/share/7163da7bc9eaee187bbcbb43ae228f37",
     "skills": [
       "Machine Learning (ML)",
       "Deep Learning",
