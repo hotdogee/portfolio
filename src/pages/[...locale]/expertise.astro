@@ -507,7 +507,7 @@ const topBrands = [
               return (
                 <Link
                   href={getRelativeLocaleUrl(currentLocale, `/certifications/organization/${slug}`)}
-                  className={cn('h-10')}
+                  className={cn('h-11')}
                   variant={'outline'}
                 >
                   {org.icon && (
@@ -515,13 +515,13 @@ const topBrands = [
                       <img
                         src={org.icon.light}
                         alt={org.icon.alt}
-                        class="size-5 object-contain dark:hidden"
+                        class="size-6 object-contain dark:hidden"
                         loading="lazy"
                       />
                       <img
                         src={org.icon.dark}
                         alt={org.icon.alt}
-                        class="hidden size-5 object-contain dark:block"
+                        class="hidden size-6 object-contain dark:block"
                         loading="lazy"
                       />
                     </div>
@@ -535,9 +535,9 @@ const topBrands = [
             <Link
               href={getRelativeLocaleUrl(currentLocale, '/certifications')}
               variant={'outline'}
-              className="flex h-10 items-center"
+              className="flex h-11 items-center"
             >
-              <Award className="mr-1 size-5" />
+              <Award className="size-6" />
               {t('viewAllCertifications')}
             </Link>
           </div>

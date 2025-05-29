@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
 import { defaultLocale } from '@lib/utils'
+import { Link } from '@components/ui/link'
 
 const translations = {
   en: {
@@ -198,14 +199,10 @@ const t = (key: string) => {
           class="mt-12 flex justify-center opacity-0"
           style={`animation: fade-in-up 0.5s ease-in 1.2s forwards;`}
         >
-          <a
-            href="/cv.pdf"
-            target="_blank"
-            class="focus-visible:ring-ring bg-primary text-primary-foreground hover:bg-primary/90 inline-flex h-11 items-center justify-center rounded-md px-8 text-sm font-medium shadow transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
-          >
+          <Link href="/cv.pdf" target="_blank" className="h-11" variant={'outline'}>
             <Download className="mr-2 h-4 w-4" />
             {t('downloadButtonText')}
-          </a>
+          </Link>
         </div>
       </div>
     </div>

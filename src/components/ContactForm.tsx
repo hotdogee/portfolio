@@ -163,7 +163,7 @@ export function ContactForm({ i18n = {} }: ContactFormProps) {
                 render={({ field }) => (
                   <FormItem>
                     <div className="relative">
-                      <CircleUserRound className="text-muted-foreground absolute m-3 size-5" />
+                      <CircleUserRound className="text-muted-foreground absolute m-2.5 size-6" />
                       <FormControl>
                         <Input
                           placeholder={strings.namePlaceholder}
@@ -183,7 +183,7 @@ export function ContactForm({ i18n = {} }: ContactFormProps) {
                 render={({ field }) => (
                   <FormItem>
                     <div className="relative">
-                      <AtSign className="text-muted-foreground absolute m-3 size-5" />
+                      <AtSign className="text-muted-foreground absolute m-2.5 size-6" />
                       <FormControl>
                         <Input
                           placeholder={strings.emailPlaceholder}
@@ -204,7 +204,7 @@ export function ContactForm({ i18n = {} }: ContactFormProps) {
               render={({ field }) => (
                 <FormItem>
                   <div className="relative">
-                    <MessageSquareText className="text-muted-foreground absolute m-3 size-5" />{' '}
+                    <MessageSquareText className="text-muted-foreground absolute m-2.5 size-6" />{' '}
                     <FormControl>
                       <Textarea
                         placeholder={strings.messagePlaceholder}
@@ -223,7 +223,7 @@ export function ContactForm({ i18n = {} }: ContactFormProps) {
                   <span>{strings.sendingText}</span>
                 ) : (
                   <>
-                    <SendHorizontal className="mr-2 size-5" />
+                    <SendHorizontal className="mr-2 size-6" />
                     <span>{strings.sendButtonText}</span>
                   </>
                 )}

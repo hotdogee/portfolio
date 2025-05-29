@@ -6,6 +6,7 @@ import { GraduationCap, BookOpen, ExternalLink, FileText, Calendar } from 'lucid
 export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
 import { defaultLocale } from '@lib/utils'
 import { Link } from '@components/ui/link'
+import GoogleScholar from '@assets/icons/GoogleScholar.svg'
 
 const translations = {
   en: {
@@ -393,15 +394,16 @@ const papers = [
               class="mt-8 flex justify-center opacity-0"
               style="animation: fade-in-up 0.5s ease-in 0.8s forwards;"
             >
-              <a
+              <Link
                 href="https://scholar.google.com/citations?hl=en&user=3pkoNyUAAAAJ"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="focus-visible:ring-ring bg-primary text-primary-foreground hover:bg-primary/90 inline-flex h-10 items-center justify-center rounded-md px-4 py-2 text-sm font-medium shadow transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+                className="h-11"
+                variant={'outline'}
               >
-                <ExternalLink className="mr-2 h-4 w-4" />
+                <GoogleScholar class="size-6" />
                 {t('googleScholarButton')}
-              </a>
+              </Link>
             </div>
           </div>
         </div>
