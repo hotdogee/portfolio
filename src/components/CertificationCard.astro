@@ -51,30 +51,31 @@ const { certification, index = 0 } = Astro.props as Props
 const { id, data } = certification
 const { slug } = getLocaleSlugFromId(id)
 const certificationUrl = getRelativeLocaleUrl(currentLocale, `/certifications/${slug}`)
-const { name, organization, issue, badge, url } = data
+const { name, organization, issue, badge, verify } = data
 const org = (organizations as Record<string, any>)?.[slugify(organization)]
 ---
 
-<div
+<!-- <div
   class="opacity-0"
-  style={`animation: fade-in-up 0.5s ease-in ${(0.1 * (index + 1)).toFixed(1)}s forwards;`}
->
+  style={`animation: fade-in-up 0.5s ease-in ${(0.02 * (index + 1)).toFixed(1)}s forwards;`}
+> -->
+<div>
   <Card
-    className="flex h-full flex-col gap-0 overflow-hidden pt-0 pb-4 transition-shadow duration-300 hover:shadow-md"
+    className="flex h-full flex-col gap-0 overflow-hidden pt-0 pb-4 transition-shadow hover:shadow-md"
   >
     <a href={certificationUrl}>
       <div class="relative aspect-square w-full overflow-hidden p-3">
         <img
           src={badge?.url || '/placeholder.svg'}
-          alt={badge?.alt || 'Badge'}
-          class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+          alt={badge?.alt[currentLocale] || 'Badge'}
+          class="h-full w-full object-cover transition-transform hover:scale-105"
+          style={`view-transition-name: badge-${id};`}
           loading="lazy"
         />
       </div>
     </a>
     <CardHeader className="flex-grow px-4">
-      {/* Replaced original CardTitle for organization with this div */}
-      <div class="flex items-center">
+      <div class="flex items-center" style={`view-transition-name: organization-${id};`}>
         {
           org?.icon && (
             <div class="mr-1.5 flex-shrink-0">
@@ -97,8 +98,10 @@ const org = (organizations as Record<string, any>)?.[slugify(organization)]
           >{organization}</CardTitle
         >
       </div>
-      <a href={certificationUrl}>
-        <CardTitle className="mb-1 line-clamp-2 text-xs leading-3.5 font-normal">{name}</CardTitle>
+      <a href={certificationUrl} style={`view-transition-name: name-${id};`}>
+        <CardTitle className="mb-1 line-clamp-2 text-xs leading-3.5 font-normal"
+          >{name.en}</CardTitle
+        >
       </a>
     </CardHeader>
     <a href={certificationUrl}>
@@ -106,7 +109,7 @@ const org = (organizations as Record<string, any>)?.[slugify(organization)]
         <div class="flex flex-wrap items-center gap-4">
           {
             issue && (
-              <div class="flex items-center">
+              <div class="flex items-center" style={`view-transition-name: issue-${id};`}>
                 <Award className="mr-1 h-3 w-3" />
                 <span>{issue}</span>
               </div>
@@ -116,9 +119,15 @@ const org = (organizations as Record<string, any>)?.[slugify(organization)]
       </CardFooter>
     </a>
     {
-      url && (
-        <div class="px-4 pt-2 pb-0">
-          <Link href={url} className="h-8 w-full" variant={'outline'}>
+      verify && (
+        <div class="px-4 pt-2 pb-0" style={`view-transition-name: verify-${id};`}>
+          <Link
+            href={verify}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="h-8 w-full"
+            variant={'outline'}
+          >
             <ShieldCheck className="mr-0 h-4 w-4" />
             {t('verify')}
           </Link>
