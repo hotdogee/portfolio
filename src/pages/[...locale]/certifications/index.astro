@@ -1,11 +1,12 @@
 ---
-import { getCollection } from 'astro:content'
+import { getCollection, type CollectionEntry } from 'astro:content'
 export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
 import { datesFromChanges, defaultLocale, getLocaleSlugFromId } from '@lib/utils'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import CertificationCard from '@components/CertificationCard.astro'
+import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
 
-const translations = {
+export const translations = {
   en: {
     title: 'Certifications | Han Lin',
     pageTitleBadge: 'Trusted Certifications',
@@ -36,13 +37,35 @@ const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
 }
 
 // Fetch all certifications and filter by current locale
-const certifications = (await getCollection('certifications')).sort((a, b) => {
+export const certifications = (await getCollection('certifications')).sort((a, b) => {
   // those with featured label should be on top
   const featuredA = a.data.featured || 0
   const featuredB = b.data.featured || 0
   const dateA = new Date(a.data.issue || 0)
   const dateB = new Date(b.data.issue || 0)
   return featuredB - featuredA || dateB.getTime() - dateA.getTime()
+})
+
+export const orgCerts = certifications.reduce<Record<string, CollectionEntry<'certifications'>[]>>(
+  (acc, certification) => {
+    const { organization } = certification.data
+    if (!acc[organization]) {
+      acc[organization] = []
+    }
+    acc[organization].push(certification)
+    return acc
+  },
+  {}
+)
+
+// Extract a list of organizations from certifications
+export const orgs = Object.keys(orgCerts).sort((a, b) => {
+  // sort by number of certifications, then alphabetically
+  const countA = orgCerts[a].length
+  const countB = orgCerts[b].length
+  const orgA = a.toLowerCase()
+  const orgB = b.toLowerCase()
+  return countB - countA || orgA.localeCompare(orgB)
 })
 ---
 
@@ -62,7 +85,7 @@ const certifications = (await getCollection('certifications')).sort((a, b) => {
           <p class="text-muted-foreground mb-12 md:text-xl">{t('description')}</p>
         </div>
       </div>
-
+      <CertificationOrganizationsFilter orgs={orgs} class="mb-8" />
       {
         certifications.length > 0 ? (
           <div class="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8">
