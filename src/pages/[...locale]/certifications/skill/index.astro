@@ -1,42 +1,22 @@
 ---
 import type { Locale } from '@lib/utils'
+import type { CollectionEntry } from 'astro:content'
 import { getCollection } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { Award } from 'lucide-react'
 import CertificationCard from '@components/CertificationCard.astro'
 import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
+import SkillBadge from '@components/SkillBadge.astro'
 import { Link } from '@components/ui/link'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import { brands } from '@lib/data'
 import { defaultLocale, locales, slugify, useTranslations } from '@lib/utils'
 import {
   certifications,
-  orgs,
   translations as parentTranslations,
 } from '@pages/certifications/index.astro'
 
-export async function getStaticPaths() {
-  const certifications = await getCollection('certifications')
-  if (!certifications || certifications.length === 0) {
-    return []
-  }
-  const skills = [
-    ...new Set(certifications.flatMap((certification) => certification.data.skills || [])),
-  ]
-  // Create paths for all locales and skills
-  const paths = skills.flatMap((skill) => {
-    return [undefined, ...locales].map((locale) => {
-      return {
-        params: {
-          locale,
-          skill: slugify(skill),
-        },
-      }
-    })
-  })
-  return paths
-}
-
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
 const { locale, skill } = Astro.params
 const currentLocale = (locale || defaultLocale) as Locale
 const tc = useTranslations(currentLocale, 'skills')
@@ -47,30 +27,37 @@ const pt = (key: keyof (typeof parentTranslations)[typeof currentLocale]) => {
 }
 const translations = {
   en: {
-    title: `${tc(skillSlug)} | Certifications | Han Lin`,
-    pageTitleBadge: 'Trusted Certifications',
-    pageTitle: `Validated Proficiency in ${tc(skillSlug)}`,
-    description: `Below is a comprehensive list of my industry-recognized certifications that validate strong skills in ${tc(skillSlug)}. These credentials demonstrate my capability to effectively apply ${tc(skillSlug)} knowledge to solve complex challenges and deliver impactful solutions.`,
-    noCertificationsFound: 'No certifications with this skill.',
+    title: `Skills | Certifications | Han Lin`,
+    pageTitleBadge: 'The Full Spectrum',
+    pageTitle: `Validated Technical Proficiencies`,
+    description: `This extensive list details the 323 distinct skills and technologies in which I've demonstrated proficiency through rigorous industry certification programs. Each skill represents validated knowledge underpinning my ability to design, develop, and deploy comprehensive solutions across AI, cloud platforms, cybersecurity, software engineering, and hardware.`,
+    noSkillsFound: 'No skills found.',
   },
   tw: {
-    title: `${tc(skillSlug)} | 國際認證 | 林翰`,
-    pageTitleBadge: '國際認證',
-    pageTitle: `${tc(skillSlug)} 專業能力驗證`,
-    description: `以下為本人所持有、經業界認可的${tc(skillSlug)}專業證照完整列表，足以驗證本人在此領域的卓越技能。這些資歷證明本人有能力有效運用${tc(skillSlug)}知識，克服複雜挑戰並提出具體有效的解決方案。`,
-    noCertificationsFound: '目前沒有相關技能的專案。',
+    title: `技能 | 國際認證 | 林翰`,
+    pageTitleBadge: '完整範疇',
+    pageTitle: `核實技術專業`,
+    description: `下文為本人持有之 Google 、 Microsoft 、 AWS 及其他指標性科技機構認證所涵蓋的 323 項技術技能之完整列表。此詳細清單充分展現本人在技術理解上的深度與廣度，以及戮力維持頂尖專業的決心。`,
+    noSkillsFound: '沒有找到技能。',
   },
 }
 const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
   return translations[currentLocale]?.[key] || translations['en']?.[key]
 }
 
-// Filter certifications by skill
-const skillCertifications = certifications.filter(
-  (certification) =>
-    certification.data.skills &&
-    certification.data.skills.map((s) => slugify(s)).includes(skillSlug)
-)
+// Extract skills
+const skills = [
+  ...new Set(certifications.flatMap((certification) => certification.data.skills || [])),
+]
+  .map((skill) => ({
+    name: skill,
+    certifications: certifications.filter((certification) =>
+      certification.data.skills?.includes(skill)
+    ),
+  }))
+  .sort((a, b) => {
+    return b.certifications.length - a.certifications.length || a.name.localeCompare(b.name)
+  })
 ---
 
 <BaseLayout title={t('title')} description={t('description')}>
@@ -90,17 +77,9 @@ const skillCertifications = certifications.filter(
           <p class="text-muted-foreground mb-12 md:text-xl">{t('description')}</p>
         </div>
       </div>
-      {
-        skillCertifications.length > 0 ? (
-          <div class="grid grid-cols-3 gap-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
-            {skillCertifications.map((certification, index) => (
-              <CertificationCard certification={certification} index={index} />
-            ))}
-          </div>
-        ) : (
-          <p class="text-muted-foreground text-center">{t('noCertificationsFound')}</p>
-        )
-      }
+      <div class="flex flex-wrap justify-center gap-3">
+        {skills.map(({ name }) => <SkillBadge skill={name} variant={'outline'} class="" />)}
+      </div>
     </div>
 
     <div class="mt-8 flex flex-wrap justify-center gap-2">

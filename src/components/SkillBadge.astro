@@ -1,26 +1,69 @@
 ---
-import { Badge } from '@components/ui/badge'
+import type { CollectionEntry } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import { cn } from '@/lib/utils'
+import { type VariantProps } from 'class-variance-authority'
+import { cn, getLocaleSlugFromId } from '@/lib/utils'
+import { Badge, badgeVariants } from '@components/ui/badge'
 import { defaultLocale, slugify, useTranslations } from '@lib/utils'
+import { certifications } from '@pages/certifications/index.astro'
+
+// Extract skills
+const skills = [
+  ...new Set(certifications.flatMap((certification) => certification.data.skills || [])),
+]
+  .map((skill) => ({
+    name: skill,
+    certifications: certifications.filter((certification) =>
+      certification.data.skills?.includes(skill)
+    ),
+  }))
+  .sort((a, b) => {
+    return b.certifications.length - a.certifications.length || a.name.localeCompare(b.name)
+  })
+
+const skillCerts = skills.reduce<Record<string, CollectionEntry<'certifications'>[]>>(
+  (acc, skill) => {
+    acc[skill.name] = skill.certifications
+    return acc
+  },
+  {}
+)
+
+export { skills, skillCerts }
 
 interface Props {
   skill: string
-  count?: number
-  className?: string
+  class?: string
+  variant?: VariantProps<typeof badgeVariants>['variant']
   type?: 'certifications'
 }
 
 const { locale } = Astro.params
 const currentLocale = locale || defaultLocale
-const { skill, count, className, type = 'certifications' } = Astro.props // Destructure 'type' with a default value
-// const t = useTranslations(currentLocale, 'skills')
+const { skill, class: className, variant = 'default', type = 'certifications' } = Astro.props // Destructure 'type' with a default value
+const t = useTranslations(currentLocale, 'skills')
+const certs = skillCerts[skill] || []
+const count = certs ? certs.length : 0
 const skillSlug = slugify(skill)
+const href = getRelativeLocaleUrl(
+  currentLocale,
+  count > 1
+    ? `/${type}/skill/${encodeURIComponent(skillSlug)}`
+    : `/${type}/${getLocaleSlugFromId(certs?.[0]?.id || '').slug}`
+)
+const isSamePage = Astro.url.pathname.endsWith(href)
 ---
 
-<!-- <a href={getRelativeLocaleUrl(currentLocale, `/${type}/skill/${encodeURIComponent(skillSlug)}`)}> -->
-<Badge variant="default" className={cn('hover:bg-primary/80 px-3 py-1 text-sm', className)}>
-  {skill}
-  {count !== undefined && <span class="ml-1">({count})</span>}
-</Badge>
-<!-- </a> -->
+<a href={isSamePage ? null : href}>
+  <Badge
+    variant={variant}
+    className={cn('px-3 py-1 text-sm', className, {
+      'hover:bg-accent hover:text-accent-foreground': variant === 'outline' && !isSamePage,
+      'hover:bg-primary/70': variant === 'default' && !isSamePage,
+      'hover:bg-secondary/70': variant === 'secondary' && !isSamePage,
+    })}
+  >
+    {t(skillSlug)}
+    {count !== 0 && !isSamePage && <span class="ml-1">({count})</span>}
+  </Badge>
+</a>

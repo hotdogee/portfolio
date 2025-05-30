@@ -2,7 +2,7 @@
 import type { CollectionEntry } from 'astro:content'
 import { getCollection, render } from 'astro:content'
 import CertificationLayout from '@layouts/CertificationLayout.astro'
-import { locales, defaultLocale, getLocaleSlugFromId } from '@lib/utils'
+import { defaultLocale, getLocaleSlugFromId, locales } from '@lib/utils'
 
 export async function getStaticPaths() {
   const certificationList = await getCollection('certifications')
