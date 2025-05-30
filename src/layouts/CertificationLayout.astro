@@ -39,8 +39,8 @@ const {
   expire,
   identifier,
   description = {
-    en: '',
-    tw: '',
+    en: [],
+    tw: [],
   },
   official,
   verify,
@@ -90,6 +90,9 @@ const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
 const orgSlug = slugify(organization)
 const orgLink = getRelativeLocaleUrl(currentLocale, `/certifications/organization/${orgSlug}`)
 const org = (organizations as Record<string, any>)?.[orgSlug]
+const localizedDescription = description[currentLocale].length
+  ? description[currentLocale]
+  : description['en']
 ---
 
 <BaseLayout title={t('title')} description={t('description')}>
@@ -228,9 +231,11 @@ const org = (organizations as Record<string, any>)?.[orgSlug]
           </div>
           <div class="opacity-0" style={`animation: fade-in-up 0.3s ease-in 0.4s forwards;`}>
             {
-              description && (
-                <div class="mb-6">
-                  <p class="text-lg">{description[currentLocale]}</p>
+              localizedDescription.length > 0 && (
+                <div class="mb-6 flex flex-col gap-4">
+                  {localizedDescription.map((desc: string) => (
+                    <p class="text-lg">{desc}</p>
+                  ))}
                 </div>
               )
             }

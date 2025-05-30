@@ -1,9 +1,10 @@
 // Import the glob loader
+import { defineCollection, z } from 'astro:content'
 import { glob } from 'astro/loaders'
 // Import utilities from `astro:content`
 import certs from '@/certifications/certifications.json'
 import { slugify } from '@lib/utils'
-import { defineCollection, z } from 'astro:content'
+
 // Define a `loader` and `schema` for each collection
 // title: 'My First Blog Post'
 // excerpt: 'This is the first post of my new Astro blog.'
@@ -150,8 +151,8 @@ const certifications = defineCollection({
     identifier: z.string().optional(),
     description: z
       .object({
-        en: z.string(),
-        tw: z.string(),
+        en: z.array(z.string()).optional(),
+        tw: z.array(z.string()).optional(),
       })
       .optional(),
     official: z.string().optional(),

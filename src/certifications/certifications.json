@@ -2,15 +2,19 @@
   {
     "name": {
       "en": "Generative AI Leader",
-      "tw": "Generative AI Leader"
+      "tw": "生成式 AI 領導者"
     },
     "organization": "Google",
     "issue": "May 2025",
     "expire": "May 2028",
     "identifier": "ac0bdb93185f419eb2214522d4296c7c",
     "description": {
-      "en": "A Generative AI Leader is a visionary professional with comprehensive knowledge of how generative AI (gen AI) can transform businesses. They have business-level knowledge of Google Cloud's gen AI offerings and understand how Google's AI-first approach can lead organizations toward innovative and responsible AI adoption. They influence gen AI-powered initiatives and identify opportunities across business functions and industries, using Google Cloud's enterprise-ready offerings to accelerate innovation.",
-      "tw": "「生成式 AI 領導者」是一位具有前瞻思維的專業人士，他們深入了解生成式 AI ( gen AI ) 如何為企業帶來變革。他們不僅對 Google Cloud 的 gen AI 產品有商業層面的認識，更了解 Google 以 AI 為先的策略如何協助企業創新，並以負責任的方式導入 AI 技術。這些領導者能影響由 gen AI 驅動的各項計畫，並運用 Google Cloud 的企業級解決方案，在不同業務部門和產業中發掘機會，加速創新。"
+      "en": [
+        "A Generative AI Leader is a visionary professional with comprehensive knowledge of how generative AI (gen AI) can transform businesses. They have business-level knowledge of Google Cloud's gen AI offerings and understand how Google's AI-first approach can lead organizations toward innovative and responsible AI adoption. They influence gen AI-powered initiatives and identify opportunities across business functions and industries, using Google Cloud's enterprise-ready offerings to accelerate innovation."
+      ],
+      "tw": [
+        "「生成式 AI 領導者」是一位具有前瞻思維的專業人士，他們深入了解生成式 AI ( gen AI ) 如何為企業帶來變革。他們不僅對 Google Cloud 的 gen AI 產品有商業層面的認識，更了解 Google 以 AI 為先的策略如何協助企業創新，並以負責任的方式導入 AI 技術。這些領導者能影響由 gen AI 驅動的各項計畫，並運用 Google Cloud 的企業級解決方案，在不同業務部門和產業中發掘機會，加速創新。"
+      ]
     },
     "official": "https://cloud.google.com/developers/generative-ai-leader",
     "verify": "https://www.credly.com/badges/5c6a2127-5bbf-452a-9179-e19795057115/linked_in_profile",
@@ -51,8 +55,19 @@
     "issue": "May 2025",
     "expire": "May 2026",
     "identifier": "A9A383FD75C41BBF",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a Microsoft Certified: Cybersecurity Architect Expert, I translate an organization's cybersecurity strategy into tangible capabilities to protect its assets, business, and operations. I am skilled in designing, guiding the implementation of, and maintaining security solutions aligned with Zero Trust principles and best practices. My expertise covers developing comprehensive security strategies for identity, devices, data, AI, applications, network, infrastructure, and DevOps.",
+        "Furthermore, I design solutions for Governance and Risk Compliance (GRC), security operations, and security posture management. A significant aspect of my role involves continuous collaboration with leaders and practitioners in security, privacy, engineering, and other organizational roles to plan and implement a cybersecurity strategy that effectively meets the organization's business needs.",
+        "My capabilities are built upon extensive experience in implementing or administering solutions across key areas such as identity and access, platform protection, security operations, data and AI security, and application security, extending to hybrid and multicloud infrastructures. I possess expert-level skills in at least one of these domains and have a strong background in designing security solutions that incorporate Microsoft security technologies."
+      ],
+      "tw": [
+        "作為一名 Microsoft 認證的網路安全架構師專家 (Microsoft Certified: Cybersecurity Architect Expert)，我能將組織的網路安全策略轉化為具體可行的防護能力，用以保護企業的資產、業務及日常營運。我專精於設計、指導建置並維護遵循「零信任 (Zero Trust)」原則及最佳實務的安全解決方案。我的專業範疇涵蓋為身分識別、裝置、資料、AI、應用程式、網路、基礎架構以及 DevOps 等關鍵領域制定全面的安全策略。",
+        "此外，我也能為「治理、風險與合規 (GRC)」、安全維運以及安全狀態管理設計解決方案。我工作內容中一個重要的環節，是持續與組織內安全、隱私、工程等不同領域的領導者及專業人員協同合作，共同規劃並實施能夠有效滿足企業營運需求的網路安全策略。",
+        "我的專業能力建立在豐富的實務經驗之上，這些經驗涵蓋了在身分識別與存取管理、平台防護、安全維運、資料與 AI 安全、應用程式安全等核心領域，乃至於混合雲及多雲環境中，實施或管理相關解決方案。我在上述至少一個領域具備專家級的技能，並且在設計整合 Microsoft 安全技術的解決方案方面，擁有深厚的實戰經驗。"
+      ]
+    },
+    "official": "https://learn.microsoft.com/credentials/certifications/cybersecurity-architect-expert/",
     "verify": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/A9A383FD75C41BBF",
     "skills": [
       "Evaluate Security Posture",
@@ -95,8 +110,19 @@
     "issue": "May 2025",
     "expire": "May 2026",
     "identifier": "DBA52D6172D9A584",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a Microsoft Certified: DevOps Engineer Expert, I possess subject matter expertise in effectively working with people, processes, and products to enable the continuous delivery of value within organizations. My responsibilities include designing and implementing comprehensive Microsoft DevOps solutions that ensure continuous security, integration, testing, delivery, deployment, monitoring, and feedback. I am also skilled in establishing efficient workflows, fostering collaboration and communication, managing source control, and implementing robust automation.",
+        "My experience extends to both administering and developing in Azure, and I have strong skills in at least one of these critical areas. I am adept at working within cross-functional teams, collaborating effectively with developers, site reliability engineers, Azure administrators, and security engineers. Furthermore, I have practical experience in implementing solutions using both GitHub and Azure DevOps platforms.",
+        "This certification validates my ability to deliver high-quality DevOps practices and solutions, contributing directly to an organization's agility and efficiency in software development and operations."
+      ],
+      "tw": [
+        "身為一名 Microsoft 認證：DevOps 工程師專家，我具備深厚的專業知識，能夠有效地整合人員、流程及產品，協助企業實現價值的持續交付。我的核心能力在於設計與實施全方位的 Microsoft DevOps 解決方案，確保從安全性、整合、測試、交付、部署，到監控與回饋的整個流程都能持續運作。同時，我也擅長建立高效的工作流程、促進團隊協作與溝通、管理原始碼，並導入穩健的自動化機制。",
+        "我的實務經驗涵蓋 Azure 環境的管理與開發，並且在這兩者之中至少精通一個領域。我能純熟地在跨部門團隊中運作，與開發人員、網站可靠性工程師 (Site Reliability Engineers)、Azure 管理員及安全工程師緊密合作。此外，我擁有運用 GitHub 與 Azure DevOps 平台來建置及部署解決方案的豐富實戰經驗。",
+        "這張認證肯定了我在提供高品質 DevOps 實務與解決方案上的專業能力，能直接提升企業在軟體開發及維運上的敏捷度與效率。"
+      ]
+    },
+    "official": "https://learn.microsoft.com/credentials/certifications/devops-engineer/",
     "verify": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/DBA52D6172D9A584?sharingId",
     "skills": [
       "DevOps",
@@ -133,8 +159,19 @@
     "issue": "Apr 2025",
     "expire": "Apr 2026",
     "identifier": "6121887",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a Salesforce Certified AI Associate, I possess a foundational knowledge of Salesforce's core capabilities and can effectively navigate the platform. My certification demonstrates my understanding of fundamental AI concepts, including its various types like predictive analytics, machine learning, natural language processing (NLP), and computer vision. I am well-versed in Salesforce's Trusted AI Principles, especially as they apply to CRM systems and its product suite.",
+        "Furthermore, I understand the critical role of data quality, preparation, cleansing, and governance in training and fine-tuning robust AI models. I am committed to the ethical and responsible handling of data, which encompasses considerations of privacy, bias mitigation, security, and compliance. This certification also signifies my ability to engage in meaningful discussions with stakeholders about leveraging AI to improve their business operations across different scenarios, including identifying opportunities for AI-driven enhancements and addressing potential challenges.",
+        "My expertise covers key areas outlined in the certification, including explaining the basic principles and applications of AI within Salesforce and differentiating between various AI types and their capabilities. I can identify CRM AI capabilities and describe their benefits. Critically, I can describe the ethical challenges of AI, such as human bias in machine learning and the lack of transparency, and I am proficient in applying Salesforce's Trusted AI Principles to practical scenarios. Finally, I understand the importance of data quality and can describe its essential elements and components, which are crucial for effective AI implementation."
+      ],
+      "tw": [
+        "身為一名 Salesforce 認證 AI 助理 (Salesforce Certified AI Associate)，我具備 Salesforce 核心功能的扎實基礎，並且能夠熟練地操作 Salesforce 平台。這張認證代表我了解 AI 的基本觀念，包含預測分析、機器學習 (machine learning)、自然語言處理 (NLP) 和電腦視覺等多種類型。我也充分理解 Salesforce 的 「可信賴 AI 原則」 (Trusted AI Principles)，尤其是在 CRM 系統及相關產品上的應用。",
+        "同時，我深知數據品質、數據準備與清理、以及數據治理，對於訓練和優化 AI 模型扮演著至關重要的角色。我堅持以合乎道德且負責任的方式處理數據，這包括了對隱私的保護、減少偏見、確保資訊安全及遵守相關法規。這張認證也證明我能和各方夥伴深入溝通，一起探討如何運用 AI 來改善不同狀況下的業務表現，包含找出能透過 AI 提升效益的機會點，以及克服可能遇到的挑戰。",
+        "我的專業能力涵蓋了認證所要求的重點，例如在 Salesforce 環境中解釋 AI 的基本原理及應用，並且能分辨不同 AI 技術的特點和用途。我能指出 CRM 系統中的 AI 功能，並說明這些功能能帶來的好處。尤其重要的是，我能清楚說明 AI 可能引發的道德問題（像是機器學習中潛在的人為偏見、資訊不夠透明等），也能夠在實際情況中靈活運用 Salesforce 的「可信賴 AI 原則」 (Trusted AI Principles)。最後，我明白數據品質的關鍵性，並且能說明構成優良數據的各項要素，這些都是成功導入 AI 不可或缺的。"
+      ]
+    },
+    "official": "https://trailhead.salesforce.com/en/credentials/aiassociate",
     "verify": "https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=I1QEKan+5MctJYwAqRZoMArZ/lUUIJ9lfDiT6nDawM0puS8X+L9JFrMo/Bn6aVCu",
     "skills": [
       "Artificial Intelligence (AI)",
@@ -168,8 +205,19 @@
     "issue": "Mar 2025",
     "expire": "Mar 2026",
     "identifier": "2FC4CBECC42B1E60",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a Microsoft Certified: Azure Security Engineer Associate, I have demonstrated the skills needed to implement security controls, maintain an organization’s security posture, and identify and remediate security vulnerabilities across Azure, multi-cloud, and hybrid environments. I am adept at implementing and managing security components and configurations using tools like `Microsoft Defender for Cloud`, ensuring that the infrastructure aligns with standards and best practices such as the `Microsoft Cloud Security Benchmark (MCSB)`. My responsibilities include managing the overall security posture, implementing robust threat protection, and diligently identifying and remediating vulnerabilities.",
+        "My expertise covers securing identity and access, networking, compute, storage, and databases, and I am proficient in securing Azure using `Microsoft Defender for Cloud` and `Microsoft Sentinel`. I am also responsible for implementing regulatory compliance controls for Azure infrastructure, which encompasses ensuring the security of identity and access, network, compute, storage, data, applications, asset management, backup and recovery, and `DevOps` security processes.",
+        "In my role, I work closely with architects, administrators, and developers to plan and implement solutions that meet stringent security and compliance requirements, and I collaborate with security operations teams when responding to security incidents in Azure. This is all built on my practical experience in administering `Microsoft Azure` and hybrid environments, along with a strong familiarity with `Microsoft Entra ID`, as well as Azure's compute, network, and storage services."
+      ],
+      "tw": [
+        "身為一名 `Microsoft Certified: Azure Security Engineer Associate` (微軟認證：Azure 安全工程師專員)，我已證明自己具備在 `Azure`、多雲及混合雲環境中實施安全控制措施、維護企業整體安全狀態，以及識別並修復資安漏洞的專業技能。我擅長運用 `Microsoft Defender for Cloud` 等工具來部署與管理各項安全元件及組態設定，確保整體基礎架構符合 `Microsoft Cloud Security Benchmark (MCSB)` 等業界標準及最佳實務。我的核心職責包含管理企業的整體安全態勢、建構堅實的威脅防禦機制，並積極找出及修補潛在的安全弱點。",
+        "我的專業能力涵蓋了身份與存取安全、網路安全、運算資源、儲存空間及資料庫的安全防護，並且能熟練地運用 `Microsoft Defender for Cloud` 與 `Microsoft Sentinel` 來強化 `Azure` 環境的安全性。此外，我也負責為 `Azure` 基礎設施導入法規遵循的相關控制措施，確保身份識別與存取管理、網路、運算、儲存、資料、應用程式、資產管理、備份與復原機制，乃至於 `DevOps` 流程的安全性均符合規範。",
+        "在我的工作崗位上，我會與架構師、系統管理員及開發人員密切協同合作，共同規劃並執行能夠滿足嚴謹安全性與合規性要求的解決方案。當 `Azure` 環境中發生資安事件時，我也會與資安維運團隊協力應對。這些能力的基礎，源自於我對 `Microsoft Azure` 及混合雲環境的管理實務經驗，以及對 `Microsoft Entra ID` 和 `Azure` 的運算、網路、儲存等服務的深入理解與掌握。"
+      ]
+    },
+    "official": "https://learn.microsoft.com/credentials/certifications/azure-security-engineer/",
     "verify": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/2FC4CBECC42B1E60?sharingId",
     "skills": [
       "Security Engineering",
@@ -205,8 +253,19 @@
     "organization": "Udacity",
     "issue": "Feb 2025",
     "identifier": "ea9a0c00-f938-11ef-b781-23b598b957fe",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a holder of the Ethical Hacker Nanodegree, I am equipped with the skills to advance in a security career, specifically as an ethical hacker or penetration tester. I understand how to find and exploit vulnerabilities and weaknesses in various systems, design and execute a penetration testing plan, and report on findings using evidence from the project. My capabilities allow me to play a critical role in enhancing an organization's security posture by proactively identifying and addressing potential threats.",
+        "My expertise includes managing the entire vulnerability lifecycle, which involves configuring and launching vulnerability scans, analyzing results, calculating risk scores, assigning risk ratings, prioritizing vulnerabilities, and managing response efforts. I can perform comprehensive security audits of internal systems and web applications, and assess information leakage. Furthermore, I am proficient in managing security awareness programs and can emulate attacks, such as conducting phishing simulations or designing malware for test attacks, to effectively demonstrate risk to an organization and improve its defenses.",
+        "I am adept at performing stealthy reconnaissance against organizations to gather information while avoiding potential tripwires, and I can scan systems to identify common security risks and oversights in best practices that could lead to compromise. I'm also skilled in investigating and researching vulnerabilities in specific software packages, identifying applicable exploits by mapping them to Common Vulnerabilities and Exposures (CVEs), and setting up appropriate attack platforms like Python environments or web intercepting proxies. Subsequently, I can perform exploitation using common tools and exploit code against identified vulnerabilities in open services, and finally, produce meaningful reports that detail findings, prioritize risk or criticality, and suggest effective mitigations, including non-technical executive summaries."
+      ],
+      "tw": [
+        "身為 Ethical Hacker Nanodegree 的認證持有者，我已具備在資安領域發展的專業技能，特別是能勝任道德駭客或滲透測試員的職位。我能夠找出並利用不同系統中存在的漏洞與弱點，規劃並執行完整的滲透測試，並根據專案實證來提出詳盡的報告。我的這些能力，讓我可以主動識別並處理潛在威脅，在強化企業組織的整體資安防護方面扮演關鍵角色。",
+        "我的專業技能涵蓋了完整的漏洞管理週期，包括配置與執行漏洞掃描、分析掃描結果、計算風險分數、評估風險等級、排定漏洞處理的優先順序，以及管理應對措施。我能對企業內部系統及網頁應用程式執行全面的安全性稽核，並評估資訊外洩的風險。此外，我也擅長規劃與執行資安意識提升計畫，並能模擬各種攻擊手法，例如進行釣魚郵件演練或設計用於測試攻擊的惡意程式，藉此向企業組織清楚地展示潛在風險，並協助強化其防禦機制。",
+        "我擅長對目標組織執行隱匿的偵察行動以蒐集情報，同時避免觸發潛在的偵測機制，並且能夠掃描系統，找出可能導致系統被入侵的常見資安風險以及最佳實務上的疏漏。我也精通於調查與研究特定軟體套件的漏洞，透過將漏洞與「通用漏洞揭露」 (CVEs) 資料庫進行比對來找出可利用的攻擊方式，並能架設合適的攻擊平台 (如 Python 環境或網頁攔截代理工具)。接著，我能運用常見工具與攻擊代碼，針對已發現的公開服務漏洞進行實際利用，最終產出清晰且具參考價值的報告，詳細載明測試結果、根據風險或危害程度排列處理的優先次序，並提出有效的應對與修補建議，其中也包含提供給非技術背景高階主管閱讀的摘要報告。"
+      ]
+    },
+    "official": "https://www.udacity.com/course/ethical-hacker-nanodegree--nd350",
     "verify": "https://www.udacity.com/certificate/e/ea9a0c00-f938-11ef-b781-23b598b957fe",
     "skills": [
       "Open Source Intelligence",
@@ -300,8 +359,19 @@
     "issue": "Feb 2025",
     "expire": "Feb 2028",
     "identifier": "f646d43ee24c4e69b368505384c3b5ed",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As an Associate Google Workspace Administrator, I am responsible for the daily management of our Google Workspace environment, ensuring our team can collaborate and communicate safely and effectively. My capabilities include managing the entire user lifecycle, from creating and provisioning accounts, including automation and third-party IdP integration with tools like SAML SSO and GCDS, to modifying user attributes, handling data transfers, and assigning licenses. I also design and create organizational units (OUs) for hierarchical user management, manage various types of groups such as distribution lists, shared mailboxes (Collaborative Inbox), dynamic groups, and security groups, and handle domain management tasks like adding domains, managing aliases, and configuring MX records for email routing, as well as managing buildings and resources for booking.",
+        "I am proficient in configuring core Workspace services to meet our organizational needs. This includes setting up Gmail with appropriate mail routing for scenarios like split and dual delivery, content compliance rules, spam, phishing, and malware settings, and implementing Google-recommended email security practices such as SPF, DKIM, and DMARC. For Google Drive and Docs, I manage sharing options, Drive trust rules, shared drives, storage quotas, and Drive Labels, and can configure Google Drive for desktop. I also configure Google Calendar by managing resource calendars, booking policies, and sharing permissions, and I can set up and manage Google Meet, Google Chat, and Gemini for Google Workspace, including their respective safety, operational settings, and license assignments. My skills extend to supporting Workspace development by identifying use cases for AppSheet and Apps Script and enabling these tools.",
+        "Furthermore, I play a key role in managing data governance and compliance, utilizing Google Vault for eDiscovery and data retention, and creating and managing Data Loss Prevention (DLP) rules and Drive trust rules to protect sensitive information. I ensure robust security by enforcing strong password policies, two-step verification (2SV), and context-aware access policies, and I can manage administrative roles, audit security risks using the Security Investigation Tool and security center, and manage third-party application integrations. My responsibilities also cover managing endpoints, including mobile devices with basic or advanced management and Chrome browsers by applying policies and managing extensions. Finally, I am adept at troubleshooting common Workspace issues across all these services by analyzing logs, using diagnostic tools like the Google Admin Toolbox, and leveraging support resources to implement effective solutions."
+      ],
+      "tw": [
+        "身為一名 Associate Google Workspace Administrator，我的職責是每日管理公司的 Google Workspace 環境，確保團隊成員能夠安全且有效地協同作業及溝通。我的專業能力涵蓋管理使用者從帳號建立到終止的完整生命週期，包括自動化處理、整合第三方身份提供者（IdP）（例如透過 SAML SSO 和 GCDS 工具），以及修改使用者資料、處理檔案移轉和分配軟體授權。我同時也負責設計與建立組織單位（OUs）來進行階層式的使用者管理，管理各類群組（如郵件群組、共享信箱 Collaborative Inbox、動態群組及安全群組），並處理網域名稱相關事務，例如新增網域、管理網域別名、設定郵件路由所需的 MX records，以及管理會議室等預約資源。",
+        "我能熟練地設定核心 Workspace 服務，以符合公司的具體需求。這包括設定 Gmail，處理如分割傳送、雙重傳送等郵件路由情境，建立內容合規政策、垃圾郵件、網路釣魚及惡意軟體防護設定，並導入 Google 建議的郵件安全機制（如 SPF、DKIM 及 DMARC）。針對 Google Drive 和 Docs，我能管理共享設定、Drive 信任規則、共享雲端硬碟、儲存空間配額及 Drive 標籤，並能設定 Google Drive 桌面版。我也會設定 Google Calendar，管理資源日曆、預約規則及共享權限。此外，我還能設定並管理 Google Meet、Google Chat 及 Gemini for Google Workspace，包含各項服務的安全與操作設定及授權指派。我的技能也包含支援 Workspace 的客製化開發，例如評估 AppSheet 與 Apps Script 的應用場景並啟用相關功能。",
+        "此外，我在資料治理與法規遵循方面扮演著關鍵角色，我會使用 Google Vault 進行電子蒐證（eDiscovery）與資料保存，建立並管理資料遺失防護（DLP）規則及 Drive 信任規則，以保護敏感資訊。我透過推行高強度密碼政策、兩步驟驗證（2SV）及情境感知存取控制，來確保系統的安全性。我同時也能管理不同的管理員權限、運用 Security Investigation Tool 和安全性中心來稽核潛在的資安風險，並管理第三方應用程式的整合。我的職責也包含管理終端裝置，例如符合基本或進階管理原則的行動裝置，以及透過套用政策和管理擴充功能來維護 Chrome 瀏覽器的安全。最後，我擅長解決 Workspace 各項服務中常見的問題，我會分析系統日誌、運用 Google Admin Toolbox 等診斷工具，並整合支援資源，找出並實施有效的解決方案。"
+      ]
+    },
+    "official": "https://cloud.google.com/certification/associate-google-workspace-administrator",
     "verify": "https://www.credly.com/badges/c6eca2f5-aaee-48d5-943c-7e0b14a6d478/linked_in_profile",
     "skills": [
       "Data Governance",
@@ -338,8 +408,19 @@
     "issue": "Feb 2025",
     "expire": "Feb 2027",
     "identifier": "7b08b30cabeb4d0381acfe1e2db54d14",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a Professional Cloud Database Engineer, I bring two years of dedicated Google Cloud experience and five years of overall database and IT expertise. I specialize in designing, creating, managing, and troubleshooting Google Cloud databases that applications rely on for storing and retrieving data, and I am adept at translating business and technical requirements into scalable and cost-effective database solutions. My design capabilities include performing thorough capacity and usage planning by sizing solutions based on workload metrics and future requirements, evaluating performance and cost tradeoffs of different configurations like machine types and storage options (HDD versus SSD), and sizing database compute and storage based on performance needs. I am also skilled in evaluating high availability and disaster recovery options, considering tradeoffs between multi-region, regional, and zonal deployment strategies, defining maintenance windows, planning database upgrades, and determining how applications will securely and efficiently connect to the database, which includes configuring network security with tools like the Cloud SQL Auth Proxy, CMEK, and SSL certificates, justifying session pooler services, and assessing auditing policies for managed services. Furthermore, I can differentiate between managed and unmanaged database services, distinguish between SQL and NoSQL business requirements for various data structures, analyze the cost of running database solutions in Google Cloud, and assess application and database dependencies to select the most appropriate solutions.",
+        "Beyond initial design, I effectively manage database solutions that can span multiple database types by determining Identity and Access Management (IAM) policies for database connectivity and access control, and managing database users, including their authentication and access. I configure robust database monitoring and troubleshooting options, which involves assessing slow-running queries, database locking, identifying missing indexes, monitoring and investigating database vitals such as RAM, CPU, storage, and I/O using Cloud Logging, monitoring and updating quotas, investigating database resource contention, and setting up alerts for errors and performance metrics. I design effective database backup and recovery solutions tailored to SLAs, SLOs, Recovery Time Objective (RTO), and Recovery Point Objective (RPO), including configuring automatic scheduled backups and data export/import processes. My skills also cover optimizing database cost and performance in Google Cloud by assessing options for scaling up and scaling out, scaling database instances based on workload, defining replication strategies, and continuously assessing and optimizing operational costs. I am also proficient in determining solutions to automate database tasks such as performing database maintenance, assessing table fragmentation, and scheduling database exports.",
+        "Finally, my capabilities extend to designing and implementing data migration and replication. This includes developing and executing migration strategies and plans for scenarios like zero downtime, near-zero downtime, and extended outages, complete with fallback plans and schema conversion. I can manage reverse replication from Google Cloud to source and determine the correct database migration tools for any given scenario. I apply these concepts to deploy highly scalable and available databases in Google Cloud by provisioning high availability solutions, periodically testing high availability and disaster recovery strategies, setting up multi-regional replication, assessing requirements for read replicas, and automating database instance provisioning."
+      ],
+      "tw": [
+        "身為一名 Professional Cloud Database Engineer，我擁有兩年 Google Cloud 的實戰經驗以及總共五年的資料庫與 IT 領域專業背景。我專精於設計、建置、管理及排除故障 Google Cloud 資料庫，確保應用程式能穩定地儲存與讀取資料，並且我擅長將商業和技術層面的需求，轉化為兼具擴展性與成本效益的資料庫解決方案。在設計方面，我能執行詳盡的容量與用量規劃，根據當前工作負載指標及未來需求來規劃解決方案的規模，評估不同配置（例如：機器類型、HDD 或 SSD 儲存選項）的效能與成本效益，並依效能需求適當配置資料庫的運算與儲存資源。我也精通評估高可用性 (HA) 與災難復原 (DR) 選項，權衡多區域、單一區域及可用區部署策略的優劣，定義維護窗口，規劃資料庫升級，並規劃應用程式安全高效連接資料庫的方式，包括使用 Cloud SQL Auth Proxy、CMEK 及 SSL 憑證等工具來設定網路安全，判斷何時應採用連線池服務 (session pooler services)，以及評估託管服務的稽核政策。此外，我能清楚分辨託管與非託管資料庫服務的差異，針對不同資料結構判斷 SQL 與 NoSQL 的商業需求，分析在 Google Cloud 上運行資料庫解決方案的成本，並評估應用程式與資料庫之間的相依性，以選擇最適合的方案。",
+        "在初步設計之後，我能有效地管理橫跨多種資料庫類型的解決方案。這包括制定 Identity and Access Management (IAM) 政策來進行資料庫連線與存取控制，以及管理資料庫使用者帳號，包含其驗證與權限。我會建置完善的資料庫監控與故障排除機制，例如評估查詢緩慢、資料庫鎖定、找出遺失的索引等問題，利用 Cloud Logging 監控並檢視資料庫的關鍵指標 (如 RAM、CPU、儲存空間及 I/O)，監控並更新配額，調查資料庫資源競爭狀況，並針對錯誤與效能指標設定告警。我能根據 SLA、SLO、復原時間目標 (RTO) 及復原點目標 (RPO) 設計有效的資料庫備份與還原方案，包含設定自動排程備份與資料的匯出匯入流程。我的技能還涵蓋在 Google Cloud 中優化資料庫的成本與效能，透過評估垂直擴展 (scaling up) 與水平擴展 (scaling out) 的選項，依據工作負載調整資料庫實例規模，定義複製策略，並持續評估與優化營運成本。我也熟悉如何找出自動化資料庫任務的方案，例如執行資料庫維護、評估資料表碎片化程度，以及排程資料庫匯出作業。",
+        "最後，我的專業能力也涵蓋資料遷移與複製的設計及實施。這包括為各種情境（如：零停機、近乎零停機、長時間停機）制定並執行遷移策略與計畫，並備妥完整的退回計畫與資料結構 (schema) 轉換方案。我能夠管理從 Google Cloud 到來源端的反向複製，並針對特定情境選擇最合適的資料庫遷移工具。我將這些概念實際應用於在 Google Cloud 中部署具備高度擴展性與可用性的資料庫，具體作法包含配置高可用性解決方案、定期測試高可用性與災難復原策略、設定跨區域複製、評估唯讀複本 (read replicas) 的需求，以及自動化資料庫實例的配置作業。"
+      ]
+    },
+    "official": "https://cloud.google.com/learn/certification/cloud-database-engineer",
     "verify": "https://www.credly.com/badges/83fbf92c-3837-4bb2-919f-566b7400fbfe/linked_in_profile",
     "skills": [
       "Backup and Recovery",
@@ -376,8 +457,19 @@
     "issue": "Feb 2025",
     "expire": "Feb 2027",
     "identifier": "21a38765356644029b9a76a7ae0bbb12",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a Professional Cloud DevOps Engineer, I implement robust processes and leverage advanced capabilities throughout the entire systems development lifecycle, adhering to Google-recommended methodologies and tools. My primary focus is to enable efficient software and infrastructure delivery, skillfully balancing reliability with deployment speed, while also diligently optimizing and maintaining production systems and services to ensure peak performance and stability.",
+        "My expertise extends to bootstrapping and maintaining resilient Google Cloud organizations, which involves designing effective resource hierarchies, managing infrastructure as code with tools such as `Terraform` and `Config Connector`, and establishing secure cloud development environments. I am proficient in designing, building, and implementing comprehensive CI/CD pipelines for both applications and infrastructure, leveraging tools like `Cloud Build` and `Cloud Deploy`, and integrating with widely used third-party solutions like `Jenkins` and `Argo CD`, all while meticulously managing configurations, secrets, and ensuring robust pipeline security.",
+        "Furthermore, I apply Site Reliability Engineering (`SRE`) principles to applications by defining clear Service Level Objectives (`SLOs`), effectively managing service lifecycles from inception to retirement, and implementing strategies to mitigate incident impact. To maintain operational excellence, I establish thorough observability practices, encompassing comprehensive log and metric management, insightful dashboards, and proactive alerting. My capabilities also cover optimizing system performance, troubleshooting diverse issues across infrastructure, applications, and CI/CD pipelines, and strategically managing resource utilization and costs within the `Google Cloud` ecosystem, including leveraging AI tools like `Gemini Code Assist` to enhance development and operations."
+      ],
+      "tw": [
+        "身為一名 Professional Cloud DevOps Engineer，我致力於在整個系統開發生命週期中，遵循 `Google` 推薦的方法論與工具，導入穩健的流程並應用先進的功能。我的核心任務是實現高效率的軟體與基礎設施交付，不僅能在可靠性與部署速度之間取得巧妙平衡，同時也專精於優化及維護生產環境的系統與服務，確保其達到巔峰效能與穩定運作。",
+        "我的專業能力涵蓋了啟動並維護高韌性的 `Google Cloud` 組織環境，具體工作包含設計高效的資源層級架構、運用如 `Terraform` 與 `Config Connector` 等工具管理「基礎設施即程式碼」(Infrastructure as Code)，以及建構安全的雲端開發環境。我擅長為應用程式及基礎設施設計、建置與實施全面的 CI/CD 管線，熟練運用 `Cloud Build`、`Cloud Deploy` 等工具，並能整合如 `Jenkins` 和 `Argo CD` 這類廣泛使用的第三方解決方案，同時細心管理相關設定、密鑰，確保管線的安全性達到最高標準。",
+        "此外，我將網站可靠性工程 (Site Reliability Engineering, `SRE`) 的原則應用於各項應用程式，透過明確定義服務等級目標 (Service Level Objectives, `SLOs`)，從服務初始階段到最終汰除進行有效的生命週期管理，並實施策略以減輕潛在事件所造成的衝擊。為了追求卓越的營運成效，我會建立完善的可觀察性實踐，包含全面的日誌與指標管理、具備洞察力的儀表板以及主動式警報機制。我的能力同時也涵蓋了優化系統效能、排除橫跨基礎設施、應用程式及 CI/CD 管線的各種複雜問題，並在 `Google Cloud` 生態系中策略性地管理資源使用率與相關成本，包括運用如 `Gemini Code Assist` 這類 AI 工具來輔助開發與維運工作。"
+      ]
+    },
+    "official": "https://cloud.google.com/learn/certification/cloud-devops-engineer",
     "verify": "https://www.credly.com/badges/76451edd-6b16-40c8-952c-dc5ec3a6f027/linked_in_profile",
     "skills": [
       "CI/CD",
@@ -416,8 +508,19 @@
     "issue": "Feb 2025",
     "expire": "Feb 2027",
     "identifier": "320df0bfa4ca4a37b27c16cddf6e5865",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a Google Cloud Certified Professional Cloud Developer, I am equipped to build and deploy scalable, secure, and highly available applications utilizing Google-recommended tools and best practices. My expertise covers cloud-native application development, leveraging Google Cloud APIs, developer and AI tools, managed services, and various datastores. I am proficient in at least one general-purpose programming language and skilled in instrumenting code to produce essential metrics, logs, and traces for comprehensive application monitoring and problem determination.",
+        "My capabilities extend to designing high-performing, reliable, and secure cloud-native applications by selecting optimal Google Cloud platforms such as Compute Engine, GKE, or Cloud Run, and effectively building and deploying containerized applications. This includes implementing robust caching with Memorystore, creating and deploying APIs using REST or gRPC, and integrating systems through event-driven services like Pub/Sub and Eventarc. A key aspect of my approach is ensuring application security by managing secrets with Secret Manager, implementing strong IAM policies, securing inter-service communication using tools like Cloud Service Mesh or Kubernetes Network Policies, and protecting data with features like Cloud Storage lifecycle policies and Binary Authorization.",
+        "Furthermore, I am adept at establishing efficient development environments using tools like the Google Cloud CLI, Cloud SDK, and Cloud Code, and using Cloud Build and Artifact Registry for building and storing application artifacts, alongside implementing thorough testing strategies including unit and integration tests, sometimes assisted by Gemini Code Assist. I am proficient in deploying applications to serverless platforms like Cloud Run and orchestrating containers with GKE, including managing resource requirements, health checks, and auto-scaling. I can seamlessly integrate applications with diverse Google Cloud data services, consume Google Cloud APIs effectively, and utilize Google Cloud Observability, Error Reporting, and Gemini Cloud Assist for proactive troubleshooting, performance monitoring, and maintaining application health."
+      ],
+      "tw": [
+        "身為一名 Google Cloud 認證的專業雲端開發人員，我能運用 Google 推薦的工具與最佳實務，建置並部署具備擴展性、安全性及高可用性的應用程式。我的專業技能涵蓋雲端原生應用程式的開發、Google Cloud API 的整合應用、開發者與 AI 工具的操作、託管服務的運用，以及多種資料庫的處理。我至少精通一種主流程式語言，並且能透過埋設追蹤碼 (instrumentation) 來產生關鍵的指標、日誌及追蹤記錄，藉此達成完善的應用程式監控及問題定位。",
+        "我的專長還包括設計高效能、高可靠度且安全的雲端原生應用程式。這包含依據需求選擇最適合的 Google Cloud 平台（例如 Compute Engine、GKE 或 Cloud Run），並有效地建置與部署容器化的應用程式。具體來說，我能夠利用 Memorystore 來實作高效的快取機制、透過 REST 或 gRPC 設計並部署 API，以及運用 Pub/Sub 或 Eventarc 等事件驅動服務來整合不同系統。確保應用程式的安全性是我工作的核心考量之一，例如使用 Secret Manager 管理金鑰、執行嚴謹的 IAM 政策、透過 Cloud Service Mesh 或 Kubernetes Network Policies 等工具來保護服務間的通訊安全，並藉由 Cloud Storage 的生命週期政策與 Binary Authorization 等功能來保護資料安全。",
+        "不僅如此，我也擅長運用 Google Cloud CLI、Cloud SDK 及 Cloud Code 等工具來打造高效率的開發環境，並透過 Cloud Build 與 Artifact Registry 來建置及儲存應用程式的套件。同時，我也會導入完整的測試策略，包含單元測試和整合測試，過程中也會參考 Gemini Code Assist 的建議。在應用程式部署方面，我熟悉如何將應用程式部署到 Cloud Run 這類的無伺服器平台，以及如何使用 GKE 進行容器的編排管理，這包括資源需求的規劃、健康狀態檢查的設定，以及自動擴展機制的配置。我能夠順暢地將應用程式與各式 Google Cloud 資料服務整合、有效率地呼叫 Google Cloud API，並運用 Google Cloud Observability、Error Reporting 及 Gemini Cloud Assist 這些工具，主動進行問題排除、監控應用程式效能，並確保系統的穩定運作。"
+      ]
+    },
+    "official": "https://cloud.google.com/learn/certification/cloud-developer",
     "verify": "https://www.credly.com/badges/d3586440-7c66-4595-8bef-70e918099a04/linked_in_profile",
     "skills": [
       "Application Security",
@@ -458,8 +561,17 @@
     "issue": "Feb 2025",
     "expire": "Feb 2027",
     "identifier": "",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "Having achieved an outstanding score of 985 out of 990 on the ETS TOEIC test, I can confidently demonstrate a near-native command of English, particularly suited for professional communication. My capabilities are strongly evidenced by my perfect listening score of 495 and a near-perfect reading score of 490.",
+        "In listening, I can effortlessly comprehend the central ideas, purposes, and contexts from both brief conversations and extended spoken discourse. This holds true even when encountering indirect responses, complex sentence structures, or nuanced vocabulary, and I can accurately grasp both explicitly stated details and a speaker's implied meanings. In reading, I possess a strong ability to infer key information, understand paraphrased content, and connect concepts across single or multiple documents. My comprehensive understanding of a wide vocabulary range, including idiomatic expressions and distinctions between closely related words, coupled with a firm grasp of complex grammatical structures, allows me to effectively engage with and interpret sophisticated written materials."
+      ],
+      "tw": [
+        "我在 ETS TOEIC 考試中取得了 985 分 (滿分 990) 的優異成績，這充分證明我具備近乎母語人士的英語水平，尤其擅長應對專業場合的溝通需求。我聽力滿分 495 分、閱讀近乎滿分 490 分的卓越表現，便是我英語能力的最佳佐證。",
+        "在聽力理解上，無論是簡短交談還是長篇的口語論述，我都能輕鬆掌握其核心主旨、說話目的及上下文背景。即便內容包含間接回覆、複雜句型或細膩詞彙，我依然能夠精準捕捉明確闡述的細節以及說話者的弦外之音。至於閱讀能力，我能夠精準地從文本中推敲出關鍵資訊、理解經過釋義改寫的內容，並有效地串聯整合單一或多份文件中的概念。我對詞彙的掌握既廣且深，包含各式慣用語和近義詞間的細微差異，再加上對複雜語法結構的紮實理解，使我能游刃有餘地解讀並運用各種複雜的書面資料。"
+      ]
+    },
+    "official": "https://www.ets.org/toeic.html",
     "verify": "https://play.google.com/store/apps/details?id=com.examverifyapp.chunshin",
     "skills": [
       "Advanced English Listening Comprehension",
@@ -500,8 +612,19 @@
     "issue": "Jan 2025",
     "expire": "",
     "identifier": "MMRFrs",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "Having achieved an EF SET Proficient score of 87/100, I possess an English Level C2, the highest proficiency level defined by the Common European Framework of Reference (CEFR). This certification signifies a native-like command of the language, often described as being bilingual. My capabilities allow me to understand with ease virtually everything I hear or read.",
+        "I am adept at summarizing information from diverse spoken and written sources, skillfully reconstructing arguments and accounts into coherent presentations. Furthermore, I can express myself spontaneously, very fluently, and with precision, capable of differentiating even subtle shades of meaning in the most complex situations.",
+        "This comprehensive proficiency enables me to actively and effectively participate in any academic or professional setting. I can confidently discuss a wide range of topics, including science and technology, celebrity culture, financial planning, personal stress, and research methodologies, and I am able to employ various techniques to promote creativity in my speech and writing."
+      ],
+      "tw": [
+        "我取得了 EF SET 精通級 87/100 的成績，證明我的英語能力已達到 C2 水平，這是歐洲共同語言參考標準 (CEFR) 中定義的最高語言能力級別。這項認證代表我對英語的掌握已接近母語人士，常被視為具備雙語能力。憑藉此能力，我幾乎可以毫不費力地理解所聽到或讀到的一切內容。",
+        "我能純熟地從各種口語及書面資料中摘要資訊，並將不同的論點和說明有條理地重新組織成清晰連貫的陳述。此外，我能夠自然流暢且精準地表達自己，即使在極其複雜的情境下，也能辨別語義間細微的差異。",
+        "如此全面的語言能力，讓我足以在任何學術或專業場合中積極且有效地參與。我可以充滿自信地探討各種議題，涵蓋科學技術、名人動態、財務規劃、個人壓力調適乃至於研究方法等，並且能運用多樣的技巧來提升我在口說與寫作上的創意表達。"
+      ]
+    },
+    "official": "https://www.efset.org/cefr/c2/",
     "verify": "https://www.efset.org/cert/MMRFrs",
     "skills": [
       "Information Synthesis",
@@ -526,15 +649,26 @@
   },
   {
     "name": {
-      "en": "Generative AI Art Design - Level 2",
-      "tw": "生成式 AI 藝術設計 - 二級"
+      "en": "Generative AI Art Design - Intermediate",
+      "tw": "生成式AI美術設計能力認證-中級"
     },
     "organization": "Institute for Information Industry",
     "issue": "Jan 2025",
     "expire": "Jan 2027",
     "identifier": "RA03250122006",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "tw": [
+        "身為一名通過「生成式 AI 美術設計能力認證-中級」的認證持有者，我具備了對生成式 AI 的基本概念、應用領域、技術術語與運作原理的紮實理解。我能夠識別不同的大語言模型及各式 AIGC 圖文影音工具，並且了解人工智慧在各領域的應用潛力及其對社會經濟的影響。",
+        "在實際操作與應用方面，我擅長優化 Prompt，使生成的內容更精準地符合需求，並具備資料治理的基本概念，如資料前處理與解讀。我能熟練運用圖片與影片生成工具進行多樣化的創作，包括圖像合成、風格轉換、動畫製作及影片剪輯，更能產出符合美術設計原理（如構圖、燈光、透視）的素材，並具備除錯及優化整合的能力，例如使用 Photoshop 等美術編輯軟體進行後製，以應用於概念提案或商業完稿。",
+        "此外，我對於生成式 AI 的最新發展趨勢、其對就業市場和個人的衝擊，以及相關的倫理準則、法律法規（包含我國與國際規範、智財權議題）與隱私保護措施均有深入的認識。我了解如何利用網路資源自主學習新技能，並持續關注重要的產業活動與社群，以不斷精進在此領域的專業能力，確保在創新的同時，也能負責任地應對相關的道德與社會挑戰。"
+      ],
+      "en": [
+        "As a holder of the 'Generative AI Art Design - Intermediate', I possess a solid understanding of the fundamental concepts, application areas, technical terminology, and operating principles of Generative AI. I can identify various large language models and a range of AIGC tools for image, text, audio, and video creation, and I appreciate the potential of artificial intelligence across different sectors and its socio-economic impact.",
+        "In practical application, I am skilled at optimizing `Prompt` to ensure generated content precisely meets requirements and understand basic data governance principles, including data preprocessing and interpretation. I am proficient in using image and video generation tools for diverse creative tasks such as image synthesis, style transfer, animation production, and video editing. Crucially, I can produce assets that adhere to core art design principles (like composition, lighting, and perspective) and have the ability to debug, refine, and integrate these materials, for instance, by using editing software like `Photoshop` for post-production to prepare them for concept proposals or final commercial projects.",
+        "Furthermore, I have an in-depth awareness of the latest trends in Generative AI, its impact on the job market and individuals, and the associated ethical guidelines, legal frameworks (including national and international regulations and intellectual property considerations), and privacy protection measures. I know how to leverage online resources for autonomous learning of new skills and actively follow key industry events and communities to continually enhance my professional capabilities in this field, ensuring I can innovate responsibly while addressing related ethical and societal challenges."
+      ]
+    },
+    "official": "https://www.iiiedu.org.tw/certifications/exam/10",
     "verify": "https://www.iiiedu.org.tw/certifications/recordnew",
     "skills": [
       "Generative AI",
@@ -548,14 +682,14 @@
       "url": "/src/certifications/images/institute-for-information-industry-certified-generative-ai-art-design-level-2-2025-badge.png",
       "alt": {
         "en": "Generative AI Art Design Certification Level 2 Badge",
-        "tw": "生成式 AI 藝術設計二級認證徽章"
+        "tw": "財團法人資訊工業策進會「生成式AI美術設計能力認證-中級」徽章"
       }
     },
     "certificate": {
       "url": "/src/certifications/images/institute-for-information-industry-certified-generative-ai-art-design-level-2-2025-certificate.png",
       "alt": {
         "en": "Generative AI Art Design Certification Level 2 Certificate",
-        "tw": "生成式 AI 藝術設計二級認證證書"
+        "tw": "財團法人資訊工業策進會「生成式AI美術設計能力認證-中級」證書"
       }
     }
   },
@@ -569,8 +703,17 @@
     "issue": "Jan 2025",
     "expire": "Jan 2027",
     "identifier": "9cc9fdb9992c49e2bda40a34f9c5ed73",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a certified Professional Cloud Network Engineer, I am adept at designing, implementing, and managing comprehensive Google Cloud network infrastructures. My expertise encompasses architecting networks optimized for high availability, scalability, resiliency, and robust security. I am proficient in configuring and managing core components such as Virtual Private Clouds (VPCs), routing, network security services including firewalls, load balancing solutions, and Cloud DNS.",
+        "My skills extend to setting up and maintaining hybrid connectivity through services like Cloud Interconnect and Cloud VPN, ensuring seamless integration between on-premises and cloud environments. Furthermore, I am experienced in diagnosing, monitoring, and troubleshooting network operations, utilizing tools like Google Cloud Observability and the Network Intelligence Center to maintain network health and performance, ensuring reliable and efficient cloud networking solutions."
+      ],
+      "tw": [
+        "作為一名認證的 Professional Cloud Network Engineer，我專精於設計、實施與管理全面的 Google Cloud 網路基礎架構。我的專業能力涵蓋了針對高可用性、可擴展性、彈性及強固安全性進行優化的網路架構設計。我精通設定與管理核心元件，如 Virtual Private Clouds (VPCs)、路由、包含防火牆在內的網路安全服務、負載平衡解決方案及 Cloud DNS。",
+        "我的技能進一步擴展至建立及維護混合雲連接方案，透過 Cloud Interconnect 和 Cloud VPN 等服務，確保企業內部部署與雲端環境間的無縫整合。此外，我在診斷、監控及排除網路營運問題方面具備豐富經驗，能善用 Google Cloud Observability 和 Network Intelligence Center 等工具來維持網路的健全狀態與效能，從而確保提供可靠且高效的雲端網路解決方案。"
+      ]
+    },
+    "official": "https://cloud.google.com/learn/certification/cloud-network-engineer",
     "verify": "https://www.credly.com/badges/04b35518-16c5-4a2f-9d20-d8f17464c26c/linked_in_profile",
     "skills": [
       "Firewalls",
@@ -608,8 +751,19 @@
     "organization": "Google",
     "issue": "Jan 2025",
     "identifier": "ZKY0PH67MYSF",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a holder of the Google Cybersecurity Professional Certificate, I understand the critical importance of cybersecurity practices and their impact on organizations. I can identify common risks, threats, and vulnerabilities, and I am equipped with the techniques to mitigate them effectively. My skills enable me to protect networks, devices, people, and data from unauthorized access and cyberattacks, including the use of Security Information and Event Management (SIEM) tools.",
+        "Through this certification, I have gained hands-on experience with essential tools and technologies such as Python, Linux, and SQL. The program covered the foundations of cybersecurity, how to manage security risks by playing it safe, and the principles of connecting and protecting networks and network security. I am also proficient in using the tools of the trade like Linux and SQL, understanding assets, threats, and vulnerabilities, and managing detection and response by sounding the alarm.",
+        "Furthermore, I have developed the capability to automate cybersecurity tasks using Python, enhancing my efficiency and effectiveness in responding to security challenges. This comprehensive training has provided me with a robust understanding of how to safeguard digital environments."
+      ],
+      "tw": [
+        "身為 Google Cybersecurity Professional Certificate 的認證持有人，我深刻理解網路安全措施的重要性以及其對企業組織的深遠影響。我能夠辨識常見的風險、威脅及系統漏洞，並具備有效降低這些風險的專業技能。我能運用所學保護網路、裝置設備、人員及資料，防範未經授權的存取和網路攻擊，其中也包含運用 Security Information and Event Management (SIEM) 這類資安事件管理工具。",
+        "透過這項認證，我取得了 Python、Linux 和 SQL 等關鍵工具和技術的實務操作經驗。課程內容涵蓋了網路安全的基礎知識、如何「謹慎行事」以有效管理安全風險，以及「連接與保護」：網路與網路安全的相關原則。我同時也熟悉 Linux 和 SQL 等業界常用工具的操作，能夠理解資產、威脅與漏洞之間的關係，並且知道如何「發出警報」來進行偵測與應對。",
+        "不僅如此，我還具備了運用 Python 將網路安全任務自動化的能力，這能提升我應對各種資安挑戰時的效率和成效。這套完整的培訓讓我對如何保護數位環境擁有了扎實的理解。"
+      ]
+    },
+    "official": "https://www.coursera.org/professional-certificates/google-cybersecurity",
     "verify": "https://coursera.org/verify/professional-cert/ZKY0PH67MYSF",
     "skills": [
       "Authentication",
@@ -655,8 +809,19 @@
     "issue": "Jan 2025",
     "expire": "Jan 2027",
     "identifier": "122058955",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a Meta Certified Digital Marketing Associate, I understand the significant value that advertising on Meta technologies can deliver for businesses. I am proficient in identifying various Meta technologies and clearly communicating their value proposition to help businesses achieve their goals. My capabilities also include establishing a robust business presence on platforms like Facebook, Instagram, and WhatsApp, utilizing the necessary tools to engage effectively with target audiences. I can customize settings within Meta Ads Manager and apply creative best practices optimized for mobile experiences.",
+        "Furthermore, I recognize the inherent value of advertising on Meta technologies by strategically matching business goals to specific ad campaign objectives. I understand the crucial roles of tools such as the Meta pixel and the Conversions API in tracking performance. I am knowledgeable about how ad charging mechanisms function, where ads are ultimately displayed, and the critical importance of adhering to data privacy protections and common ad policies.",
+        "My skills extend to effectively creating and managing ads, where I can discern the differences between boosting a Page post, promoting an Instagram post, and crafting an ad within Ads Manager. I am adept at navigating and configuring settings at the campaign, ad set, and ad levels. I can determine the most suitable ad campaign objective to meet specific business goals, identify effective ad targeting capabilities, select appropriate ad formats for diverse scenarios, and manage budget and ad scheduling options. Critically, I understand the relationship between budget allocation and estimated results, and I am proficient in identifying campaign results through Meta Ads Reporting to accurately measure the success of a campaign."
+      ],
+      "tw": [
+        "身為一名 Meta 認證數位行銷專員，我深知 Meta 廣告技術能為企業帶來巨大的商業價值。我能夠精準識別各項 Meta 技術，並清晰地闡述它們如何協助企業達成目標。我的專業能力還包括協助企業在 Facebook、Instagram 和 WhatsApp 等重要社群平台上建立穩固的商業形象，並運用合適的工具與目標客群進行有效互動。我熟悉 Meta 廣告管理工具 (Meta Ads Manager) 的各項設定，並且懂得運用針對行動裝置優化的廣告創意最佳策略。",
+        "不僅如此，我能將企業的商業目標與具體的廣告活動目標緊密結合，充分發揮 Meta 廣告技術的價值。我理解 Meta 像素 (Meta pixel) 和轉換 API (Conversions API) 這類工具在追蹤廣告成效上的重要性。我也清楚廣告費用的計算方式、廣告版位的呈現，以及遵守資料隱私規範和常見廣告政策的必要性。",
+        "我的專業技能涵蓋了廣告的完整創建與管理流程，能清楚區分「加強推廣粉絲專頁貼文」、「推廣 Instagram 貼文」以及在「廣告管理工具 (Ads Manager)」中製作廣告的差異。我能夠熟練地操作廣告活動、廣告組合及廣告層級的各項設定。我能為企業的特定目標找出最適合的廣告活動方向，運用精準的廣告受眾鎖定功能，依據不同情境選擇最佳的廣告格式，並且妥善管理廣告預算與排程。最重要的是，我了解預算投入與預期成效之間的關聯，並能透過 Meta 廣告報告 (Meta Ads Reporting) 分析廣告活動成果，準確評估行銷活動的成功與否。"
+      ]
+    },
+    "official": "https://www.facebook.com/business/learn/certification/exams/100-101-exam",
     "verify": "https://www.credly.com/badges/19ce38e2-d72a-46b5-b9ef-d64771c903b2/linked_in_profile",
     "skills": [
       "Ads Manager",
@@ -697,8 +862,17 @@
     "issue": "Dec 2024",
     "expire": "Dec 2026",
     "identifier": "808c447e0d514dcc9bc3a6774d7b0f93",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a certified Professional Cloud Security Engineer, I am equipped to help organizations design and implement secure workloads and infrastructure on Google Cloud. Drawing on a thorough understanding of security best practices and industry requirements, I can effectively design, develop, and manage comprehensive security solutions utilizing Google's advanced security technologies.",
+        "My capabilities extend to meticulously configuring access controls, including Identity and Access Management (IAM), defining resource hierarchies, and establishing organizational policies. I am proficient in securing data through robust protection strategies and encryption management, configuring network security defenses such as firewalls and virtual private clouds, and establishing private connectivity. Furthermore, I can implement security automation, secure AI workloads and software supply chains, monitor environments for threats using advanced logging and detection, and ensure adherence to regulatory controls and compliance standards."
+      ],
+      "tw": [
+        "作為一名認證的 Professional Cloud Security Engineer，我具備協助企業在 Google Cloud 平台上設計與實施安全的工作負載及基礎架構的能力。憑藉對安全最佳實務及產業要求的深入理解，我能有效地運用 Google 的先進安全技術，來設計、開發並管理全面的資安解決方案。",
+        "我的專業能力涵蓋了精細地配置存取控制，包括 Identity and Access Management (IAM) 、定義資源階層以及建立組織政策。我擅長透過強健的資料保護策略與加密管理來確保資料安全，設定如防火牆和虛擬私有雲等網路安全防護機制，並建立私有連線。此外，我也能實施資安自動化、保護 AI 工作負載與軟體供應鏈的安全，運用進階的日誌記錄與偵測技術來監控環境威脅，並確保遵循相關法規及合規標準。"
+      ]
+    },
+    "official": "https://cloud.google.com/learn/certification/cloud-security-engineer",
     "verify": "https://www.credly.com/badges/c41c9a8a-0b9f-4f43-a161-4bc050c9b51d/public_url",
     "skills": [
       "Cloud Security",
@@ -728,15 +902,24 @@
   },
   {
     "name": {
-      "en": "Professional Workspace Administrator",
-      "tw": "專業工作區管理員"
+      "en": "Professional Google Workspace Administrator",
+      "tw": "專業 Google Workspace 管理員"
     },
     "organization": "Google",
     "issue": "Dec 2024",
     "expire": "Dec 2026",
     "identifier": "0911a98c87bc42d2a1423a6ec4990586",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a certified Professional Google Workspace Administrator, I transform business objectives into tangible Google Workspace configurations, policies, and security practices related to users, content, and integrations. With a deep understanding of organizational infrastructure, I enable secure and efficient collaboration, communication, and data access. I operate with an engineering and solutions mindset, utilizing tools, programming languages, and APIs to automate workflows, educate end-users, and increase operational efficiency, all while advocating for the Google Workspace platform and its comprehensive toolset.",
+        "My capabilities include managing the complete lifecycle of Google Workspace objects such as user accounts, Google Drive, Calendar, and Groups for business. I am proficient in configuring core services like Gmail and implementing robust security configurations, including mail routing, spam controls, and application settings based on organizational policies. Furthermore, I am skilled in troubleshooting complex mail delivery, access, and performance issues, managing data access and authentication through measures like 2-Step Verification and SSO, and using tools like Vault to support critical legal and business initiatives, ensuring data governance and compliance."
+      ],
+      "tw": [
+        "作為一名獲得認證的 Professional Google Workspace Administrator，我專長於將企業營運目標轉化為實際可行的 Google Workspace 配置、政策及資安實務，這些都與使用者、內容及系統整合密切相關。基於對組織架構的深刻理解，我能協助團隊安全且高效地協作、溝通並存取資料。我抱持工程師的解決問題心態，運用各種工具、程式語言及 APIs 來自動化工作流程、培訓使用者，並提升整體營運效率，同時也積極推廣 Google Workspace 平台及其強大的工具組合。",
+        "我的專業能力涵蓋全面管理 Google Workspace 中的各項物件，例如使用者帳號、Google Drive、Calendar (日曆) 以及企業用 Groups。我熟悉如何設定 Gmail 等核心服務，並能依據企業政策部署穩固的資安配置，包含郵件路由、垃圾郵件過濾機制及應用程式設定。此外，我能有效排除複雜的郵件派送、系統存取及效能方面的問題，透過像是 2-Step Verification (兩步驟驗證) 和 SSO (單一登入) 等機制來管理資料存取與身份驗證，並善用 Vault 這類工具來支援重要的法務及業務需求，以確保資料治理的完善與法規遵循。"
+      ]
+    },
+    "official": "https://cloud.google.com/learn/certification/google-workspace-administrator",
     "verify": "https://www.credly.com/badges/9d1398ac-e13b-45c8-a281-aaf05c749c51/linked_in_profile",
     "skills": [
       "Google Workspace",
@@ -751,14 +934,14 @@
       "url": "/src/certifications/images/google-certified-professional-google-workspace-administrator-2024-badge.png",
       "alt": {
         "en": "Google Certified Professional Workspace Administrator Badge",
-        "tw": "Google 認證「專業工作區管理員」徽章"
+        "tw": "Google 認證「專業 Google Workspace 管理員」徽章"
       }
     },
     "certificate": {
       "url": "/src/certifications/images/google-certified-professional-google-workspace-administrator-2024-certificate.png",
       "alt": {
         "en": "Google Certified Professional Workspace Administrator Certificate",
-        "tw": "Google 認證「專業工作區管理員」證書"
+        "tw": "Google 認證「專業 Google Workspace 管理員」證書"
       }
     }
   },
@@ -772,8 +955,19 @@
     "issue": "Dec 2024",
     "expire": "Dec 2025",
     "identifier": "93AB72EB1C7F256C",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a Microsoft Certified: Azure AI Engineer Associate, I specialize in designing and implementing comprehensive AI solutions by leveraging Azure AI services, Azure AI Search, and Azure OpenAI. My responsibilities encompass the full lifecycle of AI solution development, including requirements definition and design, development, deployment, integration, maintenance, performance tuning, and ongoing monitoring.",
+        "I excel at collaborating with solution architects to translate their vision into tangible AI solutions. I also work effectively with data scientists, data engineers, Internet of Things (IoT) specialists, infrastructure administrators, and other software developers to build complete and secure end-to-end AI solutions, as well as integrate AI capabilities into other applications and existing systems.",
+        "My technical expertise includes developing solutions using languages such as Python and C#. I am proficient in utilizing Representational State Transfer (REST) APIs and SDKs to build secure image processing, video processing, natural language processing, knowledge mining, and generative AI solutions on Azure. Furthermore, I possess a strong understanding of the components within the Azure AI portfolio, the available data storage options, and I am committed to applying responsible AI principles in all my projects."
+      ],
+      "tw": [
+        "作為一名 Microsoft 認證的 Azure AI 工程師 (Microsoft Certified: Azure AI Engineer Associate)，我專長於運用 Azure AI 服務、 Azure AI Search 以及 Azure OpenAI 來設計並實作全方位的 AI 解決方案。我的職責範圍涵蓋了 AI 解決方案開發的完整週期，從初期的需求定義與設計，到開發、部署、整合，乃至於後續的維護、效能調校及持續監控。",
+        "我非常擅長與解決方案架構師協作，將他們的構想轉化為具體的 AI 解決方案。同時，我也能有效地與資料科學家、資料工程師、物聯網 (IoT) 專家、基礎架構管理員及其他軟體開發人員緊密合作，共同打造完整且安全的端對端 AI 解決方案，並將 AI 的能力整合進其他的應用程式與既有系統之中。",
+        "我的技術專業涵蓋了使用 Python 及 C# 等程式語言來開發解決方案。我能熟練地運用 REST API 和 SDK，在 Azure 平台上建構安全的影像處理、視訊處理、自然語言處理、知識探勘以及生成式 AI 等解決方案。不僅如此，我對於 Azure AI 產品組合內的各項元件及可用的資料儲存選項均有扎實的理解，並且在所有專案中，我都堅持應用負責任的 AI 原則。"
+      ]
+    },
+    "official": "https://learn.microsoft.com/credentials/certifications/azure-ai-engineer/",
     "verify": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/93AB72EB1C7F256C?sharingId",
     "skills": [
       "Foundation Models",
@@ -815,8 +1009,19 @@
     "issue": "Dec 2024",
     "expire": "Dec 2025",
     "identifier": "8A92F43FE71DEB57",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a Microsoft Certified: Azure Data Engineer Associate, I have demonstrated my capability to implement and manage data engineering workloads on Microsoft Azure. I possess subject matter expertise in integrating, transforming, and consolidating data from various structured, unstructured, and streaming data systems into suitable schemas for building robust analytics solutions. My skills include helping stakeholders understand data through exploration and building and maintaining secure and compliant data processing pipelines using a variety of tools and techniques.",
+        "I utilize various Azure data services and frameworks to store and produce cleansed and enhanced datasets essential for analysis. I can design these data stores based on diverse business requirements, incorporating architectural patterns such as modern data warehouses (MDW), big data solutions, and lakehouse architectures. Furthermore, I focus on ensuring that the operationalization of data pipelines and data stores is high-performing, efficient, organized, and reliable, aligning with specific business needs and constraints. This includes identifying and troubleshooting operational and data quality issues, as well as designing, implementing, monitoring, and optimizing data platforms.",
+        "My technical foundation includes a solid knowledge of data processing languages like SQL, Python, and Scala, coupled with an understanding of parallel processing and data architecture patterns. I am proficient in using key Azure services to create data processing solutions, including Azure Data Factory, Azure Synapse Analytics, Azure Stream Analytics, Azure Event Hubs, Azure Data Lake Storage, and Azure Databricks."
+      ],
+      "tw": [
+        "作為一名 Microsoft 認證的 Azure 資料工程師專員，我證明了自己有能力在 Microsoft Azure 平台上實施與管理資料工程的相關工作。我具備將來自各種結構化、非結構化及串流資料系統的數據，進行整合、轉換和統整，並將其匯入合適的資料結構，用以建構穩健的分析解決方案的專業知識。我的技能涵蓋協助專案關係人透過數據探索來理解資料，並運用多種工具與技術，建立及維護安全且符合規範的資料處理流程。",
+        "我擅長運用多樣的 Azure 資料服務及框架，來儲存並產出經過清理和強化的資料集，這對於資料分析至關重要。我能夠根據不同的商業需求設計這些資料儲存方案，整合例如現代化資料倉儲 (MDW)、巨量資料解決方案及湖倉一體 (lakehouse) 等架構模式。此外，我致力於確保資料流程和資料儲存的實際運作能夠高效、有條理且可靠，並完全符合特定的業務需求與限制。這包括找出並解決運營上及資料品質方面的問題，同時也負責設計、實施、監控並優化資料平台。",
+        "我的技術基石包含對 SQL、Python 和 Scala 等資料處理語言的扎實掌握，以及對平行處理和資料架構模式的深刻理解。我能熟練地運用多項關鍵的 Azure 服務來打造資料處理方案，其中包括 Azure Data Factory、Azure Synapse Analytics、Azure Stream Analytics、Azure Event Hubs、Azure Data Lake Storage 以及 Azure Databricks。"
+      ]
+    },
+    "official": "https://learn.microsoft.com/credentials/certifications/azure-data-engineer/",
     "verify": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/8A92F43FE71DEB57?sharingId",
     "skills": [
       "Data Lakes",
@@ -852,8 +1057,19 @@
     "issue": "Dec 2024",
     "expire": "Dec 2025",
     "identifier": "62B3D6279522723F",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a Microsoft Certified: Azure Data Scientist Associate, I have demonstrated subject matter expertise in applying data science and machine learning to implement and run machine learning workloads on Azure. I am proficient in managing the complete lifecycle of machine learning solutions, which includes data ingestion and preparation, model training and deployment, and ongoing solution monitoring, primarily utilizing Python, Azure Machine Learning, and MLflow. My skills also encompass knowledge of optimizing language models for AI applications using Azure AI.",
+        "My capabilities further extend to designing and creating suitable working environments for data science workloads, thoroughly exploring data, and training effective machine learning models. I am adept at implementing robust pipelines, running jobs to prepare models for production, and subsequently managing, deploying, and monitoring scalable machine learning solutions. Additionally, I am skilled in using language models to build innovative AI applications.",
+        "To achieve these outcomes, I leverage my knowledge and experience with key Azure technologies such as Azure Machine Learning, MLflow, and Azure AI services, including Azure AI Search and Azure AI Foundry."
+      ],
+      "tw": [
+        "身為一名 Microsoft 認證的 Azure 資料科學家專員 (Microsoft Certified: Azure Data Scientist Associate)，我已經證明自己具備在 Azure 平台上應用資料科學與機器學習來實作並執行機器學習專案的專業能力。我能夠熟練地管理機器學習解決方案的整個生命週期，從資料的擷取與準備、模型的訓練與部署，到後續方案的持續監控，主要會運用 Python、Azure Machine Learning 和 MLflow 等工具。同時，我也了解如何運用 Azure AI 來優化 AI 應用程式中的語言模型。",
+        "我的專業能力還包括為資料科學作業設計並打造合適的工作環境、進行深入的資料探索，以及訓練出高效的機器學習模型。我擅長建置穩固的自動化流程 (pipelines)、執行必要的作業以確保模型能順利投入實際應用，並且能夠有效地管理、部署及監控可擴展的機器學習解決方案。此外，我也能運用語言模型來開發創新的 AI 應用。",
+        "為了達成上述任務，我會活用我在 Azure Machine Learning、MLflow，以及 Azure AI services (包含 Azure AI Search) 和 Azure AI Foundry 等關鍵 Azure 技術上的知識與實務經驗。"
+      ]
+    },
+    "official": "https://learn.microsoft.com/credentials/certifications/azure-data-scientist/",
     "verify": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/62B3D6279522723F?sharingId",
     "skills": [
       "Machine Learning (ML)",
@@ -891,8 +1107,19 @@
     "issue": "Dec 2024",
     "expire": "Dec 2025",
     "identifier": "5A05F445D9E87EDB",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a Microsoft Certified: Azure Solutions Architect Expert, I possess subject matter expertise in designing comprehensive cloud and hybrid solutions that run on Azure. This includes a deep understanding of Azure compute, network, storage, monitoring, and security services. My capabilities enable me to effectively architect solutions tailored to specific business needs.",
+        "My responsibilities involve advising stakeholders and translating their business requirements into robust and scalable Azure solution designs. I ensure these designs align with best practices, specifically adhering to the Azure Well-Architected Framework and the Cloud Adoption Framework for Azure. To bring these solutions to life, I effectively partner with various professionals, including developers, administrators, security engineers, and data engineers.",
+        "My proficiency is built upon advanced experience and knowledge of IT operations, covering networking, virtualization, identity, security, business continuity, disaster recovery, data platforms, and governance. I am skilled in managing how decisions in each of these areas affect an overall solution. Furthermore, I bring practical experience in Azure administration, Azure development, and DevOps processes to my work, ensuring a holistic and efficient approach to solution architecture."
+      ],
+      "tw": [
+        "身為一名 Microsoft Certified: Azure Solutions Architect Expert (微軟認證 Azure 解決方案架構師專家)，我具備設計在 Azure 平台上運作的全方位雲端及混合式解決方案的專業能力。這代表我對於 Azure 的運算、網路、儲存、監控及安全性服務均有透徹的理解，能為特定的商業需求打造最適切的解決方案架構。",
+        "我的核心職責是向專案關係人提供專業諮詢，並將他們的業務需求轉化為穩固且具備高度擴充性的 Azure 解決方案設計。我會確保所有設計都遵循業界最佳實務，特別是嚴格遵守 Azure Well-Architected Framework 與 Cloud Adoption Framework for Azure 這兩大指導框架。為了將這些解決方案付諸實現，我會與開發人員、系統管理員、資安工程師及數據工程師等不同領域的專家緊密協作。",
+        "我的專業能力奠基於在 IT 維運方面的深厚經驗與知識，範疇遍及網路、虛擬化、身份識別管理、資訊安全、營運持續性、災難復原、數據平台以及企業治理。我特別擅長評估與管理上述各領域的決策對整體解決方案可能造成的影響。不僅如此，我也將 Azure 管理、Azure 開發以及 DevOps 流程的實務經驗融入我的工作之中，以確保能用最全面且有效率的方式來建構解決方案。"
+      ]
+    },
+    "official": "https://learn.microsoft.com/credentials/certifications/azure-solutions-architect/",
     "verify": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/5A05F445D9E87EDB?sharingId",
     "skills": [
       "Cloud Architecture",
@@ -923,14 +1150,23 @@
   {
     "name": {
       "en": "Generative AI",
-      "tw": "生成式人工智慧"
+      "tw": "生成式AI能力認證"
     },
     "organization": "Institute for Information Industry",
     "issue": "Nov 2024",
     "expire": "Nov 2026",
     "identifier": "RA02241113010",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a holder of the Generative AI Capability Certification, I have a comprehensive grasp of Generative AI. This includes its fundamental concepts, evolutionary history, and technological potential, as well as its practical applications in diverse fields like healthcare, finance, and education, along with its broader socio-economic impact. I am proficient in key technical terminology such as neural networks, language models, and multimodality. I also understand the core operational principles of Generative AI and know how to effectively use various large language models and AIGC tools for creating and manipulating text, images, audio, and video. Furthermore, I've honed my Prompt optimization abilities, enabling me to design effective prompts for more precise outputs, and I've mastered essential data governance practices, including data preprocessing, cleaning, and transformation.",
+        "Regarding application skills, I am adept at operating a wide range of Generative AI tools for generating and editing text, images, presentations, audio, and video. My capabilities extend to code generation, website development, data analysis, and chatbot creation. I can leverage these tools for diverse tasks such as content creation, design support, deriving data-driven insights, and automating processes. Crucially, I stay informed about the latest Generative AI development trends and am equipped with methods for continuous self-learning to acquire new skills. Equally important, I have a profound understanding of the ethical and legal considerations surrounding Generative AI, including its societal and individual impacts, relevant ethical guidelines and legal frameworks, and the critical importance of privacy protection and data security. This ensures I can apply AI technology responsibly, upholding moral and social duties."
+      ],
+      "tw": [
+        "身為財團法人資訊工業策進會〔生成式AI能力認證〕的持證者，我具備了對生成式 AI 的全面理解。從其基本概念、發展歷史、技術潛力，到在醫療、金融、教育等各領域的實際應用及其社會經濟影響，我都有深入的認識。我熟悉神經網路、語言模型、多模態等關鍵技術術語，並理解生成式 AI 的運作原理以及如何運用各種大型語言模型和  AIGC  圖文影音工具。此外，我還強化了  Prompt  優化能力，懂得如何設計有效的提示詞以獲得更精準的生成內容，並掌握了資料治理的相關知識，包括資料前處理、清理與轉換等重要環節。",
+        "在應用技能方面，我能夠熟練操作多種生成式 AI 工具，涵蓋文本、圖像、簡報、聲音、影片的生成與編輯，甚至程式碼生成、網站建置及數據分析和聊天機器人開發。我能夠運用這些工具進行內容創作、設計輔助、數據洞察和自動化流程。更重要的是，我了解生成式 AI 最新的發展趨勢，並具備自主學習新技能的方法。同時，我也深刻理解生成式 AI 所涉及的倫理法律議題，包括其對社會和個人的影響、相關倫理準則與法律規範，以及隱私保護和資料安全的重要性，確保在應用 AI 技術時能堅守道德和社會責任。"
+      ]
+    },
+    "official": "https://www.iiiedu.org.tw/certifications/exam/6",
     "verify": "https://www.iiiedu.org.tw/certifications/recordnew",
     "skills": [
       "Foundation Models",
@@ -943,14 +1179,14 @@
       "url": "/src/certifications/images/institute-for-information-industry-certified-generative-ai-2025-badge.png",
       "alt": {
         "en": "Institute for Information Industry Generative AI Certification Badge",
-        "tw": "財團法人資訊工業策進會認證「生成式人工智慧」徽章"
+        "tw": "財團法人資訊工業策進會「生成式AI能力認證」徽章"
       }
     },
     "certificate": {
       "url": "/src/certifications/images/institute-for-information-industry-certified-generative-ai-2025-certificate.png",
       "alt": {
         "en": "Institute for Information Industry Generative AI Certification Certificate",
-        "tw": "財團法人資訊工業策進會認證「生成式人工智慧」證書"
+        "tw": "財團法人資訊工業策進會「生成式AI能力認證」證書"
       }
     }
   },
@@ -963,8 +1199,19 @@
     "issue": "Nov 2024",
     "expire": "Nov 2027",
     "identifier": "48d4394ee83346aa8e325d4057ed1dee",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a certified Associate Cloud Engineer, I am proficient in deploying and securing applications, services, and infrastructure on Google Cloud. I monitor operations across multiple projects and maintain enterprise solutions to ensure they meet target performance metrics. My experience extends to working with public clouds and on-premises solutions, enabling me to perform common platform-based tasks to maintain and scale deployed solutions that leverage Google-managed or self-managed services on Google Cloud. I can effectively set up a cloud solution environment, which includes establishing cloud projects and accounts, creating a resource hierarchy, applying organizational policies, and managing Identity and Access Management (IAM) roles. My skills also cover enabling APIs, provisioning Google Cloud's observability tools like Google Cloud Observability, managing quotas, setting up cloud networking, confirming product availability in specific geographical locations, configuring Cloud Asset Inventory, utilizing Gemini Cloud Assist for resource analysis, and managing billing configurations including accounts, budgets, alerts, and exports.",
+        "I am capable of planning and implementing robust cloud solutions by selecting and deploying appropriate compute resources, such as Compute Engine, Google Kubernetes Engine (GKE), Cloud Run, and serverless functions, and choosing suitable storage options like Persistent Disk or Google Cloud Hyperdisk for them. This also involves implementing diverse storage and data solutions including Cloud Storage with its various tiers, Filestore, Google Cloud NetApp Volumes, Cloud SQL, BigQuery, Firestore, Spanner, AlloyDB, Dataflow, Pub/Sub, and Google Cloud Managed Service for Apache Kafka. I can design and configure networking resources, including Virtual Private Clouds (VPCs) with subnets, Cloud Next Generation Firewall (Cloud NGFW) policies using Tags and service accounts, and establish network connectivity through Cloud VPN, VPC Network Peering, or Cloud Interconnect, as well as deploy various load balancers and differentiate Network Service Tiers. Furthermore, I am adept at planning and implementing resources using infrastructure as code tools such as Fabric FAST, Config Connector, Terraform, and Helm.",
+        "To ensure the successful operation of a cloud solution, I can manage compute resources by remotely connecting to instances, working with snapshots and images, managing GKE cluster inventories, node pools, and Kubernetes resources like Pods and Services, and handling application deployments and traffic splitting for services like Cloud Run. My capabilities extend to managing storage and data solutions by securing objects in Cloud Storage, setting lifecycle policies, executing queries across various databases, estimating storage costs, performing backups and restores, reviewing job statuses, and using Database Center. I also manage networking resources by adding and expanding subnets, reserving IP addresses, and working with Cloud DNS and Cloud NAT. A significant part of my role involves monitoring and logging, where I create alerts, ingest custom metrics, export logs, configure log buckets and log routers, use cloud diagnostics like Cloud Trace and Cloud Profiler, leverage Gemini Cloud Assist for Cloud Monitoring, and use Active Assist for optimization. Finally, I configure access and security by managing IAM policies, defining custom roles, and meticulously managing service accounts, including their creation, permissioning, impersonation, and credential management, ensuring secure integration with GKE applications."
+      ],
+      "tw": [
+        "作為一名認證的 Associate Cloud Engineer，我擅長在 Google Cloud 平台上部署並保護應用程式、服務及基礎設施。我能夠監控多個專案的運作情況，並維護企業級解決方案，確保其達成預期的效能指標。我的經驗涵蓋公有雲及地端解決方案，能執行常見的平台任務，以維護和擴展那些在 Google Cloud 上使用 Google 管理或自行管理服務的已部署解決方案。我能有效地建置雲端解決方案環境，包括設定雲端專案與帳戶、建立資源層級架構、套用組織政策，以及管理 Identity and Access Management (IAM) 角色。我的技能同時也包含了啟用 API、配置 Google Cloud 的可觀測性工具（例如 Google Cloud Observability）、管理資源配額、設定雲端網路、確認產品在特定地理區域的可用性、配置 Cloud Asset Inventory、運用 Gemini Cloud Assist 進行資源分析，以及管理帳務配置，包含帳戶、預算、警示和帳務資料匯出。",
+        "我能夠規劃並實施穩健的雲端解決方案，具體作法是選擇並部署合適的運算資源，例如 Compute Engine、Google Kubernetes Engine (GKE)、Cloud Run 及無伺服器函式，並為其選擇適當的儲存選項，如 Persistent Disk 或 Google Cloud Hyperdisk。這同時也涉及到實施多樣化的儲存與資料解決方案，包括具備不同儲存層級的 Cloud Storage、Filestore、Google Cloud NetApp Volumes、Cloud SQL、BigQuery、Firestore、Spanner、AlloyDB、Dataflow、Pub/Sub 及 Google Cloud Managed Service for Apache Kafka。我可以設計及配置網路資源，包括具備子網路的 Virtual Private Clouds (VPCs)、使用 Tags 和服務帳戶的 Cloud Next Generation Firewall (Cloud NGFW) 政策，並透過 Cloud VPN、VPC Network Peering 或 Cloud Interconnect 建立網路連線，同時也能部署各式負載平衡器及區分不同的 Network Service Tiers。此外，我能熟練運用如 Fabric FAST、Config Connector、Terraform 及 Helm 這類的「基礎設施即程式碼」工具來規劃與實施資源。",
+        "為了確保雲端解決方案能成功運作，我可以管理各項運算資源，例如遠端連線至執行個體、處理快照與映像檔、管理 GKE 叢集詳細目錄、節點池以及像 Pods 和 Services 這類的 Kubernetes 資源，並且能處理應用程式部署及 Cloud Run 等服務的流量切分。我的能力也延伸至管理儲存與資料解決方案，透過保護 Cloud Storage 中的物件、設定物件生命週期政策、跨多種資料庫執行查詢、估算儲存成本、執行備份與還原、檢視工作狀態，以及使用 Database Center。我也負責管理網路資源，包括新增與擴展子網路、保留 IP 位址，以及操作 Cloud DNS 與 Cloud NAT。我職責中重要的一環是監控與日誌記錄，在這方面我能建立警示、收集自訂指標、匯出日誌、配置日誌儲存空間 (log buckets) 與日誌路由器、使用 Cloud Trace 和 Cloud Profiler 等雲端診斷工具、運用 Gemini Cloud Assist 進行 Cloud Monitoring，以及利用 Active Assist 進行效能優化。最後，我透過管理 IAM 政策、定義自訂角色，並審慎管理服務帳戶（包含其建立、權限指派、模擬操作及憑證管理），來配置存取權限與安全性，確保與 GKE 應用程式之間的安全整合。"
+      ]
+    },
+    "official": "https://cloud.google.com/learn/certification/cloud-engineer",
     "verify": "https://www.credly.com/badges/a60cfb97-f91d-40d5-aadc-b7995eda46f1/linked_in_profile",
     "skills": [
       "Cloud Architecture",
@@ -1004,8 +1251,19 @@
     "issue": "Nov 2024",
     "expire": "Nov 2027",
     "identifier": "724a9a00760b46b79c37d5139fcac467",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As an Associate Data Practitioner, I am equipped to secure and manage data effectively on Google Cloud. My experience encompasses a wide range of Google Cloud data services, enabling me to proficiently handle tasks such as data ingestion, transformation, pipeline management, analysis, machine learning, and visualization. I also possess a foundational understanding of core cloud computing concepts including infrastructure as a service (IaaS), platform as a service (PaaS), and software as a service (SaaS).",
+        "My capabilities include preparing and ingesting data by differentiating between various data manipulation methodologies like ETL, ELT, and ETLT, and selecting appropriate data transfer tools such as Storage Transfer Service or Transfer Appliance. I can assess data quality and perform data cleaning using tools like Cloud Data Fusion, BigQuery, SQL, and Dataflow. I am skilled in extracting data in multiple formats, including CSV, JSON, Apache Parquet, and Apache Avro, and loading it into suitable Google Cloud storage systems such as Cloud Storage, BigQuery, Cloud SQL, Firestore, Bigtable, or Spanner, using tools like Dataflow, BigQuery Data Transfer Service, and Database Migration Service. For analysis and presentation, I can identify data trends using BigQuery and Jupyter notebooks like Colab Enterprise, execute SQL queries, and create insightful dashboards in Looker. Furthermore, I can define, train, evaluate, and utilize machine learning models through BigQuery ML and AutoML, including leveraging pretrained Google large language models (LLMs) and managing models in the Model Registry.",
+        "I am proficient in designing and implementing simple data pipelines, selecting the right transformation tools such as Dataproc, Dataflow, Cloud Data Fusion, Cloud Composer, or Dataform based on specific business requirements, and evaluating use cases for ELT and ETL. I can schedule, automate, and monitor data processing tasks using services like Cloud Scheduler and Cloud Composer, review logs in Cloud Logging and Cloud Monitoring, and implement event-driven architectures with Pub/Sub and Eventarc. In terms of data management, I can configure robust access control and governance following the principle of least privilege with Identity and Access Management (IAM), manage data lifecycles effectively across services like Cloud Storage and BigQuery, and identify high availability and disaster recovery strategies. My expertise also covers applying crucial security measures, including managing encryption keys with Cloud Key Management Service (Cloud KMS) and understanding different encryption methods like CMEK, CSEK, and GMEK, to ensure data privacy and compliance."
+      ],
+      "tw": [
+        "作為一名 Associate Data Practitioner，我擁有在 Google Cloud 平台上有效保護及管理資料的專業能力。我的實務經驗廣泛，涵蓋多種 Google Cloud 資料服務，能讓我純熟地執行資料擷取、轉換、管線建置與管理、分析、機器學習以及資料視覺化等任務。同時，我也具備對雲端運算核心概念的基礎認知，包括基礎設施即服務 (IaaS)、平台即服務 (PaaS) 及軟體即服務 (SaaS)。",
+        "我的專業技能涵蓋資料的準備與擷取作業，包括辨別 ETL、ELT、ETLT 等不同資料處理方法論的差異，並能依需求選擇如 Storage Transfer Service 或 Transfer Appliance 等合適的資料傳輸工具。我能夠評估資料品質，並運用 Cloud Data Fusion、BigQuery、SQL 及 Dataflow 等工具進行資料清理。我擅於擷取 CSV、JSON、Apache Parquet、Apache Avro 等多種格式的資料，再透過 Dataflow、BigQuery Data Transfer Service、Database Migration Service 等工具，將資料載入至 Cloud Storage、BigQuery、Cloud SQL、Firestore、Bigtable 或 Spanner 等適當的 Google Cloud 儲存系統。在資料分析與呈現方面，我可以運用 BigQuery 及 Jupyter notebooks (例如 Colab Enterprise) 洞察資料趨勢、執行 SQL 查詢，並在 Looker 中打造具參考價值的互動式儀表板。此外，我還能藉由 BigQuery ML 與 AutoML 來定義、訓練、評估並應用機器學習模型，這包括運用預先訓練的 Google 大型語言模型 (LLMs)，以及在 Model Registry 中進行模型管理。",
+        "我能熟練地設計與實作簡易型資料管線，能根據具體的業務需求，選用如 Dataproc、Dataflow、Cloud Data Fusion、Cloud Composer 或 Dataform 等轉置工具，並評估 ELT 與 ETL 的適用情境。我可以使用 Cloud Scheduler、Cloud Composer 等服務來排程、自動化及監控資料處理作業，在 Cloud Logging 和 Cloud Monitoring 中檢視分析日誌，並且利用 Pub/Sub 與 Eventarc 建構事件驅動的系統架構。在資料治理方面，我能依循 Identity and Access Management (IAM) 的最低權限原則，設定嚴謹的存取控制機制，有效管理 Cloud Storage 和 BigQuery 等服務中的資料生命週期，並規劃高可用性及災難復原方案。我的專業知識也包含實施關鍵的資安防護措施，例如運用 Cloud Key Management Service (Cloud KMS) 管理加密金鑰，以及理解 CMEK、CSEK、GMEK 等不同加密方式，藉此確保資料的隱私性與法規遵循。"
+      ]
+    },
+    "official": "https://cloud.google.com/learn/certification/data-practitioner",
     "verify": "https://www.credly.com/badges/a144c9d0-c7ae-4cd2-8166-c3f84900c97e/linked_in_profile",
     "skills": [
       "Analytical Skills",
@@ -1048,8 +1306,19 @@
     "issue": "Nov 2024",
     "expire": "Nov 2026",
     "identifier": "79ea1ec16c894642a836bb229dcec141",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a Google Cloud Certified Professional Cloud Architect, I empower organizations to leverage the full potential of Google Cloud technologies. My core capability lies in understanding cloud architecture and Google's technology stack to design, develop, and manage robust, secure, scalable, highly available, and dynamic solutions that directly drive business objectives. I am proficient in all aspects of enterprise cloud strategy, solution design, and architectural best practices.",
+        "My expertise allows me to meticulously design and plan cloud solution architectures by considering diverse business requirements, such as specific use cases, cost optimization, integration with external systems, and data movement, alongside critical technical needs like high availability, failover design, elasticity, scalability, and performance. This includes architecting network, storage, and compute resources, choosing appropriate data processing technologies and platform products, creating comprehensive migration plans, and envisioning future solution improvements to align with evolving business needs and technological advancements.",
+        "Furthermore, I am experienced in managing and provisioning solution infrastructure, including configuring network topologies for hybrid or multi-cloud environments, individual storage systems, and compute systems with considerations for volatility and orchestration. I am adept at designing for security by implementing robust Identity and Access Management (IAM), resource hierarchies, data security measures, and separation of duties, and also for compliance, addressing legislative, commercial, and industry-specific requirements. My capabilities extend to analyzing and optimizing technical and business processes, managing implementation by advising development and operation teams, and ensuring solution and operations reliability through effective monitoring, deployment strategies, and support."
+      ],
+      "tw": [
+        "作為一名 Google Cloud 認證的專業雲端架構師，我能協助企業充分發揮 Google Cloud 技術的潛力。我的核心能力是透過對雲端架構和 Google 技術堆疊的深入理解，來設計、開發並管理穩健、安全、可擴展、高可用性及動態的解決方案，從而直接驅動業務目標的達成。我精通企業雲端策略、解決方案設計以及架構最佳實踐的各個方面。",
+        "我的專業技能讓我能周全地設計與規劃雲端解決方案架構。我會仔細考量各種業務需求，例如特定的應用情境、成本優化、與外部系統的整合以及資料遷移等；同時，我也會兼顧關鍵的技術要求，如高可用性、故障轉移設計、彈性、擴展性與效能。這包含了網路、儲存及運算資源的架構設計、選擇合適的資料處理技術和平台產品、制定完整的遷移計畫，並預期未來解決方案的升級方向，以符合持續演進的業務需求與技術發展。",
+        "此外，我在管理與配置解決方案基礎架構方面擁有豐富經驗，這包括為混合雲或多雲環境設定網路拓撲、個別儲存系統以及運算系統（同時考量其變動性與自動化調度）。我擅長透過實施強健的身份與存取管理 (IAM) 機制、資源層級規劃、資料安全措施及職責分離原則來進行安全設計；同時，我也能針對法規、商業規範及特定行業標準來規劃合規性設計。我的能力還涵蓋了分析並優化技術與業務流程，透過向開發及維運團隊提供專業建議來管理專案實施，並藉由有效的監控、部署策略及技術支援，確保解決方案與日常維運的可靠性。"
+      ]
+    },
+    "official": "https://cloud.google.com/learn/certification/cloud-architect",
     "verify": "https://www.credly.com/badges/fccc70de-65ea-4a98-9a45-1d664714710d/linked_in_profile",
     "skills": [
       "Cloud Architecture",
@@ -1088,8 +1357,19 @@
     "issue": "Nov 2024",
     "expire": "Nov 2025",
     "identifier": "9BC72D0AF4C41F06",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a Microsoft Certified: Azure Administrator Associate, I possess the key skills to configure, manage, secure, and administer essential professional functions within Microsoft Azure. My expertise lies in implementing, managing, and monitoring an organization's Azure environment, which encompasses virtual networks, storage, compute, identity, security, and governance. I am adept at working as part of a larger team to implement cloud infrastructure and coordinating with various roles to deliver comprehensive Azure solutions, including networking, security, database, application development, and DevOps.",
+        "My capabilities include managing Azure identities and governance by handling `Microsoft Entra` users, groups, and access to Azure resources, as well as overseeing Azure subscriptions and governance through tools like `Azure Policy` and cost management features. I can proficiently implement and manage storage solutions, configuring access, managing storage accounts, and setting up `Azure Files` and `Azure Blob Storage` with features like redundancy, encryption, and lifecycle management. Furthermore, I am skilled in deploying and managing Azure compute resources, which involves automating deployments using `Azure Resource Manager` templates or `Bicep` files, creating and configuring virtual machines and their associated components, provisioning and managing containers, and establishing `Azure App Service` instances with appropriate configurations for scaling, security, and deployment.",
+        "I am also proficient in implementing and managing virtual networking by configuring virtual networks, subnets, peering, and ensuring secure access through `Network Security Groups` and `Azure Bastion`. My skills extend to configuring name resolution with `Azure DNS` and implementing load balancing solutions. To ensure the health and reliability of Azure resources, I can effectively monitor them using `Azure Monitor`, set up alerts, analyze logs, and utilize `Azure Monitor Insights`. Additionally, I am capable of implementing robust backup and recovery strategies using `Azure Backup` and `Azure Site Recovery` to maintain business continuity."
+      ],
+      "tw": [
+        "身為一名 Microsoft 認證的 `Azure Administrator Associate`，我具備在 `Microsoft Azure` 環境中進行設定、管理、保護及執行關鍵專業職能的核心技能。我的專長是實施、管理與監控企業的 `Azure` 環境，涵蓋了虛擬網路、儲存、運算、身分識別、安全性及治理等方面。我能夠有效地融入團隊，共同建構雲端基礎設施，並與網路、資安、資料庫、應用程式開發及 `DevOps` 等不同領域的專業人士協同合作，提供全方位的 `Azure` 解決方案。",
+        "在 `Azure` 身分識別與治理方面，我的能力涵蓋管理 `Microsoft Entra` 的使用者與群組、`Azure` 資源的存取權限，以及運用 `Azure Policy` 等工具和成本管理功能來監督 `Azure` 的訂閱與治理。我能純熟地建置與管理儲存解決方案，包括設定存取權限、管理儲存體帳戶，並為 `Azure Files` 及 `Azure Blob Storage` 配置備援、加密與生命週期管理等進階功能。不僅如此，我也精通 `Azure` 運算資源的部署與管理，包括運用 `Azure Resource Manager` 範本或 `Bicep` 檔案進行自動化部署、建立與設定虛擬機器及其相關元件、佈建與管理容器，以及建構 `Azure App Service` 執行個體，並為其進行擴展、安全性與部署的最佳化配置。",
+        "我也同樣擅長實作與管理虛擬網路，負責設定虛擬網路、子網路、VNet 對等互連，並透過 `Network Security Groups` (`NSG`) 和 `Azure Bastion` 來確保安全的存取。我的技能也延伸至利用 `Azure DNS` 設定名稱解析及建置負載平衡解決方案。為了確保 `Azure` 資源的運作狀態與可靠性，我能有效地運用 `Azure Monitor` 進行監控、設定警示通知、分析日誌，並使用 `Azure Monitor Insights`。此外，我能運用 `Azure Backup` 與 `Azure Site Recovery` 來實施完善的備份與災難復原計畫，確保企業營運的持續性。"
+      ]
+    },
+    "official": "https://learn.microsoft.com/credentials/certifications/azure-administrator/",
     "verify": "https://learn.microsoft.com/api/credentials/share/en-us/hotdogee/9BC72D0AF4C41F06?sharingId",
     "skills": [
       "Azure Administration",
@@ -1126,8 +1406,19 @@
     "organization": "MongoDB",
     "issue": "Nov 2024",
     "identifier": "MDB79ghg0yjwp",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a MongoDB Associate Atlas Administrator, I possess a strong understanding of MongoDB Atlas fundamentals, including cloud architecture best practices and the effective management of organizations, projects, and clusters. My capabilities extend to deploying various cluster types such as dedicated, shared, and serverless, and managing documents within collections using tools like the Data Explorer. I am proficient in general Atlas administration, which includes differentiating between Atlas and database users, determining optimal cluster architecture including tier types and hardware configurations, and configuring settings like autoscaling and termination protection based on cluster tiers.",
+        "A significant aspect of my expertise lies in ensuring security within Atlas. I can implement robust user management features for both database and Atlas users by applying roles, permissions, access levels, and adhering to the Principle of Least Privilege. Furthermore, I am skilled in configuring networking access through methods like peering and private endpoints, utilizing audit logs and activity feeds for oversight, and understanding Atlas's default encryption mechanisms for data at rest and in transit. My knowledge also covers comprehensive database backup and recovery procedures, allowing me to define appropriate backup policies based on RPO/RTO and business requirements for different cluster types, and execute restore operations to maintain data integrity and availability.",
+        "My certification also signifies my ability to effectively monitor MongoDB performance by identifying and analyzing core metrics for both the database (like query targeting and replication lag) and the underlying system (such as CPU, memory, and network traffic), understanding metric availability across different cluster types. I can configure and respond to alerts for critical events, analyze query performance using tools like the profiler and Performance Advisor, and retrieve and manage log data. Additionally, I am equipped to plan for database upgrades and maintenance, including designing zero-downtime strategies, understanding MongoDB's rolling maintenance, and preparing rollback plans to ensure smooth operations and feature compatibility."
+      ],
+      "tw": [
+        "作為一名 MongoDB Associate Atlas Administrator，我對 MongoDB Atlas 的基礎有紮實的理解，這包括雲端架構的最佳實踐，以及如何有效地管理組織、專案和叢集。我的能力涵蓋部署各種叢集類型，例如 `dedicated` (專用)、`shared` (共享) 和 `serverless` (無伺服器) 叢集，並且能使用像 `Data Explorer` 這樣的工具來管理集合 (collection) 中的文件 (document)。我精通一般的 Atlas 管理，包括區分 Atlas 使用者和資料庫使用者、判斷最佳的叢集架構 (包含層級類型和硬體組態)，以及根據叢集層級來設定自動擴展 (autoscaling) 和終止保護 (termination protection) 等功能。",
+        "我的專業能力中，確保 Atlas 內部安全是非常重要的一環。我可以為資料庫使用者和 Atlas 使用者實施完善的使用者管理功能，具體方法是妥善運用角色、權限、存取級別，並嚴格遵守 `Principle of Least Privilege` (最小權限原則)。此外，我也擅長設定網路存取，例如透過 `peering` (對等連接) 和 `private endpoints` (私有端點) 等方式，利用稽核日誌 (audit logs) 和活動摘要 (activity feeds) 進行監控，並且了解 Atlas 對靜態資料 (data at rest) 和傳輸中資料 (data in transit) 的預設加密機制。我的知識範圍也包括完整的資料庫備份與還原程序，讓我可以根據 `RPO`/`RTO` (恢復點目標/恢復時間目標) 及不同叢集類型的業務需求來制定合適的備份策略，並執行還原作業以確保資料的完整性和可用性。",
+        "這張認證也代表我能夠有效地監控 MongoDB 的效能，透過識別與分析資料庫本身 (例如查詢目標 `query targeting`、複製延遲 `replication lag`) 及底層系統 (例如 `CPU`、記憶體、網路流量) 的核心指標，並且了解不同叢集類型可用的指標。我可以設定並回應關鍵事件的警示，使用像是 `profiler` 和 `Performance Advisor` 等工具來分析查詢效能，以及擷取和管理日誌資料。此外，我還具備規劃資料庫升級與維護的能力，包括設計零停機時間 (zero-downtime) 的策略、了解 MongoDB 的滾動式維護 (rolling maintenance)，以及準備版本回溯計畫，以確保系統運作順暢及功能相容性。"
+      ]
+    },
+    "official": "https://learn.mongodb.com/pages/mongodb-associate-atlas-administrator-exam",
     "verify": "https://learn.mongodb.com/c/Ll2utIA9Reyg_cMb43mbYA",
     "skills": [
       "MongoDB Atlas",
@@ -1165,8 +1456,19 @@
     "issue": "Oct 2024",
     "expire": "Oct 2027",
     "identifier": "cbe4112a-98d3-419b-b282-2d84fed368d4",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a GitHub Copilot certified professional, I have a validated understanding of how to leverage this AI-driven code completion tool to significantly enhance software development workflows. This includes not only using it effectively across various programming languages but also understanding its different plans (Individual, Business, and Enterprise) and features, such as Copilot in the IDE, Copilot Chat, and its CLI integration, to optimize coding efficiency. I am proficient in configuring these tools and utilizing their distinct capabilities to suit diverse project needs and organizational structures.",
+        "My expertise extends to a deep understanding of how GitHub Copilot processes data, the lifecycle of its suggestions, its inherent limitations, and the principles of responsible AI usage. I am skilled in prompt crafting and prompt engineering to elicit the most accurate and helpful responses, and I understand the importance of validating AI-generated output. Crucially, I can identify potential harms like bias or security risks in generative AI, explain how to mitigate them, and implement privacy fundamentals such as configuring content exclusions within repositories and organizations to ensure ethical and secure AI operation.",
+        "Furthermore, I can apply GitHub Copilot to a wide array of developer use cases, including learning new languages, generating documentation, modernizing legacy code, debugging, and refactoring. I am also adept at using GitHub Copilot to generate and improve various types of tests, such as unit and integration tests, thereby enhancing code quality. My knowledge covers leveraging GitHub Copilot Enterprise features like knowledge bases for improved code consistency and efficiency, and I can troubleshoot common issues to ensure smooth operation, ultimately contributing to a more productive and secure software development lifecycle."
+      ],
+      "tw": [
+        "作為一名 GitHub Copilot 認證的專業人士，我已具備純熟的技能與知識，懂得如何運用這款由 AI 驅動的程式碼自動完成工具，來大幅提升軟體開發的工作流程與效率。我的能力不僅涵蓋在各種程式語言中有效運用 GitHub Copilot，更理解其不同方案（個人版、商業版及企業版）的差異與各項功能，例如在 IDE 中的 Copilot、Copilot Chat 以及 CLI 整合，藉此最佳化程式撰寫效率。我能熟練地配置這些工具，並發揮其獨特功能，以滿足不同專案需求及組織架構。",
+        "我的專業知識也延伸至深入理解 GitHub Copilot 如何處理數據、其建議生成的生命週期、本身存在的限制，以及負責任 AI 的使用原則。我擅長運用提示詞撰寫 (prompt crafting) 和提示工程 (prompt engineering) 的技巧，以獲取最精準且實用的回覆，並且深知驗證 AI 生成內容的重要性。重要的是，我能夠辨識生成式 AI 的潛在危害，例如偏見或安全風險，說明如何降低這些風險，並能實施隱私保護的基本措施，如在程式碼儲存庫 (repository) 和組織層級設定內容排除，以確保 AI 在合乎道德及安全的原則下運作。",
+        "此外，我可以將 GitHub Copilot 應用在多樣化的開發者應用情境中，包含學習新的程式語言、產生說明文件、將舊有程式碼現代化、進行偵錯以及程式碼重構。我同樣擅長運用 GitHub Copilot 來生成並改善各種類型的測試案例，例如單元測試和整合測試，藉此提升程式碼品質。我的知識也涵蓋如何運用 GitHub Copilot Enterprise 的進階功能，例如知識庫 (Knowledge Bases)，來增進程式碼的一致性與開發效率；同時，我能排除常見問題以確保工具順暢運作，最終為打造一個更高效且安全的軟體開發生命週期貢獻心力。"
+      ]
+    },
+    "official": "https://learn.microsoft.com/credentials/certifications/github-copilot/",
     "verify": "https://www.credly.com/badges/cbe4112a-98d3-419b-b282-2d84fed368d4/linked_in_profile",
     "skills": [
       "GitHub Copilot",
@@ -1202,8 +1504,19 @@
     "issue": "Oct 2024",
     "expire": "Oct 2026",
     "identifier": "51a5de1e88324e94a85c75914f6a2ca5",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a Professional Data Engineer, I specialize in making data usable and valuable for others by collecting, transforming, and publishing it. My expertise encompasses the entire lifecycle of robust data processing systems, including their design, construction, deployment, monitoring, maintenance, and security. I am adept at evaluating and selecting the most suitable products and services to meet specific business and regulatory requirements, ensuring that data solutions are both effective and compliant.",
+        "My capabilities extend to designing systems that prioritize security and compliance, incorporating elements like `Identity and Access Management` (e.g., `Cloud IAM`), data encryption, key management, and privacy considerations for Personally Identifiable Information using tools such as the `Cloud Data Loss Prevention API`, while also addressing data sovereignty and legal regulations. I ensure reliability and fidelity by preparing and cleaning data with tools like `Dataprep` or `Dataflow`, monitoring data pipelines, implementing disaster recovery and fault tolerance strategies, managing `ACID` compliance, and performing thorough data validation. Furthermore, I design for flexibility and portability, mapping business needs to architecture, and plan comprehensive data migrations, including to `Google Cloud` using services like `BigQuery Data Transfer Service` and `Database Migration Service`.",
+        "I am proficient in ingesting and processing data by planning and building efficient batch and streaming pipelines, leveraging services like `Dataflow`, `Apache Beam`, `Dataproc`, `Cloud Data Fusion`, `BigQuery`, and `Pub/Sub`. This includes data cleansing, transformation, and integration from diverse sources. I select optimal storage solutions, whether they involve `Bigtable`, `Spanner`, `Cloud SQL`, `Cloud Storage`, `Firestore`, or `Memorystore`, and plan for data warehouses, data lakes, or data mesh architectures using tools like `Dataplex` and `Data Catalog`. My skills also include preparing data for analysis and visualization, sharing data effectively through platforms like `Analytics Hub`, and maintaining and automating data workloads through resource optimization, repeatable job scheduling with tools like `Cloud Composer`, and diligent monitoring and troubleshooting to ensure system health and mitigate failures."
+      ],
+      "tw": [
+        "身為一名專業資料工程師，我的專長是透過收集、轉換及發布資料，使其對他人而言具備易用性與價值。我的專業知識涵蓋了穩健資料處理系統的完整生命週期，從設計、建構、部署、監控、維護到安全防護。我能精準評估並挑選最適合的產品與服務，以符合特定的商業及法規需求，確保資料解決方案兼具效能與合規性。",
+        "我的能力進一步延伸至設計高度重視安全性與合規性的系統。我會整合如 `Identity and Access Management` (例如 `Cloud IAM`)、資料加密、金鑰管理等機制，並運用如 `Cloud Data Loss Prevention API` 等工具處理個人可識別資訊 (PII) 的隱私保護，同時兼顧資料主權與法律規範。為確保系統的可靠度與資料的真實性，我會使用 `Dataprep` 或 `Dataflow` 等工具進行資料準備與清理、監控資料管線、實施災難備援與容錯策略、管理 `ACID` 原則的遵循，並執行嚴謹的資料驗證。此外，我著重於設計具備彈性與可移植性的系統架構，將業務需求妥善對應至系統設計，並規劃全面的資料移轉方案，包含運用 `BigQuery Data Transfer Service` 及 `Database Migration Service` 等服務將資料遷移至 `Google Cloud`。",
+        "我精通資料的擷取與處理，能規劃並建構高效率的批次與串流資料管線，並善用 `Dataflow`、`Apache Beam`、`Dataproc`、`Cloud Data Fusion`、`BigQuery` 及 `Pub/Sub` 等服務。這包含了來自多樣來源的資料清理、轉換及整合。我能為不同需求選擇最佳化的儲存方案，無論是 `Bigtable`、`Spanner`、`Cloud SQL`、`Cloud Storage`、`Firestore` 還是 `Memorystore`，並且能運用 `Dataplex` 與 `Data Catalog` 等工具規劃資料倉儲、資料湖或資料網格 (Data Mesh) 架構。我的技能亦包含為分析及視覺化準備資料、透過 `Analytics Hub` 等平台有效地共享資料，以及藉由資源最佳化、運用 `Cloud Composer` 等工具進行可重複的作業排程，加上細心的監控與故障排除，來維護與自動化資料作業負載，以確保系統的健全運作並降低潛在故障的衝擊。"
+      ]
+    },
+    "official": "https://cloud.google.com/learn/certification/data-engineer",
     "verify": "https://www.credly.com/badges/c385b7cb-33c0-49d1-9aba-6a7bc992e826/linked_in_profile",
     "skills": [
       "BigQuery",
@@ -1240,8 +1553,19 @@
     "organization": "MongoDB",
     "issue": "Oct 2024",
     "identifier": "MDB32mmtq7gr4",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a MongoDB Associate Data Modeler, I possess a comprehensive understanding of the entire data modeling lifecycle. I am skilled in gathering application requirements, identifying crucial application operations that necessitate performance-optimized document designs, and pinpointing all prerequisite information needed for effective data modeling. I can accurately identify and group persisted data entities within their respective domains, recognizing domain ownership and potential needs for data duplication or synchronization. Furthermore, I can map the relationships between these entities, understand their cardinality, and distinguish between strong and weak entities based on application object analysis.",
+        "My capabilities extend to analyzing workload and usage patterns, including identifying entities required by CRUD operations and determining which operations are most impactful for data persistence or retrieval, while also considering retention requirements and retrieval times for active and historical data. Based on these analyses, I can design optimal data models by defining usage patterns, determining when to apply schema design patterns such as computed, versioning, and subset, and deciding between embedding versus referencing, always documenting the tradeoffs involved. I am proficient in implementing these designs using MongoDB patterns, including schema validation to meet business requirements and technical specifications like performance for data creation, modification, and retrieval.",
+        "Finally, I am adept at developing effective indexing strategies by analyzing query and analytics patterns, ensuring appropriate key fields are indexed using various types like wildcard or TTL indexes, and applying methods like the ESR (Equality, Sort, Range) rule. I can also analyze the performance of these indexes and storage strategies to select the optimal approach for both common and uncommon queries, including interpreting explain plans. My skills also cover monitoring implemented data models, tracking business and technical changes, and determining when to iterate or make schema modifications to support evolving application needs and business goals."
+      ],
+      "tw": [
+        "身為一名 MongoDB Associate Data Modeler，我對整個資料建模的生命週期有著透徹的理解。我能夠有效地收集應用程式的需求，判斷出哪些關鍵的應用程式操作需要針對效能進行文件設計，並找出資料建模前所有必要的先備資訊。我可以精準地識別出需要永久保存的資料實體，將它們歸類到相應的領域，釐清各領域的權責歸屬，並判斷是否可能需要資料複製或同步。不僅如此，我還能清晰地描繪出這些實體間的關聯、它們的對應數量關係 (cardinality)，並根據應用程式的物件分析來分辨強弱實體。",
+        "我的專業能力還包括分析系統的工作負載與使用模式，例如找出 CRUD 操作會用到的實體，判斷哪些操作對資料的儲存或讀取影響最為顯著，同時也會考量到活躍資料與歷史資料的保存期限及讀取時間要求。基於這些分析，我能透過定義使用模式，決定何時該採用 computed (計算)、versioning (版本控制)、subset (子集) 這類的 schema design patterns，以及如何在嵌入 (embedding) 與參考 (referencing) 之間做出最合適的選擇，並完整記錄各種設計方案的優缺點與權衡。我熟悉如何運用 MongoDB 的各種模式來實踐這些設計，包含透過 schema validation (結構驗證) 來確保模型符合業務需求與技術規格，例如資料新增、修改及查詢的效能要求。",
+        "最後，我非常擅長根據查詢和分析模式來制定高效率的索引 (indexing) 策略，確保重要的欄位都建立了適當的索引，例如 wildcard index (萬用字元索引) 或 TTL index (存活時間索引)，並且能應用 ESR (Equality, Sort, Range) 法則。我也能分析這些索引及儲存策略的效能表現，為常用及不常用的查詢找出最佳的執行方案，這當中也包括了解讀 explain plans (執行計畫) 的能力。我的技能同時涵蓋了監控已經上線的資料模型，持續追蹤業務或技術上的變動，並判斷何時需要調整或修改資料庫結構，以因應應用程式的不斷發展和變動的業務目標。"
+      ]
+    },
+    "official": "https://learn.mongodb.com/pages/mongodb-associate-data-modeler-exam",
     "verify": "https://learn.mongodb.com/c/ei8kNARsTXmVMwV8Wdo6JA",
     "skills": [
       "Data Governance",
@@ -1276,8 +1600,19 @@
     "organization": "MongoDB",
     "issue": "Oct 2024",
     "identifier": "MDBg20kmdh2b1",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a MongoDB Associate Database Administrator, I possess a solid understanding of MongoDB's core philosophy, its distinctive features, and how it differs from traditional RDBMS databases. I am proficient in various methods to access and administer MongoDB instances, and I grasp the function of sharding for horizontal scalability.",
+        "My capabilities extend to performing a wide range of CRUD (Create, Read, Update, Delete) operations. This includes correctly forming insert commands for structured documents, understanding the impact of updates with and without operators like `$set`, and utilizing upserts effectively. I can manage concurrent operations using `findAndModify`, handle multi-document updates, and accurately delete documents. I am adept at querying data using equality constraints (including on array fields), comparison operators, `$in`, and `$elemMatch`, as well as combining conditions with logical operators. Furthermore, I can sort, limit, and project query results, count matching documents, and perform basic aggregations using `$match` and `$group`.",
+        "I am skilled in optimizing query performance through effective index management, identifying which indexes will improve performance for various query types, including those on array fields or requiring multi-field sorts. I can analyze explain plans to diagnose issues like collection scans, understand multi-key index limitations, and validate index usage. In server administration, I can manage `mongod` processes by starting, stopping, checking status, and configuring parameters using `mongosh`. I am also proficient in managing replica sets, including adding and removing nodes, and understanding replication concepts such as primary/secondary roles, read preferences, write concerns, elections, and the `oplog`. My abilities cover monitoring database health by interpreting common alerts, running `currentOp`, viewing active operations, monitoring storage, and recognizing signs of diminishing storage. I can implement crucial security measures such as enabling TLS and authentication, defining and managing roles and privileges for authorization, and understand data protection through encryption at rest, field-level encryption, and audit logging. Finally, I know how to create backups of a replica set to ensure data recoverability."
+      ],
+      "tw": [
+        "身為一名 MongoDB Associate Database Administrator，我對 MongoDB 的核心理念、獨特功能及其與傳統 RDBMS 資料庫的差異有著穩固的理解。我熟悉多種存取與管理 MongoDB 實例的方法，也了解如何運用分片 (sharding) 技術來達成水平擴展。",
+        "我的專業能力涵蓋了各式各樣的 CRUD (新增、查詢、更新、刪除) 操作。這包括正確地下達 `insert` 指令來新增結構化文件，理解使用或未使用如 `$set` 等運算子進行更新時對資料庫狀態的影響，並且能有效地運用 `upsert` (更新或插入) 功能。我能夠使用 `findAndModify` 來處理並行操作、更新多筆文件，以及準確地刪除文件。在資料查詢方面，我擅長運用等值條件 (包含針對陣列欄位的查詢)、比較運算子、`$in` 及 `$elemMatch`，也能結合邏輯運算子來組合查詢條件。此外，我還可以對查詢結果進行排序、限制筆數、指定欄位輸出 (projection)、計算符合條件的文件數量，以及使用 `$match` 和 `$group` 進行基本的資料聚合。",
+        "我擅長透過有效的索引管理來優化查詢效能，能夠判斷何種索引能改善特定查詢類型 (例如針對陣列欄位或多欄位排序的查詢) 的執行效率。我可以分析 `explain plan` 來診斷如集合掃描 (collection scan) 等效能問題，理解多鍵索引 (multi-key index) 的限制，並確認查詢是否正確使用索引。在伺服器管理方面，我能熟練操作 `mongod` 程序，包含啟動、停止、檢查狀態，以及使用 `mongosh` 設定參數。我同時精通副本集 (replica set) 管理，包括新增與移除節點，並深入理解複製 (replication) 機制，如主節點 (primary) 與次節點 (secondary) 的角色、讀取偏好 (read preference)、寫入考量 (write concern)、選舉 (election)機制及 `oplog` 的運作。我的能力也包含了監控資料庫的健康狀態，例如判讀常見警示、執行 `currentOp` 指令、檢視當前活動的操作、監控儲存空間，並能察覺儲存空間不足的警訊。我可以實施關鍵的資安措施，如啟用 TLS 加密傳輸和身份驗證機制，為使用者授權定義並管理角色與權限，也了解如何透過靜態加密 (encryption at rest)、欄位級加密 (field-level encryption) 及稽核日誌 (audit logging) 來保護資料。最後，我知道如何為副本集建立備份，確保資料的災難復原能力。"
+      ]
+    },
+    "official": "https://learn.mongodb.com/pages/mongodb-associate-database-administrator-exam",
     "verify": "https://learn.mongodb.com/c/gS83TsFJQdaeZx46cxwjBw",
     "skills": [
       "Application Administration",
@@ -1312,8 +1647,17 @@
     "organization": "MongoDB",
     "issue": "Oct 2024",
     "identifier": "MDB23lea3yx0q",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a certified MongoDB Associate Developer - Node.js, I possess a solid understanding of MongoDB's core concepts, including its document model and BSON data types. My primary expertise lies in performing a wide range of CRUD operations, such as inserting single or multiple documents, updating existing documents effectively using various operators like `$set` or performing upserts, and efficiently deleting documents. I am proficient in querying data using equality constraints, relational operators, `$in`, and `$elemMatch`, skillfully combining these with logical operators, and can manage query results through sorting, limiting, and projections, while also understanding how to iterate through cursors to retrieve all results and count matching documents.",
+        "Furthermore, I can leverage MongoDB's aggregation framework, utilizing stages like `$match`, `$group`, `$lookup`, and `$out` to perform complex data analysis and transformations. I understand the critical role of indexes in optimizing query performance, knowing how to create appropriate single-field or compound indexes for various query patterns, including those on array fields, and can interpret explain plan outputs to diagnose performance issues or confirm index usage. My knowledge extends to fundamental data modeling principles, enabling me to discern appropriate embedding or linking strategies and recognize common anti-patterns. Crucially, as a Node.js specialist, I am adept at using the MongoDB Node.js driver to connect applications to the database, manage connection pooling, and implement all these CRUD and aggregation functionalities within a Node.js environment, distinguishing between MQL and Aggregation Framework syntax. I am also familiar with using tools like Atlas Data Explorer to interact with data, including loading sample datasets."
+      ],
+      "tw": [
+        "身為一名認證的 MongoDB Associate Developer - Node.js，我對 MongoDB 的核心概念，包含其文件模型和 BSON 資料類型，都有確實的掌握。我的專業強項在於能執行多樣化的 CRUD 操作，例如新增單筆或多筆文件、使用 `$set` 等不同運算子來有效更新既有文件、執行 `upsert`（若無則新增，若有則更新），以及高效率地刪除文件。我能熟練地運用等值比較、關係運算子、`$in` 及 `$elemMatch` 等條件來查詢資料，並能巧妙地結合邏輯運算子。同時，我也能透過排序、限制數量和投影 (projection) 來管理查詢結果，也理解如何操作游標 (cursor) 來取得所有結果及計算符合條件的文件數量。",
+        "除此之外，我還能善用 MongoDB 的聚合框架 (Aggregation Framework)，透過 `$match`、`$group`、`$lookup` 和 `$out` 等不同階段 (stage) 進行複雜的資料分析與轉換。我深刻理解索引 (index) 對於優化查詢效能的關鍵性，知道如何針對不同的查詢情境（包含對陣列欄位的查詢）建立合適的單一欄位索引或複合索引，並且能夠判讀 `explain plan` 的輸出來診斷效能瓶頸或確認索引是否被有效利用。我的知識也涵蓋了基礎的資料模型設計原則，能判斷何時該用嵌入式 (embedding) 或連結式 (linking) 的設計，並能識別常見的反面教材 (anti-pattern)。最重要的是，作為一名 Node.js 的專家，我熟稔如何使用 MongoDB Node.js 驅動程式 (driver) 來連接應用程式與資料庫、管理連線池 (connection pooling)，並在 Node.js 環境中實作上述所有的 CRUD 與聚合功能，清楚區分 MQL (MongoDB Query Language) 和聚合框架在語法上的不同。我也熟悉運用 Atlas Data Explorer 這類工具來操作資料，包含載入範例資料集。"
+      ]
+    },
+    "official": "https://learn.mongodb.com/pages/mongodb-associate-developer-exam",
     "verify": "https://learn.mongodb.com/c/vyjhu4kvTNqskC4H0krZog",
     "skills": [
       "CRUD",
@@ -1353,8 +1697,19 @@
     "issue": "Sep 2024",
     "expire": "Sep 2027",
     "identifier": "b1338ea34f5045dcbd427f2cfb8cb3c7",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As an AWS Certified AI Practitioner (AIF-C01), I have demonstrated a comprehensive understanding of Artificial Intelligence (AI), Machine Learning (ML), and generative AI technologies. This includes their fundamental concepts, methods, and strategies, both in general terms and specifically within the AWS ecosystem. My knowledge covers the essentials of AI/ML, the fundamentals of generative AI, applications of foundation models, guidelines for responsible AI, and the security, compliance, and governance considerations for AI solutions.",
+        "My capabilities enable me to effectively identify appropriate AI/ML and generative AI technologies to address specific business challenges and to ask pertinent questions within my organization to leverage these tools. I can determine the correct types of AI/ML technologies for various use cases, understand the lifecycle of ML development and foundation models, and am committed to the responsible application of these powerful technologies, including understanding how to develop AI systems responsibly and the importance of transparent and explainable models.",
+        "While my role focuses on utilizing and understanding AI/ML solutions on AWS rather than developing or coding models and pipelines from the ground up, I am familiar with core AWS services such as Amazon EC2, Amazon S3, AWS Lambda, and Amazon SageMaker, as well as services like Amazon Bedrock and Amazon Q. This also includes an understanding of the AWS shared responsibility model, IAM for security and access control, the AWS global infrastructure, service pricing models, and methods to secure AI systems and recognize governance and compliance regulations."
+      ],
+      "tw": [
+        "身為 AWS Certified AI Practitioner (AIF-C01) 認證的持有者，我已展現出對人工智慧 (AI)、機器學習 (ML) 及生成式 AI 技術的全面性理解。這包括了這些技術的基礎概念、方法與策略，無論是通用原則或是在 AWS 生態系中的具體應用。我的知識範疇涵蓋 AI/ML 基礎、生成式 AI 概要、基礎模型的應用、負責任 AI 的準則，以及 AI 解決方案在安全性、合規性與治理方面的考量。",
+        "我具備有效辨識合適的 AI/ML 與生成式 AI 技術的能力，能藉此應對特定的商業挑戰，並在組織內部提出關鍵問題以善用這些工具。我能夠為不同的應用情境判斷應採用的 AI/ML 技術類型，理解 ML 開發與基礎模型的生命週期，並致力於以負責任的方式應用這些強大的技術，這也包含理解如何負責任地開發 AI 系統，以及透明化與可解釋模型的重要性。",
+        "我的專業重點在於運用與理解 AWS 平台上的 AI/ML 解決方案，而非從零開始開發或編寫模型及管線。我熟悉如 Amazon EC2、Amazon S3、AWS Lambda 及 Amazon SageMaker 等核心 AWS 服務，也了解如 Amazon Bedrock 和 Amazon Q 等服務。此外，我對於 AWS 共同責任模型、用於安全與存取控制的 IAM、AWS 的全球基礎設施、服務定價模式，乃至於保護 AI 系統與辨識相關治理和法規遵循的方法，皆有相當程度的認識。"
+      ]
+    },
+    "official": "https://aws.amazon.com/certification/certified-ai-practitioner/",
     "verify": "https://www.credly.com/badges/494da167-c241-43aa-bdbc-731aaf5c153f/linked_in_profile",
     "skills": [
       "AI and ML on AWS",
@@ -1392,8 +1747,17 @@
     "issue": "Aug 2024",
     "expire": "Aug 2027",
     "identifier": "2e0d727905e04275a5be6607827ff764",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "Having successfully earned the AWS Certified Cloud Practitioner (CLF-C02) certification, I have demonstrated a comprehensive, high-level understanding of the AWS Cloud, independent of any specific technical role. This certification validates my ability to effectively articulate the value of the AWS Cloud and explain key concepts such as the AWS shared responsibility model and the AWS Well-Architected Framework.",
+        "My capabilities further include understanding security best practices within the AWS ecosystem, as well as grasping AWS Cloud costs, economics, and billing practices. I can also describe and position core AWS services, spanning compute, network, database, and storage, and I'm able to identify appropriate AWS services for common use cases. This foundational knowledge equips me to engage knowledgably in discussions about AWS and its benefits, making me a valuable asset to teams beginning or working with AWS Cloud technologies."
+      ],
+      "tw": [
+        "我已成功考取 AWS Certified Cloud Practitioner (CLF-C02) 證照，這代表我對 AWS Cloud 已具備全面且宏觀的理解，此能力不限於特定的技術背景或職位。這張證照證明了我能清晰地說明 AWS Cloud 的價值所在，並解釋像是 AWS shared responsibility model 和 AWS Well-Architected Framework 這類核心概念。",
+        "此外，我的專業能力還涵蓋了理解 AWS 環境中的安全最佳實務，以及掌握 AWS Cloud 的成本結構、經濟效益和計費方式。我能夠清楚地描述並說明核心 AWS 服務的定位與用途——包括運算、網路、資料庫及儲存服務——並且能針對常見的應用情境，找出合適的 AWS 解決方案。這些紮實的基礎知識，讓我能更有信心地參與 AWS 相關技術及其優勢的討論，對於剛開始導入或已經在使用 AWS Cloud 技術的團隊而言，我將能貢獻寶貴的價值。"
+      ]
+    },
+    "official": "https://aws.amazon.com/certification/certified-cloud-practitioner/",
     "verify": "https://www.credly.com/badges/32a97846-e50f-4b9b-8a60-b6c8d0773332/linked_in_profile",
     "skills": [
       "Amazon Web Services",
@@ -1429,8 +1793,19 @@
     "issue": "Sep 2024",
     "expire": "Sep 2027",
     "identifier": "03a65d2c9d5f43618acc33a3596f6f45",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a certified Cloud Digital Leader, I can clearly explain the capabilities of Google Cloud's core products and services and how they bring value to organizations. I am skilled in describing common business use cases and demonstrating how cloud solutions can effectively support an enterprise's objectives.",
+        "My knowledge encompasses cloud computing fundamentals, and I can show how Google Cloud products and services are instrumental in helping an organization achieve its goals. I understand why cloud technology is transforming businesses, including the benefits of scalability, flexibility, and cost-effectiveness it offers over traditional on-premises technology.",
+        "Furthermore, I can articulate the advantages of Google Cloud's approach to digital transformation, focusing on intelligence, collaboration, and trust. I am also familiar with various cloud computing models like IaaS, PaaS, and SaaS, and can discuss the shared responsibilities between cloud providers and customers in these environments."
+      ],
+      "tw": [
+        "身為一名認證的 Cloud Digital Leader，我能夠清晰地闡述 Google Cloud 核心產品與服務的強大功能，以及這些功能如何為企業組織創造實質價值。我擅長解析常見的商業應用情境，並具體說明雲端解決方案如何有效地協助企業達成其營運目標。",
+        "我的專業知識涵蓋了雲端運算的基礎原理，並且能實際展示 Google Cloud 的產品與服務，如何在協助企業組織達成其策略目標上扮演關鍵角色。我深刻理解雲端技術之所以能引領商業變革的原因，這包含了雲端技術在擴展性、彈性以及成本效益上，均優於傳統的本地部署（on-premises）技術。",
+        "不僅如此，我還能精闢分析 Google Cloud 推動數位轉型策略的各項優勢，特別是在智能化（intelligence）、協同合作（collaboration）及可信賴度（trust）等面向。同時，我也熟悉各種雲端運算模型，例如 IaaS (基礎設施即服務)、PaaS (平台即服務) 和 SaaS (軟體即服務)，並且能夠深入探討在這些不同模型之下，雲端服務供應商與客戶之間如何分擔責任。"
+      ]
+    },
+    "official": "https://cloud.google.com/learn/certification/cloud-digital-leader",
     "verify": "https://www.credly.com/badges/784112bf-811f-4578-a5ac-14bf0e77306e/linked_in_profile",
     "skills": [
       "Artificial Intelligence (AI)",
@@ -1468,8 +1843,19 @@
     "issue": "Sep 2024",
     "expire": "Sep 2026",
     "identifier": "a2cf65ef64ef483d869559ad7d645377",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a certified Professional Machine Learning Engineer, I possess the expertise to build, evaluate, productionize, and optimize AI solutions by effectively utilizing Google Cloud capabilities alongside my knowledge of conventional ML approaches. I am adept at handling large, complex datasets and developing repeatable, reusable code, including designing and operationalizing generative AI solutions built upon foundational models. Throughout my work, I consistently consider responsible AI practices and collaborate closely with various teams to ensure the long-term success and adoption of AI-based applications across an organization.",
+        "My skill set is distinguished by strong programming abilities and extensive experience with data platforms and distributed data processing tools. I am proficient in model architecture, the creation of robust data and ML pipelines, the application of generative AI, and the critical interpretation of performance metrics. Furthermore, I am familiar with the foundational concepts of MLOps, application development, infrastructure management, data engineering, and data governance.",
+        "By training, retraining, deploying, scheduling, monitoring, and continuously improving models, I design and create scalable, high-performing solutions. This includes architecting low-code AI solutions using tools like BigQuery ML and AutoML, building AI solutions with ML APIs or foundational models from Model Garden, and implementing retrieval augmented generation (RAG) applications using Vertex AI Agent Builder. I am also skilled in prototyping models in Jupyter environments on Google Cloud, tracking ML experiments, and choosing appropriate hardware for training and serving, ensuring efficient and effective AI deployment."
+      ],
+      "tw": [
+        "作為一名獲得認證的 Professional Machine Learning Engineer，我能純熟地運用 Google Cloud 的各項功能，並結合傳統 ML 方法的知識，來建構、評估、實現生產化並優化 AI 解決方案。我擅長處理大規模且複雜的資料集，開發可重複使用、易於維護的程式碼，同時也能設計並實際運作基於基礎模型所打造的生成式 AI 解決方案。在所有工作中，我始終堅守負責任的 AI 準則，並與不同團隊緊密合作，確保 AI 應用能在企業內部成功落地並發揮長期價值。",
+        "我擁有扎實的程式設計能力，以及在資料平台和分散式資料處理工具方面的豐富經驗。我精通模型架構設計、打造穩健的資料與 ML 管線、應用生成式 AI 技術，以及精準解讀各項效能指標。不僅如此，我也熟悉 MLOps 的核心概念、應用程式開發、基礎架構管理、資料工程以及資料治理等領域。",
+        "從模型的訓練、重新訓練、部署、排程、監控到持續改進，我致力於設計和打造具擴展性且高效能的解決方案。這包含了運用 BigQuery ML 和 AutoML 等工具來架構低程式碼 AI 解決方案，利用 Model Garden 中的 ML API 或基礎模型來建構 AI 應用，以及透過 Vertex AI Agent Builder 實現檢索增強生成 (RAG) 應用。我也熟練在 Google Cloud 的 Jupyter 環境中進行模型原型開發、追蹤 ML 實驗的進展，並為模型的訓練與線上服務選擇最適切的硬體資源，從而確保 AI 解決方案能高效且成功地部署。"
+      ]
+    },
+    "official": "https://cloud.google.com/learn/certification/machine-learning-engineer",
     "verify": "https://www.credly.com/badges/3125474c-dbc1-450b-a12c-a16c56b10181/linked_in_profile",
     "skills": [
       "Machine Learning (ML)",
@@ -1510,8 +1896,19 @@
     "issue": "Jul 2024",
     "expire": "Jul 2027",
     "identifier": "6ef12cf4-46cf-4059-acc3-710afddd239a",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a GitHub Actions certified professional, I am adept at designing, authoring, and maintaining robust automated workflows. I can configure these workflows to trigger from a variety of events such as pushes, pull requests, scheduled times, or webhook events, and I'm proficient in structuring them using jobs, steps, and conditional logic. I have a strong understanding of using both GitHub-hosted and self-hosted runners, and I can effectively manage encrypted secrets and environment variables, including the `GITHUB_TOKEN`, to ensure secure and customized pipeline operations. My capabilities also include scripting within workflows, publishing artifacts to GitHub Packages and GitHub Container Registry, integrating database and service containers, using labels to route workflows, and incorporating tools like CodeQL for security scanning.",
+        "My expertise extends to effectively consuming and interpreting workflows. I can diagnose failed workflow runs by analyzing run histories and logs, whether through the user interface or GitHub's REST API, and I know how to enable step debug logging for deeper troubleshooting. I am skilled in managing workflow runs, which includes configuring caching for dependencies, passing data between jobs, managing workflow artifacts, and implementing features like status badges, environment protections, job matrices, and approval gates. I can also efficiently locate workflows, their logs, and artifacts within a repository and understand how to manage them, including using an organization's templated workflows.",
+        "Furthermore, I am capable of authoring and maintaining custom actions, identifying the appropriate action type (JavaScript, Docker container, or run step) for a given problem, and troubleshooting them effectively. On an enterprise level, I can contribute to distributing actions and workflows, defining reuse templates, and managing access control. I understand how to configure organizational use policies for GitHub Actions, manage self-hosted runners (including configuration for proxies, labels, networking, IP allow lists, and group management), and oversee encrypted secrets at both repository and organization levels to maintain security and efficiency across the enterprise."
+      ],
+      "tw": [
+        "作為一名 GitHub Actions 認證的專業人士，我擅長設計、撰寫並維護穩健的自動化工作流程。我可以設定這些工作流程，讓它們能根據各種事件觸發，例如 `push`、`pull request`、排程時間或 `webhook` 事件，並且我能熟練地運用 `job`、`step` 和條件邏輯來組織這些流程。我對於 `GitHub-hosted runner` 和 `self-hosted runner` 的使用有深入的理解，也能有效地管理加密的 `secret` 和環境變數 (包含 `GITHUB_TOKEN`)，以確保 `pipeline` 操作的安全性與客製化。我的能力還涵蓋在工作流程中編寫腳本、將產出發布到 `GitHub Packages` 和 `GitHub Container Registry`、整合資料庫與服務容器、使用標籤來分派工作流程，以及導入 `CodeQL` 這類工具進行安全性掃描。",
+        "我的專業技能還延伸到有效地運用與解讀工作流程。我能夠透過分析執行歷史記錄和日誌來診斷失敗的工作流程，無論是透過使用者介面還是 `GitHub` 的 `REST API`，並且我知道如何啟用 `step` 的偵錯日誌模式以進行更深入的問題排查。我擅長管理工作流程的執行，這包括為相依套件設定快取、在不同的 `job` 之間傳遞資料、管理工作流程的產出物，以及實作如狀態徽章、環境保護、`job matrix` 和簽核關卡等功能。我也能夠有效率地在 `repository` 中找到工作流程、其日誌和產出物，並且了解如何管理它們，包含使用組織的共享工作流程模板。",
+        "此外，我能夠撰寫並維護客製化的 `action`，能針對特定問題判斷合適的 `action` 類型 (例如 `JavaScript`、`Docker` 容器或執行步驟)，並有效地進行故障排除。在企業規模的應用上，我可以協助 `action` 和工作流程的共享、定義可重複使用的模板，以及管理存取權限。我了解如何為 `GitHub Actions` 設定企業組織的使用政策、管理 `self-hosted runner` (包括 `proxy`、標籤、網路設定、IP 白名單以及群組管理)，並在 `repository` 和企業組織層級管理加密的 `secret`，以確保整個企業運作的安全性與效率。"
+      ]
+    },
+    "official": "https://learn.microsoft.com/credentials/certifications/github-actions/",
     "verify": "https://www.credly.com/badges/6ef12cf4-46cf-4059-acc3-710afddd239a/linked_in_profile",
     "skills": [
       "Continuous Integration (CI)",
@@ -1546,8 +1943,19 @@
     "issue": "Jul 2024",
     "expire": "Jul 2027",
     "identifier": "96e957d0-eab6-4c7c-97eb-b8fa3b3b24b2",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a GitHub Administration certification holder, I am proficient in supporting GitHub Enterprise for users and key stakeholders. I can effectively distinguish problems resolvable by an administrator from those requiring GitHub Support, generate necessary support bundles and diagnostics, and analyze how GitHub's products and services are utilized within an enterprise. This understanding allows me to identify underutilized features, active teams, and popular repositories, and to recommend standards for developer workflows, including optimal code collaboration strategies like fork-and-pull versus branching, robust branching models, branch protection rules, code owners, efficient code review processes, automation techniques, and effective release strategies. I am also able to explain the enterprise's tooling ecosystem and CI/CD strategy, and discuss how to recommend appropriate tooling and workflows to various teams.",
+        "My capabilities extend to robustly managing user identities and GitHub authentication, including implementing SAML single sign-on (SSO) across single or multiple organizations, enforcing two-factor authentication (2FA), and integrating with supported identity providers such as Azure and Okta using SCIM, while understanding the nuances of team synchronization versus SCIM. I am skilled in managing access and permissions by defining clear organizational structures, team permissions, and member privileges to ensure users have the minimum required access for their roles, whether they are organization members or outside collaborators. Furthermore, I can enable secure software development and ensure compliance by establishing security policies, managing sensitive data (including scrubbing it from repositories), leveraging features like secret scanning, code scanning with CodeQL, and Dependabot for vulnerability management. I can also manage GitHub Actions effectively by distributing reusable actions and workflows, configuring both GitHub-hosted and self-hosted runners (including managing runner groups and networking), and handling encrypted secrets through various scopes and even third-party vaults. My expertise also includes utilizing GitHub APIs (Rest and GraphQL) to extend administrative capabilities, such as querying audit logs, and leveraging the GitHub Marketplace for apps and actions, understanding their benefits, risks, and contrasting their functionalities.",
+        "Additionally, I have a solid understanding of GitHub's different deployment models, such as GitHub Enterprise Server (GHES), GitHub Enterprise Cloud (GHEC), and GitHub AE (GHAE), along with their respective capabilities, licensing, and billing structures, including for metered products like GitHub Actions minutes and storage for GitHub Packages. I can describe how to access, write, and share GitHub Packages and integrate them into workflows. This comprehensive knowledge allows me to effectively administer, secure, and optimize an enterprise's GitHub environment, ensuring smooth operations and adherence to security and compliance standards."
+      ],
+      "tw": [
+        "身為一名通過 GitHub Administration 認證的專業人士，我能純熟地為企業內的使用者及主要相關人員提供 GitHub Enterprise 支援。我能夠清楚判斷哪些問題可以由管理員自行解決，哪些則需要 GitHub 官方支援，並且能產出必要的支援檔案與診斷報告，同時分析企業內部 GitHub 各項產品和服務的使用狀況。這樣的洞察力讓我能找出未被充分利用的功能、活躍的團隊以及熱門的儲存庫，進而為開發流程提供標準化建議，內容涵蓋最佳的程式碼協同作業模式 (例如 `fork-and-pull` 與分支管理)、穩健的分支策略、分支保護規則、程式碼負責人制度、高效率的程式碼審查機制、自動化技術以及有效的版本發布流程。我也能清晰說明企業所使用的工具鏈生態系及 CI/CD 策略，並針對不同團隊的需求，推薦合適的工具與工作流程。",
+        "我的專業能力還包括能穩健地管理使用者身份識別與 GitHub 驗證機制，例如為單一或多個組織導入 SAML 單一登入 (SSO) 、強制啟用雙因素驗證 (2FA) ，以及透過 SCIM 協定整合如 Azure 、 Okta 等主流身份驗證服務，同時我也了解團隊同步與 SCIM 之間的差異。我擅長管理存取權限，透過定義明確的組織架構、團隊權限及成員權限，確保每位使用者，不論是組織成員或外部協作者，都只擁有其職責範圍內所需的最小權限。不僅如此，我還能推動安全的軟體開發實踐並確保企業合規，具體做法包括制定資安政策、管理敏感資料 (包含從儲存庫中清除資料)、運用 `secret scanning` (機敏資料掃描)、 `CodeQL` 程式碼掃描以及 `Dependabot` 漏洞管理等功能。我也能有效地管理 GitHub Actions ，包含分發可重複使用的 `actions` 與 `workflows` 、設定 GitHub 代管及自行架設的 `runners` (含 `runner` 群組與網路管理)，以及處理不同範圍的加密 `secrets` (甚至能整合第三方金鑰庫)。我的專業知識也涵蓋運用 GitHub APIs ( `Rest` 與 `GraphQL` ) 來擴展平台的管理功能，例如查詢稽核日誌，以及善用 GitHub `Marketplace` 中的應用程式與 `actions` ，並了解其優勢、風險及功能差異。",
+        "除此之外，我對於 GitHub 的各種部署模式，像是 GitHub Enterprise Server (GHES) 、 GitHub Enterprise Cloud (GHEC) 及 GitHub AE (GHAE) ，以及它們各自的功能、授權方式和計費結構 (包含 GitHub Actions 使用分鐘數和 GitHub Packages 儲存空間等用量計費產品) 都有紮實的理解。我能說明如何存取、建立、分享 GitHub Packages ，並將其整合到自動化工作流程中。這些全面的知識，讓我能有效地管理、保護並優化企業的 GitHub 環境，確保日常維運順暢，同時符合資安與法規遵循的標準。"
+      ]
+    },
+    "official": "https://learn.microsoft.com/credentials/certifications/github-administration/",
     "verify": "https://www.credly.com/badges/96e957d0-eab6-4c7c-97eb-b8fa3b3b24b2/linked_in_profile",
     "skills": [
       "Software Development Security",
@@ -1583,8 +1991,19 @@
     "issue": "Jul 2024",
     "expire": "Jul 2027",
     "identifier": "ada75c5f-2d75-4e02-99c2-9b2d2868b630",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a holder of the GitHub Advanced Security certification, I possess a deep understanding of GitHub's security features and have hands-on experience in securing software development workflows. I am adept at contrasting various GHAS features and their roles within the security ecosystem, differentiating between features available for open source projects and those requiring GHAS with GHEC or GHES, and leveraging the Security Overview dashboard for a comprehensive security posture.",
+        "I am proficient in configuring and using critical GHAS components like secret scanning, including push protection and validity checks, to prevent accidental exposure of sensitive information. My skills also cover managing vulnerable dependencies effectively with Dependabot and Dependency Review, which involves understanding the dependency graph, interpreting alerts, enabling security updates, and integrating dependency checks into pull requests. Furthermore, I am skilled in setting up and utilizing code scanning with CodeQL, and even integrating third-party tools via SARIF uploads, to identify vulnerabilities directly within our codebase through customizable workflows and analysis.",
+        "My expertise extends to implementing these security measures throughout the entire software development life cycle, effectively \"shifting security left.\" I can interpret alerts using CVEs and CWEs, make informed decisions about remediation or dismissal, and configure tools like secret scanning with push protection and code scanning on pull requests for early detection. I also understand how to use Repository Rulesets to enforce these security practices, ensuring a robust and proactive security posture for development projects by defining clear roles and responsibilities for development and security teams."
+      ],
+      "tw": [
+        "身為 `GitHub Advanced Security` 認證的持有者，我深入理解 `GitHub` 的各項安全功能，並具備保護軟體開發流程的實務經驗。我擅長比較不同 `GHAS` 功能在整體安全架構中扮演的角色、區分開源專案內建的安全機制與企業版 `GHAS` (`GHEC` 或 `GHES`) 所提供的進階功能，並能有效運用 `Security Overview` 儀表板全面掌握專案的安全狀況。",
+        "我精通設定與活用 `GHAS` 的核心安全組件，例如 `secret scanning` (祕密掃描)，包含其 `push protection` (推送保護) 和有效性檢查機制，以預防敏感資訊不慎外洩。我的專業技能也涵蓋運用 `Dependabot` 與 `Dependency Review` 高效管理具潛在風險的依賴套件，包括理解依賴關係圖、判讀安全警示、啟用自動安全更新，以及將依賴套件檢查整合進 `pull requests` (拉取請求) 流程中。此外，我能熟練地設定及運用 `CodeQL` 進行程式碼掃描，甚至能透過 `SARIF` 格式上傳來整合第三方分析工具，藉由客製化的工作流程與分析，直接在我們的程式碼庫中找出潛在漏洞。",
+        "我的專業能力還展現在能將上述安全措施貫穿整個軟體開發生命週期，實現「安全左移」(shifting security left) 的理念。我能夠運用 `CVEs` (通用漏洞披露) 和 `CWEs` (常見弱點列舉) 來解析安全警示，並針對修補或忽略警示做出明智的判斷。同時，我也能設定如具備 `push protection` 功能的 `secret scanning`，以及在 `pull requests` 階段即進行的程式碼掃描，以便及早發現並處理問題。我亦了解如何運用 `Repository Rulesets` (儲存庫規則集) 來強制推行這些安全規範，透過明確劃分開發團隊與安全團隊的職責，確保開發專案擁有穩固且積極主動的安全防護。"
+      ]
+    },
+    "official": "https://learn.microsoft.com/credentials/certifications/github-advanced-security/",
     "verify": "https://www.credly.com/badges/ada75c5f-2d75-4e02-99c2-9b2d2868b630/linked_in_profile",
     "skills": [
       "Software Development Security",
@@ -1615,14 +2034,70 @@
   },
   {
     "name": {
+      "en": "GitHub Foundations",
+      "tw": "GitHub 基礎"
+    },
+    "organization": "GitHub",
+    "issue": "Jul 2024",
+    "expire": "Jul 2027",
+    "identifier": "db64fc6a-98ed-441f-bf21-71e6ebea89db",
+    "description": {
+      "en": [
+        "As a GitHub Foundations certified individual, I have a solid understanding of Git fundamentals and the GitHub platform. This means I can effectively use Git for version control, including initializing repositories, managing local and remote versions, and handling branching and merging workflows. I'm also proficient in navigating the GitHub interface to create and manage repositories, issues, and pull requests, as well as working with files within repositories using tools like GitHub Desktop and understanding file versioning.",
+        "My capabilities extend to leveraging GitHub's powerful collaboration features. I can contribute to projects by forking repositories, creating and managing pull requests, and participating in code reviews using GitHub's tools and best practices. Furthermore, I understand how to implement basic CI/CD pipelines using GitHub Actions for automation, supporting modern DevOps practices. For project management, I can effectively use GitHub Projects, issues, labels, and milestones to track progress and manage tasks.",
+        "I am also knowledgeable in maintaining repository security through features like branch protection rules, using security tools such as Dependabot, and managing access permissions. I understand the basics of administering GitHub organizations, including managing teams and members. Finally, I am equipped to engage with the wider GitHub community, participate in open source projects, and utilize features like GitHub Discussions to contribute and collaborate effectively."
+      ],
+      "tw": [
+        "身為 GitHub Foundations 認證的持有者，我對 Git 的核心概念及 GitHub 平台運作有著穩固的基礎。這代表我能夠熟練運用 Git 進行版本控制，包含初始化 repositories、管理本地與遠端的版本，以及處理分支與合併等工作流程。我也熟悉 GitHub 的操作介面，能夠建立及管理 repositories、issues 和 pull requests，並且懂得如何在 repositories 中處理檔案，像是使用 GitHub Desktop 工具並了解檔案的版本管理。",
+        "我的能力也涵蓋了 GitHub 強大的協作功能。我可以透過 fork repositories、建立與管理 pull requests，並運用 GitHub 的工具與最佳實務來參與程式碼審核，為專案做出貢獻。此外，我了解如何運用 GitHub Actions 來實施基本的 CI/CD pipelines 以達成自動化，進而支持現代化的 DevOps 實務。在專案管理方面，我能有效地運用 GitHub Projects、issues、標籤及里程碑來追蹤進度與管理任務。",
+        "我也具備維護 repository 安全性的知識，例如透過分支保護規則、使用 Dependabot 這類安全工具，以及管理存取權限。我了解管理 GitHub organizations 的基本方法，包含管理團隊與成員。最後，我已準備好融入更廣泛的 GitHub 社群，參與開源專案，並利用 GitHub Discussions 等功能來進行有效的貢獻與協作。"
+      ]
+    },
+    "official": "https://learn.microsoft.com/credentials/certifications/github-foundations/",
+    "verify": "https://www.credly.com/badges/db64fc6a-98ed-441f-bf21-71e6ebea89db/linked_in_profile",
+    "skills": [
+      "Build Pipeline",
+      "Continuous Delivery",
+      "Continuous Integration",
+      "DevOps",
+      "GitHub",
+      "GitHub Actions",
+      "Release Management"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/github-certified-foundations-2024-badge.png",
+      "alt": {
+        "en": "GitHub Foundations Certification Badge",
+        "tw": "GitHub 認證「GitHub 基礎」徽章"
+      }
+    },
+    "certificate": {
+      "url": "/src/certifications/images/github-certified-foundations-2024-certificate.jpg",
+      "alt": {
+        "en": "GitHub Foundations Certification Certificate",
+        "tw": "GitHub 認證「GitHub 基礎」證書"
+      }
+    }
+  },
+  {
+    "name": {
       "en": "Marketing Insider",
       "tw": "行銷達人"
     },
     "organization": "LinkedIn",
     "issue": "Jul 2024",
     "identifier": "2qpwtfowvvta",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a LinkedIn Certified Marketing Insider, I possess a comprehensive understanding of LinkedIn advertising and marketing strategies. This certification signifies my expertise across three core areas: LinkedIn advertising fundamentals, full-funnel marketing strategy, and content and creative design. I am proficient in launching successful LinkedIn advertising campaigns, effectively optimizing targeting parameters, and meticulously reporting on campaign performance.",
+        "Furthermore, I have demonstrated my capability in constructing comprehensive, full-funnel marketing strategies specifically for the LinkedIn platform. This includes understanding how to engage audiences at every stage of the marketing funnel. My skills also extend to creating and maintaining impactful paid and organic content, ensuring that it is both engaging and aligns with overall marketing objectives. This holistic knowledge allows me to leverage LinkedIn effectively to achieve diverse marketing goals."
+      ],
+      "tw": [
+        "身為 LinkedIn 認證行銷達人 (LinkedIn Certified Marketing Insider)，我具備 LinkedIn 廣告與行銷策略的完整知識。這張認證代表我在三大核心領域的專業能力，包含了 LinkedIn 廣告基礎、完整的行銷漏斗 (full-funnel) 策略，以及內容與創意設計。我能夠純熟地操作成功的 LinkedIn 廣告活動，精準地優化目標受眾設定，並且仔細地分析和報告廣告活動的成效。",
+        "不僅如此，我也證明了自己有能力針對 LinkedIn 平台，規劃出涵蓋整個行銷漏斗 (full-funnel) 的全面策略。這表示我了解如何在行銷漏斗的每一個環節與目標客群有效互動。我的專業技能也包含創作與維護能產生影響力的付費及自然內容，確保內容不僅吸引人，更能達成整體的行銷目標。這些完整的專業知識，讓我能有效地運用 LinkedIn 來達成各種不同的行銷成果。"
+      ]
+    },
+    "official": "https://training.marketing.linkedin.com/page/certified-marketing-insiders",
     "verify": "https://verify.skilljar.com/c/2qpwtfowvvta",
     "skills": ["Content and Creative Design", "Social Media Marketing", "Marketing Strategy"],
     "badge": {
@@ -1649,8 +2124,19 @@
     "organization": "Oracle",
     "issue": "Jul 2024",
     "identifier": "312779921OCI2024GAIOCP",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As an Oracle Cloud Infrastructure 2024 Generative AI Certified Professional, I have a strong foundation in Large Language Models (LLMs) and am proficient in leveraging the OCI Generative AI Service. My expertise includes building, tracing, evaluating, and deploying LLM applications using advanced techniques such as Retrieval-Augmented Generation (RAG), Semantic Search, Vector databases, and LangChain.",
+        "I possess a comprehensive understanding of LLM fundamentals, including their architectures, effective prompt design, and fine-tuning methodologies, as well as the basics of code models, multi-modal systems, and language agents. Within the OCI Generative AI Service, I am skilled in utilizing pretrained foundational models for Chat and Embedding, creating dedicated AI clusters for fine-tuning and inference, fine-tuning base models with custom datasets, and managing model endpoints for inference, all while understanding the OCI Generative AI security architecture.",
+        "Furthermore, my certification demonstrates my ability to implement RAG solutions using the OCI Generative AI service, including its integration with LangChain and Oracle Database 23ai. This involves managing the complete RAG workflow, from loading, splitting, and chunking documents to creating embeddings, storing and indexing them in Oracle Database 23ai, performing similarity searches, and generating responses. I am also knowledgeable about the OCI Generative AI RAG Agents service, covering its fundamentals, options for creating knowledge bases, and the creation, deployment, and invocation of RAG agents as chatbots."
+      ],
+      "tw": [
+        "身為 Oracle Cloud Infrastructure 2024 Generative AI 認證專家，我具備大型語言模型 ( LLMs ) 的紮實基礎，並能熟練運用 OCI Generative AI Service 。我的專業技能涵蓋運用如檢索增強生成 ( RAG )、語義搜尋、向量資料庫及 LangChain 等尖端技術，進行 LLM 應用程式的建構、追蹤、評估與部署。",
+        "我深入理解 LLM 的核心原理，包含其模型架構、高效的提示詞設計技巧、微調方法，乃至於程式碼模型、多模態系統及語言代理的基礎概念。在 OCI Generative AI Service 的應用上，我能純熟地運用預訓練的基礎模型進行 Chat 和 Embedding 功能，建立專用的 AI 叢集以執行微調與推論，透過客製化資料集來微調基礎模型，並管理用於推論的模型端點，同時也充分了解 OCI Generative AI 的安全架構。",
+        "此外，此認證也代表我具備運用 OCI Generative AI service 來實作 RAG 解決方案的專業能力，包含它與 LangChain 及 Oracle Database 23ai 的整合應用。這涵蓋了 RAG 完整的作業流程管理：從文件的載入、切割和區塊化處理，到運用 OCI Generative AI service 為文件區塊產生嵌入向量 (embeddings)，將這些嵌入向量儲存於 Oracle Database 23ai 並建立索引，再到執行相似度搜尋及生成最終回應。同時，我也熟悉 OCI Generative AI RAG Agents service 的核心機制、知識庫的各種建立方式，以及如何建立、部署並呼叫 RAG 代理程式作為對話式機器人。"
+      ]
+    },
+    "official": "https://education.oracle.com/oracle-cloud-infrastructure-2024-generative-ai-certified-professional/trackp_OCI2024GAIOCP",
     "verify": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=6A29CC43B3C49A6E93E0C8B054FBF1D2A0D70FCD44AAF3D1EC02F83C7C8C12CE",
     "skills": [
       "Foundation Models",
@@ -1686,8 +2172,19 @@
     "organization": "NVIDIA",
     "issue": "Dec 2022",
     "identifier": "bf7bfde7da9641789141774954b2bf61",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a holder of the NVIDIA Fundamentals of Deep Learning certification, I have a solid understanding of how artificial intelligence (AI) and deep learning are used to solve significant challenges across various industries, from healthcare enabling faster diagnoses, to retail personalizing customer experiences, and automotive enhancing vehicle safety and efficiency. I've learned that deep learning, with its multi-layered artificial neural networks, achieves state-of-the-art accuracy in tasks like object detection, speech recognition, and language translation, allowing computers to recognize complex patterns in data that traditional software might miss.",
+        "Through hands-on experience, I've learned the fundamental mechanics of deep learning, including how to train deep learning models from scratch for computer vision and natural language processing. I am capable of training computer vision models, utilizing convolutional neural networks to improve prediction accuracy, and applying data augmentation to enhance datasets for better model generalization. I can also leverage freely available, state-of-the-art pre-trained models to expedite the development of deep learning applications, integrate these models for tasks like image classification, and apply transfer learning to customize them for specific needs, such as creating a personalized automatic doggy door.",
+        "Furthermore, I have experience in training recurrent neural networks for sequential data, exemplified by building a model to autocomplete text based on New York Times headlines. In a final project, I applied computer vision techniques to create a model that distinguishes between fresh and rotten fruit by interpreting color images, building a data generator for small datasets, and improving training speed through transfer learning and feature extraction. I also gained insights into advanced neural network architectures, recent research areas for skill improvement, and learned how to set up my own AI application development environment."
+      ],
+      "tw": [
+        "身為 NVIDIA Fundamentals of Deep Learning 認證的持有者，我對於 人工智慧 (AI) 和 深度學習 如何解決各行各業的重大挑戰，已有紮實的理解。這些應用橫跨醫療領域，協助達成更迅速精準的病患診斷；在零售業，則用以打造個人化的顧客購物體驗；在汽車產業，則能提升自駕車、共享交通和物流服務的安全性與效率。我了解到 深度學習 運用其多層 人工神經網路，在 物件偵測、語音辨識 和 語言翻譯 等任務上，都能達到頂尖的準確度，讓電腦能夠辨識出那些對傳統軟體而言過於複雜或細微的資料模式。",
+        "透過實際操作的練習，我掌握了 深度學習 的核心原理，包含如何針對 電腦視覺 和 自然語言處理 領域，從零開始訓練 深度學習 模型。我具備訓練 電腦視覺 模型的能力，懂得運用 卷積神經網路 (CNN) 來提升視覺應用中預測的準確性，並且能應用 資料擴增 (Data Augmentation) 的技巧來強化資料集，以改善模型的泛化能力。我也懂得如何善用現成、免費且技術領先的 預訓練模型 (Pre-trained Models) 來加速 深度學習 應用的開發流程，例如整合這些模型來執行 圖像分類 等任務，並透過 遷移學習 (Transfer Learning) 的方式，針對特定需求進行客製化，像是打造一個只會辨識自家狗狗的個性化寵物門。",
+        "不僅如此，我還具備訓練 循環神經網路 (Recurrent Neural Networks, RNN) 處理序列資料的經驗，例如曾建立一個能根據《紐約時報》頭條新聞進行文字自動補全的模型。在一項期末專案中，我運用 電腦視覺 技術，創建了一個能夠判讀彩色圖像、藉此區分新鮮與腐壞水果的模型；為此，我替小型資料集建立了 資料生成器 (Data Generator)，並結合 遷移學習 和 特徵提取 (Feature Extraction) 的方法來提升訓練速度。我也對先進的 神經網路 架構以及近期有助於技能提升的研究領域有所涉獵，並且學會了如何建置自己的人工智慧應用程式開發環境。"
+      ]
+    },
+    "official": "https://www.nvidia.com/en-eu/training/instructor-led-workshops/fundamentals-of-deep-learning/",
     "verify": "https://courses.nvidia.com/certificates/bf7bfde7da9641789141774954b2bf61/",
     "skills": ["Machine Learning (ML)", "Deep Learning", "Artificial Intelligence (AI)"],
     "badge": {
@@ -1713,10 +2210,19 @@
     },
     "organization": "Ministry of Education",
     "issue": "Apr 2020",
-    "identifier": "QmcT6G84bJ5ZpHYzKfZZqZFQRHt4yNHTPoajviZUNCwS3s",
-    "description": { "en": "", "tw": "" },
-    "official": "",
-    "verify": "https://certs.turingchain.tech/ipfs?hash=QmcT6G84bJ5ZpHYzKfZZqZFQRHt4yNHTPoajviZUNCwS3s",
+    "identifier": "QmRWgNNoFZDeEKUd1rHkKV3WEQcZFfhnvjKwghdnmTKkka",
+    "description": {
+      "en": [
+        "As a single-person team in the AI CUP 2019, I earned 2nd place out of 469 teams. This competition centered on developing a system to automatically read and classify sentences in computer science paper abstracts into categories like Background, Objectives, Methods, Results, Conclusions, or Others, where sentences could have multiple labels. This task required me to build and train effective natural language models capable of understanding the nuanced language of academic research.",
+        "To achieve this, I utilized Tensorflow 1.15 and applied transfer learning techniques with prominent models such as BERT, SciBERT, BioBERT, and XLNet. This approach enabled me to develop a highly accurate system for classifying sentences from a substantial dataset of 47,000 abstracts. My success in this competition showcases my proficiency in natural language processing, machine learning, and the practical application of deep learning frameworks and advanced transformer models to solve complex text analysis challenges."
+      ],
+      "tw": [
+        "在 2019 年的 AI CUP 競賽中，我以一人團隊的形式，從 469 組參賽隊伍中脫穎而出，獲得了第二名的佳績。這項競賽的主要挑戰是開發一套系統，使其能夠自動閱讀電腦科學領域的論文摘要，並將摘要中的每個句子歸類到特定的學術語境類別，例如：背景 (Background)、目標 (Objectives)、方法 (Methods)、結果 (Results)、結論 (Conclusions) 或其他 (Others)。特別的是，一個句子可以同時擁有多個分類標籤。這項任務驅使我建構並訓練出能夠深入理解學術論文精妙語言的自然語言模型。",
+        "為達成此一目標，我運用了 Tensorflow 1.15 框架，並導入遷移學習技術，結合了如 BERT、SciBERT、BioBERT 及 XLNet 等先進的預訓練模型。透過這些技術整合，我成功開發出一套高準確度的句子分類系統，能有效處理高達四萬七千份摘要的龐大資料集。此次競賽的成果，充分證明了我在自然語言處理、機器學習領域的專業能力，以及將深度學習框架與尖端 transformer 模型應用於解決複雜文本分析問題的實戰經驗。"
+      ]
+    },
+    "official": "https://www.aicup.tw/ai-cup-2019",
+    "verify": "https://certs.turingchain.tech/ipfs/?hash=QmRWgNNoFZDeEKUd1rHkKV3WEQcZFfhnvjKwghdnmTKkka",
     "skills": [
       "Machine Learning (ML)",
       "Deep Learning",
@@ -1755,8 +2261,19 @@
     "organization": "Google",
     "issue": "Mar 2020",
     "identifier": "15685055",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a holder of the TensorFlow Developer Certificate, I possess a comprehensive understanding of building and deploying TensorFlow models. My capabilities include developing software using Python, adeptly resolving issues, and navigating TensorFlow's resources, including `tensorflow.org` and beyond, to effectively work as an ML practitioner. I can create, debug, and save machine learning models of appropriate sizes, while also understanding TensorFlow version compatibility. This foundational knowledge allows me to confidently tackle various machine learning challenges.",
+        "My expertise extends to building and training neural network models with TensorFlow 2.x, covering essential tasks from data preprocessing and model compilation to making predictions. I am proficient in constructing sequential models for both binary and multi-class classification, evaluating them using loss and accuracy metrics, and implementing strategies like augmentation and dropout to prevent overfitting. Furthermore, I can leverage transfer learning by using pretrained models and extracting features, ensuring data inputs are correctly shaped and batched, and utilize callbacks and diverse datasets, including those from `tf.data.datasets` and in formats like JSON and CSV.",
+        "Specializing further, I can develop sophisticated image classification models using Convolutional Neural Networks, including `Conv2D` and pooling layers, and process real-world image data of varying shapes and sizes, effectively using `ImageDataGenerator`. In Natural Language Processing, I build systems that prepare text for TensorFlow models, perform binary and multi-class text categorization using word embeddings, LSTMs, RNNs, and GRUs, and even generate new text. My skills also cover time series analysis, where I train, tune, and deploy models for forecasting, manage data preparation, use RNNs and CNNs, understand MAE, and dynamically adjust learning rates for optimal performance."
+      ],
+      "tw": [
+        "作為 TensorFlow 開發者證書的持有者，我對建構與部署 TensorFlow 模型有著全面性的理解。我的能力涵蓋運用 Python 進行軟體開發、熟練地解決各種技術問題，並且懂得查找運用 TensorFlow 的官方資源 (如 `tensorflow.org`) 及其他外部資訊，以勝任機器學習工程師的專業工作。我能夠創建、偵錯及儲存大小合適的機器學習模型，同時也了解 TensorFlow 不同版本間的相容性問題。這些基礎知識讓我能自信地面對各種機器學習的挑戰。",
+        "我的專業技能延伸至運用 TensorFlow 2.x 版本來建構與訓練神經網路模型，其中包含了從資料預處理、模型編譯到執行預測等關鍵任務。我擅長建構用於二元分類及多類別分類的序列模型，並使用損失值 (loss) 與準確度 (accuracy) 指標來評估模型效能，同時能實施資料增強 (augmentation) 及 dropout 等策略以避免過度擬合。此外，我還能透過使用預訓練模型及提取特徵來進行遷移學習，確保輸入資料的形狀正確並進行批次處理，並且懂得運用回調函式 (callbacks) 及處理來自 `tf.data.datasets` 或 JSON、CSV 等多樣化的資料來源與格式。",
+        "在更專業的領域，我能夠運用卷積神經網路 (Convolutional Neural Networks)，包含 `Conv2D` 層與池化層 (pooling layers)，來開發精密的影像分類模型，並處理各種形狀與大小的真實世界影像資料，同時能有效地運用 `ImageDataGenerator`。在自然語言處理 (Natural Language Processing) 方面，我能建構系統來預備 TensorFlow 模型所需的文本資料，運用詞嵌入 (word embeddings)、LSTMs、RNNs 及 GRUs 來執行文本的二元或多類別分類任務，甚至能生成新的文本內容。我的技能亦包含時間序列分析，能夠訓練、調整並部署用於預測任務的模型，管理資料準備流程，運用 RNNs 及 CNNs，理解平均絕對誤差 (MAE)，並動態調整學習率以達到最佳模型效能。"
+      ]
+    },
+    "official": "https://www.tensorflow.org/certificate",
     "verify": "https://www.credential.net/ff8a7060-0408-4546-9090-41db3e05d3dc",
     "skills": [
       "Machine Learning (ML)",
@@ -1787,8 +2304,19 @@
     },
     "organization": "NVIDIA",
     "issue": "Sep 2016",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a holder of the Deep Learning for Medical Analysis certification from NVIDIA DLI, I have gained comprehensive knowledge in applying deep learning techniques to radiology and medical imaging. This workshop equipped me with the skills to perform image segmentation, train convolutional neural networks (CNNs), and utilize radiomics to identify the genomics of a disease. I now understand how to effectively use deep learning for healthcare image analysis.",
+        "My capabilities include training CNNs to infer the volume of the human heart's left ventricle from time-series MRI data and performing image segmentation on MRI images to accurately locate the left ventricle. I can also employ CNNs to detect heart disease and calculate ejection fractions by measuring the differences between diastole and systole. Furthermore, I am proficient in applying CNNs to MRI scans of low-grade gliomas (LGGs) to determine the 1p/19q chromosome co-deletion status.",
+        "Throughout this workshop, I learned to place each pixel of an image into a specific class by extending Caffe with custom Python layers, implementing transfer learning, and creating fully convolutional neural networks from popular image classification networks. I also mastered leveraging CNNs for medical image analysis to infer patient status from non-visible images, which involved extending canonical 2D CNNs to more complex data, using the MXNet framework via Python API and R, and processing high-dimensional volumetric and temporal imagery. Additionally, I gained expertise in deep learning techniques for detecting imaging genomics (radiomics) from MRIs, including designing and training CNNs and using radiomics to create biomarkers that identify disease genomics without invasive biopsies, drawing insights from the radiogenomics work at the Mayo Clinic aimed at improving treatments and health outcomes for brain tumor patients."
+      ],
+      "tw": [
+        "身為一位持有 NVIDIA DLI「醫學分析深度學習」認證的專業人士，我已經全面掌握如何將深度學習技術應用在放射學與醫學影像領域。透過這個工作坊，我學會了影像分割、訓練卷積神經網路 (CNNs)，以及運用放射體學 (radiomics) 來辨識疾病的基因組特性。我現在能夠很有信心地運用深度學習來進行醫療保健領域的影像分析。",
+        "我的專業技能涵蓋了訓練 CNNs，從時間序列的 MRI 數據中推斷人類心臟左心室的容積，並且能在 MRI 影像上執行影像分割，以精準定位左心室。同時，我能夠運用 CNNs，藉由測量心臟舒張期與收縮期之間的差異，來偵測心臟疾病並計算射血分數。不僅如此，我還能熟練地將 CNNs 應用在低度神經膠質瘤 (LGGs) 的 MRI 掃描分析，判斷其 1p/19q 染色體是否共同缺失。",
+        "在這整個工作坊中，我學到如何將影像中的每一個像素進行精準分類，具體方法包括以自訂的 Python layer 擴展 Caffe 框架、導入遷移學習的實作，以及運用主流的影像分類網路來建構全卷積神經網路。我也精通如何利用 CNNs 進行醫學影像分析，從那些肉眼不可見的影像中推斷病患的狀況；這包含了將標準的 2D CNNs 模型拓展至更複雜的數據型態、透過 Python API 及 R 語言來操作 MXNet 框架，以及處理具有立體空間和時間序列特性的高維度影像。此外，我也深入學習了從 MRI 影像中偵測影像基因組學 (radiomics) 的深度學習技術，這包括設計與訓練 CNNs，並利用放射體學來建立生物標記，進而能在不需侵入性切片檢查的情況下，辨識出疾病的基因組特徵，同時也參考了 梅約診所 (Mayo Clinic) 在放射基因組學領域的研究成果，這些成果對於改善腦瘤患者的治療成效與健康狀況有著重要貢獻。"
+      ]
+    },
+    "official": "https://www.nvidia.com/en-in/training/instructor-led-workshops/deep-learning-for-healthcare-image-analysis/",
     "verify": "https://photos.app.goo.gl/N6Jdb4ponfNcieEfA",
     "skills": [
       "Machine Learning (ML)",
@@ -1819,8 +2347,17 @@
     },
     "organization": "Google",
     "issue": "Aug 2013",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a Google AdWords certified professional, I have a comprehensive understanding of online advertising, encompassing fundamental, intermediate, and advanced concepts. This includes a strong grasp of the benefits of online advertising and the intricacies of creating, managing, measuring, and optimizing AdWords campaigns across various platforms. I am proficient in Search Advertising, able to develop and refine campaigns that effectively reach target audiences. My expertise extends to Display Advertising, where I can manage and measure display campaigns to enhance brand visibility and engagement.",
+        "Furthermore, I possess in-depth knowledge of Mobile Advertising, covering mobile-specific ad formats, bidding strategies, and targeting, as well as campaign measurement on mobile devices. I am also skilled in Video Advertising, with the ability to produce, manage, and measure impactful video campaigns on YouTube and across the web. Finally, my capabilities include Shopping Advertising, where I can effectively create Merchant Center accounts and manage shopping campaigns to drive product sales. This broad skill set allows me to develop and execute comprehensive advertising strategies tailored to diverse business objectives."
+      ],
+      "tw": [
+        "作為一名 Google AdWords 認證的專業人士，我對線上廣告有著全面性的理解，涵蓋了從基礎、中階到進階的各種概念。這包括我對線上廣告的效益有深刻的認識，並且熟悉在各種平台上創建、管理、衡量及優化 AdWords 廣告活動的各項細節與技巧。我擅長 Search Advertising ，能夠開發並持續優化，以有效觸及目標客群的廣告活動。我的專業能力也涵蓋 Display Advertising ，能妥善管理並評估展示型廣告活動成效，藉此提升品牌曝光度與使用者互動。",
+        "此外，我具備深厚的 Mobile Advertising 知識，了解行動裝置特有的廣告格式、競價策略與目標設定，以及行動廣告活動的成效評估。我也精通 Video Advertising ，有能力在 YouTube 及其他網路平台製作、管理並衡量具影響力的影音廣告活動。最後，我的專業技能還包括 Shopping Advertising ，能夠有效地建立 Merchant Center 帳戶並管理購物廣告活動，進而促進產品銷售。這些多元的專業技能，讓我能針對不同的商業目標，制定並執行全方位的廣告策略。"
+      ]
+    },
+    "official": "https://support.google.com/google-ads/answer/9702955?hl=en",
     "verify": "https://photos.app.goo.gl/uvz8MMgXTFAv8nnC6",
     "skills": [
       "Marketing Strategy",
@@ -1852,9 +2389,16 @@
     "issue": "Apr 2020",
     "expire": "Jan 2023",
     "identifier": "CYW3B9KTFFVS",
-    "description": { "en": "", "tw": "" },
-    "official": "",
-    "verify": "https://www.coursera.org/account/accomplishments/specialization/certificate/CYW3B9KTFFVS",
+    "description": {
+      "en": [
+        "As a holder of the Cloud Architecture Professional Certificate, I have explored and deployed solution elements, including infrastructure components such as networks, systems, and application services, utilizing the Google Cloud Platform. Through this six-course accelerated program, I have successfully integrated my prior technical skills into practical capabilities essential for the Cloud Architect job role. This has equipped me to design, develop, and manage robust and scalable cloud solutions."
+      ],
+      "tw": [
+        "身為 Cloud Architecture Professional Certificate 持證人，我已透過 Google Cloud Platform 學習探索並實際部署多種解決方案要素，這些要素包含了網路、系統及應用程式服務等核心基礎架構元件。這門由六個課程組成的密集專業認證，讓我成功地將過去所學的技術技能，與雲端架構師職位所需的實務能力相結合。因此，我現在具備了設計、開發及管理穩健且具高度擴展性的雲端解決方案的專業實力。"
+      ]
+    },
+    "official": "https://www.coursera.org/professional-certificates/gcp-cloud-architect",
+    "verify": "https://www.coursera.org/account/accomplishments/professional-cert/CYW3B9KTFFVS",
     "skills": [
       "Cloud Architecture",
       "Google Cloud Platform (GCP)",
@@ -1885,9 +2429,20 @@
     "issue": "Apr 2020",
     "expire": "Jan 2023",
     "identifier": "YRHW4XPXPUE4",
-    "description": { "en": "", "tw": "" },
-    "official": "",
-    "verify": "https://www.coursera.org/account/accomplishments/specialization/certificate/YRHW4XPXPUE4",
+    "description": {
+      "en": [
+        "As a holder of the Cloud Engineering Professional Certificate, I have explored and deployed solution elements, including infrastructure components such as networks, systems, and application services, all using Google Cloud Platform.",
+        "Throughout this five-course accelerated Professional Certificate, which included modules like \"Google Cloud Platform Fundamentals: Core Infrastructure,\" \"Essential Google Cloud Infrastructure: Foundation,\" \"Essential Google Cloud Infrastructure: Core Services,\" and \"Elastic Google Cloud Infrastructure: Scaling and Automation,\" as well as dedicated preparation for the \"Google Cloud Associate Cloud Engineer Exam,\" I have successfully integrated my prior technical skills into practical expertise.",
+        "This comprehensive training has equipped me with the capabilities directly relevant for the job role of an Associate Cloud Engineer."
+      ],
+      "tw": [
+        "身為「Cloud Engineering Professional Certificate」的持證者，我已經能夠運用 Google Cloud Platform 來探索及部署各種解決方案，其中涵蓋了網路、系統及應用程式服務等基礎架構元件。",
+        "在這套包含五門課的密集專業認證課程中，我研習了「Google Cloud Platform Fundamentals: Core Infrastructure」、「Essential Google Cloud Infrastructure: Foundation」、「Essential Google Cloud Infrastructure: Core Services」以及「Elastic Google Cloud Infrastructure: Scaling and Automation」等核心模組，並完成了針對「Google Cloud Associate Cloud Engineer Exam」的應試準備。",
+        "透過這些訓練，我成功地將過去所學的技術知識，轉化為能實際應用的專業技能，這也讓我具備了擔任 Associate Cloud Engineer 所需的相關能力。"
+      ]
+    },
+    "official": "https://www.coursera.org/professional-certificates/cloud-engineering-gcp",
+    "verify": "https://www.coursera.org/account/accomplishments/professional-cert/YRHW4XPXPUE4",
     "skills": [
       "Cloud Engineering",
       "Google Cloud Platform (GCP)",
@@ -1918,8 +2473,19 @@
     "issue": "Mar 2020",
     "expire": "Jan 2023",
     "identifier": "FF97FBGQ3NFC",
-    "description": { "en": "", "tw": "" },
-    "official": "",
+    "description": {
+      "en": [
+        "As a holder of the DeepLearning.AI TensorFlow Developer Professional Certificate, I have learned to build AI applications using TensorFlow. I can build, train, and optimize deep neural networks, and I have gained hands-on experience with this in-demand deep learning framework.",
+        "My expertise extends to diving deep into Computer Vision, Natural Language Processing, and Time Series Analysis. I am proficient in applying best practices for TensorFlow, a popular open-source machine learning framework, particularly for training neural networks for computer vision applications. I can handle real-world image data and have explored strategies to prevent overfitting, such as augmentation and dropout.",
+        "Furthermore, I am capable of building natural language processing systems using TensorFlow. This includes applying Recurrent Neural Networks (RNNs), Gated Recurrent Units (GRUs), and Long Short-Term Memory units (LSTMs), training them with text repositories."
+      ],
+      "tw": [
+        "作為一名 DeepLearning.AI TensorFlow 開發者專業證書的持有者，我已學會運用 TensorFlow 開發 AI 應用。我能建構、訓練及優化深度神經網路，並在這個廣受歡迎的深度學習框架中累積了實戰經驗。",
+        "我的專業技能涵蓋深度探討電腦視覺、自然語言處理及時間序列分析。我熟悉 TensorFlow 這套流行的開源機器學習框架的最佳實務，尤其擅長運用它來訓練應用於電腦視覺的神經網路。我能夠處理真實世界的圖像資料，並已研究防止過度擬合的技巧，例如資料增強 (augmentation) 及 dropout。",
+        "此外，我還能運用 TensorFlow 建構自然語言處理系統。這包含應用循環神經網路 (Recurrent Neural Networks, RNNs)、閘控循環單元 (Gated Recurrent Units, GRUs) 和長短期記憶網路 (Long Short-Term Memory units, LSTMs)，並使用文本資料集來訓練這些模型。"
+      ]
+    },
+    "official": "https://www.coursera.org/professional-certificates/tensorflow-in-practice",
     "verify": "https://coursera.org/verify/professional-cert/FF97FBGQ3NFC",
     "skills": [
       "Machine Learning (ML)",
