@@ -6,6 +6,7 @@ import { getCollection, type CollectionEntry } from 'astro:content'
 import CertificationCard from '@components/CertificationCard.astro'
 import organizations from '@/certifications/organizations.json'
 import { Link } from '@components/ui/link'
+import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
 
 const translations = {
   en: {
@@ -94,36 +95,7 @@ const topBrands = [
         <Award className="size-6" />
         {t('viewAllCertifications')}
       </Link>
-      {
-        topBrands.map((name: string) => {
-          const slug = slugify(name)
-          const org = (organizations as any)[slug] || {}
-          return (
-            <Link
-              href={getRelativeLocaleUrl(currentLocale, `/certifications/organization/${slug}`)}
-              className={cn('size-11')}
-              variant={'outline'}
-            >
-              {org.icon && (
-                <div class="flex-shrink-0">
-                  <img
-                    src={org.icon.light}
-                    alt={org.icon.alt}
-                    class="size-6 object-contain dark:hidden"
-                    loading="lazy"
-                  />
-                  <img
-                    src={org.icon.dark}
-                    alt={org.icon.alt}
-                    class="hidden size-6 object-contain dark:block"
-                    loading="lazy"
-                  />
-                </div>
-              )}
-            </Link>
-          )
-        })
-      }
+      <CertificationOrganizationsFilter orgs={topBrands} size="lg" />
     </div>
   </div>
 </section>

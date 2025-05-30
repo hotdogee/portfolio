@@ -1,11 +1,14 @@
 ---
 import { getCollection, type CollectionEntry } from 'astro:content'
-import { locales, defaultLocale, slugify, useTranslations, type Locale } from '@lib/utils'
+import { locales, defaultLocale, slugify, useTranslations, type Locale, cn } from '@lib/utils'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import CertificationCard from '@components/CertificationCard.astro'
 import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
 import organizations from '@/certifications/organizations.json'
 import { translations as parentTranslations, orgs, certifications } from '../index.astro'
+import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
+import { Link } from '@components/ui/link'
+import { getRelativeLocaleUrl } from 'astro:i18n'
 
 export async function getStaticPaths() {
   const certifications = await getCollection('certifications')
@@ -67,7 +70,7 @@ const organizationCertifications = certifications.filter(
 <BaseLayout title={t('title')} description={t('description')}>
   <section class="md:py-2">
     <div class="container px-4 md:px-6">
-      <div class="animate-fade-in-up mx-auto max-w-3xl transition duration-500">
+      <div class="mx-auto max-w-3xl transition duration-500">
         <div class="mb-8 space-y-4 text-center">
           <div
             class="dark:bg-accent dark:text-accent-foreground bg-accent text-accent-foreground inline-flex items-center rounded-lg px-3 py-1 text-sm font-medium"
@@ -80,7 +83,21 @@ const organizationCertifications = certifications.filter(
           <p class="text-muted-foreground mb-12 md:text-xl">{pt('description')}</p>
         </div>
       </div>
-      <CertificationOrganizationsFilter orgs={orgs} class="mb-8" />
+      <div class:list={['mx-auto mb-8 space-y-6']}>
+        <div class="flex flex-wrap items-center justify-center gap-2">
+          <Link
+            href={getRelativeLocaleUrl(currentLocale, `/certifications/`)}
+            className={cn('h-10', {
+              'bg-card dark:bg-card ring-accent ring-2':
+                Astro.url.pathname.endsWith('/certifications'),
+            })}
+            variant={'outline'}
+          >
+            {pt('allOrganizations')}
+          </Link>
+          <CertificationOrganizationsFilter orgs={orgs} />
+        </div>
+      </div>
       {
         organizationCertifications.length > 0 ? (
           <div class="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8">

@@ -21,6 +21,7 @@ import CertificationCard from '@components/CertificationCard.astro'
 import organizationsJsonData from '@/certifications/organizations.json' // Renamed import
 import { Link } from '@components/ui/link'
 import { getRelativeLocaleUrl } from 'astro:i18n'
+import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
 
 // Ensure organizations is treated as Record<string, any>
 const organizations: Record<string, any> = organizationsJsonData
@@ -500,37 +501,7 @@ const topBrands = [
         </div>
 
         <div class="mt-8 flex flex-wrap justify-center gap-2">
-          {
-            topBrands.map((name: string) => {
-              const slug = slugify(name)
-              const org = (organizations as any)[slug] || {}
-              return (
-                <Link
-                  href={getRelativeLocaleUrl(currentLocale, `/certifications/organization/${slug}`)}
-                  className={cn('h-11')}
-                  variant={'outline'}
-                >
-                  {org.icon && (
-                    <div class="mr-1 flex-shrink-0">
-                      <img
-                        src={org.icon.light}
-                        alt={org.icon.alt}
-                        class="size-6 object-contain dark:hidden"
-                        loading="lazy"
-                      />
-                      <img
-                        src={org.icon.dark}
-                        alt={org.icon.alt}
-                        class="hidden size-6 object-contain dark:block"
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
-                  {name}
-                </Link>
-              )
-            })
-          }
+          <CertificationOrganizationsFilter orgs={topBrands} text={true} size="lg" />
           <div class="mt-2 flex flex-wrap justify-center gap-2">
             <Link
               href={getRelativeLocaleUrl(currentLocale, '/certifications')}
