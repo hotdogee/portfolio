@@ -650,22 +650,22 @@
   {
     "name": {
       "en": "Generative AI Art Design - Intermediate",
-      "tw": "生成式AI美術設計能力認證-中級"
+      "tw": "生成式AI美術設計能力認證 - 中級"
     },
     "organization": "Institute for Information Industry",
     "issue": "Jan 2025",
     "expire": "Jan 2027",
     "identifier": "RA03250122006",
     "description": {
-      "tw": [
-        "身為一名通過「生成式 AI 美術設計能力認證-中級」的認證持有者，我具備了對生成式 AI 的基本概念、應用領域、技術術語與運作原理的紮實理解。我能夠識別不同的大語言模型及各式 AIGC 圖文影音工具，並且了解人工智慧在各領域的應用潛力及其對社會經濟的影響。",
-        "在實際操作與應用方面，我擅長優化 Prompt，使生成的內容更精準地符合需求，並具備資料治理的基本概念，如資料前處理與解讀。我能熟練運用圖片與影片生成工具進行多樣化的創作，包括圖像合成、風格轉換、動畫製作及影片剪輯，更能產出符合美術設計原理（如構圖、燈光、透視）的素材，並具備除錯及優化整合的能力，例如使用 Photoshop 等美術編輯軟體進行後製，以應用於概念提案或商業完稿。",
-        "此外，我對於生成式 AI 的最新發展趨勢、其對就業市場和個人的衝擊，以及相關的倫理準則、法律法規（包含我國與國際規範、智財權議題）與隱私保護措施均有深入的認識。我了解如何利用網路資源自主學習新技能，並持續關注重要的產業活動與社群，以不斷精進在此領域的專業能力，確保在創新的同時，也能負責任地應對相關的道德與社會挑戰。"
-      ],
       "en": [
         "As a holder of the 'Generative AI Art Design - Intermediate', I possess a solid understanding of the fundamental concepts, application areas, technical terminology, and operating principles of Generative AI. I can identify various large language models and a range of AIGC tools for image, text, audio, and video creation, and I appreciate the potential of artificial intelligence across different sectors and its socio-economic impact.",
         "In practical application, I am skilled at optimizing `Prompt` to ensure generated content precisely meets requirements and understand basic data governance principles, including data preprocessing and interpretation. I am proficient in using image and video generation tools for diverse creative tasks such as image synthesis, style transfer, animation production, and video editing. Crucially, I can produce assets that adhere to core art design principles (like composition, lighting, and perspective) and have the ability to debug, refine, and integrate these materials, for instance, by using editing software like `Photoshop` for post-production to prepare them for concept proposals or final commercial projects.",
         "Furthermore, I have an in-depth awareness of the latest trends in Generative AI, its impact on the job market and individuals, and the associated ethical guidelines, legal frameworks (including national and international regulations and intellectual property considerations), and privacy protection measures. I know how to leverage online resources for autonomous learning of new skills and actively follow key industry events and communities to continually enhance my professional capabilities in this field, ensuring I can innovate responsibly while addressing related ethical and societal challenges."
+      ],
+      "tw": [
+        "身為資策會「生成式 AI 美術設計能力認證 - 中級」的持有者，我具備了對生成式 AI 的基本概念、應用領域、技術術語與運作原理的紮實理解。我能夠識別不同的大語言模型及各式 AIGC 圖文影音工具，並且了解人工智慧在各領域的應用潛力及其對社會經濟的影響。",
+        "在實際操作與應用方面，我擅長優化 Prompt，使生成的內容更精準地符合需求，並具備資料治理的基本概念，如資料前處理與解讀。我能熟練運用圖片與影片生成工具進行多樣化的創作，包括圖像合成、風格轉換、動畫製作及影片剪輯，更能產出符合美術設計原理（如構圖、燈光、透視）的素材，並具備除錯及優化整合的能力，例如使用 Photoshop 等美術編輯軟體進行後製，以應用於概念提案或商業完稿。",
+        "此外，我對於生成式 AI 的最新發展趨勢、其對就業市場和個人的衝擊，以及相關的倫理準則、法律法規（包含我國與國際規範、智財權議題）與隱私保護措施均有深入的認識。我了解如何利用網路資源自主學習新技能，並持續關注重要的產業活動與社群，以不斷精進在此領域的專業能力，確保在創新的同時，也能負責任地應對相關的道德與社會挑戰。"
       ]
     },
     "official": "https://www.iiiedu.org.tw/certifications/exam/10",
@@ -682,14 +682,14 @@
       "url": "/src/certifications/images/institute-for-information-industry-certified-generative-ai-art-design-level-2-2025-badge.png",
       "alt": {
         "en": "Generative AI Art Design Certification Level 2 Badge",
-        "tw": "財團法人資訊工業策進會「生成式AI美術設計能力認證-中級」徽章"
+        "tw": "財團法人資訊工業策進會「生成式 AI 美術設計能力認證 - 中級」徽章"
       }
     },
     "certificate": {
       "url": "/src/certifications/images/institute-for-information-industry-certified-generative-ai-art-design-level-2-2025-certificate.png",
       "alt": {
         "en": "Generative AI Art Design Certification Level 2 Certificate",
-        "tw": "財團法人資訊工業策進會「生成式AI美術設計能力認證-中級」證書"
+        "tw": "財團法人資訊工業策進會「生成式 AI 美術設計能力認證 - 中級」證書"
       }
     }
   },
@@ -1150,7 +1150,7 @@
   {
     "name": {
       "en": "Generative AI",
-      "tw": "生成式AI能力認證"
+      "tw": "生成式 AI 能力認證"
     },
     "organization": "Institute for Information Industry",
     "issue": "Nov 2024",
@@ -1162,7 +1162,7 @@
         "Regarding application skills, I am adept at operating a wide range of Generative AI tools for generating and editing text, images, presentations, audio, and video. My capabilities extend to code generation, website development, data analysis, and chatbot creation. I can leverage these tools for diverse tasks such as content creation, design support, deriving data-driven insights, and automating processes. Crucially, I stay informed about the latest Generative AI development trends and am equipped with methods for continuous self-learning to acquire new skills. Equally important, I have a profound understanding of the ethical and legal considerations surrounding Generative AI, including its societal and individual impacts, relevant ethical guidelines and legal frameworks, and the critical importance of privacy protection and data security. This ensures I can apply AI technology responsibly, upholding moral and social duties."
       ],
       "tw": [
-        "身為財團法人資訊工業策進會〔生成式AI能力認證〕的持證者，我具備了對生成式 AI 的全面理解。從其基本概念、發展歷史、技術潛力，到在醫療、金融、教育等各領域的實際應用及其社會經濟影響，我都有深入的認識。我熟悉神經網路、語言模型、多模態等關鍵技術術語，並理解生成式 AI 的運作原理以及如何運用各種大型語言模型和  AIGC  圖文影音工具。此外，我還強化了  Prompt  優化能力，懂得如何設計有效的提示詞以獲得更精準的生成內容，並掌握了資料治理的相關知識，包括資料前處理、清理與轉換等重要環節。",
+        "身為資策會「生成式 AI 能力認證」的持有者，我具備了對生成式 AI 的全面理解。從其基本概念、發展歷史、技術潛力，到在醫療、金融、教育等各領域的實際應用及其社會經濟影響，我都有深入的認識。我熟悉神經網路、語言模型、多模態等關鍵技術術語，並理解生成式 AI 的運作原理以及如何運用各種大型語言模型和 AIGC 圖文影音工具。此外，我還強化了 Prompt 優化能力，懂得如何設計有效的提示詞以獲得更精準的生成內容，並掌握了資料治理的相關知識，包括資料前處理、清理與轉換等重要環節。",
         "在應用技能方面，我能夠熟練操作多種生成式 AI 工具，涵蓋文本、圖像、簡報、聲音、影片的生成與編輯，甚至程式碼生成、網站建置及數據分析和聊天機器人開發。我能夠運用這些工具進行內容創作、設計輔助、數據洞察和自動化流程。更重要的是，我了解生成式 AI 最新的發展趨勢，並具備自主學習新技能的方法。同時，我也深刻理解生成式 AI 所涉及的倫理法律議題，包括其對社會和個人的影響、相關倫理準則與法律規範，以及隱私保護和資料安全的重要性，確保在應用 AI 技術時能堅守道德和社會責任。"
       ]
     },
@@ -1179,14 +1179,14 @@
       "url": "/src/certifications/images/institute-for-information-industry-certified-generative-ai-2025-badge.png",
       "alt": {
         "en": "Institute for Information Industry Generative AI Certification Badge",
-        "tw": "財團法人資訊工業策進會「生成式AI能力認證」徽章"
+        "tw": "財團法人資訊工業策進會「生成式 AI 能力認證」徽章"
       }
     },
     "certificate": {
       "url": "/src/certifications/images/institute-for-information-industry-certified-generative-ai-2025-certificate.png",
       "alt": {
         "en": "Institute for Information Industry Generative AI Certification Certificate",
-        "tw": "財團法人資訊工業策進會「生成式AI能力認證」證書"
+        "tw": "財團法人資訊工業策進會「生成式 AI 能力認證」證書"
       }
     }
   },
