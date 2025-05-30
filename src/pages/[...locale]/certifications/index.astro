@@ -1,12 +1,13 @@
 ---
-import { getCollection, type CollectionEntry } from 'astro:content'
-export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
-import { cn, datesFromChanges, defaultLocale, getLocaleSlugFromId } from '@lib/utils'
-import BaseLayout from '@layouts/BaseLayout.astro'
 import CertificationCard from '@components/CertificationCard.astro'
 import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
 import { Link } from '@components/ui/link'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { cn, datesFromChanges, defaultLocale, getLocaleSlugFromId } from '@lib/utils'
+import { getCollection, type CollectionEntry } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
+
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
 
 export const translations = {
   en: {
@@ -20,6 +21,7 @@ export const translations = {
     noCertificationsFound: 'No certifications found for this language.',
     viewCertificationDetailsFallback: 'View certification details.',
     allOrganizations: 'All Organizations',
+    viewAllCertifications: 'All Certifications',
   },
   tw: {
     title: '國際認證 | 林翰',
@@ -32,6 +34,7 @@ export const translations = {
     noCertificationsFound: '目前沒有此語言的認證。',
     viewCertificationDetailsFallback: '查看認證詳情。',
     allOrganizations: '所有機構',
+    viewAllCertifications: '所有國際認證',
   },
 }
 const { locale } = Astro.params

@@ -1,27 +1,30 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro'
+import type { CollectionEntry } from 'astro:content'
+import { getCollection } from 'astro:content'
+import { getRelativeLocaleUrl } from 'astro:i18n'
 import {
+  Award,
   Brain,
   Cloud,
   Code,
   Cpu,
   Dna,
-  Award,
   GraduationCap,
   Lightbulb,
   ShieldCheck,
   WandSparkles,
 } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@components/ui/card'
-export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
-import { cn, defaultLocale, slugify } from '@lib/utils'
-import { getCollection, type CollectionEntry } from 'astro:content'
-import { certifications, orgCerts } from './certifications/index.astro'
-import CertificationCard from '@components/CertificationCard.astro'
 import organizationsJsonData from '@/certifications/organizations.json' // Renamed import
-import { Link } from '@components/ui/link'
-import { getRelativeLocaleUrl } from 'astro:i18n'
+import CertificationCard from '@components/CertificationCard.astro'
 import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@components/ui/card'
+import { Link } from '@components/ui/link'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { brands } from '@lib/data'
+import { cn, defaultLocale, slugify } from '@lib/utils'
+import { certifications, orgCerts } from './certifications/index.astro'
+
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
 
 // Ensure organizations is treated as Record<string, any>
 const organizations: Record<string, any> = organizationsJsonData
@@ -337,19 +340,6 @@ const showcaseOrgs = ['Google', 'Microsoft', 'AWS', 'MongoDB', 'GitHub']
 const otherCerts = certifications.filter((certification: CollectionEntry<'certifications'>) => {
   return !showcaseOrgs.includes(certification.data.organization)
 })
-
-const topBrands = [
-  'Google',
-  'Microsoft',
-  'AWS',
-  'Meta',
-  'MongoDB',
-  'GitHub',
-  'NVIDIA',
-  'LinkedIn',
-  'Oracle',
-  'Salesforce',
-]
 ---
 
 <BaseLayout title={t('title') as string} description={t('description') as string}>
@@ -501,7 +491,7 @@ const topBrands = [
         </div>
 
         <div class="mt-8 flex flex-wrap justify-center gap-2">
-          <CertificationOrganizationsFilter orgs={topBrands} text={true} size="lg" />
+          <CertificationOrganizationsFilter orgs={brands} text={true} size="lg" />
           <div class="mt-2 flex flex-wrap justify-center gap-2">
             <Link
               href={getRelativeLocaleUrl(currentLocale, '/certifications')}

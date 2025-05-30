@@ -1,0 +1,131 @@
+---
+import type { Locale } from '@lib/utils'
+import { getCollection } from 'astro:content'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { Award } from 'lucide-react'
+import CertificationCard from '@components/CertificationCard.astro'
+import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
+import { Link } from '@components/ui/link'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { brands } from '@lib/data'
+import { defaultLocale, locales, slugify, useTranslations } from '@lib/utils'
+import {
+  certifications,
+  orgs,
+  translations as parentTranslations,
+} from '@pages/certifications/index.astro'
+
+export async function getStaticPaths() {
+  const certifications = await getCollection('certifications')
+  if (!certifications || certifications.length === 0) {
+    return []
+  }
+  const skills = [
+    ...new Set(certifications.flatMap((certification) => certification.data.skills || [])),
+  ]
+  // Create paths for all locales and skills
+  const paths = skills.flatMap((skill) => {
+    return [undefined, ...locales].map((locale) => {
+      return {
+        params: {
+          locale,
+          skill: slugify(skill),
+        },
+      }
+    })
+  })
+  return paths
+}
+
+const { locale, skill } = Astro.params
+const currentLocale = (locale || defaultLocale) as Locale
+const tc = useTranslations(currentLocale, 'skills')
+const skillSlug = skill ? decodeURIComponent(skill) : ''
+
+const pt = (key: keyof (typeof parentTranslations)[typeof currentLocale]) => {
+  return parentTranslations[currentLocale]?.[key] || parentTranslations['en']?.[key]
+}
+const translations = {
+  en: {
+    title: `${tc(skillSlug)} | Certifications | Han Lin`,
+    pageTitleBadge: 'Trusted Certifications',
+    pageTitle: `Validated Proficiency in ${tc(skillSlug)}`,
+    description: `Below is a comprehensive list of my industry-recognized certifications that validate strong skills in ${tc(skillSlug)}. These credentials demonstrate my capability to effectively apply ${tc(skillSlug)} knowledge to solve complex challenges and deliver impactful solutions.`,
+    noCertificationsFound: 'No certifications with this skill.',
+  },
+  tw: {
+    title: `${tc(skillSlug)} | 國際認證 | 林翰`,
+    pageTitleBadge: '國際認證',
+    pageTitle: `${tc(skillSlug)} 專業能力驗證`,
+    description: `以下為本人所持有、經業界認可的${tc(skillSlug)}專業證照完整列表，足以驗證本人在此領域的卓越技能。這些資歷證明本人有能力有效運用${tc(skillSlug)}知識，克服複雜挑戰並提出具體有效的解決方案。`,
+    noCertificationsFound: '目前沒有相關技能的專案。',
+  },
+}
+const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
+  return translations[currentLocale]?.[key] || translations['en']?.[key]
+}
+
+// Extract skills
+const skills = [
+  ...new Set(certifications.flatMap((certification) => certification.data.skills || [])),
+].map((skill) => ({
+  name: skill,
+  count: certifications.filter((certification) => certification.data.skills?.includes(skill))
+    .length,
+}))
+
+// Filter certifications by skill
+const skillCertifications = certifications.filter(
+  (certification) =>
+    certification.data.skills &&
+    certification.data.skills.map((s) => slugify(s)).includes(skillSlug)
+)
+---
+
+<BaseLayout title={t('title')} description={t('description')}>
+  <section class="md:py-2">
+    <div class="container px-4 md:px-6">
+      <div class="animate-fade-in-up mx-auto max-w-3xl transition duration-500">
+        <div class="mb-8 space-y-4 text-center">
+          <a
+            href={getRelativeLocaleUrl(currentLocale, '/certifications')}
+            class="dark:bg-accent dark:text-accent-foreground bg-accent text-accent-foreground inline-flex items-center rounded-lg px-3 py-1 text-sm font-medium"
+          >
+            {t('pageTitleBadge')}
+          </a>
+          <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            {t('pageTitle')}
+          </h1>
+          <p class="text-muted-foreground mb-12 md:text-xl">{t('description')}</p>
+        </div>
+      </div>
+      {
+        skillCertifications.length > 0 ? (
+          <div class="grid grid-cols-3 gap-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6">
+            {skillCertifications.map((certification, index) => (
+              <CertificationCard certification={certification} index={index} />
+            ))}
+          </div>
+        ) : (
+          <p class="text-muted-foreground text-center">{t('noCertificationsFound')}</p>
+        )
+      }
+    </div>
+
+    <div class="mt-8 flex flex-wrap justify-center gap-2">
+      <CertificationOrganizationsFilter orgs={brands} text={true} size="lg" />
+      <div class="mt-2 flex flex-wrap justify-center gap-2">
+        <Link
+          href={getRelativeLocaleUrl(currentLocale, '/certifications')}
+          variant={'outline'}
+          className="flex h-11 items-center"
+        >
+          <Award className="size-6" />
+          {pt('viewAllCertifications')}
+        </Link>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style></style>
