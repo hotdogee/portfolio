@@ -1,11 +1,13 @@
 ---
+import type { CollectionEntry } from 'astro:content'
+import { getCollection } from 'astro:content'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { ListChecks, Star } from 'lucide-react'
 import CertificationCard from '@components/CertificationCard.astro'
 import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
 import { Link } from '@components/ui/link'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import { cn, datesFromChanges, defaultLocale, getLocaleSlugFromId } from '@lib/utils'
-import { getCollection, type CollectionEntry } from 'astro:content'
-import { getRelativeLocaleUrl } from 'astro:i18n'
 
 export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
 
@@ -22,6 +24,7 @@ export const translations = {
     viewCertificationDetailsFallback: 'View certification details.',
     allOrganizations: 'All Organizations',
     viewAllCertifications: 'All Certifications',
+    viewAllSkills: 'All Certified Skills',
   },
   tw: {
     title: '國際認證 | 林翰',
@@ -35,6 +38,7 @@ export const translations = {
     viewCertificationDetailsFallback: '查看認證詳情。',
     allOrganizations: '所有機構',
     viewAllCertifications: '所有國際認證',
+    viewAllSkills: '所有認證技能',
   },
 }
 const { locale } = Astro.params
@@ -118,6 +122,19 @@ export const orgs = Object.keys(orgCerts).sort((a, b) => {
           <p class="text-muted-foreground text-center">{t('noCertificationsFound')}</p>
         )
       }
+
+      <div class="mt-8 flex flex-wrap justify-center gap-2">
+        <div class="mt-2 flex flex-wrap justify-center gap-2">
+          <Link
+            href={getRelativeLocaleUrl(currentLocale, '/certifications/skill')}
+            variant={'outline'}
+            className="flex h-11 items-center"
+          >
+            <Star className="size-6" />
+            {t('viewAllSkills')}
+          </Link>
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>
