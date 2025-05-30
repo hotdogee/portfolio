@@ -8,9 +8,29 @@ const config = {
   organizeImportsSkipDestructiveCodeActions: true,
   plugins: [
     'prettier-plugin-astro',
-    'prettier-plugin-organize-imports',
+    // 'prettier-plugin-organize-imports',
+    '@ianvs/prettier-plugin-sort-imports',
     'prettier-plugin-tailwindcss', // MUST come last
+    // 'prettier-plugin-astro-organize-imports',
   ],
+  importOrder: [
+    '<TYPES>^(node:)',
+    '<TYPES>',
+    '<TYPES>^[.]',
+    '<BUILTIN_MODULES>',
+    '<THIRD_PARTY_MODULES>',
+    '^(@components/|@layouts/|@assets/|@lib/|@pages/|@/)(.*)$',
+    '^[.]',
+  ],
+  // astroOrganizeImportsMode: 'SortAndCombine',
+  // overrides: [
+  //   {
+  //     files: '*.astro',
+  //     options: {
+  //       parser: 'astro',
+  //     },
+  //   },
+  // ],
 }
 
 export default config
