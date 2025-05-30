@@ -1,8 +1,11 @@
 #!/usr/bin/env node
+// Use triple-dash to pass the -j arg to the script on PowerShell
+// npm run extract-certs skills --- -j
 
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { slugify } from '../src/lib/utils'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -34,7 +37,7 @@ ${colors.bright}Fields:${colors.reset}
 ${colors.bright}Options:${colors.reset}
   ${colors.yellow}-h, --help${colors.reset}    Show this help message
   ${colors.yellow}-c, --count${colors.reset}   Show count of unique items
-  ${colors.yellow}-j, --json${colors.reset}    Output as JSON format
+  ${colors.yellow}-j, --json${colors.reset}    Output as JSON format for i18n
 
 ${colors.bright}Examples:${colors.reset}
   node extract-cert-data.js name
@@ -94,7 +97,16 @@ function extractData(field, options = {}) {
 
     // Output results
     if (options.json) {
-      console.log(JSON.stringify(sortedData, null, 2))
+      console.log(
+        JSON.stringify(
+          sortedData.reduce((acc, item) => {
+            acc[slugify(item)] = item
+            return acc
+          }, {}),
+          null,
+          2
+        )
+      )
     } else {
       console.log(
         `${colors.bright}${colors.cyan}Unique ${field}s (${sortedData.length} total):${colors.reset}\n`
@@ -128,6 +140,7 @@ function extractData(field, options = {}) {
 
 function main() {
   const args = process.argv.slice(2)
+  console.log('args', args)
 
   if (args.length === 0 || args.includes('-h') || args.includes('--help')) {
     showHelp()
@@ -155,6 +168,7 @@ function main() {
 
 // Run the CLI tool if this file is executed directly
 if (process.argv[1] === __filename) {
+  console.log('process.argv', process.argv)
   main()
 }
 

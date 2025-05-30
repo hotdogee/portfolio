@@ -6,6 +6,7 @@ import { toString } from 'mdast-util-to-string'
 import getReadingTime from 'reading-time'
 import { twMerge } from 'tailwind-merge'
 import { categories } from './i18n/categories'
+import { skills } from './i18n/skills'
 import { tags } from './i18n/tags'
 import { ui } from './i18n/ui'
 export const LOCALE_COOKIE = 'locale' as const
@@ -18,7 +19,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export type Locale = (typeof locales)[number]
 
-export type TranslationStore = 'ui' | 'categories' | 'tags'
+export type TranslationStore = 'ui' | 'categories' | 'tags' | 'skills'
 export type UiKeys = keyof typeof ui.en
 export type CategoryKeys = keyof typeof categories.en
 export type TagKeys = keyof typeof tags.en
@@ -51,6 +52,7 @@ export const useTranslations = (locale: string | undefined, store: TranslationSt
     ui,
     categories,
     tags,
+    skills,
   }
 
   return (key: string) => {

@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "extract-certs": "node util/extract-cert-data.js",
+    "extract-certs": "tsx util/extract-cert-data.js",
     "slugify": "tsx util/slugify-cli.js"
   },
   "dependencies": {
