@@ -2,12 +2,12 @@
 import type { CollectionEntry } from 'astro:content'
 import { getCollection } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import { ListChecks, Star } from 'lucide-react'
+import { Star } from 'lucide-react'
 import CertificationCard from '@components/CertificationCard.astro'
 import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
 import { Link } from '@components/ui/link'
 import BaseLayout from '@layouts/BaseLayout.astro'
-import { cn, datesFromChanges, defaultLocale, getLocaleSlugFromId } from '@lib/utils'
+import { cn, defaultLocale } from '@lib/utils'
 
 export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
 
