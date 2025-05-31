@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
   console.log('Browser supports Navigation API and CSS View Transition API')
 })
 
-// 1. Certification Card List Transistions
-//    - Set `view-transistion-name` on `id`
+// 1. Certification Card List Transitions
+//    - Set `view-transition-name` on `id`
 //      - `certification-${id}`
 //    - Paths:
 //      - when `from` and `to` is one of these
@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', (e) => {
 //        - http://localhost:4321/{locale}/certifications/organization/{organization}
 //        - http://localhost:4321/{locale}/expertise
 //        - http://localhost:4321/{locale}
-// 2. Certification List Detail Transistions
-//    - Set `view-transistion-name` on `id`
+// 2. Certification List Detail Transitions
+//    - Set `view-transition-name` on `id`
 //      - `badge-${id}`
 //      - `organization-${id}`
 //      - `name-${id}`
@@ -175,6 +175,8 @@ const setupNewCertificationListToDetailTransition = (e, slug) => {
 const setTemporaryViewTransitionNames = async (elements) => {
   for (const el of elements) {
     el.style.viewTransitionName = el.id
+    // remove the hidden class
+    el.classList.remove('hidden')
   }
 }
 

@@ -1,12 +1,14 @@
 ---
+import type { Locale } from '@lib/utils'
+import type { CollectionEntry } from 'astro:content'
+import { getCollection } from 'astro:content'
+import { getRelativeLocaleUrl } from 'astro:i18n'
 import organizations from '@/certifications/organizations.json'
 import CertificationCard from '@components/CertificationCard.astro'
 import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
 import { Link } from '@components/ui/link'
 import BaseLayout from '@layouts/BaseLayout.astro'
-import { cn, defaultLocale, locales, slugify, useTranslations, type Locale } from '@lib/utils'
-import { getCollection, type CollectionEntry } from 'astro:content'
-import { getRelativeLocaleUrl } from 'astro:i18n'
+import { cn, defaultLocale, locales, slugify, useTranslations } from '@lib/utils'
 import { certifications, orgs, translations as parentTranslations } from '../index.astro'
 
 export async function getStaticPaths() {
@@ -64,6 +66,12 @@ const organizationCertifications = certifications.filter(
   (certification) =>
     certification.data.organization && slugify(certification.data.organization) === organizationSlug
 )
+// other certifications that are not from this organization
+// used for view transitions
+const otherCertifications = certifications.filter(
+  (certification) =>
+    certification.data.organization && slugify(certification.data.organization) !== organizationSlug
+)
 ---
 
 <BaseLayout title={t('title')} description={t('description')}>
@@ -103,6 +111,14 @@ const organizationCertifications = certifications.filter(
             {organizationCertifications.map((certification, index) => (
               <CertificationCard certification={certification} index={index} />
             ))}
+            {otherCertifications.length > 0 &&
+              otherCertifications.map((certification, index) => (
+                <CertificationCard
+                  certification={certification}
+                  index={index}
+                  class="hidden opacity-0"
+                />
+              ))}
           </div>
         ) : (
           <p class="text-muted-foreground text-center">{t('noCertificationsFound')}</p>

@@ -5,7 +5,7 @@ import { Award, ShieldCheck } from 'lucide-react'
 import organizations from '@/certifications/organizations.json'
 import { Card, CardFooter, CardHeader, CardTitle } from '@components/ui/card'
 import { Link } from '@components/ui/link'
-import { defaultLocale, getLocaleSlugFromId, slugify } from '@lib/utils'
+import { cn, defaultLocale, getLocaleSlugFromId, slugify } from '@lib/utils'
 
 const translations = {
   en: {
@@ -28,8 +28,9 @@ const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
 interface Props {
   certification: CollectionEntry<'certifications'>
   index?: number
+  class?: string
 }
-const { certification, index = 0 } = Astro.props as Props
+const { certification, index = 0, class: className } = Astro.props as Props
 const { id, data } = certification
 const { slug } = getLocaleSlugFromId(id)
 const certificationUrl = getRelativeLocaleUrl(currentLocale, `/certifications/${slug}`)
@@ -37,87 +38,80 @@ const { name, organization, issue, badge, verify } = data
 const org = (organizations as Record<string, any>)?.[slugify(organization)]
 ---
 
-<!-- <div
-  class="opacity-0"
-  style={`animation: fade-in-up 0.5s ease-in ${(0.02 * (index + 1)).toFixed(1)}s forwards;`}
-> -->
-<div>
-  <Card
-    id={`certification-${id}`}
-    className="flex h-full flex-col gap-0 overflow-hidden pt-0 pb-4 transition-shadow hover:shadow-md"
-  >
-    <a href={certificationUrl}>
-      <div class="relative aspect-square w-full overflow-hidden p-3">
-        <img
-          src={badge?.url || '/placeholder.svg'}
-          alt={badge?.alt[currentLocale] || 'Badge'}
-          class="h-full w-full object-cover transition-transform hover:scale-105"
-          id={`badge-${id}`}
-          loading="lazy"
-        />
-      </div>
+<Card
+  id={`certification-${id}`}
+  className={cn(
+    'flex h-full flex-col gap-0 overflow-hidden pt-0 pb-4 transition-shadow hover:shadow-md',
+    className
+  )}
+>
+  <a href={certificationUrl}>
+    <div class="relative aspect-square w-full overflow-hidden p-3">
+      <img
+        src={badge?.url || '/placeholder.svg'}
+        alt={badge?.alt[currentLocale] || 'Badge'}
+        class="h-full w-full object-cover transition-transform hover:scale-105"
+        id={`badge-${id}`}
+        loading="lazy"
+      />
+    </div>
+  </a>
+  <CardHeader className="flex-grow px-4">
+    <div class="flex items-center" id={`organization-${id}`} }>
+      {
+        org?.icon && (
+          <div class="mr-1.5 flex-shrink-0">
+            <img
+              src={org.icon.light}
+              alt={org.icon.alt}
+              class="size-5 object-contain dark:hidden"
+              loading="lazy"
+            />
+            <img
+              src={org.icon.dark}
+              alt={org.icon.alt}
+              class="hidden size-5 object-contain dark:block"
+              loading="lazy"
+            />
+          </div>
+        )
+      }
+      <CardTitle className="line-clamp-1 text-xs leading-3.5 font-normal">{organization}</CardTitle>
+    </div>
+    <a href={certificationUrl} id={`name-${id}`}>
+      <CardTitle className="mb-1 line-clamp-2 text-xs leading-3.5 font-normal">{name.en}</CardTitle>
     </a>
-    <CardHeader className="flex-grow px-4">
-      <div class="flex items-center" id={`organization-${id}`} }>
+  </CardHeader>
+  <a href={certificationUrl}>
+    <CardFooter className="text-muted-foreground px-4 text-xs">
+      <div class="flex flex-wrap items-center gap-4">
         {
-          org?.icon && (
-            <div class="mr-1.5 flex-shrink-0">
-              <img
-                src={org.icon.light}
-                alt={org.icon.alt}
-                class="size-5 object-contain dark:hidden"
-                loading="lazy"
-              />
-              <img
-                src={org.icon.dark}
-                alt={org.icon.alt}
-                class="hidden size-5 object-contain dark:block"
-                loading="lazy"
-              />
+          issue && (
+            <div class="flex items-center" id={`issue-${id}`}>
+              <Award className="mr-1 h-3 w-3" />
+              <span>{issue}</span>
             </div>
           )
         }
-        <CardTitle className="line-clamp-1 text-xs leading-3.5 font-normal"
-          >{organization}</CardTitle
-        >
       </div>
-      <a href={certificationUrl} id={`name-${id}`}>
-        <CardTitle className="mb-1 line-clamp-2 text-xs leading-3.5 font-normal"
-          >{name.en}</CardTitle
+    </CardFooter>
+  </a>
+  {
+    verify && (
+      <div class="px-4 pt-2 pb-0" id={`verify-${id}`}>
+        <Link
+          href={verify}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="h-8 w-full"
+          variant={'outline'}
         >
-      </a>
-    </CardHeader>
-    <a href={certificationUrl}>
-      <CardFooter className="text-muted-foreground px-4 text-xs">
-        <div class="flex flex-wrap items-center gap-4">
-          {
-            issue && (
-              <div class="flex items-center" id={`issue-${id}`}>
-                <Award className="mr-1 h-3 w-3" />
-                <span>{issue}</span>
-              </div>
-            )
-          }
-        </div>
-      </CardFooter>
-    </a>
-    {
-      verify && (
-        <div class="px-4 pt-2 pb-0" id={`verify-${id}`}>
-          <Link
-            href={verify}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="h-8 w-full"
-            variant={'outline'}
-          >
-            <ShieldCheck className="mr-0 h-4 w-4" />
-            {t('verify')}
-          </Link>
-        </div>
-      )
-    }
-  </Card>
-</div>
+          <ShieldCheck className="mr-0 h-4 w-4" />
+          {t('verify')}
+        </Link>
+      </div>
+    )
+  }
+</Card>
 
 <style></style>
