@@ -111,7 +111,7 @@ const localizedDescription = description[currentLocale].length
               src={badge?.url || '/placeholder.svg'}
               alt={badge?.alt[currentLocale] || 'Badge'}
               class="h-full w-full object-cover transition-transform hover:scale-105"
-              style={`view-transition-name: badge-${id};`}
+              id={`badge-${id}`}
               loading="lazy"
             />
           </div>
@@ -132,10 +132,7 @@ const localizedDescription = description[currentLocale].length
             }
             {
               verify && (
-                <div
-                  class="inline-flex flex-1 items-center"
-                  style={`view-transition-name: verify-${id};`}
-                >
+                <div class="inline-flex flex-1 items-center" id={`verify-${id}`}>
                   <Link
                     href={verify}
                     target="_blank"
@@ -159,7 +156,7 @@ const localizedDescription = description[currentLocale].length
                   <a
                     href={orgLink}
                     class="mr-1.5 flex-shrink-0 transition-transform hover:scale-105"
-                    style={`view-transition-name: organization-${id};`}
+                    id={`organization-${id}`}
                   >
                     <img
                       src={org.logo.light}
@@ -177,16 +174,13 @@ const localizedDescription = description[currentLocale].length
                 )
               }
             </div>
-            <h1
-              class="w-fit text-3xl font-bold tracking-tighter sm:text-4xl"
-              style={`view-transition-name: name-${id};`}
-            >
+            <h1 class="w-fit text-3xl font-bold tracking-tighter sm:text-4xl" id={`name-${id}`}>
               {name.en}
             </h1>
             <div class="text-muted-foreground mb-6 flex flex-wrap items-center gap-4">
               {
                 issue && (
-                  <div class="flex items-center" style={`view-transition-name: issue-${id};`}>
+                  <div class="flex items-center" id={`issue-${id}`}>
                     <Award className="mr-1 h-4 w-4" />
                     <span>{issue}</span>
                   </div>
@@ -211,10 +205,7 @@ const localizedDescription = description[currentLocale].length
             }
             {
               verify && (
-                <div
-                  class="inline-flex flex-1 items-center"
-                  style={`view-transition-name: verify-${id};`}
-                >
+                <div class="inline-flex flex-1 items-center" id={`verify-${id}`}>
                   <Link
                     href={verify}
                     target="_blank"

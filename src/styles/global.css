@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
+@import './transition.css';
 @plugin '@tailwindcss/typography';
 
 /* Default Tailwind breakpoints

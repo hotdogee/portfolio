@@ -1,6 +1,7 @@
 import type { GetStaticPaths, InferGetStaticParamsType, InferGetStaticPropsType } from 'astro'
 import type { CollectionEntry, InferEntrySchema } from 'astro:content'
-import { clsx, type ClassValue } from 'clsx'
+import type { ClassValue } from 'clsx'
+import { clsx } from 'clsx'
 import { fromMarkdown } from 'mdast-util-from-markdown'
 import { toString } from 'mdast-util-to-string'
 import getReadingTime from 'reading-time'
@@ -9,6 +10,7 @@ import { categories } from './i18n/categories'
 import { skills } from './i18n/skills'
 import { tags } from './i18n/tags'
 import { ui } from './i18n/ui'
+
 export const LOCALE_COOKIE = 'locale' as const
 export const locales = ['en', 'tw'] as const
 export const defaultLocale = locales[0]
@@ -31,6 +33,15 @@ export const getLocaleSlugFromId = (id: string) => {
     return { locale: defaultLocale, slug: id }
   }
   return { locale, slug: id.slice(i + 1) }
+}
+
+export const separateLocaleFromPathname = (pathname: string) => {
+  for (const locale of locales) {
+    if ((pathname + '/').slice(0, 4) === `/${locale}/`) {
+      return { locale, pathname: pathname.slice(3) || '/' }
+    }
+  }
+  return { locale: defaultLocale, pathname: pathname || '/' }
 }
 
 export const getCurrentLocale = (locale: string | undefined) => {

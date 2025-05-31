@@ -1,13 +1,14 @@
 ---
 import { Image } from 'astro:assets'
-import profile from '@assets/profile.jpg'
-import { Link } from '@components/ui/link'
-import { Button } from '@components/ui/button'
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import { Menu, X, Search } from 'lucide-react'
-import ThemeToggle from './ThemeToggle.astro'
+import { Menu, Search, X } from 'lucide-react'
+import profile from '@assets/profile.jpg'
+import { Button } from '@components/ui/button'
+import { Link } from '@components/ui/link'
+import { defaultLocale, useTranslations } from '@lib/utils'
 import LanguageSwitcher from './LanguageSwitcher.astro'
-import { useTranslations, defaultLocale } from '@lib/utils'
+import ThemeToggle from './ThemeToggle.astro'
+
 const { locale } = Astro.params
 const currentLocale = locale ?? defaultLocale
 const t = useTranslations(locale)
@@ -36,6 +37,7 @@ const { showCta = false } = Astro.props as Props
   <div class="container flex h-16 items-center justify-between border-b">
     <div class="flex items-center gap-2 transition-transform hover:scale-110">
       <a
+        transition:persist
         href={getRelativeLocaleUrl(currentLocale, undefined)}
         class:list={[
           'relative flex size-12 items-center justify-center rounded-full',
@@ -46,12 +48,7 @@ const { showCta = false } = Astro.props as Props
         ]}
         style={`view-transition-name: nav-0;`}
       >
-        <Image
-          transition:persist
-          src={profile}
-          class="size-10 rounded-full"
-          alt="Profile Picture"
-        />
+        <Image src={profile} class="size-10 rounded-full" alt="Profile Picture" />
       </a>
       <a
         href={getRelativeLocaleUrl(currentLocale, undefined)}

@@ -1,10 +1,10 @@
 ---
-import { ClientRouter } from 'astro:transitions'
 import { Font } from 'astro:assets'
-import Header from '../components/Header.astro'
+import { ClientRouter } from 'astro:transitions'
 import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
 import '../styles/global.css'
-import { useTranslations, getLang } from '@lib/utils'
+import { getLang, useTranslations } from '@lib/utils'
 
 export interface Props {
   title?: string
@@ -45,6 +45,7 @@ const customTransition = {
     <meta name="description" content={description} />
     <!-- Fonts -->
     <Font cssVariable="--font-inter" preload />
+    <script src="@lib/transition"></script>
     <ClientRouter />
   </head>
   <body>

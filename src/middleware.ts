@@ -1,7 +1,7 @@
 import { match } from '@formatjs/intl-localematcher'
-import { LOCALE_COOKIE, defaultLocale, locales } from '@lib/utils'
 import { defineMiddleware } from 'astro:middleware'
 import Negotiator from 'negotiator'
+import { defaultLocale, LOCALE_COOKIE, locales } from '@lib/utils'
 
 function getDetectedLocale(request: Request): string | undefined {
   // Negotiator expects plain object so we need to transform headers
@@ -95,7 +95,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
   }
 
   // Skip certain paths that don't need locale handling
-  const skipPaths = ['/favicon', '/robots.txt', '/rss.xml', '/.', '/_']
+  const skipPaths = ['/script', '/favicon', '/robots.txt', '/rss.xml', '/.', '/_']
   if (skipPaths.some((path) => url.pathname.startsWith(path))) {
     return next()
   }
