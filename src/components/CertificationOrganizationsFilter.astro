@@ -1,14 +1,8 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/card'
-import { Input } from '@components/ui/input'
-import { Button } from '@components/ui/button'
-import CategoryBadge from './CategoryBadge.astro'
-import { Search } from 'lucide-react'
-import { defaultLocale, slugify, cn } from '@lib/utils'
 import organizations from '@/certifications/organizations.json'
-import { Badge } from '@components/ui/badge'
 import { Link } from '@components/ui/link'
+import { cn, defaultLocale, slugify } from '@lib/utils'
 
 const { locale } = Astro.params
 const currentLocale = locale ?? defaultLocale

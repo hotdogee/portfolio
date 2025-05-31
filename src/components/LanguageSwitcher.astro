@@ -1,5 +1,7 @@
 ---
-import { LOCALE_COOKIE, defaultLocale, locales } from '@lib/utils'
+import { Globe } from 'lucide-react'
+import { Button } from '@components/ui/button'
+import { defaultLocale, LOCALE_COOKIE, locales } from '@lib/utils'
 
 function getLocaleFromUrl(url: URL) {
   const [, locale] = url.pathname.split('/')
@@ -11,50 +13,36 @@ const locale = getLocaleFromUrl(Astro.url) as string
 ---
 
 <div class="dropdown relative">
-  <button
+  <Button
     id="language-toggle"
+    variant="outline"
+    size="icon"
     aria-label="Toggle language"
     aria-haspopup="true"
-    class="hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-md border text-sm font-medium transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
   >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="h-[1.2rem] w-[1.2rem]"
-    >
-      <circle cx="12" cy="12" r="10"></circle>
-      <line x1="2" y1="12" x2="22" y2="12"></line>
-      <path
-        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-      ></path>
-    </svg>
+    <Globe />
     <span class="sr-only">Toggle language</span>
-  </button>
+  </Button>
   <div
     id="dropdown-content"
     class="dropdown-content bg-background/95 absolute right-0 mt-2 hidden w-36 rounded-md border p-1 shadow-lg backdrop-blur-sm"
   >
-    <button
-      type="button"
-      data-lang="en"
-      class={`cursor-pointer flex w-full items-center rounded-sm px-3 py-2 text-sm transition-colors ${locale === 'en' ? 'bg-accent text-accent-foreground' : 'hover:bg-accent/50'}`}
-    >
-      <span class="mr-2">🇺🇸</span> English
-    </button>
-    <button
-      type="button"
-      data-lang="tw"
-      class={`cursor-pointer flex w-full items-center rounded-sm px-3 py-2 text-sm transition-colors ${locale === 'tw' ? 'bg-accent text-accent-foreground' : 'hover:bg-accent/50'}`}
-    >
-      <span class="mr-2">🇹🇼</span> 繁體中文
-    </button>
+    <div class="flex flex-col gap-2">
+      <button
+        type="button"
+        data-lang="en"
+        class={`cursor-pointer flex w-full items-center rounded-sm px-3 py-2 text-sm transition-colors ${locale === 'en' ? 'bg-card dark:bg-card ring-accent ring-2' : 'hover:bg-accent/50'}`}
+      >
+        <span class="mr-2">🇺🇸</span> English
+      </button>
+      <button
+        type="button"
+        data-lang="tw"
+        class={`cursor-pointer flex w-full items-center rounded-sm px-3 py-2 text-sm transition-colors ${locale === 'tw' ? 'bg-card dark:bg-card ring-accent ring-2' : 'hover:bg-accent/50'}`}
+      >
+        <span class="mr-2">🇹🇼</span> 繁體中文
+      </button>
+    </div>
   </div>
 </div>
 
