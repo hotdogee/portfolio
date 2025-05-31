@@ -1,13 +1,14 @@
 ---
-import BaseLayout from './BaseLayout.astro'
+import type { CollectionEntry } from 'astro:content'
+import { Icon } from 'astro-icon/components'
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import { Button } from '@components/ui/button'
-import { Card, CardHeader, CardContent } from '@components/ui/card'
+import { ArrowLeft } from 'lucide-react'
 import { Badge } from '@components/ui/badge'
+import { Button } from '@components/ui/button'
+import { Card, CardContent, CardHeader } from '@components/ui/card'
 import { Link } from '@components/ui/link'
 import { defaultLocale, getLocaleSlugFromId } from '@lib/utils'
-import { ArrowLeft } from 'lucide-react'
-import { Icon } from 'astro-icon/components'
+import BaseLayout from './BaseLayout.astro'
 
 // Translations for page-specific text
 const translations = {
@@ -30,12 +31,14 @@ const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
 }
 
 export interface Props {
-  frontmatter: Record<string, any>
+  project: CollectionEntry<'projects'>
   headings?: { depth: number; slug: string; text: string }[]
 }
 
-const { frontmatter, headings } = Astro.props as Props
+const { project, headings } = Astro.props as Props
 
+const { id, data, body } = project
+const { slug } = getLocaleSlugFromId(id)
 const {
   // slug,
   title,
@@ -49,7 +52,7 @@ const {
   tech = [],
   links = [],
   cards = [],
-} = frontmatter
+} = data
 ---
 
 <BaseLayout title={title} description={subtitle}>
@@ -65,6 +68,7 @@ const {
         <div class="animate-fade-in-up">
           <div class="mb-4 flex items-center gap-3">
             <div
+              id={`icon-${slug}`}
               class={`w-12 h-12 rounded-lg bg-${color}-100 dark:bg-${color}-900/20 flex items-center justify-center`}
             >
               {
@@ -73,12 +77,15 @@ const {
                 )
               }
             </div>
-            <div>
+            <div id={`title-${slug}`}>
               <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl">{title}</h1>
               <p class="text-muted-foreground">{subtitle}</p>
             </div>
           </div>
-          <div class="bg-muted relative mb-8 aspect-video overflow-hidden rounded-lg">
+          <div
+            id={`image-${slug}`}
+            class="bg-muted relative mb-8 aspect-video overflow-hidden rounded-lg"
+          >
             <div class="absolute inset-0 flex items-center justify-center">
               <p class="text-muted-foreground">{image.alt}</p>
             </div>

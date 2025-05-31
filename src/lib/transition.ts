@@ -46,34 +46,95 @@ document.addEventListener('DOMContentLoaded', (e) => {
 const hasCertificationList = (pathname) => {
   // Check if the path matches any of the certification list paths
   return (
-    pathname === `/certifications` ||
-    pathname === `/expertise` ||
     pathname === `/` ||
-    pathname.startsWith(`/certifications/organization/`)
+    pathname === `/expertise` ||
+    pathname === `/certifications` ||
+    pathname.startsWith(`/certifications/organization/`) ||
+    pathname.startsWith(`/certifications/skill/`)
   )
 }
 
-const isCertificationDetail = (pathname) => {
-  // Check if the path matches any of the certification detail paths
-  const [_, p1, p2] = pathname.split('/')
-  const subCategories = ['skill', 'organization']
-  // console.log(
-  //   `isCertificationDetail: p1=${p1}, p2=${p2}, subCategories=${subCategories}`,
-  //   p1 === 'certifications' && p2 && !subCategories.includes(p2)
-  // )
-  return p1 === 'certifications' && p2 && !subCategories.includes(p2)
+const hasProjectList = (pathname) => {
+  // Check if the path matches any of the project list paths
+  return pathname === `/` || pathname === `/projects` || pathname.startsWith(`/projects/category/`)
+}
+
+const hasArticleList = (pathname) => {
+  // Check if the path matches any of the article list paths
+  return (
+    pathname === `/articles` ||
+    pathname.startsWith(`/articles/category/`) ||
+    pathname.startsWith(`/articles/tag/`)
+  )
+}
+
+const hasList = (pathname, collection) => {
+  // Check if the path matches any of the collection list paths
+  // combine /{collection.name}
+  return (
+    pathname === `/${collection.name}` ||
+    collection.pathname.equals.includes(pathname) ||
+    collection.subCategories.some((subCategory) =>
+      pathname.startsWith(`/${collection.name}/${subCategory}/`)
+    ) ||
+    collection.pathname.startsWith.some((prefix) => pathname.startsWith(prefix))
+  )
 }
 
 const getCertificationSlug = (pathname) => {
   // Check if the path matches any of the certification detail paths
   const [_, p1, p2] = pathname.split('/')
   const subCategories = ['skill', 'organization']
-  // console.log(
-  //   `isCertificationDetail: p1=${p1}, p2=${p2}, subCategories=${subCategories}`,
-  //   p1 === 'certifications' && p2 && !subCategories.includes(p2)
-  // )
   return p1 === 'certifications' && !subCategories.includes(p2) && p2
 }
+
+const getProjectSlug = (pathname) => {
+  // Check if the path matches any of the project detail paths
+  const [_, p1, p2] = pathname.split('/')
+  const subCategories = ['category']
+  return p1 === 'projects' && !subCategories.includes(p2) && p2
+}
+
+const getArticleSlug = (pathname) => {
+  // Check if the path matches any of the article detail paths
+  const [_, p1, p2] = pathname.split('/')
+  const subCategories = ['category', 'tag']
+  return p1 === 'articles' && !subCategories.includes(p2) && p2
+}
+
+const getSlug = (pathname, collection) => {
+  // Check if the path matches any of the collection detail paths
+  const [_, p1, p2] = pathname.split('/')
+  const subCategories = collection.subCategories
+  return p1 === collection.name && !subCategories.includes(p2) && p2
+}
+
+const collections = [
+  {
+    name: 'certifications',
+    subCategories: ['skill', 'organization'],
+    pathname: {
+      equals: ['/expertise', '/'],
+      startsWith: [],
+    },
+  },
+  {
+    name: 'projects',
+    subCategories: ['category'],
+    pathname: {
+      equals: ['/'],
+      startsWith: [],
+    },
+  },
+  {
+    name: 'articles',
+    subCategories: ['category', 'tag'],
+    pathname: {
+      equals: [],
+      startsWith: [],
+    },
+  },
+]
 
 const determineTransitionTypeUrl = (fromUrl, toUrl) => {
   if (!fromUrl || !toUrl) {
@@ -84,19 +145,21 @@ const determineTransitionTypeUrl = (fromUrl, toUrl) => {
   if (from === to) {
     return { type: 'reload' }
   }
-  if (hasCertificationList(from) && hasCertificationList(to)) {
-    return { type: 'certification-list-to-list' }
-  }
-  if (isCertificationDetail(from) && isCertificationDetail(to)) {
-    return { type: 'certification-detail-to-detail' }
-  }
-  let slug = getCertificationSlug(to)
-  if (slug && hasCertificationList(from)) {
-    return { type: 'certification-list-to-detail', slug }
-  }
-  slug = getCertificationSlug(from)
-  if (slug && hasCertificationList(to)) {
-    return { type: 'certification-detail-to-list', slug }
+  for (const collection of collections) {
+    if (hasList(from, collection) && hasList(to, collection)) {
+      return { type: `list-to-list`, collection: collection.name }
+    }
+    const fromSlug = getSlug(from, collection)
+    const toSlug = getSlug(to, collection)
+    if (fromSlug && toSlug) {
+      return { type: `detail-to-detail`, collection: collection.name, fromSlug, toSlug }
+    }
+    if (toSlug && hasList(from, collection)) {
+      return { type: `list-to-detail`, collection: collection.name, slug: toSlug }
+    }
+    if (fromSlug && hasList(to, collection)) {
+      return { type: `detail-to-list`, collection: collection.name, slug: fromSlug }
+    }
   }
   return { type: 'unknown' }
 }
@@ -104,18 +167,18 @@ const determineTransitionTypeUrl = (fromUrl, toUrl) => {
 // If navigation is not supported, we need to handle the transition differently
 document.addEventListener('astro:before-preparation', async (e) => {
   console.log(`astro:before-preparation:`, e)
-  const { type, slug } = determineTransitionTypeUrl(e.from, e.to)
-  console.log(`astro:before-preparation: ${type}`)
+  const { type, collection, slug } = determineTransitionTypeUrl(e.from, e.to)
+  console.log(`astro:before-preparation:`, type, collection, slug)
   // e.viewTransition.types.add(transitionType)
   localStorage.setItem('transitionType', type)
 
   switch (type) {
-    case 'certification-list-to-list':
-      setupCertificationListToListTransition(e)
+    case 'list-to-list':
+      setupListToListTransition(e, collection)
       break
-    case 'certification-list-to-detail':
-    case 'certification-detail-to-list':
-      setupCertificationListToDetailTransition(e, slug)
+    case 'list-to-detail':
+    case 'detail-to-list':
+      setupListToDetailTransition(e, slug)
       break
     default:
       return
@@ -124,18 +187,18 @@ document.addEventListener('astro:before-preparation', async (e) => {
 
 document.addEventListener('astro:before-swap', async (e) => {
   console.log(`astro:before-swap:`, e)
-  const { type, slug } = determineTransitionTypeUrl(e.from, e.to)
-  console.log(`astro:before-swap: ${type}`)
+  const { type, collection, slug } = determineTransitionTypeUrl(e.from, e.to)
+  console.log(`astro:before-swap:`, type, collection, slug)
   // e.viewTransition.types.add(type)
   localStorage.setItem('transitionType', type)
 
   switch (type) {
-    case 'certification-list-to-list':
-      setupNewCertificationListToListTransition(e)
+    case 'list-to-list':
+      setupNewListToListTransition(e, collection)
       break
-    case 'certification-list-to-detail':
-    case 'certification-detail-to-list':
-      setupNewCertificationListToDetailTransition(e, slug)
+    case 'list-to-detail':
+    case 'detail-to-list':
+      setupNewListToDetailTransition(e, slug)
       break
     default:
       return
@@ -143,32 +206,32 @@ document.addEventListener('astro:before-swap', async (e) => {
 })
 
 // This needs to run in `astro:after-preparation`
-const setupCertificationListToListTransition = (e) => {
+const setupListToListTransition = (e, collection) => {
   // Get a list of all elements with a id that starts with 'certification-'
-  const certificationCards = document.querySelectorAll('[id^="certification-"]')
-  console.log(`setupCertificationListToListTransition:`, certificationCards.length)
-  setTemporaryViewTransitionNames(certificationCards)
+  const cards = document.querySelectorAll(`[id^="${collection}-"]`)
+  console.log(`setupListToListTransition:`, cards.length)
+  setTemporaryViewTransitionNames(cards)
 }
 
 // This needs to run in `astro:before-swap`
-const setupNewCertificationListToListTransition = (e) => {
-  const newCertificationCards = e.newDocument.querySelectorAll('[id^="certification-"]')
-  console.log(`setupCertificationListToListTransition:`, newCertificationCards.length)
-  setNewTemporaryViewTransitionNames(newCertificationCards, e.viewTransition.finished)
+const setupNewListToListTransition = (e, collection) => {
+  const newCards = e.newDocument.querySelectorAll(`[id^="${collection}-"]`)
+  console.log(`setupNewListToListTransition:`, newCards.length)
+  setNewTemporaryViewTransitionNames(newCards, e.viewTransition.finished)
 }
 
 // This needs to run in `astro:after-preparation`
-const setupCertificationListToDetailTransition = (e, slug) => {
+const setupListToDetailTransition = (e, slug) => {
   // Get a list of all elements with a id that starts with 'certification-'
   const elements = document.querySelectorAll(`[id$="-${slug}"]`)
-  console.log(`setupCertificationListToDetailTransition:`, elements.length)
+  console.log(`setupListToDetailTransition:`, elements.length)
   setTemporaryViewTransitionNames(elements)
 }
 
 // This needs to run in `astro:before-swap`
-const setupNewCertificationListToDetailTransition = (e, slug) => {
+const setupNewListToDetailTransition = (e, slug) => {
   const newElements = e.newDocument.querySelectorAll(`[id$="-${slug}"]`)
-  console.log(`setupNewCertificationListToDetailTransition:`, newElements.length)
+  console.log(`setupNewListToDetailTransition:`, newElements.length)
   setNewTemporaryViewTransitionNames(newElements, e.viewTransition.finished)
 }
 

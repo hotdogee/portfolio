@@ -1,6 +1,9 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
+import { Calendar1, CalendarSync, Clock, User } from 'lucide-react'
+import CategoryBadge from '@components/CategoryBadge.astro'
+import { Badge } from '@components/ui/badge'
 import {
   Card,
   CardContent,
@@ -9,8 +12,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@components/ui/card'
-import { Badge } from '@components/ui/badge'
-import { Calendar1, CalendarSync, Clock, User } from 'lucide-react'
 import {
   datesFromChanges,
   defaultLocale,
@@ -18,7 +19,6 @@ import {
   localeDate,
   localeReadingTime,
 } from '@lib/utils'
-import CategoryBadge from '@components/CategoryBadge.astro'
 
 interface Props {
   article: CollectionEntry<'articles'>
@@ -37,6 +37,7 @@ const { published, updated } = datesFromChanges(changes)
 ---
 
 <div
+  id={`articles-${slug}`}
   class="opacity-0"
   style={`animation: fade-in-up 0.5s ease-in ${(0.1 * (index + 1)).toFixed(1)}s forwards;`}
 >
@@ -48,6 +49,7 @@ const { published, updated } = datesFromChanges(changes)
         <a href={articleUrl}>
           <div class="relative h-48 w-full overflow-hidden">
             <img
+              id={`image-${slug}`}
               src={image.url || '/placeholder.svg'}
               alt={image.alt || 'Blog post image'}
               class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
@@ -58,22 +60,22 @@ const { published, updated } = datesFromChanges(changes)
       )
     }
     <CardHeader>
-      <div class="mb-2 flex flex-wrap gap-2">
+      <div id={`category-${slug}`} class="mb-2 flex flex-wrap gap-2">
         {categories.slice(0, 2).map((category) => <CategoryBadge category={category} />)}
       </div>
       <a href={articleUrl}>
-        <CardTitle className="line-clamp-2">{title}</CardTitle>
+        <CardTitle id={`title-${slug}`} className="line-clamp-2">{title}</CardTitle>
         <CardDescription className="line-clamp-3" />
       </a>
     </CardHeader>
     <a href={articleUrl}>
       <CardContent className="flex-grow">
-        <p class="text-muted-foreground line-clamp-3">{excerpt}</p>
+        <p id={`excerpt-${slug}`} class="text-muted-foreground line-clamp-3">{excerpt}</p>
       </CardContent>
     </a>
     <a href={articleUrl}>
       <CardFooter className="text-muted-foreground text-sm">
-        <div class="flex flex-wrap items-center gap-4">
+        <div id={`info-${slug}`} class="flex flex-wrap items-center gap-4">
           {
             draft && (
               <Badge variant="secondary" className="mr-1">

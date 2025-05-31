@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content'
 import ProjectLayout from '@layouts/ProjectLayout.astro'
-import { locales, defaultLocale, getLocaleSlugFromId } from '@lib/utils'
+import { defaultLocale, getLocaleSlugFromId, locales } from '@lib/utils'
 
 export async function getStaticPaths() {
   const projectList = await getCollection('projects')
@@ -45,6 +45,6 @@ const { project } = Astro.props
 const { Content, headings } = await render(project)
 ---
 
-<ProjectLayout frontmatter={project.data} headings={headings}>
+<ProjectLayout project={project} headings={headings}>
   <Content />
 </ProjectLayout>

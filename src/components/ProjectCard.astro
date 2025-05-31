@@ -1,6 +1,10 @@
 ---
 import type { CollectionEntry } from 'astro:content'
+import { Icon } from 'astro-icon/components'
 import { getRelativeLocaleUrl } from 'astro:i18n'
+import { ArrowRight } from 'lucide-react'
+import CategoryBadge from '@components/CategoryBadge.astro'
+import { Badge } from '@components/ui/badge'
 import {
   Card,
   CardContent,
@@ -9,12 +13,8 @@ import {
   CardHeader,
   CardTitle,
 } from '@components/ui/card'
-import { Badge } from '@components/ui/badge'
 import { Link } from '@components/ui/link'
 import { defaultLocale, getLocaleSlugFromId } from '@lib/utils'
-import CategoryBadge from '@components/CategoryBadge.astro'
-import { ArrowRight } from 'lucide-react'
-import { Icon } from 'astro-icon/components'
 
 // make sure tailwind class names are statically detectable at build-time
 const colorVariants = {
@@ -52,6 +52,7 @@ const projectUrl = getRelativeLocaleUrl(currentLocale, `/projects/${slug}`)
 ---
 
 <div
+  id={`projects-${slug}`}
   class:list={['opacity-0']}
   style={`animation: fade-in-up 0.3s ease-in ${(0.1 * (index + 1)).toFixed(1)}s forwards;`}
 >
@@ -69,6 +70,7 @@ const projectUrl = getRelativeLocaleUrl(currentLocale, `/projects/${slug}`)
       </div>
       <div class="mt-4 flex items-start justify-start gap-4">
         <div
+          id={`icon-${slug}`}
           class:list={[
             colorVariants[color],
             `flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg`,
@@ -76,7 +78,7 @@ const projectUrl = getRelativeLocaleUrl(currentLocale, `/projects/${slug}`)
         >
           {data.icon && <Icon name={data.icon} class={`h-8 w-8`} />}
         </div>
-        <div class="flex flex-col justify-center">
+        <div id={`title-${slug}`} class="flex flex-col justify-center">
           <CardTitle>{data.title}</CardTitle>
           {data.subtitle && <CardDescription>{data.subtitle}</CardDescription>}
         </div>
@@ -99,7 +101,10 @@ const projectUrl = getRelativeLocaleUrl(currentLocale, `/projects/${slug}`)
           </div>
         )
       }
-      <div class="bg-muted flex h-40 w-full items-center justify-center overflow-hidden rounded-lg">
+      <div
+        id={`image-${slug}`}
+        class="bg-muted flex h-40 w-full items-center justify-center overflow-hidden rounded-lg"
+      >
         <p class="text-muted-foreground text-sm">{data.image?.alt || t('projectScreenshot')}</p>
       </div>
       <Link href={projectUrl} className="w-full">
