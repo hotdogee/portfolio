@@ -2,6 +2,7 @@
 import { defineCollection, z } from 'astro:content'
 import { glob } from 'astro/loaders'
 // Import utilities from `astro:content`
+import { getContentEntryIdAndSlug } from 'node_modules/astro/dist/content/utils.js'
 import certs from '@/certifications/certifications.json'
 import { slugify } from '@lib/utils'
 
@@ -86,8 +87,30 @@ const sidebarCardSchema = z.union([
   sidebarListCardSchema,
 ])
 
+type GlobOptions = Parameters<NonNullable<Parameters<typeof glob>[0]['generateId']>>[0]
+
+const generateId = ({ entry, base, data }: GlobOptions): string => {
+  if (data.slug) {
+    return data.slug as string
+  }
+  const entryURL = new URL(encodeURI(entry), base)
+  let { slug } = getContentEntryIdAndSlug({
+    entry: entryURL,
+    contentDir: base,
+    collection: '',
+  })
+  // replace duplicate ending paths
+  // e.g. "/tw/project-1/project-1" -> "/tw/project-1"
+  const lastSegment = slug.split('/').pop()
+  const secondLastSegment = slug.split('/').slice(-2, -1)[0]
+  if (lastSegment === secondLastSegment) {
+    slug = slug.slice(0, slug.length - lastSegment.length - 1)
+  }
+  return slug
+}
+
 const projects = defineCollection({
-  loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/projects' }), // Adjusted pattern
+  loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/projects', generateId }), // Adjusted pattern
   schema: z.object({
     slug: z.string().optional(),
     icon: z.string().optional(), // iconify icon name

@@ -1,12 +1,15 @@
 ---
 title: 'My First Blog Post'
-pubDate: 2025-05-05
-description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
+excerpt: 'This is the first post of my new Astro blog.'
+author: 'Han Lin'
 image:
   url: 'https://docs.astro.build/assets/rose.webp'
   alt: 'The Astro logo on a dark background with a pink glow.'
+categories: ['IoT', 'Renewable Energy', 'Software Engineering', 'Hardware']
 tags: ['astro', 'blogging', 'learning in public']
+changes:
+  - '2025-05-16': 'updated post'
+  - '2025-05-05': 'initial post'
 ---
 
 Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
