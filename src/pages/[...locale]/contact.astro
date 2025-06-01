@@ -1,15 +1,16 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro'
-import { Download, FlaskConical, GraduationCap, FileText } from 'lucide-react'
-import GitHub from '@assets/icons/GitHub.svg'
-import LinkedIn from '@assets/icons/LinkedIn.svg'
+import { Download, FileText, FlaskConical, GraduationCap } from 'lucide-react'
 import Email from '@assets/icons/Email.svg'
-import ResearchGate from '@assets/icons/ResearchGate.svg'
+import GitHub from '@assets/icons/GitHub.svg'
 import GoogleScholar from '@assets/icons/GoogleScholar.svg'
-import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/card'
-export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
-import { defaultLocale } from '@lib/utils'
+import LinkedIn from '@assets/icons/LinkedIn.svg'
+import ResearchGate from '@assets/icons/ResearchGate.svg'
 import { ContactForm } from '@components/ContactForm'
+import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/card'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { defaultLocale } from '@lib/utils'
+
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
 
 const translations = {
   en: {
@@ -141,7 +142,7 @@ const t = (key: string): any => {
                   rel="noopener noreferrer"
                   class="bg-background hover:bg-accent hover:text-accent-foreground border-input focus-visible:ring-ring inline-flex h-11 w-full items-center justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-sm transition-colors focus-visible:ring-1 focus-visible:outline-none"
                 >
-                  <ResearchGate class="mr-2 size-6" /> ResearchGate
+                  <ResearchGate class="mr-2 size-5" /> ResearchGate
                 </a>
                 <a
                   href="https://scholar.google.com/citations?hl=en&user=3pkoNyUAAAAJ"
@@ -149,7 +150,7 @@ const t = (key: string): any => {
                   rel="noopener noreferrer"
                   class="bg-background hover:bg-accent hover:text-accent-foreground border-input focus-visible:ring-ring inline-flex h-11 w-full items-center justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-sm transition-colors focus-visible:ring-1 focus-visible:outline-none"
                 >
-                  <GoogleScholar class="mr-2 size-6" /> Google Scholar
+                  <GoogleScholar class="mr-2 size-5" /> Google Scholar
                 </a>
               </div>
 
