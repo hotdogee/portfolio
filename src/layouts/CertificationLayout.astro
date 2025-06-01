@@ -11,6 +11,7 @@ import {
   ShieldCheck,
   Sparkles,
 } from 'lucide-react'
+import { marked } from 'marked'
 import organizations from '@/certifications/organizations.json'
 import SkillBadge from '@components/SkillBadge.astro'
 import { Badge } from '@components/ui/badge'
@@ -93,6 +94,9 @@ const org = (organizations as Record<string, any>)?.[orgSlug]
 const localizedDescription = description[currentLocale].length
   ? description[currentLocale]
   : description['en']
+
+// Process markdown in descriptions
+const processedDescriptions = localizedDescription.map((desc: string) => marked.parse(desc))
 ---
 
 <BaseLayout title={t('title')} description={t('description')}>
@@ -222,10 +226,10 @@ const localizedDescription = description[currentLocale].length
           </div>
           <div class="opacity-0" style={`animation: fade-in-up 0.3s ease-in 0.4s forwards;`}>
             {
-              localizedDescription.length > 0 && (
-                <div class="mb-6 flex flex-col gap-4">
-                  {localizedDescription.map((desc: string) => (
-                    <p class="text-lg">{desc}</p>
+              processedDescriptions.length > 0 && (
+                <div class="prose prose-lg dark:prose-invert mb-6 max-w-none">
+                  {processedDescriptions.map((desc: string) => (
+                    <div set:html={desc} />
                   ))}
                 </div>
               )

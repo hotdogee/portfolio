@@ -33,6 +33,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^12.10.5",
     "lucide-react": "latest",
+    "marked": "^15.0.12",
     "mdast-util-to-string": "^4.0.0",
     "negotiator": "^1.0.0",
     "radix-ui": "^1.4.1",
