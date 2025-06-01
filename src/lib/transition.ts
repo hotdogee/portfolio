@@ -66,7 +66,7 @@ const getSlug = (pathname: string, collection: any) => {
 }
 
 const navOrder = navLinks
-  .map((link) => link.href)
+  .flatMap((link) => link.href)
   .reduce((acc: { [key: string]: number }, href, index) => {
     acc[href] = index
     return acc
@@ -141,10 +141,10 @@ document.addEventListener('astro:before-preparation', async (e: any) => {
   console.log(`astro:before-preparation:`, type, collection, slug)
   localStorage.setItem('transitionType', type)
 
+  setupNav(e, direction)
   e.direction = 'unknown'
   if (direction !== 'unknown') {
     e.direction = direction === 'to-left' ? 'forward' : 'back'
-    setupNav(e, direction)
     setupContent(e, direction)
   }
 
@@ -171,9 +171,9 @@ document.addEventListener('astro:before-swap', async (e: any) => {
   // e.viewTransition.types.add(type)
   localStorage.setItem('transitionType', type)
 
+  setupNewNav(e, direction)
   e.viewTransition.types.add(direction)
   if (direction !== 'unknown') {
-    setupNewNav(e, direction)
     setupNewContent(e, direction)
   }
 

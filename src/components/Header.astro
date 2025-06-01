@@ -5,6 +5,7 @@ import { Menu, Search, X } from 'lucide-react'
 import profile from '@assets/profile.jpg'
 import { Button } from '@components/ui/button'
 import { Link } from '@components/ui/link'
+import { separateLocaleFromPathname } from '@lib/i18n'
 import { navLinks } from '@lib/nav'
 import { cn, defaultLocale, useTranslations } from '@lib/utils'
 import LanguageSwitcher from './LanguageSwitcher.astro'
@@ -18,6 +19,12 @@ interface Props {
   showCta?: boolean
 }
 const { showCta = false } = Astro.props as Props
+const activeColors = {
+  main: 'before:bg-gradient-to-r before:from-[#59ed4f] before:to-[#05b7ff] dark:before:from-[#118324] dark:before:to-[#2575fc]',
+  sub: 'before:bg-gradient-to-r before:from-[#EDC84F] before:to-[#59ed4f] dark:before:from-[#BD9C09] dark:before:to-[#118324]',
+  ter: 'before:bg-gradient-to-r before:from-[#ED744F] before:to-[#EDC84F] dark:before:from-[#BD5109] dark:before:to-[#BD9C09]',
+}
+const { pathname } = separateLocaleFromPathname(Astro.url.pathname)
 ---
 
 <header
@@ -30,8 +37,8 @@ const { showCta = false } = Astro.props as Props
         class:list={[
           'relative flex size-12 items-center justify-center rounded-full',
           {
-            'active before:absolute before:inset-0 before:z-[-1] before:rounded-full before:bg-gradient-to-r before:from-[#59ed4f] before:to-[#05b7ff] dark:before:from-[#118324] dark:before:to-[#2575fc]':
-              Astro.url.pathname === '/en' || Astro.url.pathname === '/tw',
+            [`active before:absolute before:inset-0 before:z-[-1] before:rounded-full ${activeColors.main}`]:
+              pathname === '/',
           },
         ]}
         id={`nav-0`}
@@ -59,13 +66,21 @@ const { showCta = false } = Astro.props as Props
           .filter((link) => link.label !== null)
           .map((link, index) => (
             <a
-              href={getRelativeLocaleUrl(currentLocale, link.href)}
+              href={getRelativeLocaleUrl(currentLocale, link.href[0])}
               class:list={[
                 'relative px-4 py-2 text-sm font-medium',
                 {
-                  'active before:absolute before:inset-0 before:z-[-1] before:rounded-xl before:bg-gradient-to-r before:from-[#59ed4f] before:to-[#05b7ff] dark:before:from-[#118324] dark:before:to-[#2575fc]':
-                    Astro.url.pathname.includes(link.href),
-                  'hover:text-primary': !Astro.url.pathname.includes(link.href),
+                  [`active before:absolute before:inset-0 before:z-[-1] before:rounded-xl ${activeColors.main}`]:
+                    link.href.includes(pathname),
+                  [`active before:absolute before:inset-0 before:z-[-1] before:rounded-xl ${activeColors.sub}`]:
+                    link.href.some(
+                      (href) => pathname.startsWith(href + '/') && pathname.split('/').length === 3
+                    ),
+                  [`active before:absolute before:inset-0 before:z-[-1] before:rounded-xl ${activeColors.ter}`]:
+                    link.href.some(
+                      (href) => pathname.startsWith(href + '/') && pathname.split('/').length > 3
+                    ),
+                  'hover:text-primary': !link.href.some((href) => pathname.startsWith(href + '/')),
                 },
               ]}
               id={`nav-${index + 1}`}
@@ -84,10 +99,10 @@ const { showCta = false } = Astro.props as Props
         title="Search"
         id="search-button"
         className={cn('bg-background dark:bg-background/30 relative', {
-          'active hover:text-foreground bg-transparent before:absolute before:inset-0 before:z-[-1] before:rounded-md before:bg-gradient-to-r before:from-[#59ed4f] before:to-[#05b7ff] hover:bg-transparent dark:bg-transparent dark:before:from-[#118324] dark:before:to-[#2575fc] dark:hover:bg-transparent':
-            Astro.url.pathname.includes('/search'),
+          [`active hover:text-foreground bg-transparent before:absolute before:inset-0 before:z-[-1] before:rounded-md hover:bg-transparent dark:bg-transparent dark:hover:bg-transparent ${activeColors.main}`]:
+            pathname.startsWith('/search'),
           'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent':
-            !Astro.url.pathname.includes('/search'),
+            !pathname.startsWith('/search'),
         })}
       >
         <Search />
@@ -119,13 +134,21 @@ const { showCta = false } = Astro.props as Props
           .filter((link) => link.label !== null)
           .map((link, index) => (
             <a
-              href={getRelativeLocaleUrl(currentLocale, link.href)}
+              href={getRelativeLocaleUrl(currentLocale, link.href[0])}
               class:list={[
                 'relative py-2 text-sm font-medium',
                 {
-                  'active before:absolute before:inset-0 before:z-[-1] before:rounded-xl before:bg-gradient-to-r before:from-[#59ed4f] before:to-[#05b7ff] dark:before:from-[#118324] dark:before:to-[#2575fc]':
-                    Astro.url.pathname.includes(link.href),
-                  'hover:text-primary': !Astro.url.pathname.includes(link.href),
+                  [`active before:absolute before:inset-0 before:z-[-1] before:rounded-xl ${activeColors.main}`]:
+                    link.href.includes(pathname),
+                  [`active before:absolute before:inset-0 before:z-[-1] before:rounded-xl ${activeColors.sub}`]:
+                    link.href.some(
+                      (href) => pathname.startsWith(href + '/') && pathname.split('/').length === 3
+                    ),
+                  [`active before:absolute before:inset-0 before:z-[-1] before:rounded-xl ${activeColors.ter}`]:
+                    link.href.some(
+                      (href) => pathname.startsWith(href + '/') && pathname.split('/').length > 3
+                    ),
+                  'hover:text-primary': !link.href.some((href) => pathname.startsWith(href + '/')),
                 },
               ]}
               id={`nav-${index + 1}`}
