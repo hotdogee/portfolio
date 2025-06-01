@@ -4,7 +4,7 @@ import { navLinks } from '@lib/nav'
 // Make sure browser has support
 document.addEventListener('DOMContentLoaded', (e) => {
   let shouldThrow = false
-  if (!window.navigation) {
+  if (!(window as any).navigation) {
     // the browser does not support the Navigation API,
     shouldThrow = false
   }
@@ -44,66 +44,21 @@ document.addEventListener('DOMContentLoaded', (e) => {
 //        - http://localhost:4321/{locale}/certifications/organization/{organization}
 //        - http://localhost:4321/{locale}/expertise
 //        - http://localhost:4321/{locale}
-const hasCertificationList = (pathname) => {
-  // Check if the path matches any of the certification list paths
-  return (
-    pathname === `/` ||
-    pathname === `/expertise` ||
-    pathname === `/certifications` ||
-    pathname.startsWith(`/certifications/organization/`) ||
-    pathname.startsWith(`/certifications/skill/`)
-  )
-}
 
-const hasProjectList = (pathname) => {
-  // Check if the path matches any of the project list paths
-  return pathname === `/` || pathname === `/projects` || pathname.startsWith(`/projects/category/`)
-}
-
-const hasArticleList = (pathname) => {
-  // Check if the path matches any of the article list paths
-  return (
-    pathname === `/articles` ||
-    pathname.startsWith(`/articles/category/`) ||
-    pathname.startsWith(`/articles/tag/`)
-  )
-}
-
-const hasList = (pathname, collection) => {
+const hasList = (pathname: string, collection: any) => {
   // Check if the path matches any of the collection list paths
   // combine /{collection.name}
   return (
     pathname === `/${collection.name}` ||
     collection.pathname.equals.includes(pathname) ||
-    collection.subCategories.some((subCategory) =>
+    collection.subCategories.some((subCategory: string) =>
       pathname.startsWith(`/${collection.name}/${subCategory}/`)
     ) ||
-    collection.pathname.startsWith.some((prefix) => pathname.startsWith(prefix))
+    collection.pathname.startsWith.some((prefix: string) => pathname.startsWith(prefix))
   )
 }
 
-const getCertificationSlug = (pathname) => {
-  // Check if the path matches any of the certification detail paths
-  const [_, p1, p2] = pathname.split('/')
-  const subCategories = ['skill', 'organization']
-  return p1 === 'certifications' && !subCategories.includes(p2) && p2
-}
-
-const getProjectSlug = (pathname) => {
-  // Check if the path matches any of the project detail paths
-  const [_, p1, p2] = pathname.split('/')
-  const subCategories = ['category']
-  return p1 === 'projects' && !subCategories.includes(p2) && p2
-}
-
-const getArticleSlug = (pathname) => {
-  // Check if the path matches any of the article detail paths
-  const [_, p1, p2] = pathname.split('/')
-  const subCategories = ['category', 'tag']
-  return p1 === 'articles' && !subCategories.includes(p2) && p2
-}
-
-const getSlug = (pathname, collection) => {
+const getSlug = (pathname: string, collection: any) => {
   // Check if the path matches any of the collection detail paths
   const [_, p1, p2] = pathname.split('/')
   const subCategories = collection.subCategories
@@ -112,7 +67,7 @@ const getSlug = (pathname, collection) => {
 
 const navOrder = navLinks
   .map((link) => link.href)
-  .reduce((acc, href, index) => {
+  .reduce((acc: { [key: string]: number }, href, index) => {
     acc[href] = index
     return acc
   }, {})
@@ -144,7 +99,7 @@ const navCollections = [
   },
 ]
 
-const getNavData = (fromUrl, toUrl) => {
+const getNavData = (fromUrl: URL | undefined, toUrl: URL | undefined) => {
   let direction = 'unknown'
   if (!fromUrl || !toUrl) {
     return { type: 'unknown', direction }
@@ -155,7 +110,7 @@ const getNavData = (fromUrl, toUrl) => {
     return { type: 'reload', direction }
   }
   if (to in navOrder && from in navOrder) {
-    direction = (navOrder[from] || 0) > (navOrder[to] || 0) ? 'to-left' : 'to-right'
+    direction = (navOrder[to] || 0) > (navOrder[from] || 0) ? 'to-left' : 'to-right'
   }
   if (to.startsWith('/search')) {
     return { type: `to-search`, direction }
@@ -180,15 +135,17 @@ const getNavData = (fromUrl, toUrl) => {
 }
 
 // If navigation is not supported, we need to handle the transition differently
-document.addEventListener('astro:before-preparation', async (e) => {
+document.addEventListener('astro:before-preparation', async (e: any) => {
   console.log(`astro:before-preparation:`, e)
   const { type, direction, collection, slug } = getNavData(e.from, e.to)
   console.log(`astro:before-preparation:`, type, collection, slug)
-  // e.viewTransition.types.add(transitionType)
   localStorage.setItem('transitionType', type)
 
+  e.direction = 'unknown'
   if (direction !== 'unknown') {
+    e.direction = direction === 'to-left' ? 'forward' : 'back'
     setupNav(e, direction)
+    setupContent(e, direction)
   }
 
   switch (type) {
@@ -196,26 +153,28 @@ document.addEventListener('astro:before-preparation', async (e) => {
       setupToSearch(e)
       break
     case 'list-to-list':
-      setupListToList(e, collection)
+      setupListToList(e, collection || '')
       break
     case 'list-to-detail':
     case 'detail-to-list':
-      setupListToDetail(e, slug)
+      setupListToDetail(e, slug || '')
       break
     default:
       return
   }
 })
 
-document.addEventListener('astro:before-swap', async (e) => {
+document.addEventListener('astro:before-swap', async (e: any) => {
   console.log(`astro:before-swap:`, e)
   const { type, direction, collection, slug } = getNavData(e.from, e.to)
   console.log(`astro:before-swap:`, type, collection, slug)
   // e.viewTransition.types.add(type)
   localStorage.setItem('transitionType', type)
 
+  e.viewTransition.types.add(direction)
   if (direction !== 'unknown') {
     setupNewNav(e, direction)
+    setupNewContent(e, direction)
   }
 
   switch (type) {
@@ -223,11 +182,11 @@ document.addEventListener('astro:before-swap', async (e) => {
       setupNewToSearch(e)
       break
     case 'list-to-list':
-      setupNewListToList(e, collection)
+      setupNewListToList(e, collection || '')
       break
     case 'list-to-detail':
     case 'detail-to-list':
-      setupNewListToDetail(e, slug)
+      setupNewListToDetail(e, slug || '')
       break
     default:
       return
@@ -235,7 +194,7 @@ document.addEventListener('astro:before-swap', async (e) => {
 })
 
 // This needs to run in `astro:before-preparation`
-const setupListToList = (e, collection) => {
+const setupListToList = (e: any, collection: string) => {
   // Get a list of all elements with a id that starts with '${collection}-'
   const cards = document.querySelectorAll(`[id^="${collection}-"]`)
   console.log(`setupListToList:`, cards.length)
@@ -243,14 +202,14 @@ const setupListToList = (e, collection) => {
 }
 
 // This needs to run in `astro:before-swap`
-const setupNewListToList = (e, collection) => {
+const setupNewListToList = (e: any, collection: string) => {
   const newCards = e.newDocument.querySelectorAll(`[id^="${collection}-"]`)
   console.log(`setupNewListToList:`, newCards.length)
   setNewTemporaryViewTransitionNames(newCards, e.viewTransition.finished)
 }
 
 // This needs to run in `astro:before-preparation`
-const setupListToDetail = (e, slug) => {
+const setupListToDetail = (e: any, slug: string) => {
   // Get a list of all elements with a id that starts with '${collection}-'
   const elements = document.querySelectorAll(`[id$="-${slug}"]`)
   console.log(`setupListToDetail:`, elements.length)
@@ -258,14 +217,14 @@ const setupListToDetail = (e, slug) => {
 }
 
 // This needs to run in `astro:before-swap`
-const setupNewListToDetail = (e, slug) => {
+const setupNewListToDetail = (e: any, slug: string) => {
   const newElements = e.newDocument.querySelectorAll(`[id$="-${slug}"]`)
   console.log(`setupNewListToDetail:`, newElements.length)
   setNewTemporaryViewTransitionNames(newElements, e.viewTransition.finished)
 }
 
 // This needs to run in `astro:before-preparation`
-const setupNav = (e, direction) => {
+const setupNav = (e: any, direction: string) => {
   // Get a list of all elements with a id that starts with 'nav-'
   const elements = document.querySelectorAll(`[id^="nav-"]`)
   console.log(`setupNav:`, elements.length)
@@ -277,7 +236,7 @@ const setupNav = (e, direction) => {
 }
 
 // This needs to run in `astro:before-swap`
-const setupNewNav = (e, direction) => {
+const setupNewNav = (e: any, direction: string) => {
   const newElements = e.newDocument.querySelectorAll(`[id^="nav-"]`)
   console.log(`setupNewNav:`, newElements.length)
   setNewTemporaryViewTransitionNames(newElements, e.viewTransition.finished)
@@ -288,9 +247,24 @@ const setupNewNav = (e, direction) => {
 }
 
 // This needs to run in `astro:before-preparation`
-const setupToSearch = (e) => {
+const setupContent = (e: any, direction: string) => {
+  // Get a list of all elements with a id that starts with 'content-'
+  const elements = document.querySelectorAll(`[id="content"]`)
+  console.log(`setupContent:`, elements.length)
+  setTemporaryViewTransitionNames(elements)
+}
+
+// This needs to run in `astro:before-swap`
+const setupNewContent = (e: any, direction: string) => {
+  const newElements = e.newDocument.querySelectorAll(`[id="content"]`)
+  console.log(`setupNewContent:`, newElements.length)
+  setNewTemporaryViewTransitionNames(newElements, e.viewTransition.finished)
+}
+
+// This needs to run in `astro:before-preparation`
+const setupToSearch = (e: any) => {
   const searchButton = document.getElementById('search-button')
-  searchButton.classList.add('bg-accent', 'dark:bg-accent')
+  searchButton?.classList.add('bg-accent', 'dark:bg-accent')
   console.log(`setupToSearch:`, searchButton)
   // Get a list of all elements with a id that starts with 'search-'
   const elements = document.querySelectorAll(`[id^="search-"]`)
@@ -299,7 +273,7 @@ const setupToSearch = (e) => {
 }
 
 // This needs to run in `astro:before-swap`
-const setupNewToSearch = async (e) => {
+const setupNewToSearch = async (e: any) => {
   // Prevent search button flicker on click
   const searchButton = e.newDocument.getElementById('search-button')
   searchButton.classList.add('active', 'bg-accent', 'dark:bg-accent', 'duration-1000')
@@ -320,38 +294,46 @@ const setupNewToSearch = async (e) => {
 // The view-transition-name needs to be set dynamically
 // after the user clicks on a link, but before the transition starts
 // or different transitions will interfere with each other and become laggy.
-const setTemporaryViewTransitionNames = async (elements, name) => {
+const setTemporaryViewTransitionNames = async (elements: NodeListOf<Element>, name?: string) => {
   for (const el of elements) {
-    el.style.viewTransitionName = name || el.id
+    ;(el as HTMLElement).style.viewTransitionName = name || el.id
     // remove the hidden class
     el.classList.remove('hidden')
   }
 }
 
-const setNewTemporaryViewTransitionNames = async (elements, vtPromise, name) => {
+const setNewTemporaryViewTransitionNames = async (
+  elements: NodeListOf<Element>,
+  vtPromise: Promise<void>,
+  name?: string
+) => {
   for (const el of elements) {
-    el.style.viewTransitionName = name || el.id
+    ;(el as HTMLElement).style.viewTransitionName = name || el.id
   }
   await vtPromise
   for (const el of elements) {
-    el.style.viewTransitionName = ''
+    ;(el as HTMLElement).style.viewTransitionName = ''
   }
 }
 
-const setTemporaryClass = async (elements, name) => {
+const setTemporaryClass = async (elements: NodeListOf<Element>, name: string): Promise<void> => {
   for (const el of elements) {
-    el.classList.add('transitioning')
+    el.classList.add(name || el.id)
     // remove the hidden class
     el.classList.remove('hidden')
   }
 }
 
-const setNewTemporaryClass = async (elements, vtPromise, name) => {
+const setNewTemporaryClass = async (
+  elements: NodeListOf<Element>,
+  vtPromise: Promise<void>,
+  name: string
+): Promise<void> => {
   for (const el of elements) {
-    el.classList.add('transitioning')
+    el.classList.add(name || el.id)
   }
   await vtPromise
   for (const el of elements) {
-    el.classList.remove('transitioning')
+    el.classList.remove(name || el.id)
   }
 }

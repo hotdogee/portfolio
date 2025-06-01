@@ -15,24 +15,6 @@ const { locale } = Astro.params
 const currentLocale = locale ?? defaultLocale
 const t = useTranslations(currentLocale)
 const { title = t('site.title'), description = t('site.description') } = Astro.props
-const anim = {
-  old: {
-    name: 'bump',
-    duration: '0.5s',
-    easing: 'ease-in',
-    direction: 'reverse',
-  },
-  new: {
-    name: 'bump',
-    duration: '0.5s',
-    easing: 'ease-in-out',
-  },
-}
-
-const customTransition = {
-  forwards: anim,
-  backwards: anim,
-}
 ---
 
 <html
@@ -57,26 +39,12 @@ const customTransition = {
   <body>
     <div class="flex min-h-screen flex-col">
       <Header />
-      <main class="container mx-auto flex-grow px-4 py-8">
+      <main id="content" class="container mx-auto flex-grow px-4 py-8">
         <slot />
       </main>
       <Footer />
     </div>
   </body>
 </html>
-<style is:global>
-  @keyframes bump {
-    0% {
-      opacity: 0;
-      transform: scale(1) translateX(200px);
-    }
-    50% {
-      opacity: 0.5;
-      transform: scale(1.1);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1) translateX(0);
-    }
-  }
-</style>
+
+<style></style>

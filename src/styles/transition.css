@@ -12,3 +12,81 @@
     animation: none !important;
   }
 }
+
+@theme {
+  --slide-time: 0.25s;
+  --scale-amount: 0.8;
+}
+
+@keyframes shrink-and-slide-left {
+  0% {
+    transform: scale(1) translateY(0vh);
+    opacity: 1;
+  }
+  15% {
+    transform: scale(var(--scale-amount)) translateY(10vh);
+  }
+  85% {
+    transform: scale(var(--scale-amount)) translateY(10vh) translateX(-100vw);
+  }
+  100% {
+    transform: scale(1) translateY(0vh) translateX(-100vw);
+    opacity: 0;
+  }
+}
+
+@keyframes shrink-and-slide-right {
+  0% {
+    transform: scale(1) translateY(0vh);
+    opacity: 1;
+  }
+  15% {
+    transform: scale(var(--scale-amount)) translateY(10vh);
+  }
+  85% {
+    transform: scale(var(--scale-amount)) translateY(10vh) translateX(100vw);
+  }
+  100% {
+    transform: scale(1) translateY(0vh) translateX(100vw);
+    opacity: 0;
+  }
+}
+
+html:active-view-transition-type(to-left) {
+  &::view-transition-old(content) {
+    animation: shrink-and-slide-left var(--slide-time);
+    position: absolute;
+    transform-origin: top center;
+    animation-fill-mode: both;
+  }
+  &::view-transition-new(content) {
+    animation: shrink-and-slide-right var(--slide-time) reverse;
+    position: absolute;
+    transform-origin: top center;
+    animation-fill-mode: both;
+  }
+}
+
+html:active-view-transition-type(to-right) {
+  &::view-transition-old(content) {
+    animation: shrink-and-slide-right var(--slide-time);
+    position: absolute;
+    transform-origin: top center;
+    animation-fill-mode: both;
+  }
+  &::view-transition-new(content) {
+    animation: shrink-and-slide-left var(--slide-time) reverse;
+    position: absolute;
+    transform-origin: top center;
+    animation-fill-mode: both;
+  }
+}
+
+html:active-view-transition-type(unknown) {
+  &::view-transition-old(root) {
+    animation-name: fade-out;
+  }
+  &::view-transition-new(root) {
+    animation-name: fade-in;
+  }
+}
