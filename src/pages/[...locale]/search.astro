@@ -11,8 +11,10 @@ export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
 const translations = {
   en: {
     title: 'Search | Han Lin',
+    pageTitleBadge: 'Explore My Work',
     pageTitle: 'Site Search',
-    description: 'Search for my articles and insights.',
+    description:
+      'Looking for something specific? Enter your keywords to delve into my portfolio of innovative solutions, research findings, and technical expertise at the intersection of AI, bioinformatics, and electronics.',
     noArticlesFound: 'No articles found.',
     pagefind: {
       placeholder: 'Search',
@@ -30,8 +32,10 @@ const translations = {
   },
   tw: {
     title: '搜尋 | 林翰',
+    pageTitleBadge: '探索我的作品',
     pageTitle: '全站搜尋',
-    description: '搜尋我的文章和見解。',
+    description:
+      '尋找特定主題？請在搜尋欄位輸入關鍵字，探索我的作品集，一覽本人在人工智慧 (AI)、生物資訊學 及電子學等跨領域整合中的各項創新解決方案、研究成果與專業技術。',
     noArticlesFound: '目前沒有文章。',
     pagefind: {
       placeholder: '輸入關鍵字搜尋',
@@ -55,19 +59,21 @@ const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
 }
 ---
 
-<BaseLayout title={t('title')} description={t('description')}>
-  <section class="py-6 md:py-12">
+<BaseLayout title={t('title') as string} description={t('description') as string}>
+  <section class="md:py-2">
     <div class="container px-4 md:px-6">
-      <div class="animate-fade-in-up mx-auto mb-12 max-w-3xl text-center">
-        <h1
-          id="search-title"
-          class="mb-4 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
-        >
-          {t('pageTitle')}
-        </h1>
-        <p class="text-muted-foreground md:text-xl">
-          {t('description')}
-        </p>
+      <div class="animate-fade-in-up mx-auto max-w-3xl transition duration-500">
+        <div class="mb-8 space-y-4 text-center">
+          <div
+            class="dark:bg-accent dark:text-accent-foreground bg-accent text-accent-foreground inline-flex items-center rounded-lg px-3 py-1 text-sm font-medium"
+          >
+            {t('pageTitleBadge')}
+          </div>
+          <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            {t('pageTitle')}
+          </h1>
+          <p class="text-muted-foreground mb-12 md:text-xl">{t('description')}</p>
+        </div>
       </div>
       <SearchField
         id="search-form"
