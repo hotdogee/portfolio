@@ -4,7 +4,7 @@ import { ClientRouter } from 'astro:transitions'
 import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro'
 import '../styles/global.css'
-import { getLang, useTranslations } from '@lib/utils'
+import { defaultLocale, getLang, useTranslations } from '@lib/utils'
 
 export interface Props {
   title?: string
@@ -12,7 +12,8 @@ export interface Props {
 }
 
 const { locale } = Astro.params
-const t = useTranslations(locale)
+const currentLocale = locale ?? defaultLocale
+const t = useTranslations(currentLocale)
 const { title = t('site.title'), description = t('site.description') } = Astro.props
 const anim = {
   old: {
@@ -34,7 +35,12 @@ const customTransition = {
 }
 ---
 
-<html lang={getLang(locale)} transition:name="root" transition:animate="fade">
+<html
+  lang={getLang(locale)}
+  data-locale={currentLocale}
+  transition:name="root"
+  transition:animate="fade"
+>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

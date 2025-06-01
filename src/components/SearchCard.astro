@@ -1,0 +1,66 @@
+---
+import { Search } from 'lucide-react'
+import { Button } from '@components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/card'
+import { Input } from '@components/ui/input'
+import { defaultLocale } from '@lib/utils'
+
+const { locale } = Astro.params
+const currentLocale = locale ?? defaultLocale
+const translations = {
+  en: {
+    search: 'Site Search',
+    placeholder: 'Search',
+    sr: 'Search',
+  },
+  tw: {
+    search: '全站搜尋',
+    placeholder: '輸入關鍵字搜尋',
+    sr: '搜尋',
+  },
+}
+const t = (key: string) => {
+  const locale = currentLocale as keyof typeof translations
+  return translations[locale]?.[key as keyof (typeof translations)[typeof locale]] || key
+}
+---
+
+<Card className="gap-4">
+  <CardHeader>
+    <CardTitle id="search-title">{t('search')}</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <form id="search-form" class="flex gap-2">
+      <Input id="search-input" placeholder={t('placeholder')} />
+      <Button type="submit" size="icon" className="size-11">
+        <Search className="size-5" />
+        <span class="sr-only">{t('sr')}</span>
+      </Button>
+    </form>
+  </CardContent>
+</Card>
+
+<script>
+  import { getRelativeLocaleUrl } from 'astro:i18n'
+  import { navigate } from 'astro:transitions/client'
+
+  const searchUrl = getRelativeLocaleUrl(
+    document.documentElement.dataset.locale || 'en',
+    '/search?q='
+  )
+  document.addEventListener('astro:page-load', () => {
+    const searchForm = document.getElementById('search-form')
+    const searchInput = document.getElementById('search-input') as HTMLInputElement
+    searchForm?.addEventListener('submit', (event) => {
+      event.preventDefault()
+      if (searchInput) {
+        const query = searchInput.value.trim()
+        if (query) {
+          navigate(`${searchUrl}${encodeURIComponent(query)}`)
+        }
+      }
+    })
+  })
+</script>
+
+<style></style>

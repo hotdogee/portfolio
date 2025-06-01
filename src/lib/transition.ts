@@ -292,6 +292,10 @@ const setupToSearch = (e) => {
   const searchButton = document.getElementById('search-button')
   searchButton.classList.add('bg-accent', 'dark:bg-accent')
   console.log(`setupToSearch:`, searchButton)
+  // Get a list of all elements with a id that starts with 'search-'
+  const elements = document.querySelectorAll(`[id^="search-"]`)
+  console.log(`setupToSearch:`, elements.length)
+  setTemporaryViewTransitionNames(elements)
 }
 
 // This needs to run in `astro:before-swap`
@@ -301,11 +305,14 @@ const setupNewToSearch = async (e) => {
   searchButton.classList.add('active', 'bg-accent', 'dark:bg-accent', 'duration-1000')
   searchButton.classList.remove('bg-transparent', 'dark:bg-transparent', 'dark:bg-background/30')
   console.log(`setupNewToSearch:`, searchButton)
+  // Get a list of all elements with a id that starts with 'search-'
+  const newElements = e.newDocument.querySelectorAll(`[id^="search-"]`)
+  console.log(`setupNewToSearch:`, newElements.length)
+  setNewTemporaryViewTransitionNames(newElements, e.viewTransition.finished)
   await e.viewTransition.updateCallbackDone
   // await e.viewTransition.finished
   searchButton.classList.remove('bg-accent', 'dark:bg-accent')
   searchButton.classList.add('bg-transparent', 'dark:bg-transparent', 'dark:bg-background/30')
-  console.log(`setupNewToSearch:`, searchButton)
   await e.viewTransition.finished
   searchButton.classList.remove('duration-1000')
 }

@@ -1,24 +1,25 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n'
+import { Search } from 'lucide-react'
+import { Button } from '@components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/card'
 import { Input } from '@components/ui/input'
-import { Button } from '@components/ui/button'
-import CategoryBadge from './CategoryBadge.astro'
-import { Search } from 'lucide-react'
 import { defaultLocale } from '@lib/utils'
+import CategoryBadge from './CategoryBadge.astro'
+import SearchCard from './SearchCard.astro'
 
 const { locale } = Astro.params
 const currentLocale = locale ?? defaultLocale
 const translations = {
   en: {
     'sidebar.search': 'Site Search',
-    'sidebar.search.placeholder': 'Search...',
+    'sidebar.search.placeholder': 'Search',
     'sidebar.categories': 'Project Categories',
     'sidebar.search.sr': 'Search',
   },
   tw: {
     'sidebar.search': '全站搜尋',
-    'sidebar.search.placeholder': '搜尋...',
+    'sidebar.search.placeholder': '輸入關鍵字搜尋',
     'sidebar.categories': '專案主題',
     'sidebar.search.sr': '搜尋',
   },
@@ -43,21 +44,8 @@ console.log('searchUrl', searchUrl)
 ---
 
 <div class="space-y-6">
-  <Card>
-    <CardHeader>
-      <CardTitle>{t('sidebar.search')}</CardTitle>
-    </CardHeader>
-    <CardContent>
-      <form id="project-search-form" class="flex gap-2">
-        <Input id="project-search-input" placeholder={t('sidebar.search.placeholder')} />
-        <Button type="submit" size="icon" className="size-11">
-          <Search className="h-4 w-4" />
-          <span class="sr-only">{t('sidebar.search.sr')}</span>
-        </Button>
-      </form>
-    </CardContent>
-  </Card>
-  <Card>
+  <SearchCard />
+  <Card className="gap-4">
     <CardHeader>
       <CardTitle>{t('sidebar.categories')}</CardTitle>
     </CardHeader>
@@ -78,20 +66,6 @@ console.log('searchUrl', searchUrl)
   </Card>
 </div>
 
-<script define:vars={{ searchUrl }}>
-  document.addEventListener('astro:page-load', () => {
-    const searchForm = document.getElementById('project-search-form')
-    const searchInput = document.getElementById('project-search-input')
-    searchForm?.addEventListener('submit', (event) => {
-      event.preventDefault()
-      if (searchInput) {
-        const query = searchInput.value.trim()
-        if (query) {
-          window.location.href = `${searchUrl}${encodeURIComponent(query)}`
-        }
-      }
-    })
-  })
-</script>
+<script></script>
 
 <style></style>

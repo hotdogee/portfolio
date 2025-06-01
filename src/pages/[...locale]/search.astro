@@ -1,24 +1,51 @@
 ---
 import { getCollection } from 'astro:content'
-export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
-import { defaultLocale } from '@lib/utils'
-import BaseLayout from '@layouts/BaseLayout.astro'
 import BlogCard from '@components/ArticleCard.astro'
 import BlogSidebar from '@components/ArticleSidebar.astro'
 import SearchField from '@components/SearchField.astro'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { defaultLocale } from '@lib/utils'
+
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
 
 const translations = {
   en: {
     title: 'Search | Han Lin',
-    pageTitle: 'Search',
+    pageTitle: 'Site Search',
     description: 'Search for my articles and insights.',
     noArticlesFound: 'No articles found.',
+    pagefind: {
+      placeholder: 'Search',
+      clear_search: 'Clear',
+      load_more: 'Load more results',
+      search_label: 'Search this site',
+      filters_label: 'Filters',
+      zero_results: 'No results for [SEARCH_TERM]',
+      many_results: '[COUNT] results for [SEARCH_TERM]',
+      one_result: '[COUNT] result for [SEARCH_TERM]',
+      alt_search: 'No results for [SEARCH_TERM]. Showing results for [DIFFERENT_TERM] instead',
+      search_suggestion: 'No results for [SEARCH_TERM]. Try one of the following searches:',
+      searching: 'Searching for [SEARCH_TERM]...',
+    },
   },
   tw: {
     title: '搜尋 | 林翰',
-    pageTitle: '搜尋',
+    pageTitle: '全站搜尋',
     description: '搜尋我的文章和見解。',
     noArticlesFound: '目前沒有文章。',
+    pagefind: {
+      placeholder: '輸入關鍵字搜尋',
+      clear_search: '清除',
+      load_more: '載入更多結果',
+      search_label: '搜尋本站內容',
+      filters_label: '篩選條件',
+      zero_results: '找不到與「[SEARCH_TERM]」相符的結果',
+      many_results: '找到 [COUNT] 筆與「[SEARCH_TERM]」相符的結果',
+      one_result: '找到 [COUNT] 筆与「[SEARCH_TERM]」相符的結果',
+      alt_search: '找不到與「[SEARCH_TERM]」相符的結果。改為顯示「[DIFFERENT_TERM]」的搜尋結果',
+      search_suggestion: '找不到與「[SEARCH_TERM]」相符的結果。建議嘗試以下關鍵字：',
+      searching: '正在搜尋「[SEARCH_TERM]」...',
+    },
   },
 }
 const { locale } = Astro.params
@@ -32,7 +59,10 @@ const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
   <section class="py-6 md:py-12">
     <div class="container px-4 md:px-6">
       <div class="animate-fade-in-up mx-auto mb-12 max-w-3xl text-center">
-        <h1 class="mb-4 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+        <h1
+          id="search-title"
+          class="mb-4 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
+        >
           {t('pageTitle')}
         </h1>
         <p class="text-muted-foreground md:text-xl">
@@ -40,11 +70,12 @@ const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
         </p>
       </div>
       <SearchField
-        id="search"
+        id="search-form"
         className="pagefind-ui"
         uiOptions={{
           showImages: false,
           autofocus: true,
+          translations: t('pagefind'),
         }}
       />
     </div>

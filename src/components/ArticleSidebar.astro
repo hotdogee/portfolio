@@ -1,26 +1,24 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { Card, CardContent, CardHeader, CardTitle } from '@components/ui/card'
-import { Input } from '@components/ui/input'
-import { Button } from '@components/ui/button'
-import CategoryBadge from './CategoryBadge.astro'
-import TagBadge from './TagBadge.astro'
-import { Search } from 'lucide-react'
 import { defaultLocale } from '@lib/utils'
+import CategoryBadge from './CategoryBadge.astro'
+import SearchCard from './SearchCard.astro'
+import TagBadge from './TagBadge.astro'
 
 const { locale } = Astro.params
 const currentLocale = locale ?? defaultLocale
 const translations = {
   en: {
     'sidebar.search': 'Site Search',
-    'sidebar.search.placeholder': 'Search...',
+    'sidebar.search.placeholder': 'Search',
     'sidebar.categories': 'Article Categories',
     'sidebar.tags': 'Article Tags',
     'sidebar.search.sr': 'Search',
   },
   tw: {
     'sidebar.search': '全站搜尋',
-    'sidebar.search.placeholder': '搜尋...',
+    'sidebar.search.placeholder': '輸入關鍵字搜尋',
     'sidebar.categories': '文章主題',
     'sidebar.tags': '文章標籤',
     'sidebar.search.sr': '搜尋',
@@ -52,21 +50,8 @@ console.log('searchUrl', searchUrl)
 ---
 
 <div class="space-y-6">
-  <Card>
-    <CardHeader>
-      <CardTitle>{t('sidebar.search')}</CardTitle>
-    </CardHeader>
-    <CardContent>
-      <form id="article-search-form" class="flex gap-2">
-        <Input id="article-search-input" placeholder={t('sidebar.search.placeholder')} />
-        <Button type="submit" size="icon" className="size-11">
-          <Search className="size-5" />
-          <span class="sr-only">{t('sidebar.search.sr')}</span>
-        </Button>
-      </form>
-    </CardContent>
-  </Card>
-  <Card>
+  <SearchCard />
+  <Card className="gap-4">
     <CardHeader>
       <CardTitle>{t('sidebar.categories')}</CardTitle>
     </CardHeader>
@@ -80,7 +65,7 @@ console.log('searchUrl', searchUrl)
       </div>
     </CardContent>
   </Card>
-  <Card>
+  <Card className="gap-4">
     <CardHeader>
       <CardTitle>{t('sidebar.tags')}</CardTitle>
     </CardHeader>
@@ -92,20 +77,6 @@ console.log('searchUrl', searchUrl)
   </Card>
 </div>
 
-<script define:vars={{ searchUrl }}>
-  document.addEventListener('astro:page-load', () => {
-    const searchForm = document.getElementById('article-search-form')
-    const searchInput = document.getElementById('article-search-input')
-    searchForm?.addEventListener('submit', (event) => {
-      event.preventDefault()
-      if (searchInput) {
-        const query = searchInput.value.trim()
-        if (query) {
-          window.location.href = `${searchUrl}${encodeURIComponent(query)}`
-        }
-      }
-    })
-  })
-</script>
+<script></script>
 
 <style></style>
