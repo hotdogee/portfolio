@@ -1,4 +1,5 @@
-import { separateLocaleFromPathname } from './i18n'
+import { separateLocaleFromPathname } from '@lib/i18n'
+import { navLinks } from '@lib/nav'
 
 // Make sure browser has support
 document.addEventListener('DOMContentLoaded', (e) => {
@@ -109,7 +110,14 @@ const getSlug = (pathname, collection) => {
   return p1 === collection.name && !subCategories.includes(p2) && p2
 }
 
-const collections = [
+const navOrder = navLinks
+  .map((link) => link.href)
+  .reduce((acc, href, index) => {
+    acc[href] = index
+    return acc
+  }, {})
+
+const navCollections = [
   {
     name: 'certifications',
     subCategories: ['skill', 'organization'],
@@ -136,49 +144,57 @@ const collections = [
   },
 ]
 
-const determineTransitionTypeUrl = (fromUrl, toUrl) => {
+const getNavData = (fromUrl, toUrl) => {
+  let direction = 'unknown'
   if (!fromUrl || !toUrl) {
-    return { type: 'unknown' }
+    return { type: 'unknown', direction }
   }
   const { locale: fromLocale, pathname: from } = separateLocaleFromPathname(fromUrl.pathname)
   const { locale: toLocale, pathname: to } = separateLocaleFromPathname(toUrl.pathname)
   if (from === to) {
-    return { type: 'reload' }
+    return { type: 'reload', direction }
   }
-  for (const collection of collections) {
+  if (to in navOrder && from in navOrder) {
+    direction = (navOrder[from] || 0) > (navOrder[to] || 0) ? 'to-left' : 'to-right'
+  }
+  for (const collection of navCollections) {
     if (hasList(from, collection) && hasList(to, collection)) {
-      return { type: `list-to-list`, collection: collection.name }
+      return { type: `list-to-list`, direction, collection: collection.name }
     }
     const fromSlug = getSlug(from, collection)
     const toSlug = getSlug(to, collection)
     if (fromSlug && toSlug) {
-      return { type: `detail-to-detail`, collection: collection.name, fromSlug, toSlug }
+      return { type: `detail-to-detail`, direction, collection: collection.name, fromSlug, toSlug }
     }
     if (toSlug && hasList(from, collection)) {
-      return { type: `list-to-detail`, collection: collection.name, slug: toSlug }
+      return { type: `list-to-detail`, direction, collection: collection.name, slug: toSlug }
     }
     if (fromSlug && hasList(to, collection)) {
-      return { type: `detail-to-list`, collection: collection.name, slug: fromSlug }
+      return { type: `detail-to-list`, direction, collection: collection.name, slug: fromSlug }
     }
   }
-  return { type: 'unknown' }
+  return { type: 'unknown', direction }
 }
 
 // If navigation is not supported, we need to handle the transition differently
 document.addEventListener('astro:before-preparation', async (e) => {
   console.log(`astro:before-preparation:`, e)
-  const { type, collection, slug } = determineTransitionTypeUrl(e.from, e.to)
+  const { type, direction, collection, slug } = getNavData(e.from, e.to)
   console.log(`astro:before-preparation:`, type, collection, slug)
   // e.viewTransition.types.add(transitionType)
   localStorage.setItem('transitionType', type)
 
+  if (direction !== 'unknown') {
+    setupNav(e, direction)
+  }
+
   switch (type) {
     case 'list-to-list':
-      setupListToListTransition(e, collection)
+      setupListToList(e, collection)
       break
     case 'list-to-detail':
     case 'detail-to-list':
-      setupListToDetailTransition(e, slug)
+      setupListToDetail(e, slug)
       break
     default:
       return
@@ -187,68 +203,116 @@ document.addEventListener('astro:before-preparation', async (e) => {
 
 document.addEventListener('astro:before-swap', async (e) => {
   console.log(`astro:before-swap:`, e)
-  const { type, collection, slug } = determineTransitionTypeUrl(e.from, e.to)
+  const { type, direction, collection, slug } = getNavData(e.from, e.to)
   console.log(`astro:before-swap:`, type, collection, slug)
   // e.viewTransition.types.add(type)
   localStorage.setItem('transitionType', type)
 
+  if (direction !== 'unknown') {
+    setupNewNav(e, direction)
+  }
+
   switch (type) {
     case 'list-to-list':
-      setupNewListToListTransition(e, collection)
+      setupNewListToList(e, collection)
       break
     case 'list-to-detail':
     case 'detail-to-list':
-      setupNewListToDetailTransition(e, slug)
+      setupNewListToDetail(e, slug)
       break
     default:
       return
   }
 })
 
-// This needs to run in `astro:after-preparation`
-const setupListToListTransition = (e, collection) => {
-  // Get a list of all elements with a id that starts with 'certification-'
+// This needs to run in `astro:before-preparation`
+const setupListToList = (e, collection) => {
+  // Get a list of all elements with a id that starts with '${collection}-'
   const cards = document.querySelectorAll(`[id^="${collection}-"]`)
-  console.log(`setupListToListTransition:`, cards.length)
+  console.log(`setupListToList:`, cards.length)
   setTemporaryViewTransitionNames(cards)
 }
 
 // This needs to run in `astro:before-swap`
-const setupNewListToListTransition = (e, collection) => {
+const setupNewListToList = (e, collection) => {
   const newCards = e.newDocument.querySelectorAll(`[id^="${collection}-"]`)
-  console.log(`setupNewListToListTransition:`, newCards.length)
+  console.log(`setupNewListToList:`, newCards.length)
   setNewTemporaryViewTransitionNames(newCards, e.viewTransition.finished)
 }
 
-// This needs to run in `astro:after-preparation`
-const setupListToDetailTransition = (e, slug) => {
-  // Get a list of all elements with a id that starts with 'certification-'
+// This needs to run in `astro:before-preparation`
+const setupListToDetail = (e, slug) => {
+  // Get a list of all elements with a id that starts with '${collection}-'
   const elements = document.querySelectorAll(`[id$="-${slug}"]`)
-  console.log(`setupListToDetailTransition:`, elements.length)
+  console.log(`setupListToDetail:`, elements.length)
   setTemporaryViewTransitionNames(elements)
 }
 
 // This needs to run in `astro:before-swap`
-const setupNewListToDetailTransition = (e, slug) => {
+const setupNewListToDetail = (e, slug) => {
   const newElements = e.newDocument.querySelectorAll(`[id$="-${slug}"]`)
-  console.log(`setupNewListToDetailTransition:`, newElements.length)
+  console.log(`setupNewListToDetail:`, newElements.length)
   setNewTemporaryViewTransitionNames(newElements, e.viewTransition.finished)
 }
 
-const setTemporaryViewTransitionNames = async (elements) => {
+// This needs to run in `astro:before-preparation`
+const setupNav = (e, direction) => {
+  // Get a list of all elements with a id that starts with 'nav-'
+  const elements = document.querySelectorAll(`[id^="nav-"]`)
+  console.log(`setupNav:`, elements.length)
+  setTemporaryViewTransitionNames(elements)
+  // query `a.active`
+  const activeElements = document.querySelectorAll(`a.active`)
+  console.log(`setupNav activeElements:`, activeElements.length)
+  setTemporaryClass(activeElements, 'transitioning')
+}
+
+// This needs to run in `astro:before-swap`
+const setupNewNav = (e, direction) => {
+  const newElements = e.newDocument.querySelectorAll(`[id^="nav-"]`)
+  console.log(`setupNewNav:`, newElements.length)
+  setNewTemporaryViewTransitionNames(newElements, e.viewTransition.finished)
+  // query `a.active`
+  const newActiveElements = e.newDocument.querySelectorAll(`a.active`)
+  console.log(`setupNewNav newActiveElements:`, newActiveElements.length)
+  setNewTemporaryClass(newActiveElements, e.viewTransition.finished, 'transitioning')
+}
+
+// The view-transition-name needs to be set dynamically
+// after the user clicks on a link, but before the transition starts
+// or different transitions will interfere with each other and become laggy.
+const setTemporaryViewTransitionNames = async (elements, name) => {
   for (const el of elements) {
-    el.style.viewTransitionName = el.id
+    el.style.viewTransitionName = name || el.id
     // remove the hidden class
     el.classList.remove('hidden')
   }
 }
 
-const setNewTemporaryViewTransitionNames = async (elements, vtPromise) => {
+const setNewTemporaryViewTransitionNames = async (elements, vtPromise, name) => {
   for (const el of elements) {
-    el.style.viewTransitionName = el.id
+    el.style.viewTransitionName = name || el.id
   }
   await vtPromise
   for (const el of elements) {
     el.style.viewTransitionName = ''
+  }
+}
+
+const setTemporaryClass = async (elements, name) => {
+  for (const el of elements) {
+    el.classList.add('transitioning')
+    // remove the hidden class
+    el.classList.remove('hidden')
+  }
+}
+
+const setNewTemporaryClass = async (elements, vtPromise, name) => {
+  for (const el of elements) {
+    el.classList.add('transitioning')
+  }
+  await vtPromise
+  for (const el of elements) {
+    el.classList.remove('transitioning')
   }
 }

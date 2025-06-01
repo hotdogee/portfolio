@@ -5,6 +5,7 @@ import { Menu, Search, X } from 'lucide-react'
 import profile from '@assets/profile.jpg'
 import { Button } from '@components/ui/button'
 import { Link } from '@components/ui/link'
+import { navLinks } from '@lib/nav'
 import { defaultLocale, useTranslations } from '@lib/utils'
 import LanguageSwitcher from './LanguageSwitcher.astro'
 import ThemeToggle from './ThemeToggle.astro'
@@ -13,17 +14,6 @@ const { locale } = Astro.params
 const currentLocale = locale ?? defaultLocale
 const t = useTranslations(locale)
 
-// Navigation links
-const navLinks = [
-  // { href: undefined, label: t('nav.home') },
-  { href: '/about', label: t('nav.about') },
-  { href: '/projects', label: t('nav.projects') },
-  { href: '/expertise', label: t('nav.expertise') },
-  { href: '/experience', label: t('nav.experience') },
-  { href: '/research', label: t('nav.research') },
-  { href: '/articles', label: t('nav.blog') },
-  { href: '/contact', label: t('nav.contact') },
-]
 interface Props {
   showCta?: boolean
 }
@@ -37,7 +27,6 @@ const { showCta = false } = Astro.props as Props
   <div class="container flex h-16 items-center justify-between border-b">
     <div class="flex items-center gap-2 transition-transform hover:scale-110">
       <a
-        transition:persist
         href={getRelativeLocaleUrl(currentLocale, undefined)}
         class:list={[
           'relative flex size-12 items-center justify-center rounded-full',
@@ -46,9 +35,15 @@ const { showCta = false } = Astro.props as Props
               Astro.url.pathname === '/en' || Astro.url.pathname === '/tw',
           },
         ]}
-        style={`view-transition-name: nav-0;`}
+        id={`nav-0`}
+        style={`vtn: nav-0;`}
       >
-        <Image src={profile} class="size-10 rounded-full" alt="Profile Picture" />
+        <Image
+          transition:persist
+          src={profile}
+          class="size-10 rounded-full"
+          alt="Profile Picture"
+        />
       </a>
       <a
         href={getRelativeLocaleUrl(currentLocale, undefined)}
@@ -61,22 +56,25 @@ const { showCta = false } = Astro.props as Props
     <!-- Desktop Navigation -->
     <nav class="hidden items-center gap-1 lg:flex">
       {
-        navLinks.map((link, index) => (
-          <a
-            href={getRelativeLocaleUrl(currentLocale, link.href)}
-            class:list={[
-              'relative px-4 py-2 text-sm font-medium',
-              {
-                'active before:absolute before:inset-0 before:z-[-1] before:rounded-xl before:bg-gradient-to-r before:from-[#59ed4f] before:to-[#05b7ff] dark:before:from-[#118324] dark:before:to-[#2575fc]':
-                  Astro.url.pathname.includes(link.href),
-                'hover:text-primary': !Astro.url.pathname.includes(link.href),
-              },
-            ]}
-            style={`view-transition-name: nav-${index + 1};`}
-          >
-            {link.label}
-          </a>
-        ))
+        navLinks
+          .filter((link) => link.label !== null)
+          .map((link, index) => (
+            <a
+              href={getRelativeLocaleUrl(currentLocale, link.href)}
+              class:list={[
+                'relative px-4 py-2 text-sm font-medium',
+                {
+                  'active before:absolute before:inset-0 before:z-[-1] before:rounded-xl before:bg-gradient-to-r before:from-[#59ed4f] before:to-[#05b7ff] dark:before:from-[#118324] dark:before:to-[#2575fc]':
+                    Astro.url.pathname.includes(link.href),
+                  'hover:text-primary': !Astro.url.pathname.includes(link.href),
+                },
+              ]}
+              id={`nav-${index + 1}`}
+              style={`vtn: nav-${index + 1};`}
+            >
+              {t(link.label)}
+            </a>
+          ))
       }
     </nav>
     <div class="flex items-center gap-2">
@@ -112,22 +110,25 @@ const { showCta = false } = Astro.props as Props
   <div id="mobile-menu" class="mobile-menu-hidden border-b lg:hidden">
     <div class="container flex flex-col space-y-4 py-4 text-center">
       {
-        navLinks.map((link, index) => (
-          <a
-            href={getRelativeLocaleUrl(currentLocale, link.href)}
-            class:list={[
-              'relative py-2 text-sm font-medium',
-              {
-                'active before:absolute before:inset-0 before:z-[-1] before:rounded-xl before:bg-gradient-to-r before:from-[#59ed4f] before:to-[#05b7ff] dark:before:from-[#118324] dark:before:to-[#2575fc]':
-                  Astro.url.pathname.includes(link.href),
-                'hover:text-primary': !Astro.url.pathname.includes(link.href),
-              },
-            ]}
-            style={`view-transition-name: nav-${index + 1};`}
-          >
-            {link.label}
-          </a>
-        ))
+        navLinks
+          .filter((link) => link.label !== null)
+          .map((link, index) => (
+            <a
+              href={getRelativeLocaleUrl(currentLocale, link.href)}
+              class:list={[
+                'relative py-2 text-sm font-medium',
+                {
+                  'active before:absolute before:inset-0 before:z-[-1] before:rounded-xl before:bg-gradient-to-r before:from-[#59ed4f] before:to-[#05b7ff] dark:before:from-[#118324] dark:before:to-[#2575fc]':
+                    Astro.url.pathname.includes(link.href),
+                  'hover:text-primary': !Astro.url.pathname.includes(link.href),
+                },
+              ]}
+              id={`nav-${index + 1}`}
+              style={`vtn: nav-${index + 1};`}
+            >
+              {link.label}
+            </a>
+          ))
       }
       {
         showCta && (
@@ -164,6 +165,7 @@ const { showCta = false } = Astro.props as Props
         })
       })
     }
+    // Prevent search button flicker on click
     // const searchButton = document.getElementById('search-button')
     // document.addEventListener('astro:before-swap', (event) => {
     //   event.newDocument.getElementById('search-button')?.classList.add('dark:bg-accent')
@@ -214,12 +216,12 @@ const { showCta = false } = Astro.props as Props
       view-transition-class: nav-item;
     }
 
-    a.active::before {
-      view-transition-name: active-nav-elem;
+    a.active.transitioning::before {
+      view-transition-name: active-nav;
     }
 
-    ::view-transition-old(active-nav-elem),
-    ::view-transition-new(active-nav-elem) {
+    ::view-transition-old(active-nav),
+    ::view-transition-new(active-nav) {
       height: 100%;
     }
 
@@ -227,7 +229,7 @@ const { showCta = false } = Astro.props as Props
       z-index: 1;
     }
 
-    ::view-transition-group(active-nav-elem) {
+    ::view-transition-group(active-nav) {
       animation-duration: 0.375s;
     }
 
