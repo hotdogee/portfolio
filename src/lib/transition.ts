@@ -157,6 +157,9 @@ const getNavData = (fromUrl, toUrl) => {
   if (to in navOrder && from in navOrder) {
     direction = (navOrder[from] || 0) > (navOrder[to] || 0) ? 'to-left' : 'to-right'
   }
+  if (to.startsWith('/search')) {
+    return { type: `to-search`, direction }
+  }
   for (const collection of navCollections) {
     if (hasList(from, collection) && hasList(to, collection)) {
       return { type: `list-to-list`, direction, collection: collection.name }
@@ -189,6 +192,9 @@ document.addEventListener('astro:before-preparation', async (e) => {
   }
 
   switch (type) {
+    case 'to-search':
+      setupToSearch(e)
+      break
     case 'list-to-list':
       setupListToList(e, collection)
       break
@@ -213,6 +219,9 @@ document.addEventListener('astro:before-swap', async (e) => {
   }
 
   switch (type) {
+    case 'to-search':
+      setupNewToSearch(e)
+      break
     case 'list-to-list':
       setupNewListToList(e, collection)
       break
@@ -276,6 +285,29 @@ const setupNewNav = (e, direction) => {
   const newActiveElements = e.newDocument.querySelectorAll(`a.active`)
   console.log(`setupNewNav newActiveElements:`, newActiveElements.length)
   setNewTemporaryClass(newActiveElements, e.viewTransition.finished, 'transitioning')
+}
+
+// This needs to run in `astro:before-preparation`
+const setupToSearch = (e) => {
+  const searchButton = document.getElementById('search-button')
+  searchButton.classList.add('bg-accent', 'dark:bg-accent')
+  console.log(`setupToSearch:`, searchButton)
+}
+
+// This needs to run in `astro:before-swap`
+const setupNewToSearch = async (e) => {
+  // Prevent search button flicker on click
+  const searchButton = e.newDocument.getElementById('search-button')
+  searchButton.classList.add('active', 'bg-accent', 'dark:bg-accent', 'duration-1000')
+  searchButton.classList.remove('bg-transparent', 'dark:bg-transparent', 'dark:bg-background/30')
+  console.log(`setupNewToSearch:`, searchButton)
+  await e.viewTransition.updateCallbackDone
+  // await e.viewTransition.finished
+  searchButton.classList.remove('bg-accent', 'dark:bg-accent')
+  searchButton.classList.add('bg-transparent', 'dark:bg-transparent', 'dark:bg-background/30')
+  console.log(`setupNewToSearch:`, searchButton)
+  await e.viewTransition.finished
+  searchButton.classList.remove('duration-1000')
 }
 
 // The view-transition-name needs to be set dynamically

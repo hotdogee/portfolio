@@ -6,7 +6,7 @@ import profile from '@assets/profile.jpg'
 import { Button } from '@components/ui/button'
 import { Link } from '@components/ui/link'
 import { navLinks } from '@lib/nav'
-import { defaultLocale, useTranslations } from '@lib/utils'
+import { cn, defaultLocale, useTranslations } from '@lib/utils'
 import LanguageSwitcher from './LanguageSwitcher.astro'
 import ThemeToggle from './ThemeToggle.astro'
 
@@ -18,7 +18,6 @@ interface Props {
   showCta?: boolean
 }
 const { showCta = false } = Astro.props as Props
-// console.log('Astro.url.pathname', Astro.url.pathname)
 ---
 
 <header
@@ -84,6 +83,12 @@ const { showCta = false } = Astro.props as Props
         size="icon"
         title="Search"
         id="search-button"
+        className={cn('bg-background dark:bg-background/30 relative', {
+          'active hover:text-foreground bg-transparent before:absolute before:inset-0 before:z-[-1] before:rounded-md before:bg-gradient-to-r before:from-[#59ed4f] before:to-[#05b7ff] hover:bg-transparent dark:bg-transparent dark:before:from-[#118324] dark:before:to-[#2575fc] dark:hover:bg-transparent':
+            Astro.url.pathname.includes('/search'),
+          'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent':
+            !Astro.url.pathname.includes('/search'),
+        })}
       >
         <Search />
         <span class="sr-only">Search</span>
@@ -165,22 +170,6 @@ const { showCta = false } = Astro.props as Props
         })
       })
     }
-    // Prevent search button flicker on click
-    // const searchButton = document.getElementById('search-button')
-    // document.addEventListener('astro:before-swap', (event) => {
-    //   event.newDocument.getElementById('search-button')?.classList.add('dark:bg-accent')
-    // })
-    // document.addEventListener('astro:after-swap', (event) => {
-    //   document.getElementById('search-button')?.classList.add('dark:bg-accent')
-    // })
-    // if (searchButton) {
-    //   searchButton.addEventListener('mouseover', () => {
-    //     searchButton.classList.add('dark:bg-accent')
-    //   })
-    //   searchButton.addEventListener('mouseout', () => {
-    //     searchButton.classList.remove('dark:bg-accent')
-    //   })
-    // }
   })
 </script>
 
@@ -202,14 +191,6 @@ const { showCta = false } = Astro.props as Props
       opacity 0.3s ease-in-out,
       max-height 0.3s ease-in-out;
   }
-
-  /* #search-button:hover {
-    view-transition-class: hover;
-  }
-  ::view-transition-old(.hover),
-  ::view-transition-new(.hover) {
-    background-color: var(--accent);
-  } */
 
   @layer nav {
     a {
