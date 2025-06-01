@@ -1,8 +1,9 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import organizations from '@/certifications/organizations.json'
+import { cn } from '@/lib/utils'
 import { Link } from '@components/ui/link'
-import { cn, defaultLocale, slugify } from '@lib/utils'
+import { defaultLocale, slugify } from '@lib/i18n'
 
 const { locale } = Astro.params
 const currentLocale = locale ?? defaultLocale

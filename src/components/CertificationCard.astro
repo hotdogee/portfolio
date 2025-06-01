@@ -3,9 +3,10 @@ import type { CollectionEntry } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { Award, ShieldCheck } from 'lucide-react'
 import organizations from '@/certifications/organizations.json'
+import { cn } from '@/lib/utils'
 import { Card, CardFooter, CardHeader, CardTitle } from '@components/ui/card'
 import { Link } from '@components/ui/link'
-import { cn, defaultLocale, getLocaleSlugFromId, slugify } from '@lib/utils'
+import { defaultLocale, getLocaleSlugFromId, slugify } from '@lib/i18n'
 
 const translations = {
   en: {

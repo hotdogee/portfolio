@@ -4,11 +4,12 @@ import { getCollection } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { Award, Grid3x3, ShieldCheck } from 'lucide-react'
 import organizations from '@/certifications/organizations.json'
+import { cn } from '@/lib/utils'
 import CertificationCard from '@components/CertificationCard.astro'
 import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
 import { Link } from '@components/ui/link'
 import { brands } from '@lib/data'
-import { cn, datesFromChanges, defaultLocale, getLocaleSlugFromId, slugify } from '@lib/utils'
+import { datesFromChanges, defaultLocale, getLocaleSlugFromId, slugify } from '@lib/i18n'
 
 const translations = {
   en: {

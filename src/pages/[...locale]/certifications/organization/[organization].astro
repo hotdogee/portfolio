@@ -1,14 +1,15 @@
 ---
-import type { Locale } from '@lib/utils'
+import type { Locale } from '@lib/i18n'
 import type { CollectionEntry } from 'astro:content'
 import { getCollection } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import organizations from '@/certifications/organizations.json'
+import { cn } from '@/lib/utils'
 import CertificationCard from '@components/CertificationCard.astro'
 import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
 import { Link } from '@components/ui/link'
 import BaseLayout from '@layouts/BaseLayout.astro'
-import { cn, defaultLocale, locales, slugify, useTranslations } from '@lib/utils'
+import { defaultLocale, locales, slugify, useTranslations } from '@lib/i18n'
 import { certifications, orgs, translations as parentTranslations } from '../index.astro'
 
 export async function getStaticPaths() {

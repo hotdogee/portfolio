@@ -1,10 +1,11 @@
 ---
-import { Link } from '@components/ui/link'
+import type { CollectionEntry } from 'astro:content'
+import { getCollection } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { BrainCircuit, Grid3x3 } from 'lucide-react'
-import { defaultLocale, datesFromChanges, getLocaleSlugFromId } from '@lib/utils'
-import { getCollection, type CollectionEntry } from 'astro:content'
 import ProjectCard from '@components/ProjectCard.astro'
+import { Link } from '@components/ui/link'
+import { datesFromChanges, defaultLocale, getLocaleSlugFromId } from '@lib/i18n'
 
 const translations = {
   en: {

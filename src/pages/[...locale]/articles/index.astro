@@ -1,10 +1,11 @@
 ---
 import { getCollection } from 'astro:content'
-export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
-import { defaultLocale } from '@lib/utils'
-import BaseLayout from '@layouts/BaseLayout.astro'
 import BlogCard from '@components/ArticleCard.astro'
 import BlogSidebar from '@components/ArticleSidebar.astro'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { defaultLocale } from '@lib/i18n'
+
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/i18n'
 
 const translations = {
   en: {

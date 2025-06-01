@@ -1,19 +1,20 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro'
 import {
-  Heart,
   Brain,
-  Sparkles,
-  Rocket,
-  Sprout,
-  Zap,
   Download,
   Flame,
+  Heart,
   Infinity,
+  Rocket,
+  Sparkles,
+  Sprout,
+  Zap,
 } from 'lucide-react'
-export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
-import { defaultLocale } from '@lib/utils'
 import { Link } from '@components/ui/link'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { defaultLocale } from '@lib/i18n'
+
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/i18n'
 
 const translations = {
   en: {

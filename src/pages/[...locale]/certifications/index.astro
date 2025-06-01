@@ -3,13 +3,14 @@ import type { CollectionEntry } from 'astro:content'
 import { getCollection } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { Star } from 'lucide-react'
+import { cn } from '@/lib/utils'
 import CertificationCard from '@components/CertificationCard.astro'
 import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
 import { Link } from '@components/ui/link'
 import BaseLayout from '@layouts/BaseLayout.astro'
-import { cn, defaultLocale } from '@lib/utils'
+import { defaultLocale } from '@lib/i18n'
 
-export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/i18n'
 
 export const translations = {
   en: {

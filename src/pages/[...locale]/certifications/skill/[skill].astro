@@ -1,5 +1,5 @@
 ---
-import type { Locale } from '@lib/utils'
+import type { Locale } from '@lib/i18n'
 import { getCollection } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { Award } from 'lucide-react'
@@ -8,7 +8,7 @@ import CertificationOrganizationsFilter from '@components/CertificationOrganizat
 import { Link } from '@components/ui/link'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import { brands } from '@lib/data'
-import { defaultLocale, locales, slugify, useTranslations } from '@lib/utils'
+import { defaultLocale, locales, slugify, useTranslations } from '@lib/i18n'
 import {
   certifications,
   orgs,

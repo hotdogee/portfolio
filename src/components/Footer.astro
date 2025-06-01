@@ -1,9 +1,10 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import { useTranslations, defaultLocale } from '@lib/utils'
+import Email from '@assets/icons/Email.svg'
 import GitHub from '@assets/icons/GitHub.svg'
 import LinkedIn from '@assets/icons/LinkedIn.svg'
-import Email from '@assets/icons/Email.svg'
+import { defaultLocale, useTranslations } from '@lib/i18n'
+
 const { locale } = Astro.params
 const currentLocale = locale ?? defaultLocale
 const t = useTranslations(locale)

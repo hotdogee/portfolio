@@ -15,16 +15,18 @@ import {
   WandSparkles,
 } from 'lucide-react'
 import organizationsJsonData from '@/certifications/organizations.json' // Renamed import
+
+import { cn } from '@/lib/utils'
 import CertificationCard from '@components/CertificationCard.astro'
 import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@components/ui/card'
 import { Link } from '@components/ui/link'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import { brands } from '@lib/data'
-import { cn, defaultLocale, slugify } from '@lib/utils'
+import { defaultLocale, slugify } from '@lib/i18n'
 import { certifications, orgCerts } from './certifications/index.astro'
 
-export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/i18n'
 
 // Ensure organizations is treated as Record<string, any>
 const organizations: Record<string, any> = organizationsJsonData

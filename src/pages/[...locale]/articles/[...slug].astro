@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content'
 import ArticleLayout from '@layouts/ArticleLayout.astro'
-import { locales, defaultLocale, getLocaleSlugFromId } from '@lib/utils'
+import { defaultLocale, getLocaleSlugFromId, locales } from '@lib/i18n'
 
 export async function getStaticPaths() {
   const articleList = await getCollection('articles')

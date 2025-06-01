@@ -1,7 +1,7 @@
 ---
 import { Globe } from 'lucide-react'
 import { Button } from '@components/ui/button'
-import { defaultLocale, LOCALE_COOKIE, locales } from '@lib/utils'
+import { defaultLocale, LOCALE_COOKIE, locales } from '@lib/i18n'
 
 function getLocaleFromUrl(url: URL) {
   const [, locale] = url.pathname.split('/')

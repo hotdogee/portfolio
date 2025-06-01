@@ -1,7 +1,7 @@
 import { match } from '@formatjs/intl-localematcher'
 import { defineMiddleware } from 'astro:middleware'
 import Negotiator from 'negotiator'
-import { defaultLocale, LOCALE_COOKIE, locales } from '@lib/utils'
+import { defaultLocale, LOCALE_COOKIE, locales } from '@lib/i18n'
 
 function getDetectedLocale(request: Request): string | undefined {
   // Negotiator expects plain object so we need to transform headers

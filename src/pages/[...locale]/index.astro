@@ -1,9 +1,10 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro'
-import HeroSection from '@components/HeroSection.astro'
-import FeaturedProjects from '@components/FeaturedProjects.astro'
 import FeaturedCertifications from '@components/FeaturedCertifications.astro'
-export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
+import FeaturedProjects from '@components/FeaturedProjects.astro'
+import HeroSection from '@components/HeroSection.astro'
+import BaseLayout from '@layouts/BaseLayout.astro'
+
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/i18n'
 ---
 
 <BaseLayout>

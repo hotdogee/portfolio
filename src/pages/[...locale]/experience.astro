@@ -1,9 +1,10 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro'
-import { Card, CardContent, CardHeader } from '@components/ui/card'
 import { Calendar } from 'lucide-react'
-export { getLocalizedStaticPaths as getStaticPaths } from '@lib/utils'
-import { defaultLocale } from '@lib/utils'
+import { Card, CardContent, CardHeader } from '@components/ui/card'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { defaultLocale } from '@lib/i18n'
+
+export { getLocalizedStaticPaths as getStaticPaths } from '@lib/i18n'
 
 const translations = {
   en: {

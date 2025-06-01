@@ -1,7 +1,7 @@
-import rss from '@astrojs/rss'
-import { datesFromChanges } from '@lib/utils'
 import type { APIRoute } from 'astro'
+import rss from '@astrojs/rss'
 import { getCollection } from 'astro:content'
+import { datesFromChanges } from '@lib/i18n'
 
 export const GET: APIRoute = async ({ site }) => {
   const articles = await getCollection('articles')

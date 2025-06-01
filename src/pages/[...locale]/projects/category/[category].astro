@@ -1,9 +1,10 @@
 ---
+import type { Locale } from '@lib/i18n'
 import { getCollection } from 'astro:content'
-import { locales, defaultLocale, slugify, useTranslations, type Locale } from '@lib/utils'
-import BaseLayout from '@layouts/BaseLayout.astro'
 import ProjectCard from '@components/ProjectCard.astro'
 import ProjectCategoriesSidebar from '@components/ProjectCategoriesSidebar.astro'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { defaultLocale, locales, slugify, useTranslations } from '@lib/i18n'
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects')

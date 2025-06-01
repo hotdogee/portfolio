@@ -4,7 +4,7 @@ import { glob } from 'astro/loaders'
 // Import utilities from `astro:content`
 import { getContentEntryIdAndSlug } from 'node_modules/astro/dist/content/utils.js'
 import certs from '@/certifications/certifications.json'
-import { slugify } from '@lib/utils'
+import { slugify } from '@lib/i18n'
 
 // Define a `loader` and `schema` for each collection
 // title: 'My First Blog Post'

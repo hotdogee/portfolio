@@ -2,9 +2,9 @@
 import type { CollectionEntry } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { type VariantProps } from 'class-variance-authority'
-import { cn, getLocaleSlugFromId } from '@/lib/utils'
+import { cn } from '@/lib/utils'
 import { Badge, badgeVariants } from '@components/ui/badge'
-import { defaultLocale, slugify, useTranslations } from '@lib/utils'
+import { defaultLocale, getLocaleSlugFromId, slugify, useTranslations } from '@lib/i18n'
 import { certifications } from '@pages/certifications/index.astro'
 
 // Extract skills
