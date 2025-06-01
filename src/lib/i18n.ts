@@ -1,8 +1,5 @@
 import type { GetStaticPaths, InferGetStaticParamsType, InferGetStaticPropsType } from 'astro'
 import type { CollectionEntry, InferEntrySchema } from 'astro:content'
-import { fromMarkdown } from 'mdast-util-from-markdown'
-import { toString } from 'mdast-util-to-string'
-import getReadingTime from 'reading-time'
 import { categories } from './i18n/categories'
 import { skills } from './i18n/skills'
 import { tags } from './i18n/tags'
@@ -96,12 +93,6 @@ export const localeUpdateDate = (date: string, locale: string = defaultLocale) =
   return locale === 'tw'
     ? `更新於 ${localeDate(date, locale)}`
     : `Updated on ${localeDate(date, locale)}`
-}
-
-export const localeReadingTime = (body: string, locale: string = defaultLocale) => {
-  const tree = fromMarkdown(String(body))
-  const readingTime = getReadingTime(toString(tree)).minutes.toFixed(0)
-  return locale === 'tw' ? `閱讀時間 ${readingTime} 分鐘` : `${readingTime} min read`
 }
 
 export const datesFromChanges = (changes: InferEntrySchema<'articles'>['changes']) => {

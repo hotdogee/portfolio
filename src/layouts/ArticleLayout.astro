@@ -9,13 +9,8 @@ import { Badge } from '@components/ui/badge'
 import { Button } from '@components/ui/button'
 import { Card, CardContent, CardHeader } from '@components/ui/card'
 import { Link } from '@components/ui/link'
-import {
-  datesFromChanges,
-  defaultLocale,
-  getLocaleSlugFromId,
-  localeDate,
-  localeReadingTime,
-} from '@lib/i18n'
+import { datesFromChanges, defaultLocale, getLocaleSlugFromId, localeDate } from '@lib/i18n'
+import { localeReadingTime } from '@lib/reading-time'
 import BaseLayout from './BaseLayout.astro'
 
 // Translations for page-specific text
