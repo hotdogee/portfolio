@@ -1,6 +1,6 @@
 ---
-icon: 'lucide:cuboid'
-color: 'amber'
+icon: '../../en/origami/origami-icon.png'
+color: 'blue'
 featured: 10
 tagline: '藝術與演算法的交會點'
 title: 'Origami Moving Cubes'
@@ -8,7 +8,7 @@ subtitle: '互動繪圖設計工具'
 description: '這是一款互動式網頁應用程式，能用以設計令人目眩神迷的視覺幻象，知名科普傳播者 Steve Mould 亦曾對其進行專題介紹。本專案淋漓盡致地展現了當創意巧思與精密技術相互碰撞時所迸發的獨特美學，更使複雜的數學變換原理深入淺出，人人皆可輕鬆領略。'
 categories: ['Interactive Design', 'Mathematics', 'Art']
 image:
-  url: 'https://docs.astro.build/default-og-image.png'
+  url: '../../en/origami/origami-ui.gif'
   alt: 'Origami Cubes Designer 工具介面'
 tech:
   - 'React'
@@ -39,7 +39,7 @@ cards:
   - title: '運作機制'
     type: 'diagram'
     image:
-      url: 'https://docs.astro.build/assets/rays.webp'
+      url: '../../en/origami/origami-physical.jpg'
       alt: '方塊變換原理示意圖'
     caption: '透過精密的圖案佈局，使方塊產生變換的視覺幻象，其背後蘊藏的數學原理。'
   - title: '媒體報導與推薦'
@@ -49,6 +49,9 @@ cards:
         name: 'Steve Mould'
         description: '科普傳播者'
         url: 'https://youtu.be/FMRi6pNAoag?t=17'
+        image:
+          url: '../../en/origami/origami-showcased.png'
+          alt: '獲 Steve Mould 影片介紹'
 changes:
   - '2025-05-16': 'updated post'
   - '2025-05-05': 'initial post'

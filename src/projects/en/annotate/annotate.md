@@ -1,6 +1,6 @@
 ---
-icon: 'lucide:dna'
-color: 'green'
+icon: './annotate-icon.png'
+color: 'amber'
 featured: 30
 tagline: 'Accelerating Scientific Discovery'
 title: 'ANNotate'
@@ -8,12 +8,14 @@ subtitle: 'Protein Function Prediction using Deep Learning'
 description: 'ANNotate leverages deep learning to predict protein functions 100x faster than traditional methods, making complex proteomic analysis accessible to all researchers through an intuitive web interface. The system uses a recurrent neural network architecture to identify patterns in protein sequences with unprecedented speed and accuracy.'
 categories: ['Deep Learning', 'Bioinformatics', 'Proteomics']
 image:
-  url: 'https://docs.astro.build/assets/rose.webp'
+  url: './annotate-ui.gif'
   alt: 'ANNotate Interface'
 tech:
   - 'TensorFlow'
-  - 'NVIDIA cuDNN'
+  - 'Cloud Run'
+  - 'Compute Engine'
   - 'NodeJS'
+  - 'NVIDIA cuDNN'
   - 'Recurrent Neural Networks (RNN)'
   - 'Gated Recurrent Units (GRU)'
   - 'Convolutional Neural Networks (CNN)'
@@ -27,8 +29,6 @@ tech:
   - 'Docker'
   - 'FeathersJS'
   - 'Cloudflare Pages'
-  - 'Google Compute Engine'
-  - 'Google Cloud Run'
 links:
   - text: 'Try ANNotate Live'
     url: 'https://ann.hanl.in/'
@@ -42,7 +42,7 @@ cards:
   - title: 'Architecture Diagram'
     type: 'diagram'
     image:
-      url: 'https://docs.astro.build/assets/rays.webp'
+      url: './annotate-architecture.jpg'
       alt: 'Neural Network Architecture'
     caption: 'Hierarchical neural network architecture combining convolutional and recurrent layers for protein function prediction.'
   - title: 'Performance Metrics'

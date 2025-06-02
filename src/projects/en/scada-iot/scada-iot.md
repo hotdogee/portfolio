@@ -1,6 +1,6 @@
 ---
-icon: 'lucide:cpu'
-color: 'blue'
+icon: './scada-iot-icon.png'
+color: 'green'
 featured: 20
 tagline: 'Powering a Sustainable Future'
 title: 'SCADA/IoT'
@@ -8,22 +8,22 @@ subtitle: 'Reimagining Industrial Automation for Research'
 description: "A modern, cost-effective monitoring system that helped increase power output from 70kW to 180kW in Taiwan's pioneering geothermal project. This system demonstrates how open-source technology can outperform expensive proprietary solutions while providing deeper insights for research and optimization."
 categories: ['IoT', 'Real-time Systems', 'Electronics']
 image:
-  url: 'https://docs.astro.build/assets/arc.webp'
+  url: './scada-iot-ui.gif'
   alt: 'SCADA/IoT System Dashboard'
 tech:
-  - 'Node.js'
+  - 'Vue 3'
+  - 'MongoDB'
   - 'Raspberry Pi'
+  - 'Node.js'
   - 'Modbus RTU'
   - 'RabbitMQ'
   - 'WebSockets'
   - 'GitOps'
   - 'DevOps'
-  - 'Vue 3'
   - 'TypeScript'
   - 'Tailwind CSS'
   - 'Quasar Framework'
   - 'Highcharts'
-  - 'MongoDB'
   - 'FeathersJS'
   - 'Cloudflare Pages'
   - 'Oracle Cloud Infrastructure'
@@ -48,7 +48,7 @@ cards:
   - title: 'System Architecture'
     type: 'diagram'
     image:
-      url: 'https://docs.astro.build/assets/rays.webp'
+      url: './scada-iot-architecture.png'
       alt: 'SCADA/IoT System Architecture Diagram'
     caption: 'Four-layer distributed architecture for real-time monitoring and control of geothermal power systems.'
   - title: 'Performance Metrics'

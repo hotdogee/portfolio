@@ -1,6 +1,6 @@
 ---
-icon: 'lucide:cuboid'
-color: 'amber'
+icon: './origami-icon.png'
+color: 'blue'
 featured: 10
 tagline: 'Where Art Meets Algorithm'
 title: 'Origami Moving Cubes'
@@ -8,7 +8,7 @@ subtitle: 'Interactive Drawing Designer'
 description: 'An interactive web application for designing mesmerizing optical illusions, featured by popular science communicator Steve Mould. This project showcases the beauty that emerges when creativity intersects with technical precision, making complex mathematical transformations accessible to everyone.'
 categories: ['Interactive Design', 'Mathematics', 'Art']
 image:
-  url: 'https://docs.astro.build/default-og-image.png'
+  url: './origami-ui.gif'
   alt: 'Origami Cubes Designer Interface'
 tech:
   - 'React'
@@ -39,7 +39,7 @@ cards:
   - title: 'How It Works'
     type: 'diagram'
     image:
-      url: 'https://docs.astro.build/assets/rays.webp'
+      url: './origami-physical.jpg'
       alt: 'Cube Transformation Diagram'
     caption: 'The mathematical principles behind the optical illusion of transforming cubes through precise pattern design.'
   - title: 'Featured In'
@@ -49,6 +49,9 @@ cards:
         name: 'Steve Mould'
         description: 'Science Communicator'
         url: 'https://youtu.be/FMRi6pNAoag?t=17'
+        image:
+          url: './origami-showcased.png'
+          alt: "Featured in Steve Mould's video"
 changes:
   - '2025-05-16': 'updated post'
   - '2025-05-05': 'initial post'

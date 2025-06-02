@@ -1,6 +1,6 @@
 ---
-icon: 'lucide:dna'
-color: 'green'
+icon: '../../en/annotate/annotate-icon.png'
+color: 'amber'
 featured: 30
 tagline: '加速科學探索的進程'
 title: 'ANNotate'
@@ -8,12 +8,14 @@ subtitle: '運用深度學習預測蛋白質功能'
 description: 'ANNotate 運用深度學習預測蛋白質功能，速度較傳統方法提升 100 倍，並透過易於操作的網頁介面，讓複雜的蛋白質體學分析對所有研究人員觸手可及。此系統採用遞歸神經網路架構 (RNN)，能以前所未有的速度與精準度，辨識蛋白質序列中的特定模式。'
 categories: ['Deep Learning', 'Bioinformatics', 'Proteomics']
 image:
-  url: 'https://docs.astro.build/assets/rose.webp'
+  url: '../../en/annotate/annotate-ui.gif'
   alt: 'ANNotate 介面'
 tech:
   - 'TensorFlow'
-  - 'NVIDIA cuDNN'
+  - 'Cloud Run'
+  - 'Compute Engine'
   - 'NodeJS'
+  - 'NVIDIA cuDNN'
   - 'Recurrent Neural Networks (RNN)'
   - 'Gated Recurrent Units (GRU)'
   - 'Convolutional Neural Networks (CNN)'
@@ -24,11 +26,9 @@ tech:
   - 'Tailwind CSS'
   - 'Quasar Framework'
   - 'MongoDB'
-  - 'FeathersJS'
   - 'Docker'
+  - 'FeathersJS'
   - 'Cloudflare Pages'
-  - 'Google Compute Engine'
-  - 'Google Cloud Run'
 links:
   - text: '立即試用'
     url: 'https://ann.hanl.in/'
@@ -42,7 +42,7 @@ cards:
   - title: '系統架構圖'
     type: 'diagram'
     image:
-      url: 'https://docs.astro.build/assets/rays.webp'
+      url: '../../en/annotate/annotate-architecture.jpg'
       alt: '神經網路架構圖'
     caption: '此階層式神經網路架構結合了卷積層與遞迴層，專責預測蛋白質功能。'
   - title: '成效指標'
