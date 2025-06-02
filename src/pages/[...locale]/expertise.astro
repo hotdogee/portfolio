@@ -494,16 +494,16 @@ const otherCerts = certifications.filter((certification: CollectionEntry<'certif
 
         <div class="mt-8 flex flex-wrap justify-center gap-2">
           <CertificationOrganizationsFilter orgs={brands} text={true} size="lg" />
-          <div class="mt-2 flex flex-wrap justify-center gap-2">
-            <Link
-              href={getRelativeLocaleUrl(currentLocale, '/certifications')}
-              variant={'outline'}
-              className="flex h-11 items-center"
-            >
-              <Award className="size-6" />
-              {t('viewAllCertifications')}
-            </Link>
-          </div>
+        </div>
+        <div class="mt-6 flex flex-wrap justify-center gap-2">
+          <Link
+            href={getRelativeLocaleUrl(currentLocale, '/certifications')}
+            variant={'outline'}
+            className="flex h-11 items-center"
+          >
+            <Award className="size-6" />
+            {t('viewAllCertifications')}
+          </Link>
         </div>
       </div>
     </div>

@@ -57,7 +57,7 @@ const org = (organizations as Record<string, any>)?.[slugify(organization)]
       />
     </div>
   </a>
-  <CardHeader className="flex-grow px-4">
+  <CardHeader className="flex flex-grow flex-col px-4">
     <div class="flex items-center" id={`organization-${id}`} }>
       {
         org?.icon && (

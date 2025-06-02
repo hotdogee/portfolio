@@ -88,12 +88,12 @@ const projectUrl = getRelativeLocaleUrl(currentLocale, `/projects/${slug}`)
           {tagline}
         </div>
       </div>
-      <div class="mt-4 flex flex-col items-start justify-start">
+      <div class="mt-2 flex flex-col items-start justify-start gap-1">
         {
           categories && (
             <div
               id={`categories-${slug}`}
-              class="mb-2 ml-16 flex flex-wrap items-center justify-start gap-2"
+              class="mb-2 ml-14 flex flex-wrap items-center justify-start gap-2"
             >
               {categories.slice(0, 3).map((category) => (
                 <CategoryBadge
@@ -105,7 +105,7 @@ const projectUrl = getRelativeLocaleUrl(currentLocale, `/projects/${slug}`)
             </div>
           )
         }
-        <a href={projectUrl} class="flex items-start justify-start gap-4">
+        <a href={projectUrl} class="flex items-start justify-start gap-3">
           <div
             id={`icon-${slug}`}
             class:list={[
@@ -120,7 +120,7 @@ const projectUrl = getRelativeLocaleUrl(currentLocale, `/projects/${slug}`)
               )
             }
           </div>
-          <div id={`title-${slug}`} class="flex flex-col justify-center">
+          <div id={`title-${slug}`} class="flex flex-col justify-center gap-1">
             <CardTitle>{title}</CardTitle>
             {subtitle && <CardDescription>{subtitle}</CardDescription>}
           </div>
@@ -152,7 +152,7 @@ const projectUrl = getRelativeLocaleUrl(currentLocale, `/projects/${slug}`)
           inferSize={typeof image?.url === 'string' ? true : false}
         />
       </a>
-      <Link href={projectUrl} className="w-full">
+      <Link href={projectUrl} className="w-full" variant={'default'}>
         {t('viewDetails')}
         <ArrowRight className="ml-2 h-4 w-4" />
       </Link>
