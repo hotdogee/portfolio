@@ -1,10 +1,12 @@
-// Import the glob loader
+import type { ImageFunction } from 'astro:content'
 import { defineCollection, z } from 'astro:content'
 import { glob } from 'astro/loaders'
 // Import utilities from `astro:content`
 import { getContentEntryIdAndSlug } from 'node_modules/astro/dist/content/utils.js'
 import certs from '@/certifications/certifications.json'
 import { slugify } from '@lib/i18n'
+
+// Import the glob loader
 
 // Define a `loader` and `schema` for each collection
 // title: 'My First Blog Post'
@@ -17,26 +19,38 @@ import { slugify } from '@lib/i18n'
 // changes:
 //   - '2025-05-16': 'updated post'
 //   - '2025-05-15': 'initial post'
+
+// image() will expand the url string to and object
+// image:
+//   url: {
+//     src: string;
+//     width: number;
+//     height: number;
+//     format: "png" | "jpg" | "jpeg" | "tiff" | "webp" | "gif" | "svg" | "avif";
+//   }
+//   alt: 'The Astro logo on a dark background with a pink glow.'
+
 const articles = defineCollection({
   loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/articles' }),
-  schema: z.object({
-    title: z.string(),
-    excerpt: z.string().optional(),
-    author: z.string(),
-    image: z
-      .object({
-        url: z.string(),
-        alt: z.string(),
-      })
-      .optional(),
-    categories: z.array(z.string()).optional(),
-    tags: z.array(z.string()).optional(),
-    draft: z.boolean().optional(),
-    // published: z.date(), // computed from the changes
-    // updated: z.date(), // computed from the changes
-    changes: z.array(z.record(z.string(), z.string())),
-    slug: z.string().optional(),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      excerpt: z.string().optional(),
+      author: z.string(),
+      image: z
+        .object({
+          url: image(),
+          alt: z.string(),
+        })
+        .optional(),
+      categories: z.array(z.string()).optional(),
+      tags: z.array(z.string()).optional(),
+      draft: z.boolean().optional(),
+      // published: z.date(), // computed from the changes
+      // updated: z.date(), // computed from the changes
+      changes: z.array(z.record(z.string(), z.string())),
+      slug: z.string().optional(),
+    }),
 })
 
 const projectLinkSchema = z.object({
@@ -46,15 +60,16 @@ const projectLinkSchema = z.object({
   variant: z.string().optional(), // e.g., 'default', 'outline'
 })
 
-const sidebarDiagramCardSchema = z.object({
-  type: z.literal('diagram'),
-  title: z.string(),
-  image: z.object({
-    url: z.string(),
-    alt: z.string(),
-  }),
-  caption: z.string(),
-})
+const sidebarDiagramCardSchema = (image: ImageFunction) =>
+  z.object({
+    type: z.literal('diagram'),
+    title: z.string(),
+    image: z.object({
+      url: image(),
+      alt: z.string(),
+    }),
+    caption: z.string(),
+  })
 
 const sidebarMetricsCardSchema = z.object({
   type: z.literal('metrics'),
@@ -68,24 +83,28 @@ const sidebarMetricsCardSchema = z.object({
   ),
 })
 
-const sidebarListCardSchema = z.object({
-  type: z.literal('list'),
-  title: z.string(),
-  items: z.array(
-    z.object({
-      icon: z.string().optional(),
-      name: z.string(),
-      description: z.string().optional(),
-      url: z.string().optional(),
-    })
-  ),
-})
+const sidebarListCardSchema = (image: ImageFunction) =>
+  z.object({
+    type: z.literal('list'),
+    title: z.string(),
+    items: z.array(
+      z.object({
+        icon: z.string().optional(),
+        name: z.string(),
+        description: z.string().optional(),
+        url: z.string().optional(),
+        image: z
+          .object({
+            url: image(),
+            alt: z.string(),
+          })
+          .optional(),
+      })
+    ),
+  })
 
-const sidebarCardSchema = z.union([
-  sidebarDiagramCardSchema,
-  sidebarMetricsCardSchema,
-  sidebarListCardSchema,
-])
+const sidebarCardSchema = (image: ImageFunction) =>
+  z.union([sidebarDiagramCardSchema(image), sidebarMetricsCardSchema, sidebarListCardSchema(image)])
 
 type GlobOptions = Parameters<NonNullable<Parameters<typeof glob>[0]['generateId']>>[0]
 
@@ -111,42 +130,43 @@ const generateId = ({ entry, base, data }: GlobOptions): string => {
 
 const projects = defineCollection({
   loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/projects', generateId }), // Adjusted pattern
-  schema: z.object({
-    slug: z.string().optional(),
-    icon: z.string().optional(), // iconify icon name
-    color: z.string().optional(), // tailwind color class
-    featured: z.number().optional(), // sorted descending
-    categories: z.array(z.string()).optional(),
-    tagline: z.string().optional(), // Marketing description
-    title: z.string(), // Project Name
-    subtitle: z.string().optional(), // Practical description
-    description: z.string().optional(),
-    image: z
-      .object({
-        url: z.string(),
-        alt: z.string(),
-      })
-      .optional(),
-    // description_paragraphs: z.array(z.string()).optional(),
-    // features: z.array(z.string()).optional(),
-    // impact_statement: z.string().optional(),
-    // technical_details: z
-    //   .object({
-    //     title: z.string(),
-    //     description: z.string().optional(),
-    //     points: z.array(z.string()).optional(),
-    //     conclusion: z.string().optional(),
-    //   })
-    //   .optional(),
-    tech: z.array(z.string()).optional(),
-    links: z.array(projectLinkSchema).optional(),
-    cards: z.array(sidebarCardSchema).optional(),
-    // Optional: If you want to enforce draft status or publication dates
-    draft: z.boolean().optional().default(false),
-    // published: z.date(), // computed from the changes
-    // updated: z.date(), // computed from the changes
-    changes: z.array(z.record(z.string(), z.string())),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      slug: z.string().optional(),
+      icon: image().optional(), // iconify icon name or local path
+      color: z.string().optional(), // tailwind color class
+      featured: z.number().optional(), // sorted descending
+      categories: z.array(z.string()).optional(),
+      tagline: z.string().optional(), // Marketing description
+      title: z.string(), // Project Name
+      subtitle: z.string().optional(), // Practical description
+      description: z.string().optional(),
+      image: z
+        .object({
+          url: image(),
+          alt: z.string(),
+        })
+        .optional(),
+      // description_paragraphs: z.array(z.string()).optional(),
+      // features: z.array(z.string()).optional(),
+      // impact_statement: z.string().optional(),
+      // technical_details: z
+      //   .object({
+      //     title: z.string(),
+      //     description: z.string().optional(),
+      //     points: z.array(z.string()).optional(),
+      //     conclusion: z.string().optional(),
+      //   })
+      //   .optional(),
+      tech: z.array(z.string()).optional(),
+      links: z.array(projectLinkSchema).optional(),
+      cards: z.array(sidebarCardSchema(image)).optional(),
+      // Optional: If you want to enforce draft status or publication dates
+      draft: z.boolean().optional().default(false),
+      // published: z.date(), // computed from the changes
+      // updated: z.date(), // computed from the changes
+      changes: z.array(z.record(z.string(), z.string())),
+    }),
 })
 
 const certifications = defineCollection({
@@ -160,57 +180,58 @@ const certifications = defineCollection({
       {} as Record<string, (typeof certs)[number] & { id: string }>
     )
   },
-  schema: z.object({
-    id: z.string().optional(),
-    slug: z.string().optional(),
-    featured: z.number().optional(), // sorted descending
-    name: z.object({
-      en: z.string(),
-      tw: z.string(),
-    }),
-    organization: z.string(),
-    issue: z.string().optional(),
-    expire: z.string().optional(),
-    identifier: z.string().optional(),
-    description: z
-      .object({
-        en: z.array(z.string()).optional(),
-        tw: z.array(z.string()).optional(),
-      })
-      .optional(),
-    official: z.string().optional(),
-    verify: z.string().optional(),
-    skills: z.array(z.string()).optional(),
-    badge: z
-      .object({
-        url: z.string(),
-        alt: z.object({
-          en: z.string(),
-          tw: z.string(),
-        }),
-      })
-      .optional(),
-    certificate: z
-      .object({
-        url: z.string(),
-        alt: z.object({
-          en: z.string(),
-          tw: z.string(),
-        }),
-      })
-      .optional(),
-    evidence: z
-      .array(
-        z.object({
-          url: z.string(),
+  schema: ({ image }) =>
+    z.object({
+      id: z.string().optional(),
+      slug: z.string().optional(),
+      featured: z.number().optional(), // sorted descending
+      name: z.object({
+        en: z.string(),
+        tw: z.string(),
+      }),
+      organization: z.string(),
+      issue: z.string().optional(),
+      expire: z.string().optional(),
+      identifier: z.string().optional(),
+      description: z
+        .object({
+          en: z.array(z.string()).optional(),
+          tw: z.array(z.string()).optional(),
+        })
+        .optional(),
+      official: z.string().optional(),
+      verify: z.string().optional(),
+      skills: z.array(z.string()).optional(),
+      badge: z
+        .object({
+          url: image(),
           alt: z.object({
             en: z.string(),
             tw: z.string(),
           }),
         })
-      )
-      .optional(),
-  }),
+        .optional(),
+      certificate: z
+        .object({
+          url: image(),
+          alt: z.object({
+            en: z.string(),
+            tw: z.string(),
+          }),
+        })
+        .optional(),
+      evidence: z
+        .array(
+          z.object({
+            url: image(),
+            alt: z.object({
+              en: z.string(),
+              tw: z.string(),
+            }),
+          })
+        )
+        .optional(),
+    }),
 })
 
 // Export a single `collections` object to register your collection(s)

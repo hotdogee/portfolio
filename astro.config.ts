@@ -28,6 +28,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   experimental: {
+    clientPrerender: true,
     fonts: [
       {
         provider: fontProviders.google(),

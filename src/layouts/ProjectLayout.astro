@@ -1,8 +1,10 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { ArrowLeft } from 'lucide-react'
+import CategoryBadge from '@components/CategoryBadge.astro'
 import { Badge } from '@components/ui/badge'
 import { Button } from '@components/ui/button'
 import { Card, CardContent, CardHeader } from '@components/ui/card'
@@ -10,41 +12,22 @@ import { Link } from '@components/ui/link'
 import { defaultLocale, getLocaleSlugFromId } from '@lib/i18n'
 import BaseLayout from './BaseLayout.astro'
 
-// Translations for page-specific text
-const translations = {
-  en: {
-    backToProjects: 'Back to Projects',
-    projectLinks: 'Project Links',
-    technologiesUsed: 'Technologies Used',
-  },
-  tw: {
-    backToProjects: '返回專案列表',
-    projectLinks: '專案連結',
-    technologiesUsed: '使用技術',
-  },
-}
-
-const { locale } = Astro.params
-const currentLocale = (locale || defaultLocale) as keyof typeof translations
-const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
-  return translations[currentLocale]?.[key] || translations['en']?.[key]
-}
-
 export interface Props {
   project: CollectionEntry<'projects'>
   headings?: { depth: number; slug: string; text: string }[]
 }
 
 const { project, headings } = Astro.props as Props
-
 const { id, data, body } = project
 const { slug } = getLocaleSlugFromId(id)
 const {
   // slug,
+  icon,
+  tagline,
   title,
   subtitle,
-  icon,
-  color = 'primary', // Default color theme
+  description,
+  categories,
   image = {
     src: '',
     alt: '',
@@ -53,6 +36,33 @@ const {
   links = [],
   cards = [],
 } = data
+const color = data.color || 'primary'
+
+// Translations for page-specific text
+const translations = {
+  en: {
+    backToProjects: 'Back to Projects',
+    projectLinks: 'Project Links',
+    technologiesUsed: 'Technologies Used',
+    projectScreenshot: `${title} Screenshot`,
+    iconAlt: `${title} Icon`,
+    projectDiagram: `${title} Diagram`,
+  },
+  tw: {
+    backToProjects: '返回專案列表',
+    projectLinks: '專案連結',
+    technologiesUsed: '使用技術',
+    projectScreenshot: `${title} 截圖`,
+    iconAlt: `${title} 圖示`,
+    projectDiagram: `${title} 架構圖`,
+  },
+}
+
+const { locale } = Astro.params
+const currentLocale = (locale || defaultLocale) as keyof typeof translations
+const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
+  return translations[currentLocale]?.[key] || translations['en']?.[key]
+}
 ---
 
 <BaseLayout title={title} description={subtitle}>
@@ -66,29 +76,59 @@ const {
       </div>
       <div class="grid gap-8 lg:grid-cols-[2fr_1fr]">
         <div class="animate-fade-in-up">
-          <div class="mb-4 flex items-center gap-3">
-            <div
-              id={`icon-${slug}`}
-              class={`w-12 h-12 rounded-lg bg-${color}-100 dark:bg-${color}-900/20 flex items-center justify-center`}
-            >
-              {
-                icon && (
-                  <Icon name={icon} class={`h-8 w-8 text-${color}-600 dark:text-${color}-400`} />
-                )
-              }
-            </div>
-            <div id={`title-${slug}`}>
-              <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl">{title}</h1>
-              <p class="text-muted-foreground">{subtitle}</p>
+          <div class="mt-4 flex flex-col items-start justify-start">
+            {
+              categories && (
+                <div
+                  id={`categories-${slug}`}
+                  class="mb-2 ml-14 flex flex-wrap items-center justify-start gap-2"
+                >
+                  {categories.slice(0, 3).map((category) => (
+                    <CategoryBadge
+                      type="projects"
+                      category={category}
+                      className="bg-accent text-accent-foreground py-1 text-sm hover:bg-accent/80"
+                    />
+                  ))}
+                </div>
+              )
+            }
+            <div class="mb-4 flex items-center gap-3">
+              <div
+                id={`icon-${slug}`}
+                class={`w-12 h-12 rounded-lg bg-${color}-100 dark:bg-${color}-900/20 flex items-center justify-center`}
+              >
+                {
+                  typeof data.icon === 'string' && (
+                    <Icon name={icon} class={`h-8 w-8 text-${color}-600 dark:text-${color}-400`} />
+                  )
+                }
+                {
+                  typeof data.icon?.src === 'string' && (
+                    <Image
+                      src={data.icon}
+                      class={`h-8 w-8 rounded-lg object-contain`}
+                      alt={t('iconAlt')}
+                    />
+                  )
+                }
+              </div>
+              <div id={`title-${slug}`}>
+                <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl">{title}</h1>
+                <p class="text-muted-foreground">{subtitle}</p>
+              </div>
             </div>
           </div>
           <div
-            id={`image-${slug}`}
-            class="bg-muted relative mb-8 aspect-video overflow-hidden rounded-lg"
+            class="bg-muted relative mb-8 flex items-center justify-center overflow-hidden rounded-lg"
           >
-            <div class="absolute inset-0 flex items-center justify-center">
-              <p class="text-muted-foreground">{image.alt}</p>
-            </div>
+            <Image
+              id={`image-${slug}`}
+              src={data.image?.url || '/placeholder.svg'}
+              alt={data.image?.alt || t('projectScreenshot')}
+              class="h-full w-full transition-transform"
+              inferSize={typeof data.image?.url === 'string' ? true : false}
+            />
           </div>
           <div class="prose dark:prose-invert max-w-none lg:col-span-2">
             <slot />
@@ -142,9 +182,13 @@ const {
                     <h3 class="mb-4 text-lg font-semibold">{card.title}</h3>
                     {card.type === 'diagram' && (
                       <div>
-                        <div class="bg-muted mb-2 flex aspect-video items-center justify-center rounded">
-                          <p class="text-muted-foreground text-sm">{card.image_placeholder}</p>
-                          {/* <img src={card.image_path} alt={card.alt_text} class="rounded object-cover w-full h-full" /> */}
+                        <div class="mb-2 flex items-center justify-center">
+                          <Image
+                            src={card.image?.url || '/placeholder.svg'}
+                            alt={card.image?.alt || t('projectDiagram')}
+                            class="h-full w-full rounded-lg transition-transform"
+                            inferSize={typeof card.image?.url === 'string' ? true : false}
+                          />
                         </div>
                         {card.caption && (
                           <p class="text-muted-foreground text-sm italic">{card.caption}</p>
@@ -172,21 +216,34 @@ const {
                       </ul>
                     )}
                     {card.type === 'list' && card.items && (
-                      <ul class="space-y-4">
+                      <ul class="flex flex-col gap-4">
                         {card.items.map((item: any) => (
                           <a href={item.url} target="_blank" rel="noopener noreferrer">
-                            <div class="flex items-center gap-3 rounded-lg border p-3">
-                              {item.icon && (
-                                <div class="bg-muted flex h-10 w-10 items-center justify-center rounded-full">
-                                  <Icon name={item.icon} class={`h-5 w-5`} />
+                            <div class="flex flex-col gap-3 rounded-lg border p-3">
+                              <div class="flex items-center gap-3 rounded-lg">
+                                {item.icon && (
+                                  <div class="bg-muted flex h-10 w-10 items-center justify-center rounded-full">
+                                    <Icon name={item.icon} class={`h-5 w-5`} />
+                                  </div>
+                                )}
+                                <div>
+                                  <p class="text-sm font-medium">{item.name}</p>
+                                  {item.description && (
+                                    <p class="text-muted-foreground text-xs">{item.description}</p>
+                                  )}
+                                </div>
+                              </div>
+
+                              {item.image && (
+                                <div class="flex items-center justify-center">
+                                  <Image
+                                    src={item.image?.url || '/placeholder.svg'}
+                                    alt={item.image?.alt || t('projectDiagram')}
+                                    class="h-full w-full rounded-lg transition-transform"
+                                    inferSize={typeof item.image?.url === 'string' ? true : false}
+                                  />
                                 </div>
                               )}
-                              <div>
-                                <p class="text-sm font-medium">{item.name}</p>
-                                {item.description && (
-                                  <p class="text-muted-foreground text-xs">{item.description}</p>
-                                )}
-                              </div>
                             </div>
                           </a>
                         ))}

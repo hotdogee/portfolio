@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 import { Icon } from 'astro-icon/components'
+import { Image, Picture } from 'astro:assets'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { ArrowRight } from 'lucide-react'
 import CategoryBadge from '@components/CategoryBadge.astro'
@@ -15,6 +16,7 @@ import {
 } from '@components/ui/card'
 import { Link } from '@components/ui/link'
 import { defaultLocale, getLocaleSlugFromId } from '@lib/i18n'
+import TechBadge from './TechBadge.astro'
 
 // make sure tailwind class names are statically detectable at build-time
 const colorVariants = {
@@ -23,23 +25,6 @@ const colorVariants = {
   blue: 'dark:bg-blue-900/20 dark:text-blue-400 bg-blue-100 text-blue-600',
   primary: 'bg-primary text-primary',
 }
-
-const translations = {
-  en: {
-    projectScreenshot: 'Project Screenshot',
-    viewDetails: 'View Details',
-  },
-  tw: {
-    projectScreenshot: '專案截圖',
-    viewDetails: '查看詳情',
-  },
-}
-const { locale } = Astro.params
-const currentLocale = (locale || defaultLocale) as keyof typeof translations
-const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
-  return translations[currentLocale]?.[key] || translations['en']?.[key]
-}
-
 interface Props {
   project: CollectionEntry<'projects'>
   index?: number
@@ -47,8 +32,43 @@ interface Props {
 const { project, index = 0 } = Astro.props as Props
 const { id, data } = project
 const { slug } = getLocaleSlugFromId(id)
+const {
+  // slug,
+  icon,
+  tagline,
+  title,
+  subtitle,
+  description,
+  categories,
+  image = {
+    src: '',
+    alt: '',
+  },
+  tech = [],
+  links = [],
+  cards = [],
+} = data
 const color = (data.color || 'primary') as keyof typeof colorVariants
+
+const translations = {
+  en: {
+    projectScreenshot: 'Project Screenshot',
+    viewDetails: 'View Details',
+    iconAlt: `${title} Icon`,
+  },
+  tw: {
+    projectScreenshot: '專案截圖',
+    viewDetails: '查看詳情',
+    iconAlt: `${title} 圖示`,
+  },
+}
+const { locale } = Astro.params
+const currentLocale = (locale || defaultLocale) as keyof typeof translations
+const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
+  return translations[currentLocale]?.[key] || translations['en']?.[key]
+}
 const projectUrl = getRelativeLocaleUrl(currentLocale, `/projects/${slug}`)
+// console.log('data.image', typeof data.icon.src)
 ---
 
 <div
@@ -65,48 +85,73 @@ const projectUrl = getRelativeLocaleUrl(currentLocale, `/projects/${slug}`)
             `w-fit items-center rounded-lg px-3 py-1 text-sm font-medium`,
           ]}
         >
-          {data.tagline}
+          {tagline}
         </div>
       </div>
-      <div class="mt-4 flex items-start justify-start gap-4">
-        <div
-          id={`icon-${slug}`}
-          class:list={[
-            colorVariants[color],
-            `flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg`,
-          ]}
-        >
-          {data.icon && <Icon name={data.icon} class={`h-8 w-8`} />}
-        </div>
-        <div id={`title-${slug}`} class="flex flex-col justify-center">
-          <CardTitle>{data.title}</CardTitle>
-          {data.subtitle && <CardDescription>{data.subtitle}</CardDescription>}
-        </div>
+      <div class="mt-4 flex flex-col items-start justify-start">
+        {
+          categories && (
+            <div
+              id={`categories-${slug}`}
+              class="mb-2 ml-16 flex flex-wrap items-center justify-start gap-2"
+            >
+              {categories.slice(0, 3).map((category) => (
+                <CategoryBadge
+                  type="projects"
+                  category={category}
+                  className="bg-accent text-accent-foreground hover:bg-accent/80"
+                />
+              ))}
+            </div>
+          )
+        }
+        <a href={projectUrl} class="flex items-start justify-start gap-4">
+          <div
+            id={`icon-${slug}`}
+            class:list={[
+              colorVariants[color],
+              `flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg`,
+            ]}
+          >
+            {typeof icon === 'string' && <Icon name={icon} class={`h-8 w-8`} />}
+            {
+              typeof icon?.src === 'string' && (
+                <Image src={icon} class={`h-8 w-8 rounded-lg object-contain`} alt={t('iconAlt')} />
+              )
+            }
+          </div>
+          <div id={`title-${slug}`} class="flex flex-col justify-center">
+            <CardTitle>{title}</CardTitle>
+            {subtitle && <CardDescription>{subtitle}</CardDescription>}
+          </div>
+        </a>
       </div>
     </CardHeader>
     <CardContent className="flex-grow">
-      <p class="text-muted-foreground">{data.description}</p>
+      <p class="text-muted-foreground">{description}</p>
     </CardContent>
-    <CardFooter className="flex flex-col items-start justify-start gap-4">
+    <CardFooter className="flex flex-col gap-4">
       {
-        data.categories && (
-          <div class="mb-2 flex flex-wrap gap-2">
-            {data.categories.slice(0, 3).map((category) => (
-              <CategoryBadge
-                type="projects"
-                category={category}
-                className="bg-accent text-accent-foreground hover:bg-accent/80"
-              />
+        tech && (
+          <div class="flex flex-wrap items-center justify-center gap-2">
+            {tech.slice(0, 3).map((techItem) => (
+              <TechBadge type="projects" tech={techItem} />
             ))}
           </div>
         )
       }
-      <div
-        id={`image-${slug}`}
+      <a
+        href={projectUrl}
         class="bg-muted flex h-40 w-full items-center justify-center overflow-hidden rounded-lg"
       >
-        <p class="text-muted-foreground text-sm">{data.image?.alt || t('projectScreenshot')}</p>
-      </div>
+        <Image
+          id={`image-${slug}`}
+          src={image?.url || '/placeholder.svg'}
+          alt={image?.alt || t('projectScreenshot')}
+          class="h-full w-full object-cover object-top transition-transform hover:scale-105"
+          inferSize={typeof image?.url === 'string' ? true : false}
+        />
+      </a>
       <Link href={projectUrl} className="w-full">
         {t('viewDetails')}
         <ArrowRight className="ml-2 h-4 w-4" />

@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
+import { Image, Picture } from 'astro:assets'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { Calendar1, CalendarSync, Clock, User } from 'lucide-react'
 import CategoryBadge from '@components/CategoryBadge.astro'
@@ -29,6 +30,7 @@ const articleUrl = getRelativeLocaleUrl(currentLocale, `/articles/${slug}`)
 const readingTime = localeReadingTime(String(body), currentLocale)
 const { title, excerpt, author, image, categories = [], tags = [], draft, changes } = data
 const { published, updated } = datesFromChanges(changes)
+console.log('data.image', image?.url)
 ---
 
 <div
@@ -43,12 +45,12 @@ const { published, updated } = datesFromChanges(changes)
       image && (
         <a href={articleUrl}>
           <div class="relative h-48 w-full overflow-hidden">
-            <img
+            <Image
               id={`image-${slug}`}
               src={image.url || '/placeholder.svg'}
               alt={image.alt || 'Blog post image'}
               class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
-              loading="lazy"
+              inferSize={typeof image.url === 'string' ? true : false}
             />
           </div>
         </a>
