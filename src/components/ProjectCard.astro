@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content'
+import { Image } from '@unpic/astro'
 import { Icon } from 'astro-icon/components'
-import { Image, Picture } from 'astro:assets'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { ArrowRight } from 'lucide-react'
 import CategoryBadge from '@components/CategoryBadge.astro'
@@ -40,10 +40,7 @@ const {
   subtitle,
   description,
   categories,
-  image = {
-    src: '',
-    alt: '',
-  },
+  image,
   tech = [],
   links = [],
   cards = [],
@@ -116,7 +113,12 @@ const projectUrl = getRelativeLocaleUrl(currentLocale, `/projects/${slug}`)
             {typeof icon === 'string' && <Icon name={icon} class={`h-8 w-8`} />}
             {
               typeof icon?.src === 'string' && (
-                <Image src={icon} class={`h-8 w-8 rounded-lg object-contain`} alt={t('iconAlt')} />
+                <Image
+                  src={icon}
+                  class={`h-8 w-8 rounded-lg object-contain`}
+                  alt={t('iconAlt')}
+                  unstyled
+                />
               )
             }
           </div>
@@ -149,7 +151,6 @@ const projectUrl = getRelativeLocaleUrl(currentLocale, `/projects/${slug}`)
           src={image?.url || '/placeholder.svg'}
           alt={image?.alt || t('projectScreenshot')}
           class="h-full w-full object-cover object-top transition-transform hover:scale-105"
-          inferSize={typeof image?.url === 'string' ? true : false}
         />
       </a>
       <Link href={projectUrl} className="w-full" variant={'default'}>

@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
+import { Image } from '@unpic/astro'
 import { Icon } from 'astro-icon/components'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { ArrowLeft, Calendar1, CalendarSync, Clock, User } from 'lucide-react'
@@ -54,7 +55,7 @@ const { published, updated } = datesFromChanges(changes)
       </div>
       <div class="grid gap-8">
         <div class="animate-fade-in-up">
-          <article class="prose prose-lg dark:prose-invert max-w-none">
+          <article class="max-w-none">
             <div class="mb-8">
               <div id={`category-${slug}`} class="mb-4 flex flex-wrap gap-2">
                 {categories.map((category) => <CategoryBadge category={category} />)}
@@ -103,25 +104,30 @@ const { published, updated } = datesFromChanges(changes)
               </div>
               {
                 image && (
-                  <div class="relative mb-8 aspect-video w-full overflow-hidden rounded-lg">
-                    <img
+                  <div class="relative mb-8 w-full overflow-hidden rounded-lg">
+                    <Image
                       id={`image-${slug}`}
                       src={image.url || '/placeholder.svg'}
                       alt={image.alt || 'Blog post image'}
-                      class="absolute inset-0 h-full w-full object-cover"
+                      class="h-full w-full object-cover"
                       loading="eager"
+                      placeholder="blurhash"
+                      unstyled
+                      lightbox
                     />
                   </div>
                 )
               }
               <div class="mb-6 border-b pb-6">
-                <p id={`excerpt-${slug}`} class="text-muted-foreground text-xl">{excerpt}</p>
+                <p id={`excerpt-${slug}`} class="text-muted-foreground text-lg">{excerpt}</p>
               </div>
               <div class="mb-8 flex flex-wrap gap-2">
                 {tags.map((tag) => <TagBadge tag={tag} />)}
               </div>
             </div>
-            <slot />
+            <div class="prose prose-lg dark:prose-invert">
+              <slot />
+            </div>
           </article>
         </div>
       </div>

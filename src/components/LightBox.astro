@@ -6,7 +6,7 @@
     let pic: HTMLImageElement | null = null
     let placeholder: HTMLElement | null = null
 
-    document.querySelectorAll('[light-box]').forEach((element: Element) => {
+    document.querySelectorAll('[lightbox]').forEach((element: Element) => {
       const picture = element as HTMLImageElement
       picture.addEventListener('click', (event) => {
         pic = picture
@@ -128,10 +128,10 @@
     }
   }
 
-  :global(body:not(:has(#lightbox:popover-open)) [light-box]) {
+  :global(body:not(:has(#lightbox:popover-open)) [lightbox]) {
     cursor: zoom-in;
   }
-  :global(body:has(#lightbox:popover-open) [light-box]) {
+  :global(body:has(#lightbox:popover-open) [lightbox]) {
     pointer-events: none;
   }
 </style>
