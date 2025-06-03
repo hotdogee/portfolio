@@ -89,10 +89,6 @@ export const onRequest = defineMiddleware(async (context, next) => {
   // 3. accept-language header (not compatible with SSG)
   // 4. default locale
   const { request, redirect, url } = context
-  if (url.pathname.includes('.well-known/appspecific/com.chrome.devtools')) {
-    // skip devtools
-    return new Response(null, { status: 204 })
-  }
 
   // Skip certain paths that don't need locale handling
   const skipPaths = ['/script', '/favicon', '/robots.txt', '/rss.xml', '/.', '/_']

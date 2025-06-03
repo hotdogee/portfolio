@@ -7,6 +7,7 @@ import tailwindcss from '@tailwindcss/vite'
 import icon from 'astro-icon'
 import pagefind from 'astro-pagefind'
 import { defineConfig, fontProviders } from 'astro/config'
+import devtoolsJson from 'vite-plugin-devtools-json'
 import { defaultLocale, locales } from './src/lib/i18n'
 
 // https://astro.build/config
@@ -25,7 +26,7 @@ export default defineConfig({
     prefetchAll: true,
   },
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss(), devtoolsJson()],
   },
   experimental: {
     clientPrerender: true,
