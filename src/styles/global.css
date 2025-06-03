@@ -284,6 +284,12 @@
   .prose pre > code {
     @apply block overflow-x-auto p-4;
   }
+  .prose figcaption {
+    @apply text-center;
+  }
+  .prose img {
+    @apply border-border rounded-md border;
+  }
   [data-slot='card-title'] {
     @apply text-2xl leading-7;
   }
