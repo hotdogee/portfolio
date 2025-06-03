@@ -4,11 +4,14 @@ import partytown from '@astrojs/partytown'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwindcss from '@tailwindcss/vite'
+import { imageService } from '@unpic/astro/service'
 import icon from 'astro-icon'
 import pagefind from 'astro-pagefind'
 import { defineConfig, fontProviders } from 'astro/config'
+import rehypeImageCaption from 'rehype-image-caption'
 import devtoolsJson from 'vite-plugin-devtools-json'
 import { defaultLocale, locales } from './src/lib/i18n'
+import rehypeLightbox from './src/lib/rehype-lightbox'
 
 // https://astro.build/config
 export default defineConfig({
@@ -27,6 +30,12 @@ export default defineConfig({
   },
   vite: {
     plugins: [tailwindcss(), devtoolsJson()],
+  },
+  image: {
+    service: imageService({
+      placeholder: 'blurhash',
+      layout: 'constrained',
+    }),
   },
   experimental: {
     clientPrerender: true,
@@ -59,6 +68,8 @@ export default defineConfig({
     }),
   ],
   markdown: {
+    remarkPlugins: [],
+    rehypePlugins: [rehypeImageCaption, rehypeLightbox],
     syntaxHighlight: 'shiki',
     shikiConfig: {
       // Choose from Shiki's built-in themes (or add your own)
