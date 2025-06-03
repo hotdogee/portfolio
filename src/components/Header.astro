@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from '@unpic/astro'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { Menu, Search, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -49,6 +49,7 @@ const { pathname } = separateLocaleFromPathname(Astro.url.pathname)
           src={profile}
           class="size-10 rounded-full"
           alt="Profile Picture"
+          unstyled
         />
       </a>
       <a
