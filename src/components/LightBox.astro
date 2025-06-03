@@ -1,0 +1,137 @@
+<figure id="lightbox" popover="manual"></figure>
+
+<script>
+  declare var lightbox: HTMLElement
+  document.addEventListener('astro:page-load', () => {
+    let pic: HTMLImageElement | null = null
+    let placeholder: HTMLElement | null = null
+
+    document.querySelectorAll('[light-box]').forEach((element: Element) => {
+      const picture = element as HTMLImageElement
+      picture.addEventListener('click', (event) => {
+        pic = picture
+        const showPopover = () => {
+          lightbox.innerHTML = picture.outerHTML
+          picture.style.viewTransitionName = ''
+          placeholder = placeholdImage(picture)
+          if (picture.parentElement) {
+            picture.parentElement.appendChild(placeholder)
+          }
+          picture.style.display = 'none'
+          lightbox.showPopover()
+        }
+        const shouldAnimate =
+          'startViewTransition' in document &&
+          !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        if (!shouldAnimate) {
+          showPopover()
+          return
+        }
+        picture.style.viewTransitionName = 'light-box-img'
+        const transition = document.startViewTransition(showPopover)
+        transition.finished.then(() => {
+          picture.style.viewTransitionName = 'light-box-img'
+        })
+      })
+    })
+
+    lightbox.addEventListener('toggle', (e) => {
+      const event = e as ToggleEvent
+      if (event.newState === 'open') {
+        document.addEventListener('click', handleClick)
+      } else {
+        document.removeEventListener('click', handleClick)
+      }
+    })
+
+    function handleClick(event: MouseEvent) {
+      if (
+        lightbox.matches(':popover-open') &&
+        event.target instanceof Node &&
+        !lightbox.contains(event.target)
+      ) {
+        // Click was outside the popover content
+        backdropClicked()
+        // console.log('Backdrop clicked!', event.target.nodeName)
+      }
+    }
+
+    const backdropClicked = () => {
+      const hidePopover = () => {
+        lightbox.hidePopover()
+        if (pic && pic.parentElement && placeholder) {
+          pic.parentElement.removeChild(placeholder)
+        }
+        if (pic) {
+          pic.style.display = ''
+        }
+      }
+      const shouldAnimate =
+        'startViewTransition' in document &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      if (shouldAnimate) {
+        const transition = document.startViewTransition(hidePopover)
+        transition.finished.then(() => {
+          ;(pic as HTMLElement).style.viewTransitionName = ''
+          pic = null
+          placeholder = null
+        })
+      } else {
+        hidePopover()
+      }
+    }
+  })
+  function placeholdImage(img: HTMLImageElement) {
+    let placeholder = document.createElement('div')
+    placeholder.style.width = img.clientWidth + 'px'
+    placeholder.style.height = img.clientHeight + 'px'
+    return placeholder
+  }
+</script>
+
+<style>
+  :global(::view-transition-group(light-box-img)) {
+    z-index: 1;
+  }
+
+  :where(#lightbox) {
+    border: none;
+    padding: 0;
+
+    view-transition-name: light-box;
+    margin: auto;
+    max-height: 95vh;
+    background: none;
+
+    @media (min-width: 768px) {
+      max-inline-size: 80vw;
+    }
+
+    @starting-style {
+      &:popover-open,
+      &:popover-open::backdrop {
+        opacity: 1;
+      }
+    }
+
+    &::backdrop {
+      background-image: radial-gradient(#0003, 25%, #000e);
+      view-transition-name: light-box-backdrop;
+    }
+
+    > img {
+      display: flex;
+      max-inline-size: 100%;
+      block-size: auto;
+      max-height: 95vh;
+      background: oklch(0.98 0 0);
+    }
+  }
+
+  :global(body:not(:has(#lightbox:popover-open)) [light-box]) {
+    cursor: zoom-in;
+  }
+  :global(body:has(#lightbox:popover-open) [light-box]) {
+    pointer-events: none;
+  }
+</style>

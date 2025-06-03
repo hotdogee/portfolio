@@ -123,6 +123,7 @@ const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
             class="bg-muted relative mb-8 flex items-center justify-center overflow-hidden rounded-lg"
           >
             <Image
+              light-box
               id={`image-${slug}`}
               src={data.image?.url || '/placeholder.svg'}
               alt={data.image?.alt || t('projectScreenshot')}
@@ -184,6 +185,7 @@ const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
                       <div>
                         <div class="mb-2 flex items-center justify-center">
                           <Image
+                            light-box
                             src={card.image?.url || '/placeholder.svg'}
                             alt={card.image?.alt || t('projectDiagram')}
                             class="h-full w-full rounded-lg transition-transform"

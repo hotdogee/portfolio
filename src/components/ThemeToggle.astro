@@ -93,7 +93,6 @@ import { Button } from '@components/ui/button'
           'startViewTransition' in document &&
           !window.matchMedia('(prefers-reduced-motion: reduce)').matches
         if (!shouldAnimate) {
-          console.warn('View transitions are not supported in this browser.')
           toggleTheme()
           return
         }
