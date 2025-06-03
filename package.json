@@ -11,6 +11,7 @@
     "slugify": "tsx util/slugify-cli.js"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.5.3",
     "@astrojs/mdx": "^4.3.0",
     "@astrojs/partytown": "^2.1.4",
     "@astrojs/react": "^4.3.0",

@@ -1,4 +1,5 @@
 // @ts-check
+import cloudflare from '@astrojs/cloudflare'
 import mdx from '@astrojs/mdx'
 import partytown from '@astrojs/partytown'
 import react from '@astrojs/react'
@@ -17,6 +18,7 @@ import rehypeLightbox from './src/lib/rehype-lightbox'
 export default defineConfig({
   site: 'https://hanl.in',
   trailingSlash: 'never',
+
   i18n: {
     defaultLocale: defaultLocale,
     locales: [...locales],
@@ -25,18 +27,22 @@ export default defineConfig({
       tw: defaultLocale,
     },
   },
+
   prefetch: {
     prefetchAll: true,
   },
+
   vite: {
     plugins: [tailwindcss(), devtoolsJson()],
   },
+
   image: {
     service: imageService({
       placeholder: 'blurhash',
       layout: 'constrained',
     }),
   },
+
   experimental: {
     clientPrerender: true,
     fonts: [
@@ -48,6 +54,7 @@ export default defineConfig({
       },
     ],
   },
+
   integrations: [
     mdx(),
     partytown(),
@@ -67,6 +74,7 @@ export default defineConfig({
       },
     }),
   ],
+
   markdown: {
     remarkPlugins: [],
     rehypePlugins: [rehypeImageCaption, rehypeLightbox],
@@ -95,4 +103,6 @@ export default defineConfig({
       transformers: [],
     },
   },
+
+  adapter: cloudflare(),
 })
