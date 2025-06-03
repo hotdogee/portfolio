@@ -6,6 +6,11 @@ export const tags = {
     successes: 'successes',
     setbacks: 'setbacks',
     community: 'community',
+    ddr5: 'DDR5',
+    am5: 'AM5',
+    gcp: 'GCP',
+    ctf: 'CTF',
+    'google-cloud-summit': 'Google Cloud Summit',
   },
   tw: {
     astro: 'astro',
@@ -14,5 +19,10 @@ export const tags = {
     successes: '成功經驗',
     setbacks: '挑戰',
     community: '社群',
+    ddr5: 'DDR5',
+    am5: 'AM5',
+    gcp: 'GCP',
+    ctf: 'CTF',
+    'google-cloud-summit': 'Google Cloud Summit',
   },
 } as const
