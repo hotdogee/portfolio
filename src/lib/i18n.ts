@@ -26,6 +26,10 @@ export const getLocaleSlugFromId = (id: string) => {
 }
 
 export const separateLocaleFromPathname = (pathname: string) => {
+  // remove '.html' from the end of the pathname if it exists
+  if (pathname.endsWith('.html')) {
+    pathname = pathname.slice(0, -5)
+  }
   for (const locale of locales) {
     if ((pathname + '/').slice(0, 4) === `/${locale}/`) {
       return { locale, pathname: pathname.slice(3) || '/' }
