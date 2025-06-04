@@ -1,5 +1,7 @@
 ---
 import { Globe } from 'lucide-react'
+import TW from '@assets/icons/tw.svg'
+import US from '@assets/icons/us.svg'
 import { Button } from '@components/ui/button'
 import { defaultLocale, LOCALE_COOKIE, locales } from '@lib/i18n'
 
@@ -33,14 +35,14 @@ const locale = getLocaleFromUrl(Astro.url) as string
         data-lang="en"
         class={`cursor-pointer flex w-full items-center rounded-sm px-3 py-2 text-sm transition-colors ${locale === 'en' ? 'bg-card dark:bg-card ring-accent ring-2' : 'hover:bg-accent/50'}`}
       >
-        <span class="mr-2">🇺🇸</span> English
+        <US class="mr-2 size-6" /> English
       </button>
       <button
         type="button"
         data-lang="tw"
         class={`cursor-pointer flex w-full items-center rounded-sm px-3 py-2 text-sm transition-colors ${locale === 'tw' ? 'bg-card dark:bg-card ring-accent ring-2' : 'hover:bg-accent/50'}`}
       >
-        <span class="mr-2">🇹🇼</span> 繁體中文
+        <TW class="mr-2 size-6" /> 正體中文
       </button>
     </div>
   </div>
@@ -125,18 +127,6 @@ const locale = getLocaleFromUrl(Astro.url) as string
 </script>
 
 <style>
-  /* noto-color-emoji-emoji-400-normal */
-  @font-face {
-    font-family: 'Noto Color Emoji';
-    font-style: normal;
-    font-display: swap;
-    font-weight: 400;
-    src:
-      url(@fontsource/noto-color-emoji/files/noto-color-emoji-emoji-400-normal.woff2)
-        format('woff2'),
-      url(@fontsource/noto-color-emoji/files/noto-color-emoji-emoji-400-normal.woff) format('woff');
-  }
-
   .dropdown {
     position: relative;
     display: inline-block;
@@ -160,7 +150,6 @@ const locale = getLocaleFromUrl(Astro.url) as string
 
   /* Font for emoji flags */
   button[data-lang] {
-    font-family: 'Noto Color Emoji', sans-serif;
     transition: background-color 0.2s ease;
   }
 
