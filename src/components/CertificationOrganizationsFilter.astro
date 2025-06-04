@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import organizations from '@/certifications/organizations.json'
 import { cn } from '@/lib/utils'
@@ -49,14 +50,14 @@ const { orgs, class: className, size = 'md', icon = true, text = false, ...rest 
       >
         {org.icon && icon && (
           <div class:list={[text && 'mr-1', 'flex-shrink-0']}>
-            <img
-              src={org.icon.light}
+            <Image
+              src={import(org.icon.light)}
               alt={org.icon.alt}
               class:list={[size == 'md' ? 'size-5' : 'size-6', 'object-contain dark:hidden']}
               loading="lazy"
             />
-            <img
-              src={org.icon.dark}
+            <Image
+              src={import(org.icon.dark)}
               alt={org.icon.alt}
               class:list={[size == 'md' ? 'size-5' : 'size-6', 'hidden object-contain dark:block']}
               loading="lazy"

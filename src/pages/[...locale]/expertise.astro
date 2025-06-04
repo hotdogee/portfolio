@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
+import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import {
@@ -439,14 +440,14 @@ const otherCerts = certifications.filter((certification: CollectionEntry<'certif
                     <div class="flex items-center">
                       {org?.icon && (
                         <div class="mr-3 flex-shrink-0">
-                          <img
-                            src={org.icon.light}
+                          <Image
+                            src={import(org.icon.light)}
                             alt={org.icon.alt}
                             class="size-6 object-contain dark:hidden"
                             loading="lazy"
                           />
-                          <img
-                            src={org.icon.dark}
+                          <Image
+                            src={import(org.icon.dark)}
                             alt={org.icon.alt}
                             class="hidden size-6 object-contain dark:block"
                             loading="lazy"

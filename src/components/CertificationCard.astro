@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
+import { Image } from 'astro:assets'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { Award, ShieldCheck } from 'lucide-react'
 import organizations from '@/certifications/organizations.json'
@@ -48,8 +49,8 @@ const org = (organizations as Record<string, any>)?.[slugify(organization)]
 >
   <a href={certificationUrl}>
     <div class="relative aspect-square w-full overflow-hidden p-3">
-      <img
-        src={badge?.url.src || '/placeholder.svg'}
+      <Image
+        src={badge?.url || '/placeholder.svg'}
         alt={badge?.alt[currentLocale] || 'Badge'}
         class="h-full w-full object-cover transition-transform hover:scale-105"
         id={`badge-${id}`}
@@ -62,14 +63,14 @@ const org = (organizations as Record<string, any>)?.[slugify(organization)]
       {
         org?.icon && (
           <div class="mr-1.5 flex-shrink-0">
-            <img
-              src={org.icon.light}
+            <Image
+              src={import(org.icon.light)}
               alt={org.icon.alt}
               class="size-5 object-contain dark:hidden"
               loading="lazy"
             />
-            <img
-              src={org.icon.dark}
+            <Image
+              src={import(org.icon.dark)}
               alt={org.icon.alt}
               class="hidden size-5 object-contain dark:block"
               loading="lazy"

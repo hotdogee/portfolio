@@ -1,6 +1,7 @@
 ---
 // Added ExternalLink, BadgeCheck
 import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import {
   ArrowLeft,
@@ -111,8 +112,8 @@ const processedDescriptions = localizedDescription.map((desc: string) => marked.
       <div class="grid gap-8 md:grid-cols-[1fr_2fr]">
         <div class="">
           <div class="relative aspect-square w-full overflow-hidden p-3">
-            <img
-              src={badge?.url.src || '/placeholder.svg'}
+            <Image
+              src={badge?.url || '/placeholder.svg'}
               alt={badge?.alt[currentLocale] || 'Badge'}
               class="h-full w-full object-cover transition-transform hover:scale-105"
               id={`badge-${id}`}
@@ -162,14 +163,14 @@ const processedDescriptions = localizedDescription.map((desc: string) => marked.
                     class="mr-1.5 flex-shrink-0 transition-transform hover:scale-105"
                     id={`organization-${id}`}
                   >
-                    <img
-                      src={org.logo.light}
+                    <Image
+                      src={import(org.logo.light)}
                       alt={org.logo.alt}
                       class="h-10 object-contain dark:hidden"
                       loading="lazy"
                     />
-                    <img
-                      src={org.logo.dark}
+                    <Image
+                      src={import(org.logo.dark)}
                       alt={org.logo.alt}
                       class="hidden h-10 object-contain dark:block"
                       loading="lazy"
@@ -237,8 +238,8 @@ const processedDescriptions = localizedDescription.map((desc: string) => marked.
             {
               certificate && (
                 <div class="relative mb-8 overflow-hidden rounded-lg">
-                  <img
-                    src={certificate.url.src || '/placeholder.svg'}
+                  <Image
+                    src={certificate.url || '/placeholder.svg'}
                     alt={certificate.alt[currentLocale] || 'Certificate'}
                     class=""
                     loading="eager"
@@ -250,8 +251,8 @@ const processedDescriptions = localizedDescription.map((desc: string) => marked.
               evidence.length > 0 && (
                 <div class="relative mb-8 overflow-hidden rounded-lg">
                   {evidence.map((item: { url: any; alt: { [key: string]: string } }) => (
-                    <img
-                      src={item.url.src || '/placeholder.svg'}
+                    <Image
+                      src={item.url || '/placeholder.svg'}
                       alt={item.alt[currentLocale] || 'Certificate'}
                       class=""
                       loading="eager"
