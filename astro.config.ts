@@ -16,7 +16,7 @@ import rehypeLightbox from './src/lib/rehype-lightbox'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://hanl.in',
+  site: 'https://www.hanl.in',
   trailingSlash: 'never',
 
   i18n: {
@@ -35,8 +35,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss(), devtoolsJson()],
     resolve: {
-      // Use react-dom/server.edge instead of react-dom/server.browser for React 19.
-      // Without this, MessageChannel from node:worker_threads needs to be polyfilled.
+      // Fixes 'MessageChannel is not defined' Error When
+      // Deploying Astro 5 + React 19 to Cloudflare
       alias: import.meta.env.PROD
         ? {
             'react-dom/server': 'react-dom/server.edge',
