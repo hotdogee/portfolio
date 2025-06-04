@@ -31,6 +31,10 @@ export default defineConfig({
   },
 
   trailingSlash: 'never',
+  build: {
+    // Fix trailing slash issue with Cloudflare Pages
+    format: 'file',
+  },
 
   i18n: {
     defaultLocale: defaultLocale,
