@@ -161,18 +161,20 @@ const processedDescriptions = localizedDescription.map((desc: string) => marked.
                 org?.logo && (
                   <a
                     href={orgLink}
-                    class="mr-1.5 flex-shrink-0 transition-transform hover:scale-105"
+                    class="mr-1.5 w-fit flex-shrink-0 transition-transform hover:scale-105"
                     id={`organization-${id}`}
                   >
                     <Image
                       src={org.logo.light}
                       alt={org.logo.alt}
+                      height={40}
                       class="h-10 object-contain dark:hidden"
                       loading="lazy"
                     />
                     <Image
                       src={org.logo.dark}
                       alt={org.logo.alt}
+                      height={40}
                       class="hidden h-10 object-contain dark:block"
                       loading="lazy"
                     />
