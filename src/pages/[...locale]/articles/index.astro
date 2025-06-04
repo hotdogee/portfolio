@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content'
 import BlogCard from '@components/ArticleCard.astro'
 import BlogSidebar from '@components/ArticleSidebar.astro'
 import BaseLayout from '@layouts/BaseLayout.astro'
-import { defaultLocale } from '@lib/i18n'
+import { datesFromChanges, defaultLocale } from '@lib/i18n'
 
 export { getLocalizedStaticPaths as getStaticPaths } from '@lib/i18n'
 
@@ -32,10 +32,17 @@ const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
 }
 
 // Fetch articles by locale
-const articles = await getCollection('articles', ({ id }) => {
-  // Filter articles by language if needed
-  const langPrefix = id.split('/')[0]
-  return langPrefix === currentLocale
+const articles = (
+  await getCollection('articles', ({ id }) => {
+    // Filter articles by language if needed
+    const langPrefix = id.split('/')[0]
+    return langPrefix === currentLocale
+  })
+).sort((a, b) => {
+  // Sort published date
+  const dateA = datesFromChanges(a.data.changes).published || new Date(0)
+  const dateB = datesFromChanges(b.data.changes).published || new Date(0)
+  return dateB.getTime() - dateA.getTime()
 })
 
 // Extract categories and tags for sidebar
