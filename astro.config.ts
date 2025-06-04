@@ -1,12 +1,9 @@
 // @ts-check
-import cloudflare from '@astrojs/cloudflare'
 import mdx from '@astrojs/mdx'
 import partytown from '@astrojs/partytown'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
-import vercel from '@astrojs/vercel'
 import tailwindcss from '@tailwindcss/vite'
-import { imageService } from '@unpic/astro/service'
 import icon from 'astro-icon'
 import pagefind from 'astro-pagefind'
 import { defineConfig, envField, fontProviders } from 'astro/config'
@@ -132,5 +129,5 @@ export default defineConfig({
   // adapter: vercel({
   //   edgeMiddleware: true,
   // }),
-  adapter: cloudflare(),
+  // adapter: cloudflare(),
 })
