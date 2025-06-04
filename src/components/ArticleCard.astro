@@ -30,7 +30,7 @@ const articleUrl = getRelativeLocaleUrl(currentLocale, `/articles/${slug}`)
 const readingTime = localeReadingTime(String(body), currentLocale)
 const { title, excerpt, author, image, categories = [], tags = [], draft, changes } = data
 const { published, updated } = datesFromChanges(changes)
-console.log('data.image', image?.url)
+// console.log('data.image', image?.url)
 ---
 
 <div

@@ -23,7 +23,7 @@ export default defineConfig({
   i18n: {
     defaultLocale: defaultLocale,
     locales: [...locales],
-    routing: 'manual',
+    // routing: 'manual',
     fallback: {
       tw: defaultLocale,
     },
