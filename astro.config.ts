@@ -18,7 +18,6 @@ import rehypeLightbox from './src/lib/rehype-lightbox'
 export default defineConfig({
   site: 'https://hanl.in',
   trailingSlash: 'never',
-  output: 'static',
 
   i18n: {
     defaultLocale: defaultLocale,
@@ -35,9 +34,6 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss(), devtoolsJson()],
-    optimizeDeps: {
-      include: ['react', 'react-dom'],
-    },
   },
 
   image: {
@@ -109,4 +105,6 @@ export default defineConfig({
       transformers: [],
     },
   },
+
+  adapter: cloudflare(),
 })
