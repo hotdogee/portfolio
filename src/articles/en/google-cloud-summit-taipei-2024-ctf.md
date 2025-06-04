@@ -31,7 +31,7 @@ And the result? I'm incredibly proud and excited to share that I managed to secu
 
 ![Victory! Proud to see "hotdogee" leading the scoreboard at the end of the GCP Security CTF.](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1748948137/google-summit-24-ctf-scoreboard-admin-view-presentation_loriyx.jpg)_Victory! Proud to see "hotdogee" leading the scoreboard at the end of the GCP Security CTF._
 
-![The final standings projected for all participants.](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1748948128/google-summit-24-ctf-scoreboard-top-users_auqci5.png)_The final standings for all participants._
+![The final standings for all participants.](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1748948128/google-summit-24-ctf-scoreboard-top-users_auqci5.png)_The final standings for all participants._
 
 The victory came with a cool piece of swag - a Google Cloud branded thermos, which will definitely get some good use fueling future projects!
 
