@@ -4,6 +4,7 @@ import mdx from '@astrojs/mdx'
 import partytown from '@astrojs/partytown'
 import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
+import vercel from '@astrojs/vercel'
 import tailwindcss from '@tailwindcss/vite'
 import { imageService } from '@unpic/astro/service'
 import icon from 'astro-icon'
@@ -115,7 +116,7 @@ export default defineConfig({
     },
   },
 
-  adapter: cloudflare({
-    imageService: 'custom',
+  adapter: vercel({
+    edgeMiddleware: true,
   }),
 })
