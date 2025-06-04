@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content'
-import { Image } from '@unpic/astro'
+// import { Image } from '@unpic/astro'
+import { Image } from 'astro:assets'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { Calendar1, CalendarSync, Clock, User } from 'lucide-react'
 import CategoryBadge from '@components/CategoryBadge.astro'
@@ -50,6 +51,7 @@ const { published, updated } = datesFromChanges(changes)
               src={image.url || '/placeholder.svg'}
               alt={image.alt || 'Blog post image'}
               class="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+              inferSize={typeof image.url === 'string' ? true : false}
             />
           </div>
         </a>
