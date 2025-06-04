@@ -82,7 +82,7 @@ const { pathname } = separateLocaleFromPathname(Astro.url.pathname)
                     link.href.some(
                       (href) => pathname.startsWith(href + '/') && pathname.split('/').length > 3
                     ),
-                  'hover:text-primary': !link.href.some((href) => pathname.startsWith(href + '/')),
+                  'hover:text-primary': !link.href.some((href) => pathname.startsWith(href)),
                 },
               ]}
               id={`nav-${index + 1}`}
@@ -150,13 +150,13 @@ const { pathname } = separateLocaleFromPathname(Astro.url.pathname)
                     link.href.some(
                       (href) => pathname.startsWith(href + '/') && pathname.split('/').length > 3
                     ),
-                  'hover:text-primary': !link.href.some((href) => pathname.startsWith(href + '/')),
+                  'hover:text-primary': !link.href.some((href) => pathname.startsWith(href)),
                 },
               ]}
               id={`nav-${index + 1}`}
               style={`vtn: nav-${index + 1};`}
             >
-              {link.label}
+              {t(link.label)}
             </a>
           ))
       }
