@@ -9,7 +9,7 @@ import tailwindcss from '@tailwindcss/vite'
 import { imageService } from '@unpic/astro/service'
 import icon from 'astro-icon'
 import pagefind from 'astro-pagefind'
-import { defineConfig, fontProviders } from 'astro/config'
+import { defineConfig, envField, fontProviders } from 'astro/config'
 import rehypeImageCaption from 'rehype-image-caption'
 import devtoolsJson from 'vite-plugin-devtools-json'
 import { defaultLocale, locales } from './src/lib/i18n'
@@ -18,6 +18,18 @@ import rehypeLightbox from './src/lib/rehype-lightbox'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://www.hanl.in',
+
+  env: {
+    schema: {
+      SHOW_DOWNLOAD_CV: envField.boolean({
+        context: 'server',
+        access: 'public',
+        optional: true,
+        default: false,
+      }),
+    },
+  },
+
   trailingSlash: 'never',
 
   i18n: {

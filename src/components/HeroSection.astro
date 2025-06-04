@@ -1,4 +1,5 @@
 ---
+import { SHOW_DOWNLOAD_CV } from 'astro:env/server'
 import { Button } from '@components/ui/button'
 import { defaultLocale, useTranslations } from '@lib/i18n'
 
@@ -27,12 +28,16 @@ const t = useTranslations(locale)
           >
             {t('button.contact')}
           </a>
-          <a
-            target="_blank"
-            class="ring-offset-background focus-visible:ring-ring border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-11 items-center justify-center rounded-md border px-8 py-6 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
-          >
-            {t('button.download')}
-          </a>
+          {
+            SHOW_DOWNLOAD_CV && (
+              <a
+                target="_blank"
+                class="ring-offset-background focus-visible:ring-ring border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-11 items-center justify-center rounded-md border px-8 py-6 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+              >
+                {t('button.download')}
+              </a>
+            )
+          }
         </div>
       </div>
       <div

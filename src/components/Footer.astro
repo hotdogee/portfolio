@@ -1,4 +1,5 @@
 ---
+import { SHOW_DOWNLOAD_CV } from 'astro:env/server'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import Email from '@assets/icons/Email.svg'
 import GitHub from '@assets/icons/GitHub.svg'
@@ -92,12 +93,16 @@ const t = useTranslations(locale)
             </a>
           </li>
           <li>
-            <a
-              target="_blank"
-              class="text-primary inline-flex h-auto p-0 underline-offset-4 hover:underline"
-            >
-              {t('button.download')}
-            </a>
+            {
+              SHOW_DOWNLOAD_CV && (
+                <a
+                  target="_blank"
+                  class="text-primary inline-flex h-auto p-0 underline-offset-4 hover:underline"
+                >
+                  {t('button.download')}
+                </a>
+              )
+            }
           </li>
         </ul>
       </div>

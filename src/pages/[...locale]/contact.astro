@@ -1,4 +1,5 @@
 ---
+import { SHOW_DOWNLOAD_CV } from 'astro:env/server'
 import { Download, FileText } from 'lucide-react'
 import Email from '@assets/icons/Email.svg'
 import GitHub from '@assets/icons/GitHub.svg'
@@ -171,13 +172,17 @@ const t = (key: string): any => {
             </CardHeader>
             <CardContent>
               <div class="space-y-4">
-                <a
-                  target="_blank"
-                  class="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex h-11 w-full items-center justify-center rounded-md px-8 text-sm font-medium shadow transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
-                >
-                  <Download className="mr-2 size-6" />
-                  {t('buttonDownload')}
-                </a>
+                {
+                  SHOW_DOWNLOAD_CV && (
+                    <a
+                      target="_blank"
+                      class="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex h-11 w-full items-center justify-center rounded-md px-8 text-sm font-medium shadow transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+                    >
+                      <Download className="mr-2 size-6" />
+                      {t('buttonDownload')}
+                    </a>
+                  )
+                }
                 <a
                   href="/research"
                   class="bg-background hover:bg-accent hover:text-accent-foreground border-input focus-visible:ring-ring inline-flex h-11 w-full items-center justify-center rounded-md border px-4 py-2 text-sm font-medium shadow-sm transition-colors focus-visible:ring-1 focus-visible:outline-none"
