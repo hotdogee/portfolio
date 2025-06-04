@@ -5,14 +5,16 @@ import US from '@assets/icons/us.svg'
 import { Button } from '@components/ui/button'
 import { defaultLocale, LOCALE_COOKIE, locales } from '@lib/i18n'
 
-function getLocaleFromUrl(url: URL) {
-  const [, locale] = url.pathname.split('/')
-  if ((locales as readonly string[]).includes(locale)) return locale as (typeof locales)[number]
-  return defaultLocale
-}
+// function getLocaleFromUrl(url: URL) {
+//   const [, locale] = url.pathname.split('/')
+//   if ((locales as readonly string[]).includes(locale)) return locale as (typeof locales)[number]
+//   return defaultLocale
+// }
 
-const locale = getLocaleFromUrl(Astro.url) as string
-console.log('Current locale:', Astro.url.pathname.split('/'))
+// const locale = getLocaleFromUrl(Astro.url) as string
+const { locale } = Astro.params
+const currentLocale = locale ?? defaultLocale
+console.log('Current locale:', Astro.url.pathname.split('/'), locale, currentLocale)
 ---
 
 <div class="dropdown relative">
@@ -34,14 +36,14 @@ console.log('Current locale:', Astro.url.pathname.split('/'))
       <button
         type="button"
         data-lang="en"
-        class={`cursor-pointer flex w-full items-center rounded-sm px-3 py-2 text-sm transition-colors ${locale === 'en' ? 'bg-card dark:bg-card ring-accent ring-2' : 'hover:bg-accent/50'}`}
+        class={`cursor-pointer flex w-full items-center rounded-sm px-3 py-2 text-sm transition-colors ${currentLocale === 'en' ? 'bg-card dark:bg-card ring-accent ring-2' : 'hover:bg-accent/50'}`}
       >
         <US class="mr-2 size-6" /> English
       </button>
       <button
         type="button"
         data-lang="tw"
-        class={`cursor-pointer flex w-full items-center rounded-sm px-3 py-2 text-sm transition-colors ${locale === 'tw' ? 'bg-card dark:bg-card ring-accent ring-2' : 'hover:bg-accent/50'}`}
+        class={`cursor-pointer flex w-full items-center rounded-sm px-3 py-2 text-sm transition-colors ${currentLocale === 'tw' ? 'bg-card dark:bg-card ring-accent ring-2' : 'hover:bg-accent/50'}`}
       >
         <TW class="mr-2 size-6" /> 正體中文
       </button>
@@ -49,7 +51,7 @@ console.log('Current locale:', Astro.url.pathname.split('/'))
   </div>
 </div>
 
-<script define:vars={{ locale, defaultLocale, LOCALE_COOKIE }}>
+<script define:vars={{ currentLocale, defaultLocale, LOCALE_COOKIE }}>
   document.addEventListener('astro:page-load', () => {
     // Toggle dropdown visibility
     const toggleButton = document.getElementById('language-toggle')
@@ -107,13 +109,13 @@ console.log('Current locale:', Astro.url.pathname.split('/'))
       languageButtons.forEach((button) => {
         button.addEventListener('click', (e) => {
           const selectedLocale = e.currentTarget.dataset.lang
-          if (selectedLocale === locale) {
+          if (selectedLocale === currentLocale) {
             // If current language is selected, just close the dropdown
             closeDropdown()
             return
           }
 
-          const pathnameWithoutLocale = window.location.pathname.replace(`/${locale}`, '')
+          const pathnameWithoutLocale = window.location.pathname.replace(`/${currentLocale}`, '')
           const pathnameWithNewLocale =
             selectedLocale === defaultLocale
               ? pathnameWithoutLocale || '/'
