@@ -26,6 +26,7 @@ const activeColors = {
   ter: 'before:bg-gradient-to-r before:from-[#ED744F] before:to-[#EDC84F] dark:before:from-[#BD5109] dark:before:to-[#BD9C09]',
 }
 const { pathname } = separateLocaleFromPathname(Astro.url.pathname)
+console.log(' separateLocaleFromPathname:', Astro.url.pathname, pathname)
 ---
 
 <header

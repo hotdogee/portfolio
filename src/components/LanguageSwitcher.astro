@@ -5,16 +5,9 @@ import US from '@assets/icons/us.svg'
 import { Button } from '@components/ui/button'
 import { defaultLocale, LOCALE_COOKIE, locales } from '@lib/i18n'
 
-// function getLocaleFromUrl(url: URL) {
-//   const [, locale] = url.pathname.split('/')
-//   if ((locales as readonly string[]).includes(locale)) return locale as (typeof locales)[number]
-//   return defaultLocale
-// }
-
-// const locale = getLocaleFromUrl(Astro.url) as string
 const { locale } = Astro.params
 const currentLocale = locale ?? defaultLocale
-console.log('Current locale:', Astro.url.pathname.split('/'), locale, currentLocale)
+// console.log('Current locale:', Astro.url.pathname.split('/'), locale, currentLocale)
 ---
 
 <div class="dropdown relative">
