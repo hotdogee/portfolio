@@ -4,6 +4,7 @@ import { glob } from 'astro/loaders'
 // Import utilities from `astro:content`
 import { getContentEntryIdAndSlug } from 'node_modules/astro/dist/content/utils.js'
 import certs from '@/certifications/certifications.json'
+import orgs from '@/organizations/organizations.json'
 import { slugify } from '@lib/i18n'
 
 // Import the glob loader
@@ -234,5 +235,30 @@ const certifications = defineCollection({
     }),
 })
 
+const organizations = defineCollection({
+  loader: async () => {
+    return orgs
+  },
+  schema: ({ image }) =>
+    z.object({
+      // id: z.string().optional(),
+      // name: z.object({
+      //   en: z.string(),
+      //   tw: z.string(),
+      // }),
+      name: z.string(),
+      icon: z.object({
+        light: image(),
+        dark: image(),
+        alt: z.string(),
+      }),
+      logo: z.object({
+        light: image(),
+        dark: image(),
+        alt: z.string(),
+      }),
+    }),
+})
+
 // Export a single `collections` object to register your collection(s)
-export const collections = { articles, projects, certifications }
+export const collections = { articles, projects, certifications, organizations }

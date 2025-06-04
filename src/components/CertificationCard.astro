@@ -1,9 +1,9 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 import { Image } from 'astro:assets'
+import { getEntry } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { Award, ShieldCheck } from 'lucide-react'
-import organizations from '@/certifications/organizations.json'
 import { cn } from '@/lib/utils'
 import { Card, CardFooter, CardHeader, CardTitle } from '@components/ui/card'
 import { Link } from '@components/ui/link'
@@ -37,7 +37,10 @@ const { id, data } = certification
 const { slug } = getLocaleSlugFromId(id)
 const certificationUrl = getRelativeLocaleUrl(currentLocale, `/certifications/${slug}`)
 const { name, organization, issue, badge, verify } = data
-const org = (organizations as Record<string, any>)?.[slugify(organization)]
+// const org = (organizations as Record<string, any>)?.[slugify(organization)]
+const org = (
+  (await getEntry('organizations', slugify(organization))) as CollectionEntry<'organizations'>
+).data
 ---
 
 <Card
@@ -64,13 +67,13 @@ const org = (organizations as Record<string, any>)?.[slugify(organization)]
         org?.icon && (
           <div class="mr-1.5 flex-shrink-0">
             <Image
-              src={import(org.icon.light)}
+              src={org.icon.light}
               alt={org.icon.alt}
               class="size-5 object-contain dark:hidden"
               loading="lazy"
             />
             <Image
-              src={import(org.icon.dark)}
+              src={org.icon.dark}
               alt={org.icon.alt}
               class="hidden size-5 object-contain dark:block"
               loading="lazy"

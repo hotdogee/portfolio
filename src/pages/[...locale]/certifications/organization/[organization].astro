@@ -1,9 +1,8 @@
 ---
 import type { Locale } from '@lib/i18n'
 import type { CollectionEntry } from 'astro:content'
-import { getCollection } from 'astro:content'
+import { getCollection, getEntry } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import organizations from '@/certifications/organizations.json'
 import { cn } from '@/lib/utils'
 import CertificationCard from '@components/CertificationCard.astro'
 import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
@@ -38,7 +37,9 @@ const { locale, organization } = Astro.params
 const currentLocale = (locale || defaultLocale) as Locale
 // const tc = useTranslations(currentLocale, 'categories')
 const organizationSlug = organization ? decodeURIComponent(organization) : ''
-const { name, icon, logo } = (organizations as Record<string, any>)?.[organizationSlug]
+const { name, icon, logo } = (
+  (await getEntry('organizations', organizationSlug)) as CollectionEntry<'organizations'>
+).data
 
 const pt = (key: keyof (typeof parentTranslations)[typeof currentLocale]) => {
   return parentTranslations[currentLocale]?.[key] || parentTranslations['en']?.[key]
@@ -103,7 +104,7 @@ const otherCertifications = certifications.filter(
           >
             {pt('allOrganizations')}
           </Link>
-          <CertificationOrganizationsFilter orgs={orgs} />
+          <CertificationOrganizationsFilter brands={orgs} />
         </div>
       </div>
       {

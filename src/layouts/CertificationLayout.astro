@@ -1,7 +1,9 @@
 ---
 // Added ExternalLink, BadgeCheck
+import type { CollectionEntry } from 'astro:content'
 import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
+import { getEntry } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import {
   ArrowLeft,
@@ -13,7 +15,6 @@ import {
   Sparkles,
 } from 'lucide-react'
 import { marked } from 'marked'
-import organizations from '@/certifications/organizations.json'
 import SkillBadge from '@components/SkillBadge.astro'
 import { Badge } from '@components/ui/badge'
 import { Button } from '@components/ui/button'
@@ -91,7 +92,7 @@ const t = (key: keyof (typeof translations)[typeof currentLocale]) => {
 }
 const orgSlug = slugify(organization)
 const orgLink = getRelativeLocaleUrl(currentLocale, `/certifications/organization/${orgSlug}`)
-const org = (organizations as Record<string, any>)?.[orgSlug]
+const org = ((await getEntry('organizations', orgSlug)) as CollectionEntry<'organizations'>).data
 const localizedDescription = description[currentLocale].length
   ? description[currentLocale]
   : description['en']
@@ -164,13 +165,13 @@ const processedDescriptions = localizedDescription.map((desc: string) => marked.
                     id={`organization-${id}`}
                   >
                     <Image
-                      src={import(org.logo.light)}
+                      src={org.logo.light}
                       alt={org.logo.alt}
                       class="h-10 object-contain dark:hidden"
                       loading="lazy"
                     />
                     <Image
-                      src={import(org.logo.dark)}
+                      src={org.logo.dark}
                       alt={org.logo.alt}
                       class="hidden h-10 object-contain dark:block"
                       loading="lazy"

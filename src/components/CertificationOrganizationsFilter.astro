@@ -1,7 +1,8 @@
 ---
+import type { CollectionEntry } from 'astro:content'
 import { Image } from 'astro:assets'
+import { getEntries } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import organizations from '@/certifications/organizations.json'
 import { cn } from '@/lib/utils'
 import { Link } from '@components/ui/link'
 import { defaultLocale, slugify } from '@lib/i18n'
@@ -22,7 +23,7 @@ const t = (key: string) => {
 }
 
 interface Props {
-  orgs: string[]
+  brands: string[]
   class?: string
   size?: 'md' | 'lg'
   icon?: boolean
@@ -30,13 +31,18 @@ interface Props {
   [key: string]: any
 }
 
-const { orgs, class: className, size = 'md', icon = true, text = false, ...rest } = Astro.props
+const { brands, class: className, size = 'md', icon = true, text = false, ...rest } = Astro.props
+const orgs = (await getEntries(
+  brands.map((brand: string) => {
+    return { collection: 'organizations' as const, id: slugify(brand) }
+  })
+)) as CollectionEntry<'organizations'>[]
 ---
 
 {
-  orgs.map((name: string) => {
-    const slug = slugify(name)
-    const org = (organizations as any)[slug] || {}
+  orgs.map((orgEntry) => {
+    const org = orgEntry.data
+    const slug = orgEntry.id
     return (
       <Link
         href={getRelativeLocaleUrl(currentLocale, `/certifications/organization/${slug}`)}
@@ -51,20 +57,20 @@ const { orgs, class: className, size = 'md', icon = true, text = false, ...rest 
         {org.icon && icon && (
           <div class:list={[text && 'mr-1', 'flex-shrink-0']}>
             <Image
-              src={import(org.icon.light)}
+              src={org.icon.light}
               alt={org.icon.alt}
               class:list={[size == 'md' ? 'size-5' : 'size-6', 'object-contain dark:hidden']}
               loading="lazy"
             />
             <Image
-              src={import(org.icon.dark)}
+              src={org.icon.dark}
               alt={org.icon.alt}
               class:list={[size == 'md' ? 'size-5' : 'size-6', 'hidden object-contain dark:block']}
               loading="lazy"
             />
           </div>
         )}
-        {text && name}
+        {text && org.name}
       </Link>
     )
   })

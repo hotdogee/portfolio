@@ -1,0 +1,275 @@
+{
+  "github": {
+    "name": "GitHub",
+    "icon": {
+      "light": "/src/organizations/images/github-icon.svg",
+      "dark": "/src/organizations/images/github-icon-dark.svg",
+      "alt": "GitHub Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/github-logo.svg",
+      "dark": "/src/organizations/images/github-logo-dark.svg",
+      "alt": "GitHub Logo"
+    }
+  },
+  "abb": {
+    "name": "ABB",
+    "icon": {
+      "light": "/src/organizations/images/abb-icon.svg",
+      "dark": "/src/organizations/images/abb-icon.svg",
+      "alt": "ABB Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/abb-logo.svg",
+      "dark": "/src/organizations/images/abb-logo.svg",
+      "alt": "ABB Logo"
+    }
+  },
+  "arduino": {
+    "name": "Arduino",
+    "icon": {
+      "light": "/src/organizations/images/arduino-icon.svg",
+      "dark": "/src/organizations/images/arduino-icon.svg",
+      "alt": "Arduino Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/arduino-logo.svg",
+      "dark": "/src/organizations/images/arduino-logo.svg",
+      "alt": "Arduino Logo"
+    }
+  },
+  "aws": {
+    "name": "AWS",
+    "icon": {
+      "light": "/src/organizations/images/aws-icon.svg",
+      "dark": "/src/organizations/images/aws-icon-dark.svg",
+      "alt": "AWS Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/aws-logo.svg",
+      "dark": "/src/organizations/images/aws-logo-dark.svg",
+      "alt": "AWS Logo"
+    }
+  },
+  "coursera": {
+    "name": "Coursera",
+    "icon": {
+      "light": "/src/organizations/images/coursera-icon.svg",
+      "dark": "/src/organizations/images/coursera-icon.svg",
+      "alt": "Coursera Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/coursera-logo.svg",
+      "dark": "/src/organizations/images/coursera-logo.svg",
+      "alt": "Coursera Logo"
+    }
+  },
+  "deeplearningai": {
+    "name": "DeepLearning.AI",
+    "icon": {
+      "light": "/src/organizations/images/deeplearning-ai-icon.svg",
+      "dark": "/src/organizations/images/deeplearning-ai-icon.svg",
+      "alt": "eepLearning.AI Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/deeplearning-ai-logo.svg",
+      "dark": "/src/organizations/images/deeplearning-ai-logo.svg",
+      "alt": "eepLearning.AI Logo"
+    }
+  },
+  "ef-set": {
+    "name": "EF SET",
+    "icon": {
+      "light": "/src/organizations/images/ef-set-icon.svg",
+      "dark": "/src/organizations/images/ef-set-icon-dark.svg",
+      "alt": "EF SET Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/ef-set-logo.svg",
+      "dark": "/src/organizations/images/ef-set-logo-dark.svg",
+      "alt": "EF SET Logo"
+    }
+  },
+  "ets": {
+    "name": "ETS",
+    "icon": {
+      "light": "/src/organizations/images/ets-icon.svg",
+      "dark": "/src/organizations/images/ets-icon.svg",
+      "alt": "ETS Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/ets-logo.svg",
+      "dark": "/src/organizations/images/ets-logo-dark.svg",
+      "alt": "ETS Logo"
+    }
+  },
+  "google": {
+    "name": "Google",
+    "icon": {
+      "light": "/src/organizations/images/google-icon.svg",
+      "dark": "/src/organizations/images/google-icon.svg",
+      "alt": "Google Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/google-logo.svg",
+      "dark": "/src/organizations/images/google-logo.svg",
+      "alt": "Google Logo"
+    }
+  },
+  "institute-information-industry": {
+    "name": "Institute For Information Industry",
+    "icon": {
+      "light": "/src/organizations/images/institute-information-industry-icon.svg",
+      "dark": "/src/organizations/images/institute-information-industry-icon-dark.svg",
+      "alt": "Institute For Information Industry Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/institute-information-industry-logo.svg",
+      "dark": "/src/organizations/images/institute-information-industry-logo-dark.svg",
+      "alt": "Institute For Information Industry Logo"
+    }
+  },
+  "linkedin": {
+    "name": "LinkedIn",
+    "icon": {
+      "light": "/src/organizations/images/linkedin-icon.svg",
+      "dark": "/src/organizations/images/linkedin-icon.svg",
+      "alt": "LinkedIn Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/linkedin-logo.svg",
+      "dark": "/src/organizations/images/linkedin-logo.svg",
+      "alt": "LinkedIn Logo"
+    }
+  },
+  "meta": {
+    "name": "Meta",
+    "icon": {
+      "light": "/src/organizations/images/meta-icon.svg",
+      "dark": "/src/organizations/images/meta-icon.svg",
+      "alt": "Meta Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/meta-logo.svg",
+      "dark": "/src/organizations/images/meta-logo-dark.svg",
+      "alt": "Meta Logo"
+    }
+  },
+  "microsoft": {
+    "name": "Microsoft",
+    "icon": {
+      "light": "/src/organizations/images/microsoft-icon.svg",
+      "dark": "/src/organizations/images/microsoft-icon.svg",
+      "alt": "Microsoft Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/microsoft-logo.svg",
+      "dark": "/src/organizations/images/microsoft-logo.svg",
+      "alt": "Microsoft Logo"
+    }
+  },
+  "ministry-education": {
+    "name": "Ministry Of Education",
+    "icon": {
+      "light": "/src/organizations/images/ministry-education-icon.svg",
+      "dark": "/src/organizations/images/ministry-education-icon.svg",
+      "alt": "Ministry Of Education Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/ministry-education-logo.svg",
+      "dark": "/src/organizations/images/ministry-education-logo-dark.svg",
+      "alt": "Ministry Of Education Logo"
+    }
+  },
+  "mongodb": {
+    "name": "MongoDB",
+    "icon": {
+      "light": "/src/organizations/images/mongodb-icon.svg",
+      "dark": "/src/organizations/images/mongodb-icon.svg",
+      "alt": "MongoDB Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/mongodb-logo.svg",
+      "dark": "/src/organizations/images/mongodb-logo.svg",
+      "alt": "MongoDB Logo"
+    }
+  },
+  "nvidia": {
+    "name": "NVIDIA",
+    "icon": {
+      "light": "/src/organizations/images/nvidia-icon.svg",
+      "dark": "/src/organizations/images/nvidia-icon.svg",
+      "alt": "NVIDIA Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/nvidia-logo.svg",
+      "dark": "/src/organizations/images/nvidia-logo-dark.svg",
+      "alt": "NVIDIA Logo"
+    }
+  },
+  "oracle": {
+    "name": "Oracle",
+    "icon": {
+      "light": "/src/organizations/images/oracle-icon.svg",
+      "dark": "/src/organizations/images/oracle-icon.svg",
+      "alt": "Oracle Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/oracle-logo.svg",
+      "dark": "/src/organizations/images/oracle-logo.svg",
+      "alt": "Oracle Logo"
+    }
+  },
+  "raspberry-pi": {
+    "name": "Raspberry Pi",
+    "icon": {
+      "light": "/src/organizations/images/raspberry-pi-icon.svg",
+      "dark": "/src/organizations/images/raspberry-pi-icon.svg",
+      "alt": "Raspberry Pi Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/raspberry-pi-logo.svg",
+      "dark": "/src/organizations/images/raspberry-pi-logo-dark.svg",
+      "alt": "Raspberry Pi Logo"
+    }
+  },
+  "researchgate": {
+    "name": "ResearchGate",
+    "icon": {
+      "light": "/src/organizations/images/researchgate-icon.svg",
+      "dark": "/src/organizations/images/researchgate-icon.svg",
+      "alt": "ResearchGate Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/researchgate-logo.svg",
+      "dark": "/src/organizations/images/researchgate-logo.svg",
+      "alt": "ResearchGate Logo"
+    }
+  },
+  "salesforce": {
+    "name": "Salesforce",
+    "icon": {
+      "light": "/src/organizations/images/salesforce-icon.svg",
+      "dark": "/src/organizations/images/salesforce-icon.svg",
+      "alt": "Salesforce Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/salesforce-logo.svg",
+      "dark": "/src/organizations/images/salesforce-logo.svg",
+      "alt": "Salesforce Logo"
+    }
+  },
+  "udacity": {
+    "name": "Udacity",
+    "icon": {
+      "light": "/src/organizations/images/udacity-icon.svg",
+      "dark": "/src/organizations/images/udacity-icon.svg",
+      "alt": "Udacity Icon"
+    },
+    "logo": {
+      "light": "/src/organizations/images/udacity-logo.svg",
+      "dark": "/src/organizations/images/udacity-logo-dark.svg",
+      "alt": "Udacity Logo"
+    }
+  }
+}

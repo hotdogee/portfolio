@@ -3,7 +3,6 @@ import type { CollectionEntry } from 'astro:content'
 import { getCollection } from 'astro:content'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { Award, Grid3x3, ShieldCheck } from 'lucide-react'
-import organizations from '@/certifications/organizations.json'
 import { cn } from '@/lib/utils'
 import CertificationCard from '@components/CertificationCard.astro'
 import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
@@ -85,7 +84,7 @@ const certifications = (await getCollection('certifications'))
         <Award className="size-6" />
         {t('viewAllCertifications')}
       </Link>
-      <CertificationOrganizationsFilter orgs={brands} size="lg" />
+      <CertificationOrganizationsFilter brands={brands} size="lg" />
     </div>
   </div>
 </section>
