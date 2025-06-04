@@ -12,6 +12,7 @@ function getLocaleFromUrl(url: URL) {
 }
 
 const locale = getLocaleFromUrl(Astro.url) as string
+console.log('Current locale:', Astro.url.pathname.split('/'))
 ---
 
 <div class="dropdown relative">
@@ -23,7 +24,7 @@ const locale = getLocaleFromUrl(Astro.url) as string
     aria-haspopup="true"
   >
     <Globe />
-    <span class="sr-only">Toggle language</span>
+    <span class="sr-only">Toggle language [{Astro.url.pathname}]</span>
   </Button>
   <div
     id="dropdown-content"
