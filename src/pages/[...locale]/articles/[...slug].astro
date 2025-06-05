@@ -39,7 +39,7 @@ export async function getStaticPaths() {
 }
 
 const { article } = Astro.props
-// Render the MDX content
+// Render the Markdown content
 const { Content, headings } = await render(article)
 ---
 

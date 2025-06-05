@@ -32,7 +32,7 @@ import { slugify } from '@lib/i18n'
 //   alt: 'The Astro logo on a dark background with a pink glow.'
 
 const articles = defineCollection({
-  loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/articles' }),
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/articles' }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
@@ -130,7 +130,7 @@ const generateId = ({ entry, base, data }: GlobOptions): string => {
 }
 
 const projects = defineCollection({
-  loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: './src/projects', generateId }), // Adjusted pattern
+  loader: glob({ pattern: '**/[^_]*.md', base: './src/projects', generateId }), // Adjusted pattern
   schema: ({ image }) =>
     z.object({
       slug: z.string().optional(),
