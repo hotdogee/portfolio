@@ -6,8 +6,8 @@ import { datesFromChanges } from '@lib/i18n'
 export const GET: APIRoute = async ({ site }) => {
   const articles = await getCollection('articles')
   return rss({
-    title: 'Han Lin',
-    description: 'Random thoughts and ideas',
+    title: 'The Curiosity Circuit | Han Lin',
+    description: 'Musings on Tech, Science & Invention',
     site: site as URL,
     items: articles.map((article) => {
       const { published, updated } = datesFromChanges(article.data.changes)
