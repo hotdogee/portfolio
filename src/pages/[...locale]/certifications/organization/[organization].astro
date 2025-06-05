@@ -8,7 +8,13 @@ import CertificationCard from '@components/CertificationCard.astro'
 import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
 import { Link } from '@components/ui/link'
 import BaseLayout from '@layouts/BaseLayout.astro'
-import { defaultLocale, locales, slugify, useTranslations } from '@lib/i18n'
+import {
+  defaultLocale,
+  locales,
+  separateLocaleFromPathname,
+  slugify,
+  useTranslations,
+} from '@lib/i18n'
 import { certifications, orgs, translations as parentTranslations } from '../index.astro'
 
 export async function getStaticPaths() {
@@ -74,6 +80,7 @@ const otherCertifications = certifications.filter(
   (certification) =>
     certification.data.organization && slugify(certification.data.organization) !== organizationSlug
 )
+const { pathname } = separateLocaleFromPathname(Astro.url.pathname)
 ---
 
 <BaseLayout title={t('title')} description={t('description')}>
@@ -97,8 +104,7 @@ const otherCertifications = certifications.filter(
           <Link
             href={getRelativeLocaleUrl(currentLocale, `/certifications/`)}
             className={cn('h-10', {
-              'bg-card dark:bg-card ring-accent ring-2':
-                Astro.url.pathname.endsWith('/certifications'),
+              'bg-card dark:bg-card ring-accent ring-2': pathname.endsWith('/certifications'),
             })}
             variant={'outline'}
           >

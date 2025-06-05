@@ -8,7 +8,7 @@ import CertificationCard from '@components/CertificationCard.astro'
 import CertificationOrganizationsFilter from '@components/CertificationOrganizationsFilter.astro'
 import { Link } from '@components/ui/link'
 import BaseLayout from '@layouts/BaseLayout.astro'
-import { defaultLocale } from '@lib/i18n'
+import { defaultLocale, separateLocaleFromPathname } from '@lib/i18n'
 
 export { getLocalizedStaticPaths as getStaticPaths } from '@lib/i18n'
 
@@ -79,6 +79,7 @@ export const orgs = Object.keys(orgCerts).sort((a, b) => {
   const orgB = b.toLowerCase()
   return countB - countA || orgA.localeCompare(orgB)
 })
+const { pathname } = separateLocaleFromPathname(Astro.url.pathname)
 ---
 
 <BaseLayout title={t('title')} description={t('description')}>
@@ -102,8 +103,7 @@ export const orgs = Object.keys(orgCerts).sort((a, b) => {
           <Link
             href={getRelativeLocaleUrl(currentLocale, `/certifications/`)}
             className={cn('h-10', {
-              'bg-card dark:bg-card ring-accent ring-2':
-                Astro.url.pathname.endsWith('/certifications'),
+              'bg-card dark:bg-card ring-accent ring-2': pathname.endsWith('/certifications'),
             })}
             variant={'outline'}
           >

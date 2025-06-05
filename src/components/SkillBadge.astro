@@ -4,7 +4,13 @@ import { getRelativeLocaleUrl } from 'astro:i18n'
 import { type VariantProps } from 'class-variance-authority'
 import { cn } from '@/lib/utils'
 import { Badge, badgeVariants } from '@components/ui/badge'
-import { defaultLocale, getLocaleSlugFromId, slugify, useTranslations } from '@lib/i18n'
+import {
+  defaultLocale,
+  getLocaleSlugFromId,
+  separateLocaleFromPathname,
+  slugify,
+  useTranslations,
+} from '@lib/i18n'
 import { certifications } from '@pages/certifications/index.astro'
 
 // Extract skills
@@ -51,7 +57,8 @@ const href = getRelativeLocaleUrl(
     ? `/${type}/skill/${encodeURIComponent(skillSlug)}`
     : `/${type}/${getLocaleSlugFromId(certs?.[0]?.id || '').slug}`
 )
-const isSamePage = Astro.url.pathname.endsWith(href)
+const { pathname } = separateLocaleFromPathname(Astro.url.pathname)
+const isSamePage = pathname.endsWith(href)
 ---
 
 <a href={isSamePage ? null : href}>
