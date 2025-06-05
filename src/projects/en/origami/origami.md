@@ -5,7 +5,7 @@ featured: 10
 tagline: 'Where Art Meets Algorithm'
 title: 'Origami Moving Cubes'
 subtitle: 'Interactive Drawing Designer'
-description: 'An interactive web application for designing mesmerizing optical illusions, featured by popular science communicator Steve Mould. This project showcases the beauty that emerges when creativity intersects with technical precision, making complex mathematical transformations accessible to everyone.'
+description: 'An interactive web application for designing kinetic origami illusions, featured by popular science communicator Steve Mould. This project showcases the beauty that emerges when creativity intersects with technical precision, making complex mathematical transformations accessible to everyone.'
 categories: ['Interactive Design', 'Mathematics', 'Art']
 image:
   url: './origami-ui.gif'
@@ -65,7 +65,7 @@ I developed this application to make this fascinating art form accessible to eve
 
 ## Features
 
-- Synchronized multi-canvas preview system shows real-time transformations
+- Synchronized dual-canvas system shows real-time transformations
 - Custom jog wheel interface enables precise frame-by-frame animation control
 - Intuitive drawing tools with adjustable brush properties
 - Multilingual support across seven languages
