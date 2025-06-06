@@ -18,8 +18,8 @@ const tagSlug = slugify(tag)
 ---
 
 <a href={getRelativeLocaleUrl(currentLocale, `/articles/tag/${encodeURIComponent(tagSlug)}`)}>
-  <Badge variant="outline" className={cn('hover:bg-accent/20', className)}>
+  <Badge variant="outline" className={cn('hover:bg-accent/20 text-sm', className)}>
     #{t(tagSlug)}
-    {count !== undefined && <span class="ml-1 text-xs">({count})</span>}
+    {count !== undefined && <span class="">({count})</span>}
   </Badge>
 </a>

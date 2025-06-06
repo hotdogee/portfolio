@@ -24,8 +24,8 @@ const categorySlug = slugify(category)
     `/${type}/category/${encodeURIComponent(categorySlug)}` // Use the 'type' prop in the href
   )}
 >
-  <Badge variant="secondary" className={cn('hover:bg-secondary/80', className)}>
+  <Badge variant="secondary" className={cn('hover:bg-secondary/80 text-sm', className)}>
     {t(categorySlug)}
-    {count !== undefined && <span class="ml-1 text-xs">({count})</span>}
+    {count !== undefined && <span class="">({count})</span>}
   </Badge>
 </a>

@@ -25,7 +25,7 @@ const t = useTranslations(locale)
         <div class="mt-2 flex flex-col gap-3 sm:flex-row">
           <a
             href={getRelativeLocaleUrl(currentLocale, '/contact')}
-            class="ring-offset-background focus-visible:ring-ring bg-primary text-primary-foreground hover:bg-primary/90 inline-flex h-11 items-center justify-center rounded-md px-8 py-6 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+            class="ring-offset-background focus-visible:ring-ring bg-primary text-primary-foreground hover:bg-primary/90 inline-flex h-11 items-center justify-center rounded-md px-8 py-6 text-base font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
           >
             {t('button.contact')}
           </a>
@@ -33,7 +33,7 @@ const t = useTranslations(locale)
             SHOW_DOWNLOAD_CV && (
               <a
                 target="_blank"
-                class="ring-offset-background focus-visible:ring-ring border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-11 items-center justify-center rounded-md border px-8 py-6 text-sm font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+                class="ring-offset-background focus-visible:ring-ring border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-11 items-center justify-center rounded-md border px-8 py-6 text-base font-medium transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
               >
                 {t('button.download')}
               </a>
@@ -56,7 +56,7 @@ const t = useTranslations(locale)
                 >
                 </div>
               </div>
-              <p class="text-muted-foreground mt-4 text-sm">
+              <p class="text-muted-foreground mt-4 text-base">
                 {t('home.hero.domains')}
               </p>
             </div>
