@@ -15,14 +15,14 @@ changes:
 
 People have asked me, "Why go to this extreme?"
 
-For me, it was never about just collecting badges. As a research engineer who thrives on deconstructing complex systems to build novel solutions, I saw this as a systematic way to master a new technological ecosystem from the ground up. My goal was to build a truly holistic, full-stack understanding of the platform—from the foundational networking and security that underpins everything, to the high-level services that power modern AI and cloud-native applications.
+For me, it was never about just collecting badges. As a research engineer who thrives on deconstructing complex systems to build novel solutions, I saw this as a systematic way to master a new technological ecosystem from the ground up. My goal was to build a truly holistic, full-stack understanding of the platform, from the foundational networking and security that underpins everything, to the high-level services that power modern AI and cloud-native applications.
 
 This journey was an intensive, self-directed deep dive. And while the swag is definitely a fun perk, the real rewards are the structured knowledge and practical skills I can now apply to solve real-world problems.
 
 Certifications on their own won’t magically land you a job, but when paired with hands-on experience, they become a powerful combination. For me, the true value was in the process itself.
 
 - **Structured Learning:** The curriculum for each certification forced me to explore corners of GCP I might have otherwise ignored. I now have a comprehensive mental map of the platform’s capabilities.
-- **Enterprise-Grade Patterns:** I gained a deep appreciation for enterprise design patterns, learning to balance trade-offs between cost, performance, security, and reliability—skills that are critical for any large-scale project.
+- **Enterprise-Grade Patterns:** I gained a deep appreciation for enterprise design patterns, learning to balance trade-offs between cost, performance, security, and reliability. These are skills that are critical for any large-scale project.
 - **Credibility & Confidence:** It’s one thing to know a service; it’s another to have that knowledge validated. This process has given me the confidence to design, architect, and defend complex cloud solutions.
 
 As I noted to myself during the process, the single best part is that **the certifications pushed me to dig into documentation I would’ve otherwise skipped.** Now, those concepts are part of my day-to-day thinking.
@@ -36,7 +36,7 @@ I developed a consistent strategy that proved effective for every exam, from Clo
 
 1.  **Deconstruct the Official Exam Guide:**
 
-    This is the most critical step. Don't just skim it—master it. For every single line item in the official Exam Guide, I challenge myself to do the following:
+    This is the most critical step. Don't just skim it. Master it. For every single line item in the official Exam Guide, I challenge myself to do the following:
 
     **Give a 30-second "elevator pitch" explaining it: What is it? Why is it important? How does it work? Can I give a practical example?**
 
@@ -48,7 +48,7 @@ I developed a consistent strategy that proved effective for every exam, from Clo
 
 1.  **Use Sample Questions as a Diagnostic Tool:**
 
-    Every certification has free sample questions. These sample questions are particularly crucial, as their difficulty and style are remarkably close to the real exam. I did these until I understood _every single option_ for every question—not just why the right answer was right, but why the wrong answers were wrong. An incorrect or uncertain answer is a gift; it reveals a blind spot that you can then patch by diving into the official docs.
+    Every certification has free sample questions. These sample questions are particularly crucial, as their difficulty and style are remarkably close to the real exam. I did these until I understood _every single option_ for every question: not just why the right answer was right, but why the wrong answers were wrong. An incorrect or uncertain answer is a gift; it reveals a blind spot that you can then patch by diving into the official docs.
 
 1.  **Targeted Deep Dives into Official Docs:**
 
@@ -64,7 +64,7 @@ Where should you start? I recommend the **Cloud Digital Leader** certification. 
 
 From there, follow your professional needs or personal interests. My own work in AI led me to pursue the **Professional Machine Learning Engineer** cert early on.
 
-For anyone on their own cloud certification path, my advice is simple: stay curious, be persistent, and don't just memorize—strive to understand.
+For anyone on their own cloud certification path, my advice is simple: stay curious, be persistent, and don't just memorize; strive to understand.
 
 Of all the exams I've taken, I found the **Professional Cloud Network Engineer** to be the most difficult. Be prepared for very long, dense questions. I encountered around 10 questions that were so long they couldn't fit on the screen without scrolling. I spent a full ten minutes reading and re-reading just one of them. These truly test your ability to analyze intricate scenarios and are not to be underestimated.
 
@@ -91,7 +91,7 @@ While about 90% of my at-home experiences have been smooth, that 10% chance of a
 _Most of my Google Cloud exams were taken at a Kryterion Authorized Testing Center, which provides a secure and professional environment._
 
 ![The modern lounge area of a testing center at dusk, with tables, chairs, a long counter with coffee and soda machines, and a view of the Taipei 101 skyscraper through a window.](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1749231610/gcp-certifications-complete-testing-center-lounge_bx7zzg.jpg)
-_My preferred testing environment. This center in Taipei offers an excellent lounge with unlimited coffee and a great view of the city—a perfect place to relax and review notes before an exam._
+_My preferred testing environment. This center in Taipei offers an excellent lounge with unlimited coffee and a great view of the city, a perfect place to relax and review notes before an exam._
 
 ![A narrow hallway inside a testing center, lined with several identical doors labeled with signs like "TESTING ROOM A" and "TESTING ROOM G."](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1749231609/gcp-certifications-complete-exam-hallway_zypoz6.jpg)
 _The final step: the testing room. Each exam is taken in a private, distraction-free room, allowing for complete focus on the challenges ahead._
@@ -100,7 +100,7 @@ _The final step: the testing room. Each exam is taken in a private, distraction-
 
 Of course, passing the exams comes with some fun perks. For each Professional certification, Google sends a code to redeem a piece of swag from a special store. It’s a small but rewarding token for the hard work. Over the course of my journey, I've accumulated a nice collection of jackets, hoodies, and a welcome kit.
 
-![A collection of three hoodies and jackets—two black and one white—all featuring the embroidered Google Cloud "Certified Professional" logo.](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1749224696/gcp-certifications-complete-apparel-collection_jl8hln.jpg)
+![A collection of three hoodies and jackets - two black and one white - all featuring the embroidered Google Cloud "Certified Professional" logo.](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1749224696/gcp-certifications-complete-apparel-collection_jl8hln.jpg)
 _My collection of "Certified Professional" apparel is growing! A great perk for each pro-level exam passed._
 
 ![A close-up of the embroidered Google Cloud "Certified Professional" logo on a white zippered hoodie.](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1749224692/gcp-certifications-complete-white-hoodie-logo_xyqntw.jpg)
@@ -116,7 +116,7 @@ _The welcome kit mug is my new daily driver for coffee._
 _Can't have too many stickers._
 
 ![A black Timbuk2 backpack with a round "Google Cloud Certified - PROFESSIONAL" sticker placed on the front.](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1749224698/gcp-certifications-complete-timbuk2-backpack_bupkdf.jpg)
-_The Timbuk2 backpack is another fantastic swag option—durable and practical._
+_The Timbuk2 backpack is another fantastic swag option: durable and practical._
 
 ![A screenshot of the Google Cloud certification rewards store webpage, showing options like shirts, hoodies, jackets, a backpack, and a welcome kit.](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1749224691/gcp-certifications-complete-rewards-store_vw2mrb.png)
 _For each Professional cert, you get a code to redeem one of these items. The hardest part is choosing!_
