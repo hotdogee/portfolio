@@ -11,6 +11,8 @@ export const tags = {
     gcp: 'GCP',
     ctf: 'CTF',
     'google-cloud-summit': 'Google Cloud Summit',
+    certification: 'Certification',
+    'lifelong-learning': 'Lifelong Learning',
   },
   tw: {
     astro: 'astro',
@@ -24,5 +26,7 @@ export const tags = {
     gcp: 'GCP',
     ctf: 'CTF',
     'google-cloud-summit': 'Google Cloud Summit',
+    certification: '認證',
+    'lifelong-learning': '終身學習',
   },
 } as const

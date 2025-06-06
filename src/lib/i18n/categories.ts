@@ -23,7 +23,9 @@ export const categories = {
     events: 'Events',
     achievements: 'Achievements',
     overclocking: 'Overclocking',
-    amd: 'AMD',
+    'professional-development': 'Professional Development',
+    'google-cloud': 'Google Cloud',
+    'learning-strategies': 'Learning Strategies',
   },
   tw: {
     personal: '個人',
@@ -50,5 +52,8 @@ export const categories = {
     achievements: '成就',
     overclocking: '超頻',
     amd: 'AMD',
+    'professional-development': '專業發展',
+    'google-cloud': 'Google Cloud',
+    'learning-strategies': '學習策略',
   },
 } as const
