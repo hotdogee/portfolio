@@ -3,7 +3,7 @@ export const ui = {
     name: 'Han Lin',
     'site.title': 'Han Lin | Research Engineer | Bridging Science and Engineering',
     'site.description':
-      "Han Lin's portfolio – Bridging AI, bioinformatics, and electronics to forge novel solutions. Certified in AI and Cybersecurity by Google, Microsoft, and AWS.",
+      'Han Lin’s portfolio – Bridging AI, bioinformatics, and electronics to forge novel solutions. Certified in AI and Cybersecurity by Google, Microsoft, and AWS.',
 
     // Navigation
     'nav.home': 'Home',

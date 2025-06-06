@@ -37,7 +37,7 @@ The victory came with a cool piece of swag - a Google Cloud branded thermos, whi
 
 ![The spoils of victory - my new Google Cloud thermos alongside the CTF scoreboard!](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1748948143/google-summit-24-laptops-ctf-scoreboard-water-bottle-angle-2_zxqqww.jpg)_The spoils of victory - my new Google Cloud thermos alongside the CTF scoreboard!_
 
-This win isn't just about a prize; it's a practical validation of the cybersecurity and cloud skills I've been building. It’s always rewarding to see theoretical knowledge and hands-on practice translate into tangible results in a competitive environment. It reinforces my passion for tackling complex technical puzzles and designing secure, robust systems on cutting-edge platforms.
+This win isn't just about a prize; it's a practical validation of the cybersecurity and cloud skills I've been building. It's always rewarding to see theoretical knowledge and hands-on practice translate into tangible results in a competitive environment. It reinforces my passion for tackling complex technical puzzles and designing secure, robust systems on cutting-edge platforms.
 
 Beyond the CTF, the Summit was packed with valuable insights into the latest advancements in Google Cloud, from Generative AI with Vertex AI and Gemini to advanced data management and, of course, robust security solutions.
 
@@ -49,6 +49,6 @@ And, of course, no tech event is complete without some excellent coffee and deli
 
 ![... and some impressive Google-colored treats!](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1748948138/google-summit-24-colorful-cupcakes-dessert_t8nflr.jpg)_... and some impressive Google-colored treats!_
 
-Events like the Google Cloud Summit are invaluable for staying at the forefront of technology, networking with peers, and putting skills to the test. I’m already looking forward to applying the sharpened skills and new knowledge gained to future engineering projects and research.
+Events like the Google Cloud Summit are invaluable for staying at the forefront of technology, networking with peers, and putting skills to the test. I'm already looking forward to applying the sharpened skills and new knowledge gained to future engineering projects and research.
 
 ![Google Cloud pins](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1748948130/google-summit-24-assorted-google-badges-swag_potxtl.jpg)
