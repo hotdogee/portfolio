@@ -94,6 +94,8 @@ I developed a consistent strategy that proved effective for every exam, from Clo
 
     I used AI tools like Perplexity to get detailed explanations for complex topics or practice questions. The key is to use AI services that provide source links, allowing you to verify the information directly against the official documentation. It’s a great way to accelerate understanding, as long as you treat the AI as a knowledgeable discussion partner, not an infallible oracle.
 
+You might notice that some certification pages link to an official study guide or book. I chose to stick exclusively with the free materials provided on the official exam pages. Why? The cloud evolves at an incredible pace, and I found that many of the published books were written a few years ago and simply couldn't keep up with the latest services or exam objectives. By focusing on the official documentation, learning paths, and sample questions, I ensured I was studying the most current and relevant information—and saved some money in the process.
+
 ### Recommended Path and The Toughest Challenges
 
 Where should you start? I recommend the **Cloud Digital Leader** certification. It’s not deeply technical, but it provides a fantastic high-level overview of GCP's value proposition and is a low-stress way to get familiar with the online proctored exam format.
