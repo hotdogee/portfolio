@@ -1,6 +1,11 @@
-# Han's Portfolio
+# Han's Portfolio [Live](https://hanl.in/)
 
 A modern, multilingual portfolio website built with [Astro](https://astro.build/), [React](https://react.dev/), and [Tailwind CSS](https://tailwindcss.com/). Features smooth transitions with the [View Transition API](https://developer.chrome.com/docs/web-platform/view-transitions), full site search with [PageFind](https://pagefind.app/), content management for articles and projects, and certification showcase.
+
+![portfolio-home-dark-to-light-en-canva](https://github.com/user-attachments/assets/b486d43a-54b9-4d00-953b-4de1408aae98)
+![portfolio-cert-filter-en mp4](https://github.com/user-attachments/assets/d976b806-57b8-4278-9606-79efba8bfeac)
+![portfolio-nav-lightbox-short-en](https://github.com/user-attachments/assets/9db9d456-4b12-4217-9f3c-82d531c27d73)
+
 
 ## ✨ Features
 
