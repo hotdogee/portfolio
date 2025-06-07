@@ -121,7 +121,7 @@ I only take exams at home when a test center is booked solid for over a month. W
 - **Strict Environment:** Your room must be sterile. An uncluttered desk, a clean room, no interruptions.
 - **Instant Failure Risk:** If someone walks into your room or a voice is heard on the mic, the exam can be terminated immediately with no refund.
 - **Proctor Roulette:** You might wait a long time for a proctor to become available. Some are relaxed, while others might ask you to re-orient your camera or tidy your room, even if you've tested in the same setup before.
-- **Technical Glitches:** Some exams, like the Network and Security Engineer, may have advanced requirements like eye-tracking, which can add another layer of potential issues.
+- **Technical Glitches:** Certain exams, such as the Network and Security Engineer certification, require you to set up a second camera filming from the side in addition to the main camera focused on your face. These exams may also include advanced monitoring features like eye-tracking, which triggers a warning whenever you look away from the screen. These additional technical requirements can introduce another layer of potential issues during the exam.
 
 While about 90% of my at-home experiences have been smooth, that 10% chance of a one-hour delay or a frustrating proctor experience is why I’ll always choose a test center when I can.
 
