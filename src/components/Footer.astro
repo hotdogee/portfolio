@@ -1,6 +1,7 @@
 ---
 import { SHOW_DOWNLOAD_CV } from 'astro:env/server'
 import { getRelativeLocaleUrl } from 'astro:i18n'
+import AstroIcon from '@assets/icons/Astro.svg'
 import Email from '@assets/icons/Email.svg'
 import GitHub from '@assets/icons/GitHub.svg'
 import LinkedIn from '@assets/icons/LinkedIn.svg'
@@ -108,10 +109,21 @@ const t = useTranslations(locale)
       </div>
     </div>
 
-    <div class="mt-8 flex flex-col items-center justify-between border-t pt-8 md:flex-row">
-      <a href="https://www.hanl.in/" class="text-muted-foreground text-xs"
+    <div class="mt-8 flex items-center justify-between border-t pt-8">
+      <a href="https://www.hanl.in/" class="hover:text-accent text-muted-foreground text-xs"
         >{t('footer.copyright')}</a
       >
+      <p class="text-muted-foreground text-xs">
+        Built with
+        <a
+          href="https://astro.build"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-accent"
+        >
+          Astro <AstroIcon class="inline size-3" />
+        </a>
+      </p>
     </div>
   </div>
 </footer>
