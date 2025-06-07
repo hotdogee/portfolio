@@ -5,7 +5,7 @@ excerpt: 'Over the last several months, I embarked on a personal research and de
 image:
   url: 'https://res.cloudinary.com/hanlin-portfolio/image/upload/v1749224691/gcp-certifications-complete-badge-collage_wnyujx.png'
   alt: 'The complete collection! All 14 official Google Cloud certification badges, from Foundational and Associate to Professional.'
-categories: ['Professional Development', 'Google Cloud', 'Learning Strategies']
+categories: ['Professional Development', 'Learning Strategies', 'Google Cloud']
 tags: ['GCP', 'Certification', 'Lifelong Learning']
 changes:
   - '2025-05-15': 'initial post'

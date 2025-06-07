@@ -5,7 +5,7 @@ excerpt: '過去數月，我投入了一項研發專案，目標是對 Google Cl
 image:
   url: 'https://res.cloudinary.com/hanlin-portfolio/image/upload/v1749224691/gcp-certifications-complete-badge-collage_wnyujx.png'
   alt: '認證大滿貫！ 全套 14 張官方 Google Cloud 證照，從基礎級、助理級到專家級，全員到齊。'
-categories: ['Professional Development', 'Google Cloud', 'Learning Strategies']
+categories: ['Professional Development', 'Learning Strategies', 'Google Cloud']
 tags: ['GCP', 'Certification', 'Lifelong Learning']
 changes:
   - '2025-05-15': 'initial post'
