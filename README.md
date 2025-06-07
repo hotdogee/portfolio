@@ -18,7 +18,8 @@ A modern, multilingual portfolio website built with [Astro](https://astro.build/
 - **Partytown Integration:** Offloads third-party scripts to a web worker for improved performance.
 - **Image Optimization:** Uses Astro's built-in image optimization.
 - **Dark Mode:** Supports light and dark themes with system preference detection.
-- **View Transitions:** Utilizes Astro's View Transitions API for smooth page navigation.
+- **View Transitions:** Utilizes the View Transitions API for smooth page navigation with optimized performance architecture.
+  - Employs Astro's `<ClientRouter />` and dynamically assigned `view-transition-name`s to optimize performance and prevent conflicts across various UI transitions, including theme switching, lightbox popovers, navigation menus, page-to-page navigation, and list-to-list/detail views.
 - **SEO Friendly:** Includes meta tags, Open Graph tags, and structured data for better search engine visibility.
 - **Custom Fonts:** Uses Google Fonts (Inter) via Astro's font configuration.
 - **Markdown Enhancements:**
@@ -99,6 +100,24 @@ Supports English (`en`) and Taiwanese Mandarin (`tw`) with:
   - The same article in different languages should have the same markdown filename
   - URL slugs are generated from the markdown filenames
 - Date formatting and stop word filtering
+
+## 🎭 View Transitions Architecture
+
+The portfolio implements a sophisticated view transitions system using Astro's `astro:transitions` with `<ClientRouter />` and dynamic `view-transition-name` assignment for optimal performance and seamless user experience:
+
+### Performance-Optimized Implementation
+
+- **Dynamic Transition Names:** Uses programmatically assigned `view-transition-name` attributes to avoid interference between different transition types
+- **Fallback Support:** Respects `reduced-motion` OS settings and graceful fallback for browsers that don't support view transitions API.
+
+### Transition Categories
+
+- **Theme Switching:** Smooth light/dark mode transitions without visual disruption
+- **Lightbox Popovers:** Image gallery interactions with fluid open/close animations
+- **Navigation Menu:** Menu state changes with contextual transitions
+- **Page-to-Page Navigation:** Cross-route MPA transitions maintaining visual continuity
+- **List-to-List Views:** Seamless filtering transitions (e.g., certification filters, project categories)
+- **List-to-Detail Views:** Smooth navigation from overview pages to detailed content with shared element morphing
 
 ## 🏁 Getting Started
 
