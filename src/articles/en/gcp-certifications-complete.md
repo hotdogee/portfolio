@@ -11,6 +11,45 @@ changes:
   - '2025-05-15': 'initial post'
 ---
 
+I’m excited to share that as of today, I officially hold 14 active Google Cloud certifications—from Foundational up through Professional level ([Credly](https://www.credly.com/users/hanlin)):
+
+**Professional Certifications:**
+
+- [Professional Cloud Architect](/certifications/professional-cloud-architect) ([11/12/24](https://www.credly.com/badges/fccc70de-65ea-4a98-9a45-1d664714710d/linked_in_profile))
+
+- [Professional Cloud Data Engineer](/certifications/professional-data-engineer) ([10/14/24](https://www.credly.com/badges/c385b7cb-33c0-49d1-9aba-6a7bc992e826/linked_in_profile))
+
+- [Professional Cloud DevOps Engineer](/certifications/professional-cloud-devops-engineer) ([02/10/25](https://www.credly.com/badges/76451edd-6b16-40c8-952c-dc5ec3a6f027/linked_in_profile))
+
+- [Professional Cloud Database Engineer](/certifications/professional-cloud-database-engineer) ([02/16/25](https://www.credly.com/badges/83fbf92c-3837-4bb2-919f-566b7400fbfe/linked_in_profile))
+
+- [Professional Cloud Developer](/certifications/professional-cloud-developer) ([02/06/25](https://www.credly.com/badges/d3586440-7c66-4595-8bef-70e918099a04/linked_in_profile))
+
+- [Professional Cloud Network Engineer](/certifications/professional-cloud-network-engineer) ([01/23/25](https://www.credly.com/badges/04b35518-16c5-4a2f-9d20-d8f17464c26c/linked_in_profile))
+
+- [Professional Cloud Security Engineer](/certifications/professional-cloud-security-engineer) ([12/31/24](https://www.credly.com/badges/c41c9a8a-0b9f-4f43-a161-4bc050c9b51d/public_url))
+
+- [Professional Machine Learning Engineer](/certifications/professional-machine-learning-engineer) ([09/07/24](https://www.credly.com/badges/3125474c-dbc1-450b-a12c-a16c56b10181/linked_in_profile))
+
+- [Professional Google Workspace Administrator](/certifications/professional-google-workspace-administrator) ([12/21/24](https://www.credly.com/badges/9d1398ac-e13b-45c8-a281-aaf05c749c51/linked_in_profile))
+
+**Associate Certifications:**
+
+- [Associate Cloud Engineer](/certifications/associate-cloud-engineer) ([11/05/24](https://www.credly.com/badges/a60cfb97-f91d-40d5-aadc-b7995eda46f1/linked_in_profile))
+
+- [Associate Data Practitioner](/certifications/associate-data-practitioner) ([11/26/24](https://www.credly.com/badges/a144c9d0-c7ae-4cd2-8166-c3f84900c97e/linked_in_profile))
+
+- [Associate Google Workspace Administrator](/certifications/associate-google-workspace-administrator) ([02/16/25](https://www.credly.com/badges/c6eca2f5-aaee-48d5-943c-7e0b14a6d478/linked_in_profile))
+
+**Foundational Certifications:**
+
+- [Cloud Digital Leader](/certifications/cloud-digital-leader) ([09/02/24](https://www.credly.com/badges/784112bf-811f-4578-a5ac-14bf0e77306e/linked_in_profile))
+
+- [Generative AI Leader](/certifications/generative-ai-leader) ([05/15/25](https://www.credly.com/badges/5c6a2127-5bbf-452a-9179-e19795057115/linked_in_profile))
+
+![A screenshot of a Credly "Badge Wallet" showing tiles for 14 Google Cloud certifications, including Professional Cloud Architect and Associate Cloud Engineer.](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1749224690/gcp-certifications-complete-credly-badge-wallet_j9gl3y.png)
+_The digital proof. My public Credly wallet showcasing all 14 certifications and their issue dates._
+
 ### The "Why": From Curiosity to Certified Expertise
 
 People have asked me, "Why go to this extreme?"
@@ -26,9 +65,6 @@ Certifications on their own won’t magically land you a job, but when paired wi
 - **Credibility & Confidence:** It’s one thing to know a service; it’s another to have that knowledge validated. This process has given me the confidence to design, architect, and defend complex cloud solutions.
 
 As I noted to myself during the process, the single best part is that **the certifications pushed me to dig into documentation I would’ve otherwise skipped.** Now, those concepts are part of my day-to-day thinking.
-
-![A screenshot of a Credly "Badge Wallet" showing tiles for 14 Google Cloud certifications, including Professional Cloud Architect and Associate Cloud Engineer.](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1749224690/gcp-certifications-complete-credly-badge-wallet_j9gl3y.png)
-_The digital proof. My public Credly wallet showcasing all 14 certifications and their issue dates._
 
 ### The "How": A Strategic Approach to Conquer Any GCP Exam
 

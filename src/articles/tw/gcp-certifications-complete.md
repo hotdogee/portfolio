@@ -11,7 +11,46 @@ changes:
   - '2025-05-15': 'initial post'
 ---
 
-### 探究「為什麼」：從好奇心到認證專家
+很高興能與各位分享，我已全數考取 Google Cloud 旗下 14 張有效證照，範圍橫跨基礎到專家級別（所有認證紀錄皆可於 [Credly](https://www.credly.com/users/hanlin) 公開檔案查詢）：
+
+**Professional Certifications:**
+
+- [Professional Cloud Architect](/certifications/professional-cloud-architect) ([11/12/24](https://www.credly.com/badges/fccc70de-65ea-4a98-9a45-1d664714710d/linked_in_profile))
+
+- [Professional Cloud Data Engineer](/certifications/professional-data-engineer) ([10/14/24](https://www.credly.com/badges/c385b7cb-33c0-49d1-9aba-6a7bc992e826/linked_in_profile))
+
+- [Professional Cloud DevOps Engineer](/certifications/professional-cloud-devops-engineer) ([02/10/25](https://www.credly.com/badges/76451edd-6b16-40c8-952c-dc5ec3a6f027/linked_in_profile))
+
+- [Professional Cloud Database Engineer](/certifications/professional-cloud-database-engineer) ([02/16/25](https://www.credly.com/badges/83fbf92c-3837-4bb2-919f-566b7400fbfe/linked_in_profile))
+
+- [Professional Cloud Developer](/certifications/professional-cloud-developer) ([02/06/25](https://www.credly.com/badges/d3586440-7c66-4595-8bef-70e918099a04/linked_in_profile))
+
+- [Professional Cloud Network Engineer](/certifications/professional-cloud-network-engineer) ([01/23/25](https://www.credly.com/badges/04b35518-16c5-4a2f-9d20-d8f17464c26c/linked_in_profile))
+
+- [Professional Cloud Security Engineer](/certifications/professional-cloud-security-engineer) ([12/31/24](https://www.credly.com/badges/c41c9a8a-0b9f-4f43-a161-4bc050c9b51d/public_url))
+
+- [Professional Machine Learning Engineer](/certifications/professional-machine-learning-engineer) ([09/07/24](https://www.credly.com/badges/3125474c-dbc1-450b-a12c-a16c56b10181/linked_in_profile))
+
+- [Professional Google Workspace Administrator](/certifications/professional-google-workspace-administrator) ([12/21/24](https://www.credly.com/badges/9d1398ac-e13b-45c8-a281-aaf05c749c51/linked_in_profile))
+
+**Associate Certifications:**
+
+- [Associate Cloud Engineer](/certifications/associate-cloud-engineer) ([11/05/24](https://www.credly.com/badges/a60cfb97-f91d-40d5-aadc-b7995eda46f1/linked_in_profile))
+
+- [Associate Data Practitioner](/certifications/associate-data-practitioner) ([11/26/24](https://www.credly.com/badges/a144c9d0-c7ae-4cd2-8166-c3f84900c97e/linked_in_profile))
+
+- [Associate Google Workspace Administrator](/certifications/associate-google-workspace-administrator) ([02/16/25](https://www.credly.com/badges/c6eca2f5-aaee-48d5-943c-7e0b14a6d478/linked_in_profile))
+
+**Foundational Certifications:**
+
+- [Cloud Digital Leader](/certifications/cloud-digital-leader) ([09/02/24](https://www.credly.com/badges/784112bf-811f-4578-a5ac-14bf0e77306e/linked_in_profile))
+
+- [Generative AI Leader](/certifications/generative-ai-leader) ([05/15/25](https://www.credly.com/badges/5c6a2127-5bbf-452a-9179-e19795057115/linked_in_profile))
+
+![A screenshot of a Credly "Badge Wallet" showing tiles for 14 Google Cloud certifications, including Professional Cloud Architect and Associate Cloud Engineer.](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1749224690/gcp-certifications-complete-credly-badge-wallet_j9gl3y.png)
+_The digital proof. My public Credly wallet showcasing all 14 certifications and their issue dates._
+
+### 為什麼：從好奇心到認證專家
 
 有人問我：「有必要這麼拚嗎？」
 
@@ -27,10 +66,7 @@ changes:
 
 誠如我在備考期間的筆記所言，這趟旅程最棒的一點是：**「這些證照，逼著我去讀完那些我原本會直接跳過的文件。」** 如今，這些概念已內化為我日常思考的一部分。
 
-![Credly 的「Badge Wallet」頁面截圖，方格中陳列著 14 項 Google Cloud 認證，包含 Professional Cloud Architect 和 Associate Cloud Engineer 等。](https://res.cloudinary.com/hanlin-portfolio/image/upload/v1749224690/gcp-certifications-complete-credly-badge-wallet_j9gl3y.png)
-_國際認證：我的 Credly 頁面，展示了全部 14 張證照及其核發日期。_
-
-### 我的「方法論」：攻克所有 GCP 考試的戰略
+### 方法論：攻克所有 GCP 考試的戰略
 
 從入門的 Cloud Digital Leader 到我認為最棘手的 Professional Cloud Network Engineer，我摸索出一套適用於所有考試的應對策略。這套方法簡單明瞭，核心在於「理解」，而非「死背」。
 
