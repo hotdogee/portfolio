@@ -6,7 +6,6 @@ A modern, multilingual portfolio website built with [Astro](https://astro.build/
 ![portfolio-cert-filter-en mp4](https://github.com/user-attachments/assets/d976b806-57b8-4278-9606-79efba8bfeac)
 ![portfolio-nav-lightbox-short-en](https://github.com/user-attachments/assets/9db9d456-4b12-4217-9f3c-82d531c27d73)
 
-
 ## ✨ Features
 
 - **Internationalization (i18n):** Supports English (`en`) and Taiwanese Mandarin (`tw`) locales, managed via [`src/lib/i18n.ts`](h:\Projects\Career\portfolio\src\lib\i18n.ts) and Astro's i18n routing.
