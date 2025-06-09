@@ -2,6 +2,7 @@
 import { SHOW_DOWNLOAD_CV } from 'astro:env/server'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import AstroIcon from '@assets/icons/Astro.svg'
+import Credly from '@assets/icons/Credly.svg'
 import Email from '@assets/icons/Email.svg'
 import GitHub from '@assets/icons/GitHub.svg'
 import LinkedIn from '@assets/icons/LinkedIn.svg'
@@ -31,6 +32,15 @@ const t = useTranslations(locale)
           >
             <LinkedIn class="size-6" />
             <span class="sr-only">LinkedIn</span>
+          </a>
+          <a
+            href="https://www.credly.com/users/hanlin"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:bg-accent hover:text-accent-foreground focus-visible:ring-ring inline-flex h-10 w-10 items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+          >
+            <Credly class="size-6" />
+            <span class="sr-only">Credly</span>
           </a>
           <a
             href="https://github.com/hotdogee"
