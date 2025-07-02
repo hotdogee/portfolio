@@ -1,5 +1,53 @@
 [
   {
+    "featured": 72,
+    "name": {
+      "en": "Solutions Architect - Associate SAA-C03",
+      "tw": "解決方案架構師 - 助理 SAA-C03"
+    },
+    "organization": "AWS",
+    "issue": "July 2025",
+    "expire": "July 2028",
+    "identifier": "83032d041f5b461086c63f273cec025c",
+    "description": {
+      "en": [
+        "As an AWS Certified Solutions Architect - Associate, I have the validated ability to design and implement robust and effective solutions on AWS. My expertise is grounded in the AWS Well-Architected Framework, enabling me to build architectures that are secure, resilient, high-performing, and cost-optimized. I can design solutions that meet current business requirements while anticipating future needs, and I am also skilled in reviewing existing architectures to identify and recommend improvements.",
+        "My practical skills include designing secure network architectures with VPCs, implementing robust identity and access management using IAM, and ensuring data is protected both at rest and in transit. I build resilient and scalable systems by leveraging auto-scaling, load balancing, and loosely coupled services like SQS and Lambda. I am also proficient in selecting the optimal compute, storage, and database services to meet performance demands while designing cost-optimized solutions through resource right-sizing, lifecycle management, and strategic use of AWS purchasing options."
+      ],
+      "tw": [
+        "作為一名 AWS Certified Solutions Architect - Associate，這張證照證明了我具備在 AWS 平台上設計與實作強大、可靠雲端解決方案的專業能力。我的所有設計均以 AWS Well-Architected Framework 為基礎，確保架構在安全性、彈性、效能與成本效益之間達到最佳平衡。我不僅能依據當前的業務需求設計合適的方案，更能預應未來的成長需求，同時也擅長審視既有系統，找出可改進之處並提出具體建議。",
+        "在技術實務上，我的能力涵蓋了透過 VPC 設計安全的網路架構、利用 IAM 實作精密的權限管理，並確保資料無論在靜態儲存 (at rest) 或動態傳輸 (in transit) 中都受到嚴密保護。我擅長運用 Auto Scaling、負載平衡以及 SQS、Lambda 等鬆散耦合 (loosely coupled) 的服務，來建構兼具高彈性與高擴展性的系統。此外，我能為不同的應用場景精準選擇最合適的運算、儲存與資料庫服務，並透過資源規模的最適化 (right-sizing)、資料生命週期管理與採購方案的策略性運用，打造出兼顧效能與成本效益的最佳解決方案。"
+      ]
+    },
+    "official": "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
+    "verify": "https://www.credly.com/badges/2804558d-dd01-41f8-ac4f-4e2543667d55/linked_in_profile",
+    "skills": [
+      "Amazon Web Services",
+      "AWS",
+      "AWS Certification",
+      "AWS Cloud",
+      "Cloud Architecture",
+      "Cloud Certification",
+      "Cloud Data",
+      "Cloud Infrastructure",
+      "Cloud Services"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/aws-certified-saa-c03-solutions-architect-associate-2025-badge.png",
+      "alt": {
+        "en": "AWS Certified Solutions Architect - Associate Badge",
+        "tw": "AWS 認證「解決方案架構師 - 助理」徽章"
+      }
+    },
+    "certificate": {
+      "url": "/src/certifications/images/aws-certified-saa-c03-solutions-architect-associate-2025-certificate.png",
+      "alt": {
+        "en": "AWS Certified Solutions Architect - Associate Certificate",
+        "tw": "AWS 認證「解決方案架構師 - 助理」證書"
+      }
+    }
+  },
+  {
     "name": {
       "en": "Generative AI Leader",
       "tw": "生成式 AI 領導者"
@@ -1688,10 +1736,9 @@
     }
   },
   {
-    "featured": 72,
     "name": {
-      "en": "AWS Certified AI Practitioner",
-      "tw": "AWS 認證 AI 從業人員"
+      "en": "AI Practitioner AIF-C01",
+      "tw": "AI 從業人員 AIF-C01"
     },
     "organization": "AWS",
     "issue": "Sep 2024",
@@ -1724,14 +1771,14 @@
       "Machine Learning (ML)"
     ],
     "badge": {
-      "url": "/src/certifications/images/aws-certified-ai-practitioner-2024-badge.png",
+      "url": "/src/certifications/images/aws-certified-aif-c01-ai-practitioner-2024-badge.png",
       "alt": {
         "en": "AWS Certified AI Practitioner Badge",
         "tw": "AWS 認證「AI 從業人員」徽章"
       }
     },
     "certificate": {
-      "url": "/src/certifications/images/aws-certified-ai-practitioner-2024-certificate.png",
+      "url": "/src/certifications/images/aws-certified-aif-c01-ai-practitioner-2024-certificate.png",
       "alt": {
         "en": "AWS Certified AI Practitioner Certificate",
         "tw": "AWS 認證「AI 從業人員」證書"
@@ -1740,8 +1787,8 @@
   },
   {
     "name": {
-      "en": "AWS Certified Cloud Practitioner",
-      "tw": "AWS 認證雲端從業人員"
+      "en": "Cloud Practitioner CLF-C02",
+      "tw": "雲端從業人員 CLF-C02"
     },
     "organization": "AWS",
     "issue": "Aug 2024",
@@ -1770,14 +1817,14 @@
       "Cloud Services"
     ],
     "badge": {
-      "url": "/src/certifications/images/aws-certified-cloud-practitioner-2024-badge.png",
+      "url": "/src/certifications/images/aws-certified-clf-c02-cloud-practitioner-2024-badge.png",
       "alt": {
         "en": "AWS Certified Cloud Practitioner Badge",
         "tw": "AWS 認證「雲端從業人員」徽章"
       }
     },
     "certificate": {
-      "url": "/src/certifications/images/aws-certified-cloud-practitioner-2024-certificate.png",
+      "url": "/src/certifications/images/aws-certified-clf-c02-cloud-practitioner-2024-certificate.png",
       "alt": {
         "en": "AWS Certified Cloud Practitioner Certificate",
         "tw": "AWS 認證「雲端從業人員」證書"
