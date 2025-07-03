@@ -2,6 +2,67 @@
   {
     "featured": 72,
     "name": {
+      "en": "Machine Learning Engineer - Associate MLA-C01",
+      "tw": "機器學習工程師 - 助理 MLA-C01"
+    },
+    "organization": "AWS",
+    "issue": "July 2025",
+    "expire": "July 2028",
+    "identifier": "0dcf91491d6e419bb930e545bf396985",
+    "description": {
+      "en": [
+        "As an AWS Certified Machine Learning Engineer - Associate, I possess the validated ability to build, operationalize, deploy, and maintain end-to-end machine learning (ML) solutions and pipelines on the AWS Cloud. My expertise covers the entire ML lifecycle, from ingesting and preparing data for modeling, to training and refining models, and finally to deploying, monitoring, and securing these solutions in production.",
+        "In data preparation, I am skilled in ingesting data from various sources, including streaming data with Kinesis, and transforming it using tools like Amazon SageMaker Data Wrangler and AWS Glue. I perform crucial feature engineering, handle data quality validation, and use SageMaker Clarify to identify and mitigate pre-training bias. For model development, I can select appropriate algorithms, including SageMaker's built-in options and foundation models from SageMaker JumpStart, and I am proficient in training, fine-tuning, and evaluating models. My skills include hyperparameter optimization with SageMaker's automatic model tuning, managing model versions in the SageMaker Model Registry, and interpreting model performance and bias.",
+        "My capabilities extend to deploying and orchestrating ML workflows. I can select and provision the optimal compute infrastructure (CPU/GPU) and deployment endpoints (real-time, batch, serverless) based on performance and cost requirements. I am adept at automating the entire ML workflow by building robust CI/CD pipelines using SageMaker Pipelines and AWS developer tools like CodePipeline. This includes implementing deployment strategies such as A/B testing and ensuring solutions are scalable and maintainable through infrastructure as code (IaC).",
+        "Finally, I ensure the long-term health and security of ML solutions by implementing comprehensive monitoring and maintenance strategies. I use SageMaker Model Monitor to detect data and model drift, CloudWatch to monitor infrastructure performance, and cost management tools like AWS Cost Explorer to optimize expenses. I also apply security best practices by configuring IAM roles, VPCs, and encryption to protect ML systems and resources, ensuring they remain secure and compliant."
+      ],
+      "tw": [
+        "作為一名 AWS Certified Machine Learning Engineer - Associate，我具備在 AWS 雲端平台上建構、操作、部署及維護端對端機器學習 (ML) 解決方案與管線的專業能力。我的專業知識涵蓋了完整的機器學習生命週期，從擷取與準備用於模型的資料，到訓練與優化模型，最終將這些解決方案部署至生產環境，並進行持續的監控與安全維護。",
+        "在資料準備方面，我擅長從多種來源（包含使用 Kinesis 處理的串流資料）擷取資料，並運用 Amazon SageMaker Data Wrangler 和 AWS Glue 等工具進行轉換。我能執行關鍵的特徵工程、進行資料品質驗證，並使用 SageMaker Clarify 來識別與減輕訓練前的資料偏見。在模型開發上，我能選擇合適的演算法，包括 SageMaker 的內建選項及 SageMaker JumpStart 中的基礎模型，並且精通模型的訓練、微調與評估。我的技能涵蓋使用 SageMaker 的自動模型調校功能進行超參數優化、在 SageMaker Model Registry 中管理模型版本，以及解讀模型的效能與偏見。",
+        "我的能力也延伸至部署與自動化編排機器學習工作流程。我能根據效能與成本需求，選擇並配置最佳的運算基礎設施 (CPU/GPU) 及部署端點 (即時、批次、無伺服器)。我擅長運用 SageMaker Pipelines 及 AWS CodePipeline 等開發者工具，建構穩健的 CI/CD 管線，以自動化整個機器學習工作流程。這包括實施 A/B 測試等部署策略，並透過「基礎設施即程式碼」(IaC) 確保解決方案的可擴展性與可維護性。",
+        "最後，我透過實施全面的監控與維護策略，來確保機器學習解決方案的長期穩定與安全。我會使用 SageMaker Model Monitor 來偵測資料與模型的漂移，利用 CloudWatch 監控基礎設施效能，並透過 AWS Cost Explorer 等成本管理工具來優化費用。我也會應用資安最佳實務，藉由設定 IAM 角色、VPC 及加密機制來保護機器學習系統與資源，確保其持續安全且合規。"
+      ]
+    },
+    "official": "https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/",
+    "verify": "https://www.credly.com/badges/5b015acf-dfff-46fc-a18e-722165ea1a67/linked_in_profile",
+    "skills": [
+      "Amazon SageMaker",
+      "Amazon Web Services",
+      "Applied Machine Learning",
+      "Artificial Intelligence (AI)",
+      "AWS",
+      "AWS Certification",
+      "AWS Cloud",
+      "CI/CD for ML",
+      "Cloud Certification",
+      "Data Engineering",
+      "Data Preprocessing",
+      "Data Science",
+      "Deep Learning",
+      "Feature Engineering",
+      "Machine Learning (ML)",
+      "MLOps",
+      "Model Deployment",
+      "Model Monitoring",
+      "Natural Language Processing (NLP)"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/aws-certified-mla-c01-machine-learning-engineer-associate-2025-badge.png",
+      "alt": {
+        "en": "AWS Certified Machine Learning Engineer - Associate Badge",
+        "tw": "AWS 認證「機器學習工程師 - 助理」徽章"
+      }
+    },
+    "certificate": {
+      "url": "/src/certifications/images/aws-certified-mla-c01-machine-learning-engineer-associate-2025-certificate.png",
+      "alt": {
+        "en": "AWS Certified Machine Learning Engineer - Associate Certificate",
+        "tw": "AWS 認證「機器學習工程師 - 助理」證書"
+      }
+    }
+  },
+  {
+    "name": {
       "en": "Solutions Architect - Associate SAA-C03",
       "tw": "解決方案架構師 - 助理 SAA-C03"
     },
