@@ -1,5 +1,67 @@
 [
   {
+    "name": {
+      "en": "Data Engineer - Associate DEA-C01",
+      "tw": "資料工程師 - 助理 DEA-C01"
+    },
+    "organization": "AWS",
+    "issue": "July 2025",
+    "expire": "July 2028",
+    "identifier": "43b1dbcebe18442baabfcd11723dc8c9",
+    "description": {
+      "en": [
+        "As an AWS Certified Data Engineer - Associate, I have the validated ability to design, implement, and optimize data pipelines on the AWS platform. My expertise covers the entire data lifecycle, from ingestion and transformation to storage and analysis, ensuring that data solutions are high-performing, cost-effective, and secure in accordance with AWS best practices. I am skilled in orchestrating complex workflows, managing data stores, and maintaining the operational health of data systems.",
+        "My practical skills include ingesting data from a wide range of streaming and batch sources, such as Amazon Kinesis, Amazon MSK, and Amazon S3. I am proficient in transforming and processing this data using services like AWS Glue, Amazon EMR, and AWS Lambda, and I can orchestrate these processes into robust, event-driven pipelines with AWS Step Functions and Amazon MWAA. I apply core programming concepts and Infrastructure as Code (IaC) with tools like the AWS CDK and CloudFormation to build repeatable and scalable data engineering solutions.",
+        "I am adept at managing the full data lifecycle by selecting optimal data stores like Amazon Redshift, Amazon DynamoDB, and Amazon S3 to meet specific performance and access pattern requirements. My capabilities include designing effective data models and schemas, creating and managing data catalogs with AWS Glue Data Catalog, and implementing data lifecycle policies to manage storage costs and data retention. I also ensure data quality through validation, profiling, and cleansing techniques using tools like AWS Glue DataBrew.",
+        "A core part of my role involves ensuring robust security and governance. I implement strong authentication and authorization mechanisms using IAM and AWS Lake Formation, adhering to the principle of least privilege. I am skilled in applying data encryption both in transit and at rest with AWS KMS, protecting sensitive data through masking and anonymization, and preparing comprehensive logs with CloudTrail and CloudWatch for auditing and monitoring purposes. This holistic approach ensures that data is not only accessible and valuable but also secure and compliant."
+      ],
+      "tw": [
+        "作為一名 AWS Certified Data Engineer - Associate，這張證照證明了我具備在 AWS 平台上設計、實作與優化資料管線的專業能力。我的專業範疇涵蓋了從資料擷取、轉換、儲存到分析的完整資料生命週期，並遵循 AWS 最佳實務，確保所有資料解決方案都兼具高效能、成本效益與安全性。我擅長編排複雜的工作流程、管理資料儲存，並維護資料系統的穩定運作。",
+        "在技術實務上，我的能力涵蓋從各種串流與批次來源（如 Amazon Kinesis、Amazon MSK、Amazon S3）擷取資料。我能熟練地運用 AWS Glue、Amazon EMR 及 AWS Lambda 等服務來轉換與處理這些資料，並透過 AWS Step Functions 和 Amazon MWAA 將這些流程編排成穩健、事件驅動的管線。我會應用核心的程式設計概念與「基礎設施即程式碼」(IaC) 原則，並搭配 AWS CDK、CloudFormation 等工具，來建構可重複部署且具擴展性的資料工程解決方案。",
+        "我擅長管理完整的資料生命週期，能根據特定的效能需求與存取模式，選擇如 Amazon Redshift、Amazon DynamoDB 及 Amazon S3 等最合適的資料儲存方案。我的能力包含設計高效的資料模型與結構、利用 AWS Glue Data Catalog 建立與管理資料目錄，以及實施資料生命週期政策來優化儲存成本與資料保留策略。同時，我也會運用 AWS Glue DataBrew 等工具，透過資料驗證、剖析與清理技術，來確保資料的品質。",
+        "我工作的核心環節之一是確保資料具備強健的安全性與完善的治理。我會遵循最低權限原則，運用 IAM 與 AWS Lake Formation 來實施嚴謹的身份驗證與授權機制。我擅長利用 AWS KMS 對傳輸中及靜態儲存的資料進行加密，透過遮罩與匿名化技術保護敏感資料，並利用 CloudTrail 與 CloudWatch 準備詳盡的日誌以供稽核與監控。這種全方位的策略，確保資料不僅易於存取且富有價值，同時也安全合規。"
+      ]
+    },
+    "official": "https://aws.amazon.com/certification/certified-data-engineer-associate/",
+    "verify": "https://www.credly.com/badges/d199f4cf-d4b1-4dac-b4f0-1da5eb3562ee/public_url",
+    "skills": [
+      "Amazon Web Services",
+      "AWS",
+      "AWS Certification",
+      "AWS Cloud",
+      "Cloud Certification",
+      "Data Engineering",
+      "Data Governance",
+      "Data Ingestion",
+      "Data Modeling",
+      "Data Pipelines",
+      "Data Security",
+      "Data Transformation",
+      "ETL",
+      "AWS Glue",
+      "Amazon EMR",
+      "Amazon Redshift",
+      "Amazon Kinesis",
+      "AWS Lambda",
+      "AWS Step Functions",
+      "Amazon S3"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/aws-certified-dea-c01-data-engineer-associate-2025-badge.png",
+      "alt": {
+        "en": "AWS Certified Data Engineer - Associate Badge",
+        "tw": "AWS 認證「資料工程師 - 助理」徽章"
+      }
+    },
+    "certificate": {
+      "url": "/src/certifications/images/aws-certified-dea-c01-data-engineer-associate-2025-certificate.png",
+      "alt": {
+        "en": "AWS Certified Data Engineer - Associate Certificate",
+        "tw": "AWS 認證「資料工程師 - 助理」證書"
+      }
+    }
+  },
+  {
     "featured": 72,
     "name": {
       "en": "Machine Learning Engineer - Associate MLA-C01",
