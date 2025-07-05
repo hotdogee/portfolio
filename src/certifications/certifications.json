@@ -1,6 +1,58 @@
 [
   {
     "name": {
+      "en": "Developer - Associate DVA-C02",
+      "tw": "開發人員 - 助理 DVA-C02"
+    },
+    "organization": "AWS",
+    "issue": "July 2025",
+    "expire": "July 2028",
+    "identifier": "39bfa7df064a46fb9d26fe7983c6e714",
+    "description": {
+      "en": [
+        "As an AWS Certified Developer - Associate, I have the validated expertise to develop, deploy, and debug cloud-native applications using AWS services. My proficiency covers the entire development lifecycle, from writing code that utilizes AWS SDKs to interact with services, to packaging and deploying applications through robust CI/CD workflows, with a strong focus on serverless technologies.",
+        "My technical skills include building fault-tolerant and resilient applications by applying architectural patterns like event-driven and microservices, and implementing asynchronous processing with services such as AWS Lambda, Amazon SQS, and Amazon SNS. I am adept at developing, extending, and maintaining APIs, and I can proficiently use and optimize various data stores, including Amazon DynamoDB and Amazon S3, by implementing effective indexing, caching strategies, and data lifecycle management.",
+        "In terms of security, I can implement robust authentication and authorization using services like Amazon Cognito and IAM, manage secrets securely with AWS Secrets Manager, and apply encryption for both data at rest and in transit. For deployment and operations, I am experienced in preparing application artifacts, automating CI/CD pipelines with tools like AWS SAM and AWS CodePipeline, and executing various deployment strategies such as blue/green and canary. Furthermore, I can instrument code for observability, troubleshoot issues using logs and traces from Amazon CloudWatch and AWS X-Ray, and continuously optimize application performance and cost."
+      ],
+      "tw": [
+        "作為一名 AWS Certified Developer - Associate，這張證照證明我具備使用 AWS 服務來開發、部署及偵錯雲端原生應用程式的專業能力。我的專業範疇涵蓋了完整的開發生命週期，從運用 AWS SDKs 編寫與服務互動的程式碼，到透過穩健的 CI/CD 工作流程來封裝與部署應用程式，並特別專精於無伺服器 (serverless) 技術的應用。",
+        "在技術實務上，我擅長運用事件驅動、微服務等架構模式，並透過 AWS Lambda、Amazon SQS 及 Amazon SNS 等服務實作非同步處理，藉此打造兼具容錯能力與高彈性的應用程式。我能熟練地開發、擴充及維護 API，並能有效地使用與優化如 Amazon DynamoDB 和 Amazon S3 等多種資料儲存服務，具體方法包括實施高效的索引、快取策略及資料生命週期管理。",
+        "在安全性方面，我能透過 Amazon Cognito 和 IAM 等服務來實作穩固的身份驗證與授權機制，利用 AWS Secrets Manager 安全地管理敏感資訊，並為靜態與傳輸中的資料進行加密。在部署與維運方面，我熟悉準備應用程式部署所需的產出物，能運用 AWS SAM 和 AWS CodePipeline 等工具來自動化 CI/CD 管線，並執行如藍/綠部署 (blue/green) 或金絲雀部署 (canary) 等多種部署策略。此外，我能為程式碼導入可觀測性 (observability) 的監控機制，利用 Amazon CloudWatch 和 AWS X-Ray 的日誌與追蹤資料來排除問題，並持續優化應用程式的效能與成本。"
+      ]
+    },
+    "official": "https://aws.amazon.com/certification/certified-developer-associate/",
+    "verify": "https://www.credly.com/badges/c709c41a-7f12-49c1-a846-4f19414f028e/public_url",
+    "skills": [
+      "Amazon Web Services",
+      "AWS",
+      "AWS Certification",
+      "AWS Cloud",
+      "AWS Lambda",
+      "AWS SDKs",
+      "CI/CD",
+      "Cloud Certification",
+      "Code Deployment",
+      "Code Development",
+      "IAM",
+      "Serverless"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/aws-certified-dva-c02-developer-associate-2025-badge.png",
+      "alt": {
+        "en": "AWS Certified Developer - Associate Badge",
+        "tw": "AWS 認證「開發人員 - 助理」徽章"
+      }
+    },
+    "certificate": {
+      "url": "/src/certifications/images/aws-certified-dva-c02-developer-associate-2025-certificate.png",
+      "alt": {
+        "en": "AWS Certified Developer - Associate Certificate",
+        "tw": "AWS 認證「開發人員 - 助理」證書"
+      }
+    }
+  },
+  {
+    "name": {
       "en": "Data Engineer - Associate DEA-C01",
       "tw": "資料工程師 - 助理 DEA-C01"
     },
