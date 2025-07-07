@@ -1,6 +1,63 @@
 [
   {
     "name": {
+      "en": "Salesforce Certified Agentforce Specialist",
+      "tw": "Salesforce 認證 Agentforce 專家"
+    },
+    "organization": "Salesforce",
+    "issue": "July 2025",
+    "expire": "July 2026",
+    "identifier": "6335344",
+    "description": {
+      "en": [
+        "As a Salesforce Certified Agentforce Specialist, I possess a deep understanding of both Agentforce capabilities and core Salesforce Platform configuration. This certification validates my expertise in implementing and managing Agentforce to drive business success, enhance processes, and empower teams to work more efficiently. I am skilled in engaging with stakeholders to identify opportunities and challenges for Agentforce-driven improvements, ensuring that AI-powered agents are effectively leveraged across the organization.",
+        "My practical skills include navigating Salesforce tools to develop custom solutions and integrations. I am proficient in identifying appropriate use cases for Prompt Builder, managing prompt templates, and applying grounding techniques to ensure relevance. I can create and customize agents with prebuilt or custom skills for various departments, such as Sales and Service, and rigorously test them using the Agentforce Testing Center to ensure they meet specific business needs.",
+        "Furthermore, I leverage the Agentforce Data Library and Data Cloud retrievers to enhance agent response accuracy and personalize interactions, grounding them with relevant data from sources like Knowledge articles. I can connect agents to digital channels, monitor their adoption, and manage user security to ensure a secure and effective deployment. My ability to integrate agents with existing systems and apply best practices ensures that all interactions are accurate and contextually relevant, delivering tangible value to the business."
+      ],
+      "tw": [
+        "身為一名 Salesforce 認證 Agentforce 專家，我對 Agentforce 的功能以及 Salesforce 平台的核心配置有著深入的理解。這張認證肯定了我在實施與管理 Agentforce 方面的專業能力，能藉此驅動業務成功、優化流程，並賦能團隊更高效地工作。我擅長與利害關係人溝通，共同找出由 Agentforce 驅動的改善機會與潛在挑戰，確保 AI 代理程式能在整個組織中得到有效的應用。",
+        "在技術實務上，我的能力涵蓋了操作 Salesforce 工具以開發客製化解決方案與整合。我能熟練地為不同情境找出 Prompt Builder 的最佳應用方式、管理提示詞模板，並運用接地技術以確保內容的關聯性。我能夠為銷售、服務等不同部門創建及客製化具備預設或自訂技能的代理程式，並透過 Agentforce Testing Center 進行嚴謹的測試，確保其符合特定的業務需求。",
+        "此外，我能善用 Agentforce Data Library 與 Data Cloud 檢索器來提升代理程式的回應準確性並實現個人化互動，例如以知識庫文章等來源作為其回應的依據。我可以將代理程式連接到各種數位渠道、監控其採用率，並管理使用者安全，以確保部署的安全與成效。我能將代理程式與既有系統整合，並應用最佳實務，確保所有互動都精準且符合情境，為企業帶來實質的價值。"
+      ]
+    },
+    "official": "https://trailhead.salesforce.com/en/credentials/agentforcespecialist",
+    "verify": "https://trailhead.salesforce.com/en/credentials/certification-detail-print/?searchString=I1QEKan+5MctJYwAqRZoMArZ/lUUIJ9lfDiT6nDawM0puS8X+L9JFrMo/Bn6aVCu",
+    "skills": [
+      "Agentforce",
+      "Prompt Engineering",
+      "Prompt Builder",
+      "Custom Agents",
+      "Agent Testing",
+      "Agent Management",
+      "Agent Monitoring",
+      "Agent Security",
+      "Salesforce Data Cloud",
+      "Data Grounding",
+      "Agentforce Data Library",
+      "Salesforce Service Cloud",
+      "Salesforce Sales Cloud",
+      "Generative AI for Service",
+      "Generative AI for Sales",
+      "Salesforce Platform",
+      "Artificial Intelligence (AI)"
+    ],
+    "badge": {
+      "url": "/src/certifications/images/salesforce-certified-agentforce-specialist-2025-badge.png",
+      "alt": {
+        "en": "Salesforce Certified Agentforce Specialist Badge",
+        "tw": "Salesforce 認證「Agentforce 專家」徽章"
+      }
+    },
+    "certificate": {
+      "url": "/src/certifications/images/salesforce-certified-agentforce-specialist-2025-certificate.png",
+      "alt": {
+        "en": "Salesforce Certified Agentforce Specialist Certificate",
+        "tw": "Salesforce 認證「Agentforce 專家」證書"
+      }
+    }
+  },
+  {
+    "name": {
       "en": "Developer - Associate DVA-C02",
       "tw": "開發人員 - 助理 DVA-C02"
     },
